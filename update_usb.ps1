@@ -21,8 +21,16 @@ try {
     Copy-Item $tmpVideo (Join-Path $dest "Jobs this week.mp4") -Force
     Remove-Item $tmpVideo -Force
 
+    Write-Host "Downloading Apprenticeships this week.mp4 ..."
+    $tmpApps = Join-Path $env:TEMP "apprenticeships-this-week.mp4"
+    try {
+        Invoke-WebRequest -Uri "$Site/usb/apprenticeships-this-week.mp4?t=$([DateTime]::Now.Ticks)" -OutFile $tmpApps -UseBasicParsing
+        Copy-Item $tmpApps (Join-Path $dest "Apprenticeships this week.mp4") -Force
+        Remove-Item $tmpApps -Force
+    } catch { Write-Host "(No apprenticeship video yet - skipped)" }
+
     Write-Host ""
-    Write-Host "Done: $dest\Jobs this week.mp4 is up to date" -ForegroundColor Green
+    Write-Host "Done: $dest\Jobs this week.mp4 and Apprenticeships this week.mp4 are up to date" -ForegroundColor Green
     Write-Host "Safely eject the stick, put it in the TV and play the video with repeat on."
 } catch {
     Write-Host ""

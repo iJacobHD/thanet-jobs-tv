@@ -84,8 +84,8 @@
 <div id="stage">
   <header>
     <span class="kicker" id="area">Hiring now · Thanet &amp; East Kent</span>
-    <h1>Local jobs</h1>
-    <p class="sub">No experience needed · all within 90 mins of Thanet by bus or train. Point your <b>phone camera</b> at a code to apply.</p>
+    <h1 id="heading">Local jobs</h1>
+    <p class="sub" id="subline">No experience needed · all within 90 mins of Thanet by bus or train. Point your <b>phone camera</b> at a code to apply.</p>
   </header>
   <main id="slide"></main>
   <footer>
@@ -102,7 +102,16 @@
   const ROTATE   = parseInt(q.get("rotate") ?? "270", 10);   // 0, 90, 180 or 270
   const SECONDS  = Math.max(5, parseInt(q.get("seconds") ?? "12", 10));
   const PER_PAGE = Math.max(1, parseInt(q.get("perpage") ?? "6", 10));
-  const SRC      = q.get("src") || "jobs.json";
+  const BOARD    = q.get("board") === "apprenticeships" ? "apprenticeships" : "jobs";
+  const SRC      = q.get("src") || (BOARD === "apprenticeships" ? "apprenticeships.json" : "jobs.json");
+  const CACHE    = BOARD === "apprenticeships" ? "thanetApprenticeshipsCache" : "thanetJobsCache";
+  if (BOARD === "apprenticeships") {
+    document.getElementById("area").textContent = "Earn while you learn · Thanet & East Kent";
+    document.getElementById("heading").textContent = "Apprenticeships";
+    document.getElementById("subline").innerHTML = "Paid jobs with training and a qualification · all within 90 mins of Thanet by bus or train. Point your <b>phone camera</b> at a code to apply.";
+    document.documentElement.style.setProperty("--accent", "#4ade80");
+    document.title = "Apprenticeships – Thanet & East Kent";
+  }
   const REFRESH_MIN = 10;
   const USB      = q.get("usb") === "1";                     // static picture mode (for USB slideshows)
   const MIN_DAYS = Math.max(1, parseInt(q.get("mindays") ?? "1", 10)); // must stay open at least this many days                                     // re-download the job list every 10 minutes
@@ -124,14 +133,14 @@
 
   // ---------- data ----------
   let data = null, page = Math.max(0, parseInt(q.get("page") ?? "1", 10) - 1), timer = null;
-  try { const c = localStorage.getItem("thanetJobsCache"); if (c) data = JSON.parse(c); } catch (e) {}
+  try { const c = localStorage.getItem(CACHE); if (c) data = JSON.parse(c); } catch (e) {}
 
   async function load() {
     try {
       const r = await fetch(SRC + (SRC.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
       if (!r.ok) throw new Error(r.status);
       data = await r.json();
-      try { localStorage.setItem("thanetJobsCache", JSON.stringify(data)); } catch (e) {}
+      try { localStorage.setItem(CACHE, JSON.stringify(data)); } catch (e) {}
     } catch (e) { console.warn("Could not refresh jobs, using last copy", e); }
   }
 
@@ -186,14 +195,16 @@
     const pages = Math.max(1, Math.ceil(jobs.length / PER_PAGE));
     if (page >= pages) page = 0;
     if (!jobs.length) {
-      slide.innerHTML = `<div class="empty">New jobs are on their way.<br>Ask a member of staff for help finding work today.</div>`;
+      slide.innerHTML = BOARD === "apprenticeships"
+        ? `<div class="empty">New apprenticeships are on their way.<br>Ask a member of staff about apprenticeships and training.</div>`
+        : `<div class="empty">New jobs are on their way.<br>Ask a member of staff for help finding work today.</div>`;
       pageEl.textContent = "";
       document.body.dataset.pages = 0;
     } else {
       slide.innerHTML = jobs.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE).map(card).join("");
       // keep the same layout even on a short last page
       for (let i = jobs.length - page * PER_PAGE; i < PER_PAGE && i >= 0; i++) slide.insertAdjacentHTML("beforeend", `<div style="flex:1 1 0"></div>`);
-      pageEl.textContent = `Page ${page + 1} of ${pages}  ·  ${jobs.length} jobs`;
+      pageEl.textContent = `Page ${page + 1} of ${pages}  ·  ${jobs.length} ${BOARD === "apprenticeships" ? (jobs.length === 1 ? "apprenticeship" : "apprenticeships") : (jobs.length === 1 ? "job" : "jobs")}`;
       document.body.dataset.pages = pages;
       // if a row of chips is too wide, drop the least important (last) chip rather than cut it off
       slide.querySelectorAll(".chips").forEach(c => { while (c.scrollWidth > c.clientWidth + 1 && c.children.length > 2) c.lastElementChild.remove(); });

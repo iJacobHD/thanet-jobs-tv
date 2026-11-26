@@ -14,6 +14,8 @@
        padding:22px 44px;border-radius:14px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.35)}
   .btn:hover{background:#ffe34d}
   .small{font-size:15px;color:#9fb2c9}
+  .btn.green{background:#4ade80;margin-top:6px}
+  .btn.green:hover{background:#86efac}
   ol{text-align:left;display:inline-block;margin:18px 0 0;color:#d6e2f0}
   a{color:#ffd400}
 </style>
@@ -24,11 +26,13 @@
   <p>Entry-level jobs within 90 minutes of Thanet by bus or train</p>
   <p id="info">Loading…</p>
   <a class="btn" id="dl" href="usb/jobs-this-week.mp4" download="Jobs this week.mp4">⬇ Jobs for this week</a>
-  <p class="small">An MP4 video, 12 seconds per slide, already turned for the sideways TV.<br>
+  <br><a class="btn green" id="dl2" href="usb/apprenticeships-this-week.mp4" download="Apprenticeships this week.mp4">⬇ Apprenticeships for this week</a>
+  <p id="info2" class="small">Loading…</p>
+  <p class="small">Two MP4 videos, 12 seconds per slide, already turned for the sideways TV.<br>
      Every job in it stays open for at least the next 7 days.</p>
   <ol>
     <li>Click the yellow button. The video goes into your Downloads.</li>
-    <li>Copy <b>Jobs this week.mp4</b> onto the USB stick, replacing last week's.</li>
+    <li>Copy <b>Jobs this week.mp4</b> (and <b>Apprenticeships this week.mp4</b> if you want it) onto the USB stick, replacing last week's.</li>
     <li>On the TV, play the video from the stick with <b>repeat</b> switched on.</li>
   </ol>
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.</p>
@@ -38,6 +42,9 @@
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
     document.getElementById("info").textContent = `${i.slides} slides, made ${d}. The robot remakes it every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
+  fetch("usb/info-apprenticeships.json?t=" + Date.now()).then(r => r.json()).then(i => {
+    document.getElementById("info2").textContent = `${i.count ?? ""} apprenticeships, ${i.slides} slides.`;
+  }).catch(() => { document.getElementById("info2").textContent = "Apprenticeship video, remade every morning."; });
 </script>
 </body>
 </html>

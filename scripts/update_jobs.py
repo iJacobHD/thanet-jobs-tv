@@ -243,6 +243,87 @@ def annual_min(pay):
     return None
 
 
+APPRENTICE = re.compile(r"\bapprentic(?:e|eship|eships)\b", re.I)
+
+
+def is_apprenticeship(job):
+    return (job.get("source") == "Find an apprenticeship" or str(job.get("job_type", "")).lower() == "apprenticeship"
+            or bool(APPRENTICE.search(job.get("title", ""))))
+
+
+def classify_apprenticeship(job, cfg, today):
+    """Apprenticeships are entry-level by design (paid training), so only the area, closing date,
+    blocked-employer and self-employed checks apply - not the experience/qualification/pay rules."""
+    for bad in cfg.get("exclude_places", []):
+        if re.search(r"\b" + re.escape(bad) + r"\b", f"{job['location']} {job['title']}", re.I):
+            return False, f"outside the commute area ({bad})", {}
+    if not any(re.search(r"\b" + re.escape(p) + r"\b", job["location"], re.I) for p in cfg["allowed_places"]):
+        return False, "outside the commute area", {}
+    mins = commute_minutes(job["location"], cfg)
+    if cfg.get("commute") and (mins is None or mins > cfg["commute"].get("max_minutes", 90)):
+        return False, "over the commute limit", {}
+    closing = parse_date_iso(job["closing"])
+    if job.get("closed_notice") or not closing or (closing - today).days < cfg.get("hide_when_days_left_below", 1):
+        return False, "closed / no closing date", {}
+    emp = job["employer"].lower()
+    for b in cfg.get("blocked_employers", []):
+        if b.lower() in emp:
+            return False, "blocked employer", {}
+    if _any(SELF_EMPLOYED, f"{job['job_type']} . {job['title']} . {job['description']}"):
+        return False, "self-employed", {}
+    return True, "ok", {"licence": needs_licence(job), "no_experience": True, "travel_minutes": mins}
+
+
+def board_entry(jid, job, cfg, flags):
+    svg = to_svg_path(make_qr(job["url"], "M"), border=0)
+    size = len(make_qr(job["url"], "M"))
+    return {
+        "id": jid,
+        "title": clean_title(job["title"]),
+        "employer": tidy_employer(job["employer"]),
+        "town": nice_town(town_of(job["location"], cfg["allowed_places"]), cfg),
+        "pay": tidy_pay(job["pay"], job["description"]),
+        "hours": job["hours"],
+        "contract": job["job_type"],
+        "closing": job["closing"],
+        "licence": flags["licence"],
+        "travel_minutes": flags.get("travel_minutes"),
+        "no_experience": flags["no_experience"],
+        "url": job["url"],
+        "source": job.get("source", "DWP Find a Job"),
+        "posted": job.get("posted", ""),
+        "closing_estimated": bool(job.get("closing_estimated")),
+        "listed_only": bool(job.get("listed_only")),
+        "qr": {"size": size, "path": svg},
+    }
+
+
+def write_apprenticeships(apps, failed, used, cfg, today):
+    """docs/apprenticeships.json - the separate apprenticeship board and video."""
+    path = os.path.join(ROOT, "docs", "apprenticeships.json")
+    if failed:
+        try:
+            prev = json.load(open(path, encoding="utf-8"))
+            apps += [j for j in prev.get("jobs", []) if j.get("source") in failed and j.get("closing", "") > str(today)]
+        except (OSError, ValueError):
+            pass
+    seen, unique = set(), []
+    for j in sorted(apps, key=lambda j: (j.get("source") != "Find an apprenticeship", j["closing"])):
+        k = (re.sub(r"[^a-z0-9]", "", j["title"].lower()), j["town"].lower(), re.sub(r"[^a-z0-9]", "", j["employer"].lower())[:12])
+        if k not in seen:
+            seen.add(k)
+            unique.append(j)
+    unique.sort(key=lambda j: (j["closing"], j["title"]))
+    srcs = sorted({j["source"] for j in unique})
+    out = {"generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "source": (", ".join(srcs) or "no apprenticeships found today") +
+                     (". Find an apprenticeship data under the Open Government Licence v3.0" if "Find an apprenticeship" in srcs else ""),
+           "count": len(unique), "area": cfg.get("area_name", "Thanet"), "jobs": unique}
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(out, fh, ensure_ascii=False, indent=1)
+    print(f"Apprenticeship board: {len(unique)} apprenticeships")
+
+
 def classify(job, cfg, today):
     """Return (keep, reason, flags)."""
     text = f"{job['title']} . {job['description']}"
@@ -499,11 +580,15 @@ def main():
         cache = json.load(open(cache_path)) if dump is None else {}
     except (OSError, ValueError):
         cache = {}
-    kept, report = [], []
+    kept, report, apprentices = [], [], []
     for jid in ids:
         c = cache.get(jid)
         if c and c["reason"] != "ok" and (today - dt.date.fromisoformat(c["checked"])).days < 7:
             report.append((jid, c["title"], c["reason"] + " (cached)"))
+            if reed_jobs is not None and is_apprenticeship(reed_by_id[jid]):     # may still suit the apprenticeship board
+                ok, why, aflags = classify_apprenticeship(reed_by_id[jid], cfg, today)
+                if ok:
+                    apprentices.append(board_entry(jid, reed_by_id[jid], cfg, aflags))
             continue
         if reed_jobs is not None:
             job = reed_by_id[jid]
@@ -519,27 +604,11 @@ def main():
         if not reason.startswith("expired"):
             cache[jid] = {"title": job["title"], "reason": reason, "checked": str(today)}
         if keep:
-            svg = to_svg_path(make_qr(job["url"], "M"), border=0)
-            size = len(make_qr(job["url"], "M"))
-            kept.append({
-                "id": jid,
-                "title": clean_title(job["title"]),
-                "employer": tidy_employer(job["employer"]),
-                "town": nice_town(town_of(job["location"], cfg["allowed_places"]), cfg),
-                "pay": tidy_pay(job["pay"], job["description"]),
-                "hours": job["hours"],
-                "contract": job["job_type"],
-                "closing": job["closing"],
-                "licence": flags["licence"],
-                "travel_minutes": flags.get("travel_minutes"),
-                "no_experience": flags["no_experience"],
-                "url": job["url"],
-                "source": job.get("source", "DWP Find a Job"),
-                "posted": job.get("posted", ""),
-                "closing_estimated": bool(job.get("closing_estimated")),
-                "listed_only": bool(job.get("listed_only")),
-                "qr": {"size": size, "path": svg},
-            })
+            kept.append(board_entry(jid, job, cfg, flags))
+        if reed_jobs is not None and is_apprenticeship(job):
+            ok, why, aflags = classify_apprenticeship(job, cfg, today)
+            if ok:
+                apprentices.append(board_entry(jid, job, cfg, aflags))
 
     if failed:
         try:
@@ -570,6 +639,8 @@ def main():
     os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)
     with open(os.path.join(ROOT, "docs", "jobs.json"), "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)
+    if reed_jobs is not None:
+        write_apprenticeships(apprentices, failed, used, cfg, today)
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
     cache = {k: v for k, v in cache.items() if k in ids}          # forget adverts that have gone
     if dump is None:
