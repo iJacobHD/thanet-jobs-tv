@@ -1,13 +1,11 @@
-Run 2026-11-26T14:19:08Z  kept 17 of 39
+Run 2026-11-26T14:23:27Z  kept 13 of 39
 
-KEEP | Field Sales                                                  | ok | https://www.reed.co.uk/jobs/field-sales/57598099
 KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57574966
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57574803
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57576325
 KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57579607
 KEEP | Care Assistant                                               | ok | https://www.reed.co.uk/jobs/care-assistant/57410096
 KEEP | Purchasing Administrator                                     | ok | https://www.reed.co.uk/jobs/purchasing-administrator/57603141
-KEEP | Hydraulic Fitter                                             | ok | https://www.reed.co.uk/jobs/hydraulic-fitter/57557993
 KEEP | SEN Teaching Assistant / Learning Support Assistant          | ok | https://www.reed.co.uk/jobs/sen-teaching-assistant-learning-support-assistant/57489443
 KEEP | Customer Service Administrator | Immediate start!            | ok | https://www.reed.co.uk/jobs/customer-service-administrator--immediate-start/57482470
 KEEP | Caterlink - Catering Assistant                               | ok | https://www.reed.co.uk/jobs/caterlink-catering-assistant/57604533
@@ -17,25 +15,27 @@ KEEP | Care Professional_Broadstairs_T054                           | ok | https
 KEEP | Cleaner                                                      | ok | https://www.reed.co.uk/jobs/cleaner/57599485
 KEEP | Recovery Worker and Waking Night Recovery Worker - Mental He | ok | https://www.reed.co.uk/jobs/recovery-worker-and-waking-night-recovery-worker-mental-health/57408989
 KEEP | Part Time Bar Staff                                          | ok | https://www.reed.co.uk/jobs/part-time-bar-staff/57547772
-SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/telehandler/57500939
-SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/welfare-labourer/57479118
-SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
+SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/telehandler/57500939
+SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/welfare-labourer/57479118
+SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
 SKIP | Mechanical Engineer                                          | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/mechanical-engineer/57505441
-SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/traffic-marshall/57492714
-SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/labourer/57500932
-SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
-SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
-SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
-SKIP | General Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/general-manager/57594937
-SKIP | Key Account Manager                                          | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/key-account-manager/57562716
-SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
-SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
-SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57581325
-SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57492425
-SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') | https://www.reed.co.uk/jobs/employment-specialist/57513221
-SKIP | Teacher                                                      | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/teacher/57524530
-SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/secondary-teacher/57468003
-SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
-SKIP | Mobile Optometrist                                           | self-employed ('Franchise') | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
-SKIP | Financial Controller                                         | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/financial-controller/57601284
-SKIP | Maths Teacher                                                | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/maths-teacher/57533142
+SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/traffic-marshall/57492714
+SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/labourer/57500932
+SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') (cached) | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
+SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') (cached) | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
+SKIP | Field Sales                                                  | not entry level (title: 'Field Sales') | https://www.reed.co.uk/jobs/field-sales/57598099
+SKIP | Hydraulic Fitter                                             | not entry level (title: 'Fitter') | https://www.reed.co.uk/jobs/hydraulic-fitter/57557993
+SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
+SKIP | General Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/general-manager/57594937
+SKIP | Key Account Manager                                          | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/key-account-manager/57562716
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57581325
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57492425
+SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') (cached) | https://www.reed.co.uk/jobs/employment-specialist/57513221
+SKIP | Teacher                                                      | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/teacher/57524530
+SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/secondary-teacher/57468003
+SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) (cached) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
+SKIP | Mobile Optometrist                                           | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
+SKIP | Financial Controller                                         | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/financial-controller/57601284
+SKIP | Maths Teacher                                                | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/maths-teacher/57533142
