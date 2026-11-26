@@ -81,7 +81,10 @@ def main():
                 "-r", "25", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
                 "-t", str(secs * len(files)), os.path.join(OUT, video_name),
             ], check=True)
-            count = json.load(open(os.path.join(DOCS, src), encoding="utf-8")).get("count", 0)
+            import datetime as _dt
+            cutoff = str(_dt.date.today() + _dt.timedelta(days=min_days))
+            count = sum(1 for j in json.load(open(os.path.join(DOCS, src), encoding="utf-8")).get("jobs", [])
+                        if j.get("closing", "") >= cutoff)          # what is actually in the video
             with open(os.path.join(OUT, info_name), "w") as fh:
                 json.dump({"made": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "slides": len(files),
                            "seconds_per_slide": secs, "min_days_open": min_days, "count": count}, fh)

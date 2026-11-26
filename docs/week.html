@@ -40,10 +40,10 @@
 <script>
   fetch("usb/info.json?t=" + Date.now()).then(r => r.json()).then(i => {
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
-    document.getElementById("info").textContent = `${i.slides} slides, made ${d}. The robot remakes it every morning.`;
+    document.getElementById("info").textContent = `${i.count ? i.count + " jobs, " : ""}${i.slides} slides, made ${d}. The robot remakes both videos every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
   fetch("usb/info-apprenticeships.json?t=" + Date.now()).then(r => r.json()).then(i => {
-    document.getElementById("info2").textContent = `${i.count ?? ""} apprenticeships, ${i.slides} slides.`;
+    document.getElementById("info2").textContent = `${i.count} apprenticeship${i.count === 1 ? "" : "s"} in this week's video (${i.slides} slide${i.slides === 1 ? "" : "s"}).`;
   }).catch(() => { document.getElementById("info2").textContent = "Apprenticeship video, remade every morning."; });
 </script>
 </body>
