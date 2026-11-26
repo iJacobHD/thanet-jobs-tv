@@ -216,11 +216,13 @@ def employer_site(emp, places, today, cache, log=print):
     Each advert's structured JobPosting data (what Google Jobs reads) gives title, location, pay and any closing date.
     Respects the site's crawl-delay and only reads public pages that robots.txt allows.
     """
+    mode = emp.get("mode", "slug")
+    if mode in SPECIAL_MODES:
+        return SPECIAL_MODES[mode](emp, places, today, cache, log)
     s = requests.Session()
     s.headers.update(UA)
     base = emp["base"].rstrip("/")
     delay = float(emp.get("crawl_delay", 2))
-    mode = emp.get("mode", "slug")
     towns = [p.lower().replace(" ", "-").replace(".", "").replace("'", "") for p in places if not re.fullmatch(r"[A-Z]{1,2}\d+", p)]
     town_re = re.compile(r"(?:^|[-/_])(?:" + "|".join(map(re.escape, towns)) + r")(?:[-/_.]|$)", re.I)
     urls = _sitemap_urls(s, base, emp.get("sitemaps", ["/sitemap.xml"]), emp.get("sitemap_filter"))
@@ -246,6 +248,12 @@ def employer_site(emp, places, today, cache, log=print):
         job_urls = [u for u in urls if re.search(emp.get("job_path", "/jobs?/"), u)]
         if mode == "slug":
             job_urls = [u for u in job_urls if town_re.search(u.lower())]
+        if emp.get("url_geo_box"):        # links that carry @lat,lng (McDonald's): keep the ones near Thanet
+            la1, la2, lo1, lo2 = emp["url_geo_box"]
+            def _in(u):
+                m = re.search(r"@(-?[\d.]+),(-?[\d.]+)", u)
+                return bool(m) and la1 <= float(m.group(1)) <= la2 and lo1 <= float(m.group(2)) <= lo2
+            job_urls = [u for u in job_urls if _in(u)]
 
     ecache = cache.setdefault(emp["name"], {})
     for k in list(ecache):            # forget adverts that are no longer listed
@@ -268,7 +276,12 @@ def employer_site(emp, places, today, cache, log=print):
             continue
         if r.status_code != 200:
             continue
-        post = _jobposting(r.text) or (_from_text(r.text) if emp.get("text_fallback") else None)
+        if _expired(r.text):
+            ecache[u] = {"local": False, "checked": str(today)}
+            continue
+        post = (_jobposting(r.text) or _microdata(r.text)
+                or (_fields(r.text) if emp.get("fields") else None)
+                or (_from_text(r.text) if emp.get("text_fallback") else None))
         if not post:
             ecache[u] = {"local": False, "checked": str(today)}
             continue
@@ -295,7 +308,7 @@ def employer_site(emp, places, today, cache, log=print):
                 pay = f"£{v}" + (f" to £{hi}" if hi else "") + (" an hour" if unit == "HOUR" else " a year" if unit == "YEAR" else "")
         et = post.get("employmentType") or ""
         et = et[0] if isinstance(et, list) and et else et
-        closing = _date(post.get("validThrough"))
+        closing = _date(post.get("validThrough")) or _anydate(post.get("validThrough"))
         ident = (post.get("identifier") or {}).get("value") if isinstance(post.get("identifier"), dict) else None
         job = {
             "id": f"emp:{emp['name'].lower()}:" + str(ident or re.sub(r"\W+", "", u[-40:])),
@@ -304,7 +317,7 @@ def employer_site(emp, places, today, cache, log=print):
             "pay": pay,
             "hours": {"FULL_TIME": "Full-time", "PART_TIME": "Part-time"}.get(str(et).upper(), ""),
             "location": loc or u, "job_type": "",
-            "posted": str(_date(post.get("datePosted")) or ""),
+            "posted": str(_date(post.get("datePosted")) or _anydate(post.get("datePosted")) or ""),
             "description": _text(post.get("description"))[:12000],
             "closed_notice": False, "url": u, "source": emp["name"],
         }
@@ -318,3 +331,328 @@ def employer_site(emp, places, today, cache, log=print):
     left = sum(1 for u in job_urls if u not in ecache)
     log(f"{emp['name']}: opened {opened} adverts, {len(jobs)} local jobs" + (f", {left} still to read on later runs" if left else ""))
     return jobs
+
+
+# --------------------------------------------------------------------------- page helpers for careers sites
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+EXPIRED = re.compile(r"(vacancy (?:has now expired|is now closed|has closed)|deadline for this vacancy has now passed|"
+                     r"no longer accepting applications|this job (?:is no longer available|has expired)|position has been filled)", re.I)
+
+
+def _expired(html_text):
+    return bool(EXPIRED.search(_text(re.sub(r"<(script|style)[\s\S]*?</\1>", " ", html_text or ""))[:20000]))
+
+
+def _anydate(s):
+    """Dates written for people: '17 December, 2026', '10 Dec 2026', 'Tue Dec 01 00:00:00 UTC 2026', '01/12/2026'."""
+    s = str(s or "")
+    m = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})[a-z]*,?\s+(\d{4})", s)
+    if m and m.group(2).lower() in MONTHS:
+        d, mo, y = int(m.group(1)), MONTHS[m.group(2).lower()], int(m.group(3))
+    else:
+        m = re.search(r"\b([A-Za-z]{3})[a-z]*\s+(\d{1,2})\b.*?\b(\d{4})\b", s)
+        if m and m.group(1).lower() in MONTHS:
+            d, mo, y = int(m.group(2)), MONTHS[m.group(1).lower()], int(m.group(3))
+        else:
+            m = re.search(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b", s)
+            if not m:
+                return None
+            d, mo, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    try:
+        return dt.date(y, mo, d)
+    except ValueError:
+        return None
+
+
+def _microdata(html_text):
+    """schema.org JobPosting written as itemprop attributes (SuccessFactors sites such as Currys)."""
+    if 'itemtype="http://schema.org/JobPosting"' not in html_text and "schema.org/JobPosting" not in html_text:
+        return None
+    def prop(name):
+        m = re.search(r'itemprop="%s"[^>]*?content="([^"]*)"' % name, html_text) or \
+            re.search(r'itemprop="%s"[^>]*>([\s\S]{0,300}?)</' % name, html_text)
+        return _text(m.group(1)) if m else ""
+    title = prop("title") or _text((re.search(r"<h1[^>]*>([\s\S]*?)</h1>", html_text) or [None, ""])[1])
+    loc = " ".join(x for x in [prop("addressLocality"), prop("addressRegion"), prop("postalCode")] if x)
+    if not (title and loc):
+        return None
+    return {"title": title, "description": prop("description")[:12000] or _text(html_text)[:12000],
+            "jobLocation": {"address": {"addressLocality": loc}},
+            "validThrough": prop("validThrough"), "datePosted": prop("datePosted"),
+            "employmentType": prop("employmentType")}
+
+
+def _fields(html_text):
+    """Labelled fields on the page ('Location Newry  Salary: ...  Closing Date: 10 Dec 2026  Vacancy Type: Full Time') - Eploy sites (B&M, Travelodge)."""
+    body = _text(re.sub(r"<(script|style)[\s\S]*?</\1>", " ", html_text))
+    t = re.search(r"<title>([\s\S]*?)</title>", html_text)
+    title = _text(t.group(1)).split(" - ")[0].split(" | ")[0] if t else ""
+    loc = re.search(r"\bLocation:?\s*([A-Z][^:]{1,60}?)\s+(?:Location is a required|Salary|Pay\b|Position|Vacancy Type|Date Posted|Closing)", body)
+    if not (title and loc):
+        return None
+    pay = re.search(r"(?:Salary|Pay):?\s*(£[^A-Z]{1,60}?)(?=\s+[A-Z])", body)
+    close = re.search(r"Closing Date:?\s*([^A-Z]{0,3}\d{1,2}\s+\w+\s+\d{4})", body)
+    posted = re.search(r"Date Posted:?\s*(\d{1,2}\s+\w+\s+\d{4})", body)
+    vt = re.search(r"Vacancy Type:?\s*(Full|Part)[ -]?Time", body, re.I)
+    return {"title": title, "description": body[:12000],
+            "jobLocation": {"address": {"addressLocality": loc.group(1)}},
+            "baseSalary": {"value": {"value": pay.group(1).strip() if pay else ""}},
+            "validThrough": str(_anydate(close.group(1))) if close else "",
+            "datePosted": str(_anydate(posted.group(1))) if posted else "",
+            "employmentType": (vt.group(1).upper() + "_TIME") if vt else ""}
+
+
+def _closing_in_text(text):
+    m = re.search(r"(?:Apply by|Closing date|Closing Date:|Applications close:?|Application deadline:?|Closes:?)\s*"
+                  r"((?:[A-Za-z]{3,9},?\s+)?\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+,?\s+\d{4}|\d{1,2}/\d{1,2}/\d{4})", text)
+    return _anydate(m.group(1)) if m else None
+
+
+def _pay_in_text(text):
+    m = re.search(r"£\s?\d[\d,]*(?:\.\d{2})?(?:\s*(?:-|to|–)\s*£?\s?\d[\d,]*(?:\.\d{2})?)?\s*(?:per hour|an hour|p/?h|per annum|a year|pa\b)", text, re.I)
+    return m.group(0) if m else ""
+
+
+def _job(emp, ident, title, location, url, today, pay="", hours="", closing=None, posted="", description=""):
+    j = {"id": f"emp:{emp['name'].lower()}:{ident}", "title": _text(title), "employer": emp.get("employer", emp["name"]),
+         "pay": pay or "", "hours": hours or "", "location": location, "job_type": "",
+         "posted": str(posted or ""), "description": (description or "")[:12000], "closed_notice": False,
+         "url": url, "source": emp["name"]}
+    if closing:
+        j["closing"] = str(closing)
+    else:
+        j["closing"] = str(today + dt.timedelta(days=int(emp.get("show_days_without_closing", 8))))
+        j["closing_estimated"] = True
+        j["listed_only"] = True
+    return j
+
+
+def _hours(text):
+    t = (text or "").lower()
+    return "Part-time" if "part" in t else "Full-time" if "full" in t else ""
+
+
+def _session():
+    s = requests.Session()
+    s.headers.update(UA)
+    return s
+
+
+def _open_detail(s, emp, url, delay):
+    """Open one local advert for its closing date / pay / description. Returns (closing, pay, text) or None if it says it has closed."""
+    time.sleep(delay)
+    try:
+        r = s.get(url, timeout=30)
+    except requests.RequestException:
+        return (None, "", "")
+    if r.status_code != 200:
+        return (None, "", "")
+    if _expired(r.text):
+        return None
+    post = _jobposting(r.text) or _microdata(r.text)
+    body = _text(re.sub(r"<(script|style)[\s\S]*?</\1>", " ", r.text))
+    closing = (_date(post.get("validThrough")) if post else None) or _closing_in_text(body)
+    desc = _text(post.get("description")) if post else body
+    return (closing, _pay_in_text(body), desc)
+
+
+# --------------------------------------------------------------------------- special careers-site readers
+def listing_pages(emp, places, today, cache, log=print):
+    """
+    A careers site whose search-results pages list every vacancy with its location (Greggs, Halfords).
+    Reads the listing pages, keeps rows that name one of our towns, then opens just those adverts
+    for the closing date and pay.
+    """
+    s, base, delay = _session(), emp["base"].rstrip("/"), float(emp.get("crawl_delay", 2))
+    link_re = re.compile(emp["job_link"])
+    rows, seen = [], set()
+    for page in range(1, int(emp.get("max_pages", 1)) + 1):
+        url = base + emp["listing"].format(page=page)
+        if page > 1:
+            time.sleep(delay)
+        try:
+            t = s.get(url, timeout=40).text
+        except requests.RequestException:
+            break
+        parts = re.split(r'(?=<a\b[^>]*href="[^"]*(?:%s))' % emp["job_link"], t)
+        new = 0
+        for part in parts[1:]:
+            m = re.match(r'<a\b[^>]*href="([^"]+)"', part)
+            if not m or not link_re.search(m.group(1)):
+                continue
+            href = m.group(1) if m.group(1).startswith("http") else base + m.group(1)
+            if href in seen:
+                continue
+            seen.add(href)
+            new += 1
+            rows.append((href, part[:int(emp.get("row_chars", 1500))]))
+        if not new:
+            break
+    jobs = []
+    for href, row in rows:
+        text = _text(row)
+        if not _thanet(text, places):
+            continue
+        title = _text((re.search(emp.get("title_re", r"<a\b[^>]*>([\s\S]*?)</a>"), row) or [None, ""])[1])
+        loc = _text((re.search(emp["location_re"], row) or [None, text])[1]) if emp.get("location_re") else text
+        closing = _closing_in_text(text)
+        pay = _pay_in_text(text)
+        desc = ""
+        if emp.get("open_local", True):
+            d = _open_detail(s, emp, href, delay)
+            if d is None:
+                continue
+            closing = closing or d[0]
+            pay = pay or d[1]
+            desc = d[2]
+        posted = _anydate((re.search(r"Posted on\s*(.{6,30})", text) or [None, ""])[1])
+        ident = (re.findall(r"\d{3,}", href) or [re.sub(r"\W+", "", href[-40:])])[-1]
+        jobs.append(_job(emp, ident, title, loc, href, today, pay=pay,
+                         hours=_hours(text), closing=closing, posted=posted or "", description=desc))
+    log(f"{emp['name']}: {len(rows)} adverts listed, {len(jobs)} local jobs")
+    return jobs
+
+
+def costa(emp, places, today, cache, log=print):
+    """Costa Coffee careers site search (the same request its own search page makes)."""
+    s, base = _session(), emp["base"].rstrip("/")
+    jobs, page, pages = [], 0, 1
+    while page < pages and page < 20:
+        r = s.post(base + "/wp-json/posts/search", timeout=40,
+                   data={"paginate[page]": page, "paginate[per_page]": 100, "status[]": "publish"})
+        d = r.json()
+        pages = int(d.get("total_pages") or 1)
+        for x in d.get("results", []):
+            loc = x.get("full_location") or ""
+            if x.get("country") not in ("GB", "UK", None) or not _thanet(loc + " " + (x.get("postal_code") or ""), places):
+                continue
+            jobs.append(_job(emp, x.get("id"), x.get("post_title"), loc, x.get("permalink"), today,
+                             hours="", posted=str(x.get("posted_at") or "")[:10],
+                             description=x.get("employment_indicator") or ""))
+        page += 1
+        time.sleep(float(emp.get("crawl_delay", 2)))
+    log(f"{emp['name']}: {len(jobs)} local jobs")
+    return jobs
+
+
+def phenom(emp, places, today, cache, log=print):
+    """Phenom careers sites (TJX: TK Maxx / Homesense): the site's own keyword search, one search per town."""
+    import json as _json
+    s, base, delay = _session(), emp["base"].rstrip("/"), float(emp.get("crawl_delay", 3))
+    towns = emp.get("search_towns") or ["Broadstairs", "Margate", "Ramsgate", "Canterbury", "Ashford", "Dover", "Deal", "Whitstable", "Herne Bay", "Sittingbourne", "Faversham"]
+    jobs, seen = [], set()
+    for town in towns:
+        time.sleep(delay)
+        try:
+            t = s.get(base + emp.get("search_path", "/global/en/search-results"), params={"keywords": town}, timeout=40).text
+        except requests.RequestException:
+            continue
+        i = t.find('"eagerLoadRefineSearch"')
+        if i < 0:
+            continue
+        j = t.find('"jobs":[', i)
+        if j < 0:
+            continue
+        try:
+            arr, _ = _json.JSONDecoder().raw_decode(t[j + 7:])
+        except ValueError:
+            continue
+        for x in arr:
+            loc = x.get("address") or x.get("cityStateCountry") or ""
+            if x.get("country") != emp.get("country", "United Kingdom") or not _thanet(loc + " " + (x.get("city") or ""), places):
+                continue
+            jid = x.get("jobId") or x.get("reqId")
+            if jid in seen:
+                continue
+            seen.add(jid)
+            url = f"{base}{emp.get('job_prefix', '/global/en/job/')}{jid}"
+            jb = _job(emp, jid, x.get("title"), loc, url, today, hours=_hours(x.get("type")),
+                      posted=str(x.get("postedDate") or "")[:10],
+                      description=(x.get("ml_job_parser") or {}).get("descriptionTeaser") or x.get("descriptionTeaser") or "")
+            if x.get("brand"):
+                jb["employer"] = x["brand"]
+            jobs.append(jb)
+    log(f"{emp['name']}: {len(jobs)} local jobs")
+    return jobs
+
+
+def xml_feed(emp, places, today, cache, log=print):
+    """An employer's own job feed in the standard Indeed XML format (The Range)."""
+    s = _session()
+    r = s.get(emp["feed"], timeout=60)
+    root = ET.fromstring(r.content)
+    jobs = []
+    for x in root.iter("job"):
+        g = lambda k: (x.findtext(k) or "").strip()
+        loc = ", ".join(v for v in [g("streetaddress"), g("city"), g("postalcode")] if v)
+        if not _thanet(loc, places):
+            continue
+        desc = _text(g("description"))
+        jobs.append(_job(emp, g("referencenumber"), g("title"), loc, g("url").replace("&source=Indeed", ""), today,
+                         pay=g("salary") or _pay_in_text(desc), hours=_hours(g("jobtype") or desc[:400]),
+                         closing=_anydate(g("expirationdate")) if g("expirationdate") else None,
+                         posted=str(_anydate(g("date")) or ""), description=desc))
+    log(f"{emp['name']}: {len(jobs)} local jobs")
+    return jobs
+
+
+def greenhouse(emp, places, today, cache, log=print):
+    """Greenhouse public job board API (JD Sports)."""
+    s = _session()
+    d = s.get(f"https://boards-api.greenhouse.io/v1/boards/{emp['board']}/jobs", params={"content": "true"}, timeout=60).json()
+    jobs = []
+    for x in d.get("jobs", []):
+        loc = (x.get("location") or {}).get("name", "")
+        if not _thanet(loc, places):
+            continue
+        desc = _text(html.unescape(x.get("content") or ""))
+        jobs.append(_job(emp, x.get("id"), x.get("title"), loc, x.get("absolute_url"), today,
+                         pay=_pay_in_text(desc), hours=_hours(x.get("title") + " " + desc[:300]),
+                         closing=_date(x.get("application_deadline")), posted=str(x.get("first_published") or "")[:10],
+                         description=desc))
+    log(f"{emp['name']}: {len(d.get('jobs', []))} adverts, {len(jobs)} local jobs")
+    return jobs
+
+
+def aspnet_grid(emp, places, today, cache, log=print):
+    """Kallidus/ASP.NET vacancy table with numbered pages (Iceland & The Food Warehouse)."""
+    s, base, delay = _session(), emp["base"].rstrip("/"), float(emp.get("crawl_delay", 3))
+    url = base + emp.get("listing", "/Search.aspx")
+    r = s.get(url, timeout=40)
+    t = r.text
+    rows, page = [], 1
+    while True:
+        for tr in re.findall(r"<tr[^>]*>([\s\S]*?)</tr>", t):
+            m = re.search(r'href="[^"]*VacancyInformation\.aspx\?VId=(\d+)"[^>]*>([^<]+)</a>', tr)
+            if m:
+                cells = [_text(c) for c in re.findall(r"<td[^>]*>([\s\S]*?)</td>", tr)]
+                rows.append((m.group(1), _text(m.group(2)), " ".join(cells)))
+        page += 1
+        if page > int(emp.get("max_pages", 40)) or f"Page${page}" not in t:
+            break
+        form = dict(re.findall(r'<input[^>]*type="hidden"[^>]*name="([^"]+)"[^>]*value="([^"]*)"', t))
+        target = re.search(r"__doPostBack\('([^']+)','Page\$%d'\)" % page, t)
+        if not target:
+            break
+        form["__EVENTTARGET"] = html.unescape(target.group(1))
+        form["__EVENTARGUMENT"] = f"Page${page}"
+        time.sleep(delay)
+        t = s.post(url, data={k: html.unescape(v) for k, v in form.items()}, timeout=40).text
+    jobs, seen = [], set()
+    for vid, title, rowtext in rows:
+        if vid in seen or not _thanet(rowtext, places):
+            continue
+        seen.add(vid)
+        href = f"{base}/VacancyInformation.aspx?VId={vid}"
+        d = _open_detail(s, emp, href, delay)
+        if d is None:
+            continue
+        loc = rowtext.replace(title, "").strip()
+        jobs.append(_job(emp, vid, title, loc, href, today, pay=d[1], hours=_hours(d[2][:600]),
+                         closing=d[0], description=d[2]))
+    log(f"{emp['name']}: {len(rows)} adverts listed, {len(jobs)} local jobs")
+    return jobs
+
+
+SPECIAL_MODES = {"listing": listing_pages, "costa": costa, "phenom": phenom, "xml_feed": xml_feed,
+                 "greenhouse": greenhouse, "aspnet_grid": aspnet_grid}

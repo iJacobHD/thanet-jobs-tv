@@ -165,6 +165,126 @@
       "crawl_delay": 10,
       "text_fallback": true,
       "max_new_pages_per_run": 120
+    },
+    {
+      "name": "Primark",
+      "base": "https://careers.primark.com",
+      "mode": "slug",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Next",
+      "base": "https://careers.next.co.uk",
+      "mode": "all",
+      "sitemaps": [
+        "/jobs/sitemap.xml"
+      ],
+      "job_path": "/jobs/\\d+",
+      "crawl_delay": 1,
+      "max_new_pages_per_run": 300
+    },
+    {
+      "name": "McDonald's",
+      "base": "https://people.mcdonalds.co.uk",
+      "mode": "all",
+      "job_path": "/job-search/restaurant-",
+      "url_geo_box": [
+        50.95,
+        51.47,
+        0.68,
+        1.48
+      ],
+      "crawl_delay": 3
+    },
+    {
+      "name": "Greggs",
+      "base": "https://careerssearch.greggs.co.uk",
+      "mode": "listing",
+      "listing": "/jobs/search/-1/{page}",
+      "max_pages": 60,
+      "job_link": "/jobs/job/",
+      "title_re": "job-list-title\">([^<]+)",
+      "location_re": "itemprop=\"address\">([^<]+)",
+      "crawl_delay": 10
+    },
+    {
+      "name": "Costa Coffee",
+      "base": "https://costacareers.co.uk",
+      "mode": "costa",
+      "crawl_delay": 2
+    },
+    {
+      "name": "TK Maxx / Homesense",
+      "base": "https://jobs.tjx.com",
+      "mode": "phenom",
+      "crawl_delay": 3
+    },
+    {
+      "name": "B&M",
+      "base": "https://jobs.bmstores.co.uk",
+      "mode": "all",
+      "sitemaps": [
+        "/live-jobs.xml"
+      ],
+      "job_path": "/vacancies/\\d+",
+      "fields": true,
+      "crawl_delay": 3
+    },
+    {
+      "name": "Iceland / The Food Warehouse",
+      "base": "https://jobs.icelandcareers.co.uk",
+      "mode": "aspnet_grid",
+      "listing": "/Search.aspx",
+      "crawl_delay": 3
+    },
+    {
+      "name": "The Range",
+      "base": "https://www.therange.co.uk",
+      "mode": "xml_feed",
+      "feed": "https://www.therange.co.uk/careers/?fmt=xml"
+    },
+    {
+      "name": "Halfords",
+      "base": "https://careers.halfordscareers.com",
+      "mode": "listing",
+      "listing": "/en/listing/?page={page}&page-items=250",
+      "max_pages": 6,
+      "job_link": "/en/job/\\d+",
+      "location_re": "</a>\\s*</td>\\s*<td>([\\s\\S]*?)</td>",
+      "row_chars": 600,
+      "crawl_delay": 3
+    },
+    {
+      "name": "Wickes / Toolstation / Travis Perkins",
+      "base": "https://www.tpplccareers.co.uk",
+      "mode": "slug",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Currys",
+      "base": "https://curryscareers.co.uk",
+      "mode": "slug",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "JD Sports",
+      "base": "https://job-boards.greenhouse.io/jdsports",
+      "mode": "greenhouse",
+      "board": "jdsports"
+    },
+    {
+      "name": "Travelodge",
+      "base": "https://www.travelodge.co.uk",
+      "mode": "all",
+      "sitemaps": [
+        "/vacancies/live-jobs.xml"
+      ],
+      "job_path": "/vacancies/vacancies/\\d+",
+      "fields": true,
+      "crawl_delay": 10
     }
   ],
   "commute": {
@@ -274,7 +394,10 @@
   "employers_not_possible": {
     "Aldi": "vacancy site sits behind a Cloudflare bot check",
     "Work Hub (DWP)": "blocks automated access",
-    "Indeed": "no public feed"
+    "Indeed": "no public feed",
+    "Dunelm": "job list only appears after accepting cookies in a browser - no feed",
+    "Pets at Home": "job search runs in their page script only - no feed or sitemap of jobs",
+    "Superdrug / The Perfume Shop": "adverts go through a third-party (inploi) - already reaches Reed/DWP"
   },
   "exclude_places": [
     "Guernsey",
