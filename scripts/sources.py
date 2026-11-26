@@ -522,9 +522,9 @@ def costa(emp, places, today, cache, log=print):
     """Costa Coffee careers site search (the same request its own search page makes)."""
     s, base = _session(), emp["base"].rstrip("/")
     jobs, page, pages = [], 0, 1
-    while page < pages and page < 20:
-        r = s.post(base + "/wp-json/posts/search", timeout=40,
-                   data={"paginate[page]": page, "paginate[per_page]": 100, "status[]": "publish"})
+    while page < pages and page < 30:
+        r = s.post(base + "/wp-json/posts/search", timeout=120,
+                   data={"paginate[page]": page, "paginate[per_page]": 50, "status[]": "publish"})
         d = r.json()
         pages = int(d.get("total_pages") or 1)
         for x in d.get("results", []):
