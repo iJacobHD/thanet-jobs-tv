@@ -339,7 +339,8 @@ def employer_site(emp, places, today, cache, log=print):
 # --------------------------------------------------------------------------- page helpers for careers sites
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 EXPIRED = re.compile(r"(vacancy (?:has now expired|is now closed|has closed)|deadline for this vacancy has now passed|"
-                     r"no longer accepting applications|this job (?:is no longer available|has expired)|position has been filled)", re.I)
+                     r"no longer accepting applications|this job (?:is no longer available|has expired)|position has been filled|"
+                     r"open to internal (?:applications|applicants|candidates) (?:from existing [\w ]+ )?only|internal (?:applicants|applications|candidates) only)", re.I)
 
 
 def _expired(html_text):
@@ -389,20 +390,40 @@ def _microdata(html_text):
 
 
 def _fields(html_text):
-    """Labelled fields on the page ('Location Newry  Salary: ...  Closing Date: 10 Dec 2026  Vacancy Type: Full Time') - Eploy sites (B&M, Travelodge)."""
+    """Labelled fields on the page instead of structured data:
+       Eploy sites (B&M, Travelodge, Wetherspoon) and Premier Inn ('Location: Margate, United Kingdom')."""
     body = _text(re.sub(r"<(script|style)[\s\S]*?</\1>", " ", html_text))
-    t = re.search(r"<title>([\s\S]*?)</title>", html_text)
-    title = _text(t.group(1)).split(" - ")[0].split(" | ")[0] if t else ""
-    loc = re.search(r"\bLocation:?\s*([A-Z][^:]{1,60}?)\s+(?:Location is a required|Salary|Pay\b|Position|Vacancy Type|Date Posted|Closing)", body)
+    t = _text((re.search(r"<title>([\s\S]*?)</title>", html_text) or [None, ""])[1])
+    h1 = _text((re.search(r"<h1[^>]*>([\s\S]*?)</h1>", html_text) or [None, ""])[1])
+    title = h1 if 2 < len(h1) < 100 else re.split(r"\s+(?:-|\|)\s+", t)[0]
+    title = re.sub(r"\s+in\s+[A-Z][\w' .-]+$", "", title)
+    loc = None
+    for pat in (r"\bLocation:?\s*([A-Z][^:]{1,60}?)\s+(?:Location is a required|Salary|Pay\b|Position|Vacancy Type|Date Posted|Closing)",
+                r"All locations\s+([A-Z][^:]{1,60}?)\s+All locations is a required",
+                r"\bLocation:\s*([^:]{2,60}?,\s*United Kingdom)",
+                r"LOCATION:\s*([^:]{4,120}?[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d[A-Z]{2})"):
+        rx = re.compile(pat)
+        found = [m.group(1).strip() for m in (rx.match(body, i.start()) for i in re.finditer(r"Location|All locations|LOCATION", body)) if m]
+        found = [x for x in found if not re.search(r"\b(?:Search|Location|Keywords|Careers)\b", x)] or found
+        if found:
+            loc = min(found, key=len)
+            break
+    if not loc:
+        m = re.search(r"\sin\s+([A-Z][\w' .-]{2,40}?)\s+(?:-|\|)\s+", t)
+        loc = m.group(1) if m else None
     if not (title and loc):
         return None
     pay = re.search(r"(?:Salary|Pay):?\s*(£[^A-Z]{1,60}?)(?=\s+[A-Z])", body)
-    close = re.search(r"Closing Date:?\s*([^A-Z]{0,3}\d{1,2}\s+\w+\s+\d{4})", body)
-    posted = re.search(r"Date Posted:?\s*(\d{1,2}\s+\w+\s+\d{4})", body)
-    vt = re.search(r"Vacancy Type:?\s*(Full|Part)[ -]?Time", body, re.I)
+    pay = pay.group(1).strip() if pay else ""
+    if not pay:
+        m = re.search(r"Salary details:\s*£?(\d{1,2}\.\d{2})\b", body)
+        pay = f"£{m.group(1)} an hour" if m else _pay_in_text(body)
+    close = re.search(r"(?:Closing|Close) [Dd]ate:?\s*([^A-Z]{0,3}\d{1,2}\s+\w+\s+\d{4})", body)
+    posted = re.search(r"(?:Date Posted|Posted on):?\s*(\d{1,2}\s+\w+\s+\d{4}|\d{1,2}/\d{1,2}/\d{4})", body)
+    vt = re.search(r"(?:Vacancy Type|Vacancy type):?\s*(Full|Part)[ -]?[Tt]ime", body)
     return {"title": title, "description": body[:12000],
-            "jobLocation": {"address": {"addressLocality": loc.group(1)}},
-            "baseSalary": {"value": {"value": pay.group(1).strip() if pay else ""}},
+            "jobLocation": {"address": {"addressLocality": loc}},
+            "baseSalary": {"value": {"value": pay}},
             "validThrough": str(_anydate(close.group(1))) if close else "",
             "datePosted": str(_anydate(posted.group(1))) if posted else "",
             "employmentType": (vt.group(1).upper() + "_TIME") if vt else ""}
@@ -499,7 +520,7 @@ def listing_pages(emp, places, today, cache, log=print):
     jobs = []
     for href, row in rows:
         text = _text(row)
-        if not _thanet(text, places):
+        if not _thanet(text, places) or re.search(r"internal only", text, re.I):
             continue
         title = _text((re.search(emp.get("title_re", r"<a\b[^>]*>([\s\S]*?)</a>"), row) or [None, ""])[1])
         loc = _text((re.search(emp["location_re"], row) or [None, text])[1]) if emp.get("location_re") else text

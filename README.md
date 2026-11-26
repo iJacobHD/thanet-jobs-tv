@@ -13,10 +13,11 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
   * **Employers' own careers sites** (list in `config.json` → `employers`):
     * Supermarkets: Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Sainsbury's, Iceland / The Food Warehouse.
     * Westwood Cross and the retail parks: Boots, Primark, Next, TK Maxx / Homesense, B&M, The Range, Halfords, Wickes / Toolstation, Currys, JD Sports, Smyths Toys, Hobbycraft, Hotel Chocolat, Hollywood Bowl.
-    * Food and hotels: McDonald's, Greggs, Costa Coffee, Travelodge.
+    * Food, pubs and hotels: McDonald's, Greggs, Costa Coffee, Wetherspoon, Harvester / Toby Carvery / Miller & Carter, Premier Inn / Beefeater / Brewers Fayre, Travelodge.
+    * Hospitals: 2gether Support Solutions (porters, domestics, catering at QEQM Margate, Kent & Canterbury, William Harvey) - NHS Trust jobs come through NHS Jobs.
     * Each site is read the way it publishes jobs: its sitemap and the job details built into each advert, its own job feed or public jobs API, or its search-results pages. Only adverts in our towns are opened, and the reader waits between requests as each site asks.
     * Where a site gives a closing date it is used. Where it gives none, the job shows as "Open on X careers · apply soon" and is re-checked every morning.
-    * Not possible: Aldi (bot check), Dunelm (jobs only appear after accepting cookies), Pets at Home (search only works inside their page), Superdrug (adverts go via a third party; they already reach Reed), Vue and Nando's (their sites refuse automated visits), Deichmann (search form only), Elev8 (no careers site).
+    * Not possible: Aldi (bot check), Dunelm (jobs only appear after accepting cookies), Pets at Home (search only works inside their page), Superdrug (adverts go via a third party; they already reach Reed), Vue and Nando's (their sites refuse automated visits), Deichmann (search form only), Elev8 (no careers site), Mitie (bot check; its adverts reach Reed).
   * If a feed is down, yesterday's jobs from that feed are kept.
 * **Area:** anywhere within **90 minutes door to door from Thanet by public transport** (`commute` in `config.json`). Each town has a minutes figure: the average train time plus about 25 minutes to walk to the station, wait, and walk at the other end. Today that includes Thanet, Herne Bay, Whitstable, Canterbury, Faversham, Sandwich, Deal, Sittingbourne, Ashford and Dover. Folkestone (~93) and Medway (~95) are over the limit.
 * **Expired jobs:** the web board drops a job on its closing day. The video only includes jobs open for 7+ more days (`usb_min_days_open` in config.json), so replacing it on the stick once a week is enough.
