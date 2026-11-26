@@ -10,7 +10,13 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
   * **Teaching Vacancies** (Department for Education) needs no key and has closing dates. It covers school support jobs like teaching assistants, cleaners and catering.
   * **NHS Jobs** needs no key and has closing dates. It covers GP receptionists, care homes, healthcare assistants and similar.
   * **Adzuna** (secrets `ADZUNA_APP_ID` + `ADZUNA_APP_KEY`, optional) pulls from lots of other job sites, but gives no closing dates. Only jobs posted in the last 10 days are used, and they're shown as "Posted …, apply soon".
-  * **Employers' own careers sites** (list in `config.json` → `employers`): Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Boots, Sainsbury's. Aldi can't be added because its vacancy site blocks automated access: read from the site's public sitemap and the job details built into each advert, opening only adverts in our towns and waiting between requests as the site asks. These have no closing date, so they show as "Open on Morrisons careers · apply soon" and are re-checked every morning.
+  * **Employers' own careers sites** (list in `config.json` → `employers`):
+    * Supermarkets: Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Sainsbury's, Iceland / The Food Warehouse.
+    * Westwood Cross and the retail parks: Boots, Primark, Next, TK Maxx / Homesense, B&M, The Range, Halfords, Wickes / Toolstation, Currys, JD Sports.
+    * Food and hotels: McDonald's, Greggs, Costa Coffee, Travelodge.
+    * Each site is read the way it publishes jobs: its sitemap and the job details built into each advert, its own job feed or public jobs API, or its search-results pages. Only adverts in our towns are opened, and the reader waits between requests as each site asks.
+    * Where a site gives a closing date it is used. Where it gives none, the job shows as "Open on X careers · apply soon" and is re-checked every morning.
+    * Not possible: Aldi (bot check), Dunelm (jobs only appear after accepting cookies), Pets at Home (search only works inside their page), Superdrug (adverts go via a third party; they already reach Reed).
   * If a feed is down, yesterday's jobs from that feed are kept.
 * **Area:** anywhere within **90 minutes door to door from Thanet by public transport** (`commute` in `config.json`). Each town has a minutes figure: the average train time plus about 25 minutes to walk to the station, wait, and walk at the other end. Today that includes Thanet, Herne Bay, Whitstable, Canterbury, Faversham, Sandwich, Deal, Sittingbourne, Ashford and Dover. Folkestone (~93) and Medway (~95) are over the limit.
 * **Expired jobs:** the web board drops a job on its closing day. The video only includes jobs open for 7+ more days (`usb_min_days_open` in config.json), so replacing it on the stick once a week is enough.
