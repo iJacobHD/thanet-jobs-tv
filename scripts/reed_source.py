@@ -44,9 +44,19 @@ def _pay(d):
         return ""
     per = "an hour" if "hour" in unit else "a day" if "day" in unit else "a week" if "week" in unit else "a month" if "month" in unit else "a year"
     if not unit:
-        per = "an hour" if float(lo or hi) < 100 else "a year"
+        v = float(lo or hi)
+        per = "an hour" if v < 50 else "a day" if v < 1000 else "a year"
     lo, hi = lo or hi, hi or lo
     return f"£{lo} to £{hi} {per}"
+
+
+def _hours(d):
+    jt = str(_g(d, "jobType", "contractTime")).lower()
+    if "part" in jt or _g(d, "partTime") is True:
+        return "Part-time"
+    if "full" in jt or _g(d, "fullTime") is True:
+        return "Full-time"
+    return ""
 
 
 def fetch(api_key, location="Margate", miles=10, delay=0.3, log=print, places=None):
@@ -93,13 +103,20 @@ def fetch(api_key, location="Margate", miles=10, delay=0.3, log=print, places=No
         except Exception as e:  # keep going with the search data
             log(f"  details for {jid} failed: {e}")
         d = {**r, **detail}
+        if not jobs:
+            try:
+                import json, os
+                os.makedirs("data", exist_ok=True)
+                json.dump({k: (str(v)[:120]) for k, v in d.items()}, open("data/reed_sample_fields.json", "w"), indent=1)
+            except Exception:
+                pass
         closing = _date(_g(d, "expirationDate", "expiryDate", "closingDate"))
         jobs.append({
             "id": jid,
             "title": _text(_g(d, "jobTitle", "title")),
             "employer": _text(_g(d, "employerName")),
             "pay": _pay(d),
-            "hours": str(_g(d, "jobType", "contractTime")).replace("_", " ").title(),
+            "hours": _hours(d),
             "location": loc or _text(_g(d, "locationName")),
             "job_type": str(_g(d, "contractType")).title(),
             "posted": str(_date(_g(d, "datePosted", "date")) or ""),

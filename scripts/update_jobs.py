@@ -85,7 +85,9 @@ SENIOR_TITLES = [
     r"\bchef\b", r"\bveterinary\b", r"\bvet\b", r"\btechnician\b", r"\belectrician\b", r"\bplumber\b",
     r"\bscientist\b", r"\bsocial worker\b", r"\bprofessor\b", r"\b(?:hgv|lgv|class [12]) driver\b",
     r"\badvis[oe]r\b", r"\bnavigator\b", r"\binspector\b", r"\bsurveyor\b", r"\bminder\b",
-    r"\bsite manager\b", r"\bestimator\b", r"\bpartner\b", r"\bassociate (?:dentist|director)\b",
+    r"\bsite manager\b", r"\bestimator\b", r"\bfitter\b", r"\bwelder\b", r"\bmechanic\b",
+    r"\bjoiner\b", r"\bcarpenter\b", r"\bbricklayer\b", r"\bplasterer\b", r"\bpainter and decorator\b",
+    r"\bfield sales\b", r"\bsales executive\b", r"\bbusiness development\b", r"\bpartner\b", r"\bassociate (?:dentist|director)\b",
 ]
 NO_EXPERIENCE = [
     r"no (?:previous |prior )?experience\s*(?:is )?(?:needed|necessary|required|neccessary)?",
@@ -253,6 +255,9 @@ def classify(job, cfg, today):
             hit = _any(pats + cfg.get("extra_reject_phrases", []), clean)
             if hit:
                 return False, f"{label} ('{hit}')", {}
+        nums = [float(n.replace(",", "")) for n in re.findall(r"£\s*([\d,]+(?:\.\d+)?)", job["pay"])]
+        if nums and max(nums) > cfg.get("max_annual_salary_top", 45000):
+            return False, f"pay range suggests commission/senior role ({job['pay']})", {}
         amin = annual_min(job["pay"])
         if amin and amin > cfg.get("max_annual_salary", 32000):
             return False, f"salary too high for entry level ({job['pay']})", {}
@@ -276,6 +281,8 @@ def parse_date_iso(s):
 
 def clean_title(t):
     t = t.split(" | ")[0]
+    if "_" in t:
+        t = t.split("_")[0]
     t = re.sub(r"^\d+\s*-\s*", "", t)                      # leading reference numbers
     t = re.sub(r"\s*\*+[^*]*\*+\s*", " ", t)                  # ** RELOCATION ** style shouting
     t = re.sub(r"\s*(?:P/T|F/T)?\s*@\s*£.*$", "", t, flags=re.I)  # "P/T@ £15/hr in X"
@@ -305,6 +312,8 @@ def tidy_pay(pay, description=""):
     if nums:
         lo, hi = nums[0], nums[1] if len(nums) > 1 else nums[0]
         rng = _money(lo) if float(lo.replace(",", "")) == float(hi.replace(",", "")) else f"{_money(lo)}–{_money(hi)}"
+        if re.search(r"a day|per day|daily", p, re.I):
+            return f"{rng}/day"
         if re.search(r"hour|/hr|p/?h|per hr", p, re.I) or float(lo.replace(",", "")) < 100:
             return f"{rng}/hr"
         extra = " pro rata" if "pro rata" in p.lower() else ""
@@ -446,6 +455,13 @@ def main():
             })
 
     kept.sort(key=lambda j: (j["closing"], j["title"]))
+    seen_keys, unique = set(), []
+    for j in kept:
+        k = (j["title"].lower(), j["employer"].lower(), j["town"].lower())
+        if k not in seen_keys:
+            seen_keys.add(k)
+            unique.append(j)
+    kept = unique
     out = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": ("reed.co.uk (official Reed Jobseeker API)" if reed_jobs is not None else
