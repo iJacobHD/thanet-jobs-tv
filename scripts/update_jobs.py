@@ -369,10 +369,21 @@ def main():
     f = Fetcher(cfg.get("request_delay_seconds", 1.0), dump)
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
 
+    # Source: Reed's official API when a key is set (fully automatic), otherwise Work Hub.
+    reed_key = os.environ.get("REED_API_KEY", "").strip()
+    reed_jobs = None
+    if reed_key and dump is None:
+        from reed_source import fetch
+        reed_jobs = fetch(reed_key, cfg["search_location"], 10, places=cfg["allowed_places"])
+        if not reed_jobs:
+            print("Reed returned no jobs. Keeping the previous jobs.json.")
+            sys.exit(1)
+
     # 1. collect job ids from the search results
     loc = cfg["search_location"]
-    ids, page, total = [], 1, None
-    while page <= cfg.get("max_search_pages", 40):
+    ids, page, total = ([j["id"] for j in reed_jobs] if reed_jobs else []), 1, None
+    reed_by_id = {j["id"]: j for j in reed_jobs or []}
+    while reed_jobs is None and page <= cfg.get("max_search_pages", 40):
         status, html = f.get(f"/jobs/search?location={loc}&pageNumber={page}")
         if status != 200:
             print(f"search page {page}: HTTP {status}, stopping")
@@ -403,12 +414,15 @@ def main():
         if c and c["reason"] != "ok" and (today - dt.date.fromisoformat(c["checked"])).days < 7:
             report.append((jid, c["title"], c["reason"] + " (cached)"))
             continue
-        status, html = f.get(f"/jobs/{jid}")
-        if status != 200:
-            if dump is None:
-                report.append((jid, "", f"advert not available (HTTP {status})"))
-            continue                       # collector only opens Thanet adverts
-        job = parse_detail(html, jid)
+        if reed_jobs is not None:
+            job = reed_by_id[jid]
+        else:
+            status, html = f.get(f"/jobs/{jid}")
+            if status != 200:
+                if dump is None:
+                    report.append((jid, "", f"advert not available (HTTP {status})"))
+                continue                       # collector only opens Thanet adverts
+            job = parse_detail(html, jid)
         keep, reason, flags = classify(job, cfg, today)
         report.append((jid, job["title"], reason))
         if not reason.startswith("expired"):
@@ -434,7 +448,8 @@ def main():
     kept.sort(key=lambda j: (j["closing"], j["title"]))
     out = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source": "DWP Find a Job (jobs.service.gov.uk) - contains public sector information licensed under the Open Government Licence v3.0",
+        "source": ("reed.co.uk (official Reed Jobseeker API)" if reed_jobs is not None else
+                   "DWP Find a Job (jobs.service.gov.uk) - contains public sector information licensed under the Open Government Licence v3.0"),
         "count": len(kept),
         "jobs": kept,
     }
@@ -449,7 +464,8 @@ def main():
     with open(os.path.join(ROOT, "data", "report.txt"), "w", encoding="utf-8") as fh:
         fh.write(f"Run {out['generated']}  kept {len(kept)} of {len(ids)}\n\n")
         for jid, title, reason in sorted(report, key=lambda r: (r[2] != "ok", r[2])):
-            fh.write(f"{'KEEP' if reason == 'ok' else 'SKIP'} | {title[:60]:60} | {reason} | {BASE}/jobs/{jid}\n")
+            link = reed_by_id[jid]["url"] if jid in reed_by_id else f"{BASE}/jobs/{jid}"
+            fh.write(f"{'KEEP' if reason == 'ok' else 'SKIP'} | {title[:60]:60} | {reason} | {link}\n")
     print(f"Done: {len(kept)} jobs on the board (checked {len(ids)}). See data/report.txt for why others were skipped.")
 
 

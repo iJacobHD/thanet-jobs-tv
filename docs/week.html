@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs for this week – Thanet</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:#0c2340;color:#fff;font:18px/1.5 Arial,Helvetica,sans-serif;text-align:center;padding:20px;box-sizing:border-box}
+  .wrap{max-width:620px}
+  h1{font-size:40px;margin:0 0 6px}
+  p{color:#d6e2f0;margin:6px 0}
+  .btn{display:inline-block;margin:28px 0 14px;background:#ffd400;color:#0b0c0c;font-weight:800;font-size:30px;
+       padding:22px 44px;border-radius:14px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .btn:hover{background:#ffe34d}
+  .small{font-size:15px;color:#9fb2c9}
+  ol{text-align:left;display:inline-block;margin:18px 0 0;color:#d6e2f0}
+  a{color:#ffd400}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Thanet jobs for the TV</h1>
+  <p id="info">Loading…</p>
+  <a class="btn" id="dl" href="usb/jobs-this-week.mp4" download="Jobs this week.mp4">⬇ Jobs for this week</a>
+  <p class="small">An MP4 video, 15 seconds per slide, already turned for the sideways TV.<br>
+     Every job in it stays open for at least the next 7 days.</p>
+  <ol>
+    <li>Click the yellow button. The video goes into your Downloads.</li>
+    <li>Copy <b>Jobs this week.mp4</b> onto the USB stick, replacing last week's.</li>
+    <li>On the TV, play the video from the stick with <b>repeat</b> switched on.</li>
+  </ol>
+  <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.</p>
+</div>
+<script>
+  fetch("usb/info.json?t=" + Date.now()).then(r => r.json()).then(i => {
+    const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
+    document.getElementById("info").textContent = `${i.slides} slides, made ${d}. The robot remakes it every morning.`;
+  }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
+</script>
+</body>
+</html>

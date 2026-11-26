@@ -1,13 +1,8 @@
 name: Update Thanet jobs
 
-# Work Hub blocks GitHub's servers, so jobs are collected by a person on Work Hub
-# (the "Collect Thanet jobs" bookmark) and the file is uploaded to the incoming/ folder.
-# That upload starts this workflow. It also runs every morning to rebuild the USB
-# slides, so jobs that are about to close drop off them.
+# Every morning: fetch jobs from Reed's official API (needs the REED_API_KEY secret),
+# filter them, and remake the TV board, the slides and "Jobs this week.mp4".
 on:
-  push:
-    paths:
-      - "incoming/**.json"
   schedule:
     - cron: "17 5 * * *"
   workflow_dispatch: {}
@@ -32,28 +27,28 @@ jobs:
 
       - name: Install
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -r requirements.txt playwright pillow
           python -m playwright install --with-deps chromium
 
-      - name: Process uploaded job file
+      - name: Fetch and filter jobs (Reed)
+        env:
+          REED_API_KEY: ${{ secrets.REED_API_KEY }}
         run: |
-          f=$(ls incoming/*.json 2>/dev/null | sort | tail -n 1)
-          if [ -n "$f" ]; then
-            echo "Processing $f"
-            python scripts/update_jobs.py --from-dump "$f"
-            git rm -q incoming/*.json
+          if [ -n "$REED_API_KEY" ]; then
+            python scripts/update_jobs.py
           else
-            echo "No new upload - just rebuilding slides"
+            echo "::warning::No REED_API_KEY secret yet - remaking the video from the last job list."
           fi
 
-      - name: Make USB slides (JPG)
+      - name: Make slides and MP4
         run: python scripts/render_slides.py
 
       - name: Save changes
         run: |
           git config user.name  "jobs-bot"
           git config user.email "jobs-bot@users.noreply.github.com"
-          git add -A docs data incoming
+          git add -A docs data
           if git diff --cached --quiet; then
             echo "No changes"
           else

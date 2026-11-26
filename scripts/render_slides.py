@@ -15,7 +15,9 @@ import json
 import os
 import shutil
 import socketserver
+import subprocess
 import sys
+import time
 import threading
 import zipfile
 
@@ -69,7 +71,22 @@ def main():
     with zipfile.ZipFile(os.path.join(OUT, "slides.zip"), "w", zipfile.ZIP_DEFLATED) as z:
         for f in files:
             z.write(os.path.join(OUT, f), f)
-    print(f"Made {len(files)} slides in docs/usb/ (jobs must stay open at least {min_days} days)")
+
+    # MP4 for the TV: every slide shown for SLIDE_SECONDS, already rotated, plays on any TV (H.264).
+    secs = int(cfg.get("video_seconds_per_slide", 15))
+    video = os.path.join(OUT, "jobs-this-week.mp4")
+    subprocess.run([
+        "ffmpeg", "-y", "-loglevel", "error",
+        "-framerate", f"1/{secs}", "-i", os.path.join(OUT, "JOBS_%02d.jpg"),
+        "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage",
+        "-r", "25", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+        "-t", str(secs * len(files)), video,
+    ], check=True)
+    with open(os.path.join(OUT, "info.json"), "w") as fh:
+        json.dump({"made": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "slides": len(files),
+                   "seconds_per_slide": secs, "min_days_open": min_days}, fh)
+    print(f"Made {len(files)} slides + jobs-this-week.mp4 ({len(files) * secs}s) in docs/usb/ "
+          f"(every job stays open at least {min_days} more days)")
 
 
 if __name__ == "__main__":

@@ -47,5 +47,6 @@
   "extra_block_ids": [],
   "nhs_max_annual_salary": 25500,
   "usb_rotate": 270,
-  "usb_min_days_open": 4
+  "usb_min_days_open": 7,
+  "video_seconds_per_slide": 15
 }

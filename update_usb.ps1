@@ -14,18 +14,16 @@ try {
     $dest = "$drive\JOBS"
     $tmp  = Join-Path $env:TEMP "thanet-slides.zip"
 
-    Write-Host "Downloading the latest job slides..."
-    Invoke-WebRequest -Uri "$Site/usb/slides.zip?t=$([DateTime]::Now.Ticks)" -OutFile $tmp -UseBasicParsing
+    Write-Host "Downloading Jobs this week.mp4 ..."
+    if (-not (Test-Path $dest)) { New-Item -ItemType Directory -Path $dest | Out-Null }
+    $tmpVideo = Join-Path $env:TEMP "jobs-this-week.mp4"
+    Invoke-WebRequest -Uri "$Site/usb/jobs-this-week.mp4?t=$([DateTime]::Now.Ticks)" -OutFile $tmpVideo -UseBasicParsing
+    Copy-Item $tmpVideo (Join-Path $dest "Jobs this week.mp4") -Force
+    Remove-Item $tmpVideo -Force
 
-    if (Test-Path $dest) { Get-ChildItem $dest -Filter "JOBS_*.jpg" | Remove-Item -Force }
-    else { New-Item -ItemType Directory -Path $dest | Out-Null }
-    Expand-Archive -Path $tmp -DestinationPath $dest -Force
-    Remove-Item $tmp -Force
-
-    $n = (Get-ChildItem $dest -Filter "JOBS_*.jpg").Count
     Write-Host ""
-    Write-Host "Done: $n slides are in $dest" -ForegroundColor Green
-    Write-Host "Safely eject the stick, put it in the TV and start the photo slideshow from the JOBS folder."
+    Write-Host "Done: $dest\Jobs this week.mp4 is up to date" -ForegroundColor Green
+    Write-Host "Safely eject the stick, put it in the TV and play the video with repeat on."
 } catch {
     Write-Host ""
     Write-Host "Something went wrong: $($_.Exception.Message)" -ForegroundColor Red
