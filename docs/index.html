@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs in Thanet</title>
+<style>
+  :root{
+    --bg:#0c2340; --bg2:#123259; --card:#ffffff; --ink:#0b0c0c; --muted:#4b5563;
+    --accent:#ffd400; --warn:#d4351c; --ok:#00703c; --chip:#eef2f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:100%;height:100%;overflow:hidden;background:#000;
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+
+  /* The stage is always designed as a 1080 x 1920 portrait screen (9:16).
+     JavaScript scales it to fit and rotates it (default 270deg) for a TV mounted on its side. */
+  #stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;
+    transform-origin:center center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+    color:#fff;display:flex;flex-direction:column;padding:56px 52px 40px}
+
+  header{margin-bottom:30px}
+  .kicker{display:inline-block;background:var(--accent);color:#0b0c0c;font-weight:800;
+    font-size:30px;letter-spacing:.04em;text-transform:uppercase;padding:8px 18px;border-radius:6px}
+  h1{font-size:104px;line-height:1;font-weight:800;margin:18px 0 12px;letter-spacing:-.01em}
+  .sub{font-size:34px;line-height:1.25;color:#d6e2f0}
+  .sub b{color:var(--accent)}
+
+  #slide{flex:1;display:flex;flex-direction:column;gap:26px;transition:opacity .6s ease}
+  #slide.fade{opacity:0}
+
+  .job{flex:1 1 0;min-height:0;background:var(--card);color:var(--ink);border-radius:22px;
+    display:flex;align-items:stretch;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .job .info{flex:1;min-width:0;padding:24px 26px 22px 32px;display:flex;flex-direction:column;
+    border-left:14px solid var(--accent)}
+  .title{font-size:50px;line-height:1.08;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;
+    -webkit-box-orient:vertical;overflow:hidden;flex:0 0 auto}
+  .employer{font-size:28px;line-height:1.2;color:var(--muted);margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 0 auto}
+  .chips{display:flex;flex-wrap:nowrap;gap:10px;margin-top:auto;padding-top:12px;overflow:hidden;flex:0 0 auto}
+  .chip{font-size:25px;font-weight:700;background:var(--chip);border-radius:999px;padding:6px 16px;white-space:nowrap}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;flex:0 0 auto}
+  .chip.pay{background:#e6f4ea;color:#0b4f2a}
+  .chip.lic{background:#fff1c2;color:#5c4400}
+  .chip.noexp{background:#dbeafe;color:#123c7a}
+  .closes{font-size:26px;font-weight:700;color:var(--muted);white-space:nowrap}
+  .closes.soon{color:var(--warn)}
+
+  .qr{width:310px;flex:0 0 310px;background:#fff;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;border-left:2px dashed #d0d7e2;padding:14px}
+  .qr svg{width:262px;height:262px;display:block}
+  .qr span{font-size:22px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;color:#0b0c0c}
+
+  .empty{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+    font-size:54px;line-height:1.25;color:#d6e2f0;padding:60px}
+
+  footer{margin-top:30px}
+  .bar{height:10px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:26px;color:#c3d1e3}
+  .meta b{color:#fff;font-size:30px}
+  .source{font-size:21px;color:#9fb2c9;margin-top:10px}
+</style>
+</head>
+<body>
+<div id="stage">
+  <header>
+    <span class="kicker">Hiring now · Thanet</span>
+    <h1>Jobs in Thanet</h1>
+    <p class="sub">No experience needed. Point your <b>phone camera</b> at a code to see the job and apply.</p>
+  </header>
+  <main id="slide"></main>
+  <footer>
+    <div class="bar"><i id="progress"></i></div>
+    <div class="meta"><b id="page"></b><span id="updated"></span></div>
+    <div class="source">Source: DWP Find a Job (jobs.service.gov.uk). Contains public sector information licensed under the Open Government Licence v3.0. Always check the full advert before applying.</div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  // ---------- settings (override in the URL, e.g. index.html?rotate=90&seconds=20) ----------
+  const q = new URLSearchParams(location.search);
+  const ROTATE   = parseInt(q.get("rotate") ?? "270", 10);   // 0, 90, 180 or 270
+  const SECONDS  = Math.max(5, parseInt(q.get("seconds") ?? "15", 10));
+  const PER_PAGE = Math.max(1, parseInt(q.get("perpage") ?? "4", 10));
+  const SRC      = q.get("src") || "jobs.json";
+  const REFRESH_MIN = 10;
+  const USB      = q.get("usb") === "1";                     // static picture mode (for USB slideshows)
+  const MIN_DAYS = Math.max(1, parseInt(q.get("mindays") ?? "1", 10)); // must stay open at least this many days                                     // re-download the job list every 10 minutes
+
+  const stage = document.getElementById("stage");
+  const slide = document.getElementById("slide");
+  const pageEl = document.getElementById("page");
+  const updEl = document.getElementById("updated");
+  const prog = document.getElementById("progress");
+
+  // ---------- fit + rotate ----------
+  function fit() {
+    const W = innerWidth, H = innerHeight;
+    const sideways = ROTATE % 180 !== 0;
+    const s = sideways ? Math.min(W / 1920, H / 1080) : Math.min(W / 1080, H / 1920);
+    stage.style.transform = `translate(-50%,-50%) rotate(${ROTATE}deg) scale(${s})`;
+  }
+  addEventListener("resize", fit); fit();
+
+  // ---------- data ----------
+  let data = null, page = Math.max(0, parseInt(q.get("page") ?? "1", 10) - 1), timer = null;
+  try { const c = localStorage.getItem("thanetJobsCache"); if (c) data = JSON.parse(c); } catch (e) {}
+
+  async function load() {
+    try {
+      const r = await fetch(SRC + (SRC.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) throw new Error(r.status);
+      data = await r.json();
+      try { localStorage.setItem("thanetJobsCache", JSON.stringify(data)); } catch (e) {}
+    } catch (e) { console.warn("Could not refresh jobs, using last copy", e); }
+  }
+
+  const todayISO = () => { const d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); };
+  const daysLeft = iso => Math.round((new Date(iso + "T00:00:00") - new Date(todayISO() + "T00:00:00")) / 864e5);
+
+  // A job is only shown while its closing date is still in the future.
+  // This check runs on every slide, so expired jobs disappear at midnight even if the data hasn't updated yet.
+  function liveJobs() {
+    if (!data || !Array.isArray(data.jobs)) return [];
+    return data.jobs.filter(j => j.closing && daysLeft(j.closing) >= MIN_DAYS);
+  }
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+
+  function card(j) {
+    const left = daysLeft(j.closing);
+    const n = j.qr.size + 8;
+    const closes = left <= 3 ? `Closes soon: ${fmtDate(j.closing)}` : `Apply by ${fmtDate(j.closing)}`;
+    return `<article class="job">
+      <div class="info">
+        <div class="title">${esc(j.title)}</div>
+        <div class="employer">${esc(j.employer)}</div>
+        <div class="chips">
+          <span class="chip">📍 ${esc(j.town)}</span>
+          <span class="chip pay">${esc(j.pay)}</span>
+          ${j.hours ? `<span class="chip">${esc(j.hours)}</span>` : ""}
+        </div>
+        <div class="foot">
+          <div class="closes ${left <= 3 ? "soon" : ""}">${closes}</div>
+          ${j.licence ? `<span class="chip lic">🚗 Licence needed</span>` : (j.no_experience ? `<span class="chip noexp">✓ Training given</span>` : "")}
+        </div>
+      </div>
+      <div class="qr">
+        <svg viewBox="0 0 ${n} ${n}" shape-rendering="crispEdges" role="img" aria-label="QR code for ${esc(j.title)}">
+          <rect width="${n}" height="${n}" fill="#fff"/>
+          <path transform="translate(4,4)" d="${j.qr.path}" fill="#000"/>
+        </svg>
+        <span>Scan to apply</span>
+      </div>
+    </article>`;
+  }
+
+  function render() {
+    const jobs = liveJobs();
+    const pages = Math.max(1, Math.ceil(jobs.length / PER_PAGE));
+    if (page >= pages) page = 0;
+    if (!jobs.length) {
+      slide.innerHTML = `<div class="empty">New jobs are on their way.<br>Ask a member of staff for help finding work today.</div>`;
+      pageEl.textContent = "";
+      document.body.dataset.pages = 0;
+    } else {
+      slide.innerHTML = jobs.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE).map(card).join("");
+      // keep the 4-slot layout even on a short last page
+      for (let i = jobs.length - page * PER_PAGE; i < PER_PAGE && i >= 0; i++) slide.insertAdjacentHTML("beforeend", `<div style="flex:1 1 0"></div>`);
+      pageEl.textContent = `Page ${page + 1} of ${pages}  ·  ${jobs.length} jobs`;
+      document.body.dataset.pages = pages;
+      // if a row of chips is too wide, drop the least important (last) chip rather than cut it off
+      slide.querySelectorAll(".chips").forEach(c => { while (c.scrollWidth > c.clientWidth + 1 && c.children.length > 2) c.lastElementChild.remove(); });
+    }
+    if (data && data.generated) {
+      const g = new Date(data.generated);
+      updEl.textContent = "Updated " + g.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+    }
+    if (USB) { document.querySelector(".bar").style.visibility = "hidden"; document.body.dataset.ready = "1"; return; }
+    // progress bar
+    prog.style.transition = "none"; prog.style.width = "0";
+    void prog.offsetWidth;
+    prog.style.transition = `width ${SECONDS}s linear`; prog.style.width = "100%";
+  }
+
+  function next() {
+    slide.classList.add("fade");
+    setTimeout(() => { page++; render(); slide.classList.remove("fade"); }, 600);
+  }
+
+  const started = Date.now();
+  async function start() {
+    await load(); render();
+    if (USB) return;
+    timer = setInterval(next, SECONDS * 1000);
+    setInterval(load, REFRESH_MIN * 60 * 1000);
+    // reload the whole page once a day (picks up any changes to this page)
+    setInterval(() => { if (Date.now() - started > 24 * 3600e3) location.reload(); }, 3600e3);
+  }
+  start();
+})();
+</script>
+</body>
+</html>

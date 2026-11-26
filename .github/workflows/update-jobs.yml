@@ -1,0 +1,48 @@
+name: Update Thanet jobs
+
+on:
+  schedule:
+    # every 3 hours (UTC). GitHub may run scheduled jobs a few minutes late.
+    - cron: "23 */3 * * *"
+  workflow_dispatch: {}        # lets you press "Run workflow" by hand
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt playwright pillow
+          python -m playwright install --with-deps chromium
+
+      - name: Fetch and filter jobs
+        run: python scripts/update_jobs.py
+
+      - name: Make USB slides (JPG)
+        run: python scripts/render_slides.py
+
+      - name: Save changes
+        run: |
+          git config user.name  "jobs-bot"
+          git config user.email "jobs-bot@users.noreply.github.com"
+          git add -A docs data
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update jobs $(date -u +'%Y-%m-%d %H:%M')"
+            git push
+          fi
