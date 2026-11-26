@@ -1,25 +1,26 @@
-Run 2026-11-26T11:17:35Z  kept 26 of 203
+Run 2026-11-26T13:24:28Z  kept 27 of 195
 
+KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae37ec7eb629aedf42c1c2d
 KEEP | Support Worker                                               | ok | https://www.jobs.service.gov.uk/jobs/6af58aaa5ddccbfd39db4202
 KEEP | Field Interviewer - Part Time - Car required                 | ok | https://www.jobs.service.gov.uk/jobs/6b0470f68416cf7e522e0f14
-KEEP | Reception/ Admin                                             | ok | https://www.jobs.service.gov.uk/jobs/6aebc82086839092c863fb76
 KEEP | Healthcare Support Worker - QEQM Hospital                    | ok | https://www.jobs.service.gov.uk/jobs/6b06bc49dbc8ab84eb7e52bc
-KEEP | Support Worker - Female                                      | ok | https://www.jobs.service.gov.uk/jobs/6a4e5b8a10c28cd5cf51d604
-KEEP | Healthcare Support Worker - QEQM Hospital | East Kent Hospit | ok | https://www.jobs.service.gov.uk/jobs/6aeb4355d9834f943e5d4f2b
+KEEP | Reception/ Admin                                             | ok | https://www.jobs.service.gov.uk/jobs/6aebc82086839092c863fb76
+KEEP | Receptionist                                                 | ok | https://www.jobs.service.gov.uk/jobs/6af3b0e45ddccbfd39aac50a
+KEEP | Practice Cleaner                                             | ok | https://www.jobs.service.gov.uk/jobs/6afb99ee55f177b7a102903e
 KEEP | Receptionist/Telephonist                                     | ok | https://www.jobs.service.gov.uk/jobs/6b002871834a07ae16fe007d
-KEEP | Teaching Assistant                                           | ok | https://www.jobs.service.gov.uk/jobs/6afdb566e9e410361bdfe3f2
+KEEP | Healthcare Support Worker - QEQM Hospital | East Kent Hospit | ok | https://www.jobs.service.gov.uk/jobs/6aeb4355d9834f943e5d4f2b
 KEEP | Breakfast Club Assistant                                     | ok | https://www.jobs.service.gov.uk/jobs/6ae21cec73425b592619a13e
-KEEP | 1:1 SEND Teaching Assistant (TA) (Fixed term contract until  | ok | https://www.jobs.service.gov.uk/jobs/6ac6530b674f2873e7cc0f33
 KEEP | Bank Receptionist                                            | ok | https://www.jobs.service.gov.uk/jobs/6afd9109043e5c2692416338
+KEEP | Nursery/EYFS Teaching Assistant                              | ok | https://www.jobs.service.gov.uk/jobs/6aeb09ca52719924504ab127
+KEEP | Kitchen Assistant                                            | ok | https://www.jobs.service.gov.uk/jobs/6b00886b6318029352119802
 KEEP | Healthcare Support Worker - QEQM Hospital | East Kent Hospit | ok | https://www.jobs.service.gov.uk/jobs/6b06b7a98416cf7e5272c570
 KEEP | Bar Team Member                                              | ok | https://www.jobs.service.gov.uk/jobs/6b06ccb04560216823a2ea8b
-KEEP | Retail Stock Counter - Thanet - £14.34 p/hr*                 | ok | https://www.jobs.service.gov.uk/jobs/6b02b92663180293523d3a8d
 KEEP | Customer Team Member                                         | ok | https://www.jobs.service.gov.uk/jobs/6b06b1d08416cf7e5271faa1
+KEEP | Retail Stock Counter - Thanet - £14.34 p/hr*                 | ok | https://www.jobs.service.gov.uk/jobs/6b02b92663180293523d3a8d
+KEEP | 24179 - Receptionist - Canterbury, Folkestone, Ashford  Rams | ok | https://www.jobs.service.gov.uk/jobs/6af6e6855ddccbfd390183f2
 KEEP | Female Support Worker                                        | ok | https://www.jobs.service.gov.uk/jobs/6ae9c50f9b30c7c6809f527b
 KEEP | Support Worker                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae9c646c0bcb2f3824ae286
-KEEP | 24179 - Receptionist - Canterbury, Folkestone, Ashford & Ram | ok | https://www.jobs.service.gov.uk/jobs/6af6e6855ddccbfd390183f2
 KEEP | Factory Operative                                            | ok | https://www.jobs.service.gov.uk/jobs/6af62d925ddccbfd39efba65
-KEEP | Customer Service Champion - Shell Royal Oak                  | ok | https://www.jobs.service.gov.uk/jobs/6af6bb4857f727c85b78031e
 KEEP | Complex Care Worker/PA 10hrs per week flexible @ £15.00/hr i | ok | https://www.jobs.service.gov.uk/jobs/6a62e7b81ffe646b1719ac29
 KEEP | Care Assistant for a person P/T@ £16.00 per hr in CT10 - Bro | ok | https://www.jobs.service.gov.uk/jobs/6a16a27ba1489754c8dadf79
 KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae78b01baea710107f02100
@@ -29,107 +30,8 @@ KEEP | Warehouse Operative                                          | ok | https
 SKIP | Support Time Recovery Worker | Kent and Medway Mental Health | NHS Band 3+ pay - usually needs experience (£25,760 - £27,476 per annum) | https://www.jobs.service.gov.uk/jobs/6af742d257f727c85b879454
 SKIP | Medical Education Support Administrator | East Kent Hospital | NHS Band 3+ pay - usually needs experience (£25,760 - £27,476 per annum) | https://www.jobs.service.gov.uk/jobs/6afeeac2bce65bde923f0a29
 SKIP | Medical Education Support Administrator                      | NHS Band 3+ pay - usually needs experience (£25,760 to £27,476 a year) | https://www.jobs.service.gov.uk/jobs/6afef6bdba6abc4abb1c71b9
-SKIP | Health & Rehabilitation Care Assistant                       | NHS Band 3+ pay - usually needs experience (£25,760 to £27,476 a year) | https://www.jobs.service.gov.uk/jobs/6afb05795ddccbfd39669b4c
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae9990bc0bcb2f38243f081
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aece10afa4a125cbdaecd6f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aee1645866aeedfec31793f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb575786839092c8545c2f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb580ed9834f943e5fe038
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb3dece0e8b4d9c5153754
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb5ab086839092c854c32a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aea0d5e0bf495633e427e13
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af09a01866aeedfec649035
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af1ee8819ccb0f6eef9b27f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af1ef0719ccb0f6eef9c276
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af434ccefb020ed98268a6f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af4927e5ddccbfd39c1ec49
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af5a41defb020ed985097a3
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af8b01fefb020ed989ddf68
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af8d0855ddccbfd3931ac04
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0402d7d5788322382d9c6c
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afae94e57f727c85bdec7d4
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afd7fad9df92eac4759e360
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b001d1b834a07ae16fc43aa
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b01c673d57883223801e3cb
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b057ca7456021682378db11
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae0c6451ffc3902b658101a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afb3673a3bc9c86f443983e
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae89754c0bcb2f38226883a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8a8899f3790d58f98e39d
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae4c537c9309ef2a4c2b080
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6a3ecca603d13c67ee844d5f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b069f18dbc8ab84eb7af7cd
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06a1b645602168239ad013
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afdc24de9e410361be1c3c6
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae479e6c9309ef2a4bb3319
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae889069f3790d58f948459
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae1feccbdf53687a2570be2
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae3e082eb629aedf4366c28
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0039e42ad5e699fa626791
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8bbc29b30c7c68080237e
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8bbc39b30c7c680802394
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8e28a9f3790d58fa1cf13
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb098545d38df994b3185e
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0076fbd578832238e4eb52
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afec642e9e410361bfe9c4a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb394e527199245051eb78
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeef93b756455ed4a3b9b6c
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aedcb2f46cca5e1d9e3e843
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afc604a55f177b7a118b5f6
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0675fa456021682395d68b
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afc85d0a3bc9c86f46c9e87
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afeca5bbce65bde923ab4b0
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afeb5f9e9e410361bfc710f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae62cd1f390770d290512f1
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06de838416cf7e527b06f5
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b050efd45602168236c2600
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06154b45602168238d4dd8
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06cb798416cf7e52780892
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b070f4037f7fbd856cc69fe
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b071055f4e9f3c4272325e2
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b04845c8416cf7e523032fc
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb4ad2669374343694b408
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb73e1d9834f943e638930
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af332d65ddccbfd399a784b
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ad21d38813f93ba4146772b
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aeb6873669374343698b468
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aea035f63264a01986e5f10
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af1b9c59ec5a6cfe2999fd4
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af1dff919ccb0f6eef7dca3
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af1f168d90dd1b95e918830
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae3315673425b59261ef285
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae334a973425b59261f0302
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ad72f392b622423e5360ae9
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afb3a248bdf4a80f0977537
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8cfa69b30c7c680832c58
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae8a9079b30c7c6807d5c74
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aee0d7f36c080c423574d0f
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae9b676c0bcb2f382485b3a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae9ba7a9b30c7c6809db35b
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af488e05ddccbfd39c0bde9
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afc6059a3bc9c86f467f787
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af718b55ddccbfd39079c15
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af5c95a57f727c85b5f6b3c
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6af8c05d57f727c85baabecd
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afecd5fba6abc4abb173f4c
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afad93857f727c85bdc0085
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afb4c00a3bc9c86f445e6a3
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afd87cfe160390923cb33ee
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6afdcfbbba6abc4abbfb4a5e
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b006e06834a07ae16075795
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0592d4dbc8ab84eb5c98d5
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b05824e456021682379ad0a
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b0582728416cf7e524f3095
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b058dd18416cf7e525099df
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b058704dbc8ab84eb5b2bde
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b05872545602168237a597d
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06daec4560216823a50b85
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b06daf9dbc8ab84eb85a848
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6ae766fbf390770d291dff8d
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6aedd0defa4a125cbdc575dd
-SKIP |                                                              | advert not available (HTTP 404) | https://www.jobs.service.gov.uk/jobs/6b080f8f3940099fbb586cb9
-SKIP | Healthcare Support Worker | Kent and Medway Mental Health NH | asks for experience ('Band 3') | https://www.jobs.service.gov.uk/jobs/6ae4d303f390770d29e7b826
-SKIP | Health & Rehabilitation Care Assistant | Kent Community Heal | asks for experience ('Band 3') | https://www.jobs.service.gov.uk/jobs/6af59ea4efb020ed984fe4c1
+SKIP | Health  Rehabilitation Care Assistant                        | NHS Band 3+ pay - usually needs experience (£25,760 to £27,476 a year) | https://www.jobs.service.gov.uk/jobs/6afb05795ddccbfd39669b4c
+SKIP | Health  Rehabilitation Care Assistant | Kent Community Healt | asks for experience ('Band 3') | https://www.jobs.service.gov.uk/jobs/6af59ea4efb020ed984fe4c1
 SKIP | Maternity Support Worker | East Kent Hospitals University NH | asks for experience ('Band 4') | https://www.jobs.service.gov.uk/jobs/6af31a2e5ddccbfd39970af0
 SKIP | Personal assistant                                           | asks for experience ('Experience with children with special needs is a must') | https://www.jobs.service.gov.uk/jobs/6aea54a152719924503a1f58
 SKIP | Personal Assistant/Carer                                     | asks for experience ('Experienced carer') | https://www.jobs.service.gov.uk/jobs/6aface3e57f727c85bda6546
@@ -137,69 +39,71 @@ SKIP | Personal Care Assistant for a young man P/T@ £15.00/hr in Ra | asks for 
 SKIP | Cook                                                         | asks for experience ('Have experience in a similar role') | https://www.jobs.service.gov.uk/jobs/6afd5d89a7c2faba4c511344
 SKIP | Trainee Classic Car Technician                               | asks for experience ('Previous experience in') | https://www.jobs.service.gov.uk/jobs/6b050efd8416cf7e52419379
 SKIP | Finance Administrator (Accounts Assistant)                   | asks for experience ('Proven experience in') | https://www.jobs.service.gov.uk/jobs/6ae8be2f9f3790d58f9c133e
+SKIP | Care Assistant                                               | asks for experience ('experience is essential') | https://www.jobs.service.gov.uk/jobs/6b0582728416cf7e524f3095
 SKIP | KSC Teaching Assistant                                       | asks for experience ('looking for experienced') | https://www.jobs.service.gov.uk/jobs/6aed11b5fa4a125cbdb4a1cc
+SKIP | Female support worker                                        | asks for experience ('previous experience in') | https://www.jobs.service.gov.uk/jobs/6b082bab37f7fbd856ede03e
 SKIP | SEND Teaching Assistant                                      | asks for experience ('will have experience') | https://www.jobs.service.gov.uk/jobs/6ac8f5d010fa3dcfbef5d01a
+SKIP | SEND Teaching Assistant                                      | asks for experience ('will have experience') | https://www.jobs.service.gov.uk/jobs/6ac8ecdbbce00b7bfece9ba1
 SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae05a511ffc3902b655b363
 SKIP | Specialist Stroke Speech and Language Therapist | Kent Commu | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae079bd9991b23a7bdbe5bd
-SKIP | Production Operative                                         | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae074ee9991b23a7bdbc40a
 SKIP | Quality Assurance Multi-Skilled Operative                    | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae0886ac85e5ec2da5937a1
 SKIP | Greenhouse Operative                                         | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae088171ffc3902b656c02e
-SKIP | Packhouse Driver                                             | needs a qualification/licence ('PPT licence') | https://www.jobs.service.gov.uk/jobs/6ae32fc113d098b2f7843eed
+SKIP | Warehouse Operative                                          | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae089c2c85e5ec2da594148
+SKIP | Halfords Autocentre Thanet - Autocare Technician Apprentices | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae081179991b23a7bdc18a2
 SKIP | Smoke Free Pregnancy Advisor for Maternity - Thanet area     | not entry level (title: 'Advisor') | https://www.jobs.service.gov.uk/jobs/6aec7d14a148e29a63976d4d
 SKIP | Buyer                                                        | not entry level (title: 'Buyer') | https://www.jobs.service.gov.uk/jobs/6aec76556dc23220be391bdb
+SKIP | Bank Chef                                                    | not entry level (title: 'Chef') | https://www.jobs.service.gov.uk/jobs/6b00340d11e0a00921b3356e
 SKIP | Safeguarding Co-ordinator                                    | not entry level (title: 'Co-ordinator') | https://www.jobs.service.gov.uk/jobs/6b00460b834a07ae1601ab43
-SKIP | Consultant Gastroenterologist                                | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6afc81298bdf4a80f0bfeb18
 SKIP | Consultant in Anaesthetics (QEH) | East Kent Hospitals Unive | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aec9ed2a148e29a639b4f8f
-SKIP | Consultant Psychiatrist - Thanet Community Older People | Ke | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aeb4352669374343693b151
+SKIP | Consultant Gastroenterologist                                | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6afc81298bdf4a80f0bfeb18
 SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6af31a2e57f727c85b12b9d1
 SKIP | Consultant in Acute Medicine | East Kent Hospitals Universit | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6af449a7efb020ed982995fc
-SKIP | Consultant Gastroenterologist | East Kent Hospitals Universi | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6afc7c4855f177b7a11c5612
+SKIP | Consultant in Critical Care (QEH)                            | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042bbf8416cf7e522441a9
+SKIP | Consultant Psychiatrist - Thanet Community Older People | Ke | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aeb4352669374343693b151
+SKIP | Consultant in Palliative Medicine (QEH)                      | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042fb08416cf7e5224dfbe
+SKIP | Consultant in Critical Care (QEH) | East Kent Hospitals Univ | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042f988416cf7e5224dd3f
+SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042f998416cf7e5224dd63
 SKIP | Locum Consultant                                             | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aff22d511e0a00921958a92
-SKIP | Purchasing Coordinator                                       | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6b06e2364560216823a5f142
 SKIP | Client Project Coordinator                                   | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6b0729b4f4e9f3c42725b56c
+SKIP | Purchasing Coordinator                                       | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6b06e2364560216823a5f142
 SKIP | Compliance Coordinator                                       | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6af712f75ddccbfd3906fba1
+SKIP | Deputy Headteacher                                           | not entry level (title: 'Deputy') | https://www.jobs.service.gov.uk/jobs/6aedae9dfa4a125cbdc1ae4a
 SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6afc462da3bc9c86f464559d
 SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6b043740dbc8ab84eb310139
 SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6aba9f774e30a13628214439
 SKIP | Graphic and Multimedia Designer                              | not entry level (title: 'Designer') | https://www.jobs.service.gov.uk/jobs/6af2dd2e57f727c85b0922b3
-SKIP | Specialty Doctor in Paediatrics | East Kent Hospitals Univer | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6ae8b541c0bcb2f3822abc51
-SKIP | Community CAMHS Speciality Doctor | Kent and Medway Mental H | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6aeb022fe0e8b4d9c50c23b2
 SKIP | Trust Doctor in Intensive Care Medicine (ST1) | East Kent Ho | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6af30cbfefb020ed98066b73
-SKIP | Specialty Doctor in Anaesthetics | East Kent Hospitals Unive | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6af731e2efb020ed987bf93a
-SKIP | Process & Maintenance Engineer                               | not entry level (title: 'Engineer') | https://www.jobs.service.gov.uk/jobs/6b05e14545602168238534a0
+SKIP | Community CAMHS Speciality Doctor | Kent and Medway Mental H | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6aeb022fe0e8b4d9c50c23b2
+SKIP | Process  Maintenance Engineer                                | not entry level (title: 'Engineer') | https://www.jobs.service.gov.uk/jobs/6b05e14545602168238534a0
 SKIP | Salaried GP - St Peters Surgery                              | not entry level (title: 'GP') | https://www.jobs.service.gov.uk/jobs/6ae85c47c9309ef2a40fceb2
 SKIP | Locum GP                                                     | not entry level (title: 'GP') | https://www.jobs.service.gov.uk/jobs/6ae5309df390770d29f1bf4e
 SKIP | Maintenance Inspector                                        | not entry level (title: 'Inspector') | https://www.jobs.service.gov.uk/jobs/6af5b6d35ddccbfd39e0f439
 SKIP | Maths Lecturer                                               | not entry level (title: 'Lecturer') | https://www.jobs.service.gov.uk/jobs/6b076f933940099fbb47007e
-SKIP | Deputy Dispensary Manager | East Kent Hospitals University N | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6ad0fb77813f93ba41426f3e
+SKIP | Assistant Manager - Broadstairs                              | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6afd8554e160390923cad99e
 SKIP | Care Manager                                                 | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6afdcd5eba6abc4abbfad511
 SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b00753663180293520f509c
-SKIP | Bereavement Midwife | East Kent Hospitals University NHS Fou | not entry level (title: 'Midwife') | https://www.jobs.service.gov.uk/jobs/6ae4cbfac9309ef2a4c3615d
+SKIP | Registered Manager                                           | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b06daec4560216823a50b85
+SKIP | Residential Service Manager                                  | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b06daf9dbc8ab84eb85a848
 SKIP | 6-Colour Machine Minder ** RELOCATION PACKAGE AVAILABLE**    | not entry level (title: 'Minder') | https://www.jobs.service.gov.uk/jobs/6af70acc5ddccbfd39061ebe
 SKIP | Mental Health Together Navigator                             | not entry level (title: 'Navigator') | https://www.jobs.service.gov.uk/jobs/6b0076fcd578832238e4eb5d
-SKIP | Registered Nurse (Community) | Kent Community Health NHS Fou | not entry level (title: 'Nurse') | https://www.jobs.service.gov.uk/jobs/6ae48a52c9309ef2a4bcf9ba
-SKIP | Registered Nurse (Community) | Kent Community Health NHS Fou | not entry level (title: 'Nurse') | https://www.jobs.service.gov.uk/jobs/6ae48a52baea710107afbcf9
 SKIP | Registered General Nurse                                     | not entry level (title: 'Nurse') | https://www.jobs.service.gov.uk/jobs/6b05a6a18416cf7e5254113e
 SKIP | Marketing Officer                                            | not entry level (title: 'Officer') | https://www.jobs.service.gov.uk/jobs/6aeb4ad4d9834f943e5e502f
 SKIP | Planner                                                      | not entry level (title: 'Planner') | https://www.jobs.service.gov.uk/jobs/6afd9dcfe160390923cebb5a
-SKIP | Wound Clinic Practitioner | Kent Community Health NHS Founda | not entry level (title: 'Practitioner') | https://www.jobs.service.gov.uk/jobs/6b055a588416cf7e524910f3
+SKIP | Wound Clinic Practitioner                                    | not entry level (title: 'Practitioner') | https://www.jobs.service.gov.uk/jobs/6b058481dbc8ab84eb5ad796
 SKIP | Assistant Healthcare Scientist (Blood Sciences)              | not entry level (title: 'Scientist') | https://www.jobs.service.gov.uk/jobs/6af5e4a0efb020ed9858a339
-SKIP | Senior Clinical Fellow in Anaesthetics ST3 (QEQM)            | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6afc42b5a3bc9c86f463cb3d
-SKIP | Senior Healthcare Support Worker                             | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06bc498416cf7e5273539d
-SKIP | Senior Clinical Fellow in Anaesthetics ST3 (QEQM)            | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6af731e2efb020ed987bf91b
 SKIP | Senior Care Assistant - Nights                               | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6af715a25ddccbfd39074539
-SKIP | Senior Healthcare Support Worker - Outpatients | East Kent H | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06b7a845602168239d50d5
 SKIP | Senior Healthcare Support Worker | East Kent Hospitals Unive | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06beaf45602168239e28a8
-SKIP | Teacher of Geography                                         | not entry level (title: 'Teacher') | https://www.jobs.service.gov.uk/jobs/6af3a9295ddccbfd39aa3656
+SKIP | Senior Healthcare Support Worker - Outpatients | East Kent H | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06b7a845602168239d50d5
+SKIP | Teacher of DT and Food Technology                            | not entry level (title: 'Teacher') | https://www.jobs.service.gov.uk/jobs/6af4faa15ddccbfd39cea665
+SKIP | Team Leader - Ramsgate                                       | not entry level (title: 'Team Leader') | https://www.jobs.service.gov.uk/jobs/6afd786f043e5c26923d475b
 SKIP | Senior Employment Specialist / Team Leader                   | not entry level (title: 'Team Leader') | https://www.jobs.service.gov.uk/jobs/6af46f035ddccbfd39bd2c18
 SKIP | Children's Specialist Speech and Language Therapist | Kent C | not entry level (title: 'Therapist') | https://www.jobs.service.gov.uk/jobs/6aea0fa2a37b5b00dd749af0
 SKIP | Specialist Speech and Language Therapist | East Kent Hospita | not entry level (title: 'Therapist') | https://www.jobs.service.gov.uk/jobs/6af2fa8a57f727c85b0e4411
 SKIP | Locum consultant in General Medicine                         | not entry level (title: 'consultant') | https://www.jobs.service.gov.uk/jobs/6af736b6efb020ed987c71f3
 SKIP | Assistant shop manager                                       | not entry level (title: 'manager') | https://www.jobs.service.gov.uk/jobs/6afb2b03a3bc9c86f4425259
+SKIP | Female care team leader - Driver essential                   | not entry level (title: 'team leader') | https://www.jobs.service.gov.uk/jobs/6af6e0865ddccbfd39007d77
 SKIP | Delivery Driver                                              | self-employed ('Self-employ') | https://www.jobs.service.gov.uk/jobs/6b05006445602168236b52e3
 SKIP | site manager                                                 | self-employed ('freelance') | https://www.jobs.service.gov.uk/jobs/6af7584757f727c85b89696b
 SKIP | Mystery Shopper                                              | self-employed ('self-employ') | https://www.jobs.service.gov.uk/jobs/6aeb36ac52719924505178cd
 SKIP | Deliver with Deliveroo – Flexible Food Delivery Driver Jobs  | self-employed/blocked employer (Deliveroo) | https://www.jobs.service.gov.uk/jobs/6af58039efb020ed984c0a13
-SKIP | Residential Cleaner                                          | self-employed/blocked employer (Maid2Clean) | https://www.jobs.service.gov.uk/jobs/6ae3e07d7fddfd2370230684
 SKIP | Part-time Cleaner                                            | self-employed/blocked employer (Maid2Clean) | https://www.jobs.service.gov.uk/jobs/6af50d7b5ddccbfd39d05236
-SKIP | In-Person Mystery Shopper - flex hours                       | self-employed/blocked employer (Serve Legal) | https://www.jobs.service.gov.uk/jobs/6b01d0a9e29061d81d4bfcb7
