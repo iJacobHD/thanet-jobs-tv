@@ -17,6 +17,9 @@ import xml.etree.ElementTree as ET
 import requests
 
 UA = {"User-Agent": "ThanetJobsTV/1.0 (community job board; daily)"}
+# Reading careers sites stops opening NEW adverts after this many minutes, so the daily run always finishes
+# well inside GitHub's time limit. Anything left is read on the next morning's run (the cache remembers progress).
+DEADLINE = time.time() + 60 * float(__import__("os").environ.get("EMPLOYER_MINUTES", "70"))
 
 
 def _text(h):
@@ -266,7 +269,7 @@ def employer_site(emp, places, today, cache, log=print):
         c = ecache.get(u)
         if c and not c.get("local"):
             continue                                   # read before, not in our area
-        if not c and opened >= budget:
+        if not c and (opened >= budget or time.time() > DEADLINE):
             continue                                   # rest will be read on later runs
         time.sleep(delay)
         opened += 1
@@ -467,6 +470,8 @@ def listing_pages(emp, places, today, cache, log=print):
     link_re = re.compile(emp["job_link"])
     rows, seen = [], set()
     for page in range(1, int(emp.get("max_pages", 1)) + 1):
+        if time.time() > DEADLINE:
+            break
         url = base + emp["listing"].format(page=page)
         if page > 1:
             time.sleep(delay)
