@@ -17,6 +17,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"      # show progress in the log while it runs
     timeout-minutes: 110
     steps:
       - uses: actions/checkout@v4

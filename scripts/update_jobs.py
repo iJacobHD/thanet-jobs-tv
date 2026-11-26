@@ -218,6 +218,10 @@ def commute_minutes(location, cfg):
     return None
 
 
+def nice_town(t, cfg):
+    return (cfg.get("commute") or {}).get("postcode_names", {}).get(t, t)
+
+
 def town_of(location, places):
     places = sorted(places, key=lambda p: (("Westwood" not in p), -len(p)))   # Westwood Cross first, then longest names
     for p in places:
@@ -245,6 +249,9 @@ def classify(job, cfg, today):
         return False, "blocked id", {}
     forced = job["id"] in cfg.get("extra_allow_ids", [])
 
+    for bad in cfg.get("exclude_places", []):
+        if re.search(r"\b" + re.escape(bad) + r"\b", f"{job['location']} {job['title']}", re.I):
+            return False, f"outside the commute area ({bad})", {}
     if not any(re.search(r"\b" + re.escape(p) + r"\b", job["location"], re.I) for p in cfg["allowed_places"]):
         return False, f"outside the commute area ({job['location'] or 'no location'})", {}
     mins = commute_minutes(job["location"], cfg)
@@ -339,6 +346,8 @@ def tidy_pay(pay, description=""):
         if re.search(r"a day|per day|daily", p, re.I):
             return f"{rng}/day"
         if re.search(r"hour|/hr|p/?h|per hr", p, re.I) or float(lo.replace(",", "")) < 100:
+            if float(lo.replace(",", "")) < 10:      # e.g. "£3 night premium" - not the real wage
+                return "See advert"
             return f"{rng}/hr"
         extra = " pro rata" if "pro rata" in p.lower() else ""
         return f"{rng}/yr{extra}"
@@ -510,7 +519,7 @@ def main():
                 "id": jid,
                 "title": clean_title(job["title"]),
                 "employer": tidy_employer(job["employer"]),
-                "town": town_of(job["location"], cfg["allowed_places"]),
+                "town": nice_town(town_of(job["location"], cfg["allowed_places"]), cfg),
                 "pay": tidy_pay(job["pay"], job["description"]),
                 "hours": job["hours"],
                 "contract": job["job_type"],

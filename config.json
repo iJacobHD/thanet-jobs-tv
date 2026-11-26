@@ -177,8 +177,6 @@
       "Garlinge": 30,
       "Westwood": 30,
       "Broadstairs": 30,
-      "St Peter": 35,
-      "St. Peter": 35,
       "Ramsgate": 30,
       "Birchington": 35,
       "Minster": 35,
@@ -215,7 +213,9 @@
       "Dover": 80,
       "Whitfield": 85,
       "Westwood Cross": 30,
-      "Westwood Retail Park": 30
+      "Westwood Retail Park": 30,
+      "St Peter's": 35,
+      "St Peters": 35
     },
     "postcodes": {
       "CT1": 55,
@@ -247,11 +247,39 @@
       "Gillingham": 90,
       "Maidstone": 120,
       "London": 120
+    },
+    "postcode_names": {
+      "CT1": "Canterbury",
+      "CT2": "Canterbury",
+      "CT3": "Canterbury area",
+      "CT4": "Canterbury area",
+      "CT5": "Whitstable",
+      "CT6": "Herne Bay",
+      "CT7": "Birchington",
+      "CT8": "Westgate",
+      "CT9": "Margate",
+      "CT10": "Broadstairs",
+      "CT11": "Ramsgate",
+      "CT12": "Ramsgate",
+      "CT13": "Sandwich",
+      "CT14": "Deal",
+      "CT16": "Dover",
+      "CT17": "Dover",
+      "ME13": "Faversham",
+      "ME10": "Sittingbourne",
+      "TN23": "Ashford",
+      "TN24": "Ashford"
     }
   },
   "employers_not_possible": {
     "Aldi": "vacancy site sits behind a Cloudflare bot check",
     "Work Hub (DWP)": "blocks automated access",
     "Indeed": "no public feed"
-  }
+  },
+  "exclude_places": [
+    "Guernsey",
+    "Jersey",
+    "St Peter Port",
+    "Isle of Man"
+  ]
 }
