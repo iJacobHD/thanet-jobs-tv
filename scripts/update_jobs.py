@@ -362,7 +362,10 @@ def main():
     args = ap.parse_args()
 
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
-    dump = json.load(open(args.from_dump)) if args.from_dump else None
+    dump = json.load(open(args.from_dump, encoding="utf-8")) if args.from_dump else None
+    if dump is not None and "pages" in dump:      # file saved by the Work Hub collector bookmark
+        print(f"Using collected file from {dump.get('collected')} ({dump.get('thanet')} Thanet adverts)")
+        dump = dump["pages"]
     f = Fetcher(cfg.get("request_delay_seconds", 1.0), dump)
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
 
@@ -402,8 +405,9 @@ def main():
             continue
         status, html = f.get(f"/jobs/{jid}")
         if status != 200:
-            report.append((jid, "", f"advert not available (HTTP {status})"))
-            continue
+            if dump is None:
+                report.append((jid, "", f"advert not available (HTTP {status})"))
+            continue                       # collector only opens Thanet adverts
         job = parse_detail(html, jid)
         keep, reason, flags = classify(job, cfg, today)
         report.append((jid, job["title"], reason))

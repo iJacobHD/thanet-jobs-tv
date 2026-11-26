@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs TV – staff: how to update</title>
+<style>
+  body{font:18px/1.55 Arial,Helvetica,sans-serif;color:#0b0c0c;max-width:760px;margin:40px auto;padding:0 20px}
+  h1{font-size:34px;margin-bottom:6px} h2{font-size:22px;margin-top:34px}
+  .lead{color:#4b5563;margin-top:0}
+  ol li{margin:10px 0}
+  .bm{display:inline-block;background:#ffd400;color:#0b0c0c;font-weight:bold;padding:12px 20px;border-radius:8px;
+      text-decoration:none;border:2px dashed #0c2340;cursor:grab}
+  .btn{display:inline-block;background:#00703c;color:#fff;font-weight:bold;padding:10px 18px;border-radius:6px;text-decoration:none}
+  .note{background:#f3f2f1;border-left:6px solid #0c2340;padding:12px 16px;margin:20px 0}
+  code{background:#f3f2f1;padding:1px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Thanet Jobs TV – updating the board</h1>
+<p class="lead">Takes about 2 minutes. Do it at least twice a week (e.g. Monday and Thursday).</p>
+
+<h2>One-time setup</h2>
+<p>Drag this yellow button onto your browser's bookmarks bar. If you can't see the bar, press <b>Ctrl+Shift+B</b>.</p>
+<p><a class="bm" id="bm" href="#">Collect Thanet jobs</a></p>
+
+<h2>Each time</h2>
+<ol>
+  <li>Open <a href="https://www.jobs.service.gov.uk/jobs/search?location=Margate" target="_blank">Work Hub</a>.</li>
+  <li>Click the <b>Collect Thanet jobs</b> bookmark. A blue box appears in the corner. Wait about a minute until it says <b>Done</b>. A file called <code>thanet-jobs-DATE.json</code> is saved to your Downloads.</li>
+  <li>Open the upload page, drag the file in, then press <b>Commit changes</b>.<br><br>
+      <a class="btn" href="https://github.com/iJacobHD/thanet-jobs-tv/upload/main/incoming" target="_blank">Open the upload page</a></li>
+  <li>About 5 minutes later, the <a href="./">TV board</a> and the USB slides are up to date.</li>
+  <li>USB TV only: put the stick in a PC, double-click <b>Update USB stick.bat</b>, then put the stick back in the TV.</li>
+</ol>
+
+<div class="note">
+  The board only shows jobs that are in Thanet, still open, entry level and <b>not self-employed</b>. Jobs past their closing date drop off by themselves.
+  The bookmark only reads public job adverts; it doesn't change anything on Work Hub.
+  To see why a job was left out, check <a href="https://github.com/iJacobHD/thanet-jobs-tv/blob/main/data/report.txt" target="_blank">the report</a>.
+</div>
+
+<script>
+  const base = new URL("./", location.href).href;
+  const code = `(()=>{if(!/jobs\\.service\\.gov\\.uk$/.test(location.hostname)){alert('Open Work Hub first (jobs.service.gov.uk), then click this bookmark again.');location.href='https://www.jobs.service.gov.uk/jobs/search?location=Margate';return;}var s=document.createElement('script');s.src='${base}collector.js?'+Date.now();document.body.appendChild(s);})()`;
+  document.getElementById("bm").href = "javascript:" + encodeURIComponent(code);
+  document.getElementById("bm").addEventListener("click", e => { e.preventDefault(); alert("Drag this button to your bookmarks bar instead of clicking it."); });
+</script>
+</body>
+</html>

@@ -1,10 +1,16 @@
 name: Update Thanet jobs
 
+# Work Hub blocks GitHub's servers, so jobs are collected by a person on Work Hub
+# (the "Collect Thanet jobs" bookmark) and the file is uploaded to the incoming/ folder.
+# That upload starts this workflow. It also runs every morning to rebuild the USB
+# slides, so jobs that are about to close drop off them.
 on:
+  push:
+    paths:
+      - "incoming/**.json"
   schedule:
-    # every 3 hours (UTC). GitHub may run scheduled jobs a few minutes late.
-    - cron: "23 */3 * * *"
-  workflow_dispatch: {}        # lets you press "Run workflow" by hand
+    - cron: "17 5 * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -29,8 +35,16 @@ jobs:
           pip install -r requirements.txt playwright pillow
           python -m playwright install --with-deps chromium
 
-      - name: Fetch and filter jobs
-        run: python scripts/update_jobs.py
+      - name: Process uploaded job file
+        run: |
+          f=$(ls incoming/*.json 2>/dev/null | sort | tail -n 1)
+          if [ -n "$f" ]; then
+            echo "Processing $f"
+            python scripts/update_jobs.py --from-dump "$f"
+            git rm -q incoming/*.json
+          else
+            echo "No new upload - just rebuilding slides"
+          fi
 
       - name: Make USB slides (JPG)
         run: python scripts/render_slides.py
@@ -39,7 +53,7 @@ jobs:
         run: |
           git config user.name  "jobs-bot"
           git config user.email "jobs-bot@users.noreply.github.com"
-          git add -A docs data
+          git add -A docs data incoming
           if git diff --cached --quiet; then
             echo "No changes"
           else
