@@ -159,79 +159,162 @@ def adzuna(app_id, app_key, places, location="Margate", km=16, max_days_old=10, 
 
 
 # --------------------------------------------------------------------------- Employer careers sites
-def employer_sitemap(emp, places, today, log=print):
-    """
-    Reads an employer's own careers site through its public sitemap + the structured
-    JobPosting data on each advert (the data Google Jobs uses).
-    Only adverts whose web address names one of our towns are opened, at the site's crawl-delay.
-    A job is treated as open because it is listed on the employer's site today; if the advert has
-    no closing date it is shown as "listed - apply soon" and re-checked every morning.
-    """
+def _sitemap_urls(s, base, sitemaps, sitemap_filter=None, depth=0):
+    out = []
+    for sm in sitemaps:
+        url = sm if sm.startswith("http") else base + sm
+        try:
+            r = s.get(url, timeout=40)
+        except requests.RequestException:
+            continue
+        if r.status_code != 200:
+            continue
+        locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
+        if "<sitemapindex" in r.text and depth < 2:
+            kids = [l for l in locs if not sitemap_filter or re.search(sitemap_filter, l)]
+            out += _sitemap_urls(s, base, kids, sitemap_filter, depth + 1)
+        else:
+            out += locs
+    return out
+
+
+def _jobposting(html_text):
     import json as _json
+    for block in re.findall(r'<script[^>]*application/ld\+json[^>]*>([\s\S]*?)</script>', html_text):
+        try:
+            data = _json.loads(block)
+        except ValueError:
+            continue
+        items = data if isinstance(data, list) else data.get("@graph", [data]) if isinstance(data, dict) else []
+        for d in items:
+            if isinstance(d, dict) and d.get("@type") == "JobPosting":
+                return d
+    return None
+
+
+def _from_text(html_text):
+    """Fallback for sites without structured data (e.g. Sainsbury's): read title/location/pay from the page text."""
+    h1 = re.search(r"<h1[^>]*>([\s\S]*?)</h1>", html_text)
+    body = _text(re.sub(r"<(script|style)[\s\S]*?</\1>", " ", html_text))
+    loc = re.search(r"([A-Z][\w'&.() -]{2,60}, [A-Z][\w' -]{2,40}, [A-Z]{1,2}\d{1,2}[A-Z]? ?\d[A-Z]{2})", body)
+    pay = re.search(r"£\s?\d+(?:\.\d{2})?\s*(?:per hour|an hour|p/?h)", body, re.I)
+    hrs = re.search(r"\b(Part time|Full time)\b", body, re.I)
+    if not (h1 and loc):
+        return None
+    return {"title": _text(h1.group(1)), "description": body[:12000],
+            "jobLocation": {"address": {"addressLocality": loc.group(1)}},
+            "baseSalary": {"value": {"value": pay.group(0) if pay else ""}},
+            "employmentType": (hrs.group(1).upper().replace(" ", "_") if hrs else "")}
+
+
+def employer_site(emp, places, today, cache, log=print):
+    """
+    Reads an employer's own careers site:
+      mode "slug"           - sitemap job links whose web address names one of our towns (Morrisons, Asda, Tesco, Lidl, M&S)
+      mode "all"            - every job link in the sitemap, remembered in a cache so each advert is read once (Boots, Waitrose, Sainsbury's)
+      mode "location_pages" - the site's own town pages for our towns, then the jobs listed on them (Co-op)
+    Each advert's structured JobPosting data (what Google Jobs reads) gives title, location, pay and any closing date.
+    Respects the site's crawl-delay and only reads public pages that robots.txt allows.
+    """
     s = requests.Session()
     s.headers.update(UA)
     base = emp["base"].rstrip("/")
-    delay = float(emp.get("crawl_delay", 10))
-    r = s.get(base + emp.get("sitemap", "/sitemap.xml"), timeout=30)
-    r.raise_for_status()
-    urls = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
-    urls = [u for u in urls if emp.get("job_path", "/jobs/") in u]
-    towns = [p.lower().replace(" ", "-").replace(".", "") for p in places if not re.fullmatch(r"CT\d+", p)]
-    local = [u for u in urls if re.search(r"(?:^|[-/])(?:" + "|".join(map(re.escape, towns)) + r")(?:[-./]|$)", u.lower())]
-    log(f"{emp['name']}: {len(urls)} adverts on their site, {len(local)} name a local town")
-    jobs = []
-    for u in local:
-        time.sleep(delay)
-        try:
-            p = s.get(u, timeout=30)
-            if p.status_code != 200:
+    delay = float(emp.get("crawl_delay", 2))
+    mode = emp.get("mode", "slug")
+    towns = [p.lower().replace(" ", "-").replace(".", "").replace("'", "") for p in places if not re.fullmatch(r"[A-Z]{1,2}\d+", p)]
+    town_re = re.compile(r"(?:^|[-/_])(?:" + "|".join(map(re.escape, towns)) + r")(?:[-/_.]|$)", re.I)
+    urls = _sitemap_urls(s, base, emp.get("sitemaps", ["/sitemap.xml"]), emp.get("sitemap_filter"))
+    if emp.get("url_rewrite"):
+        a, b = emp["url_rewrite"]
+        urls = [u.replace(a, b) for u in urls]
+    urls = list(dict.fromkeys(urls))
+
+    if mode == "location_pages":
+        pages = [u for u in urls if re.search(emp["location_path"], u) and town_re.search(u.lower())]
+        job_urls = []
+        for pg in pages:
+            time.sleep(delay)
+            try:
+                t = s.get(pg, timeout=30).text
+            except requests.RequestException:
                 continue
+            for href in re.findall(r'href="([^"]+)"', t):
+                if re.search(emp["job_link"], href):
+                    job_urls.append(href if href.startswith("http") else base + href)
+        job_urls = list(dict.fromkeys(job_urls))
+    else:
+        job_urls = [u for u in urls if re.search(emp.get("job_path", "/jobs?/"), u)]
+        if mode == "slug":
+            job_urls = [u for u in job_urls if town_re.search(u.lower())]
+
+    ecache = cache.setdefault(emp["name"], {})
+    for k in list(ecache):            # forget adverts that are no longer listed
+        if k not in job_urls:
+            del ecache[k]
+    log(f"{emp['name']}: {len(urls)} links in sitemap, {len(job_urls)} adverts to consider")
+
+    jobs, opened, budget = [], 0, int(emp.get("max_new_pages_per_run", 400))
+    for u in job_urls:
+        c = ecache.get(u)
+        if c and not c.get("local"):
+            continue                                   # read before, not in our area
+        if not c and opened >= budget:
+            continue                                   # rest will be read on later runs
+        time.sleep(delay)
+        opened += 1
+        try:
+            r = s.get(u, timeout=30)
         except requests.RequestException:
             continue
-        post = None
-        for block in re.findall(r'<script[^>]*application/ld\+json[^>]*>([\s\S]*?)</script>', p.text):
-            try:
-                data = _json.loads(block)
-            except ValueError:
-                continue
-            for d in (data if isinstance(data, list) else data.get("@graph", [data])):
-                if isinstance(d, dict) and d.get("@type") == "JobPosting":
-                    post = d
+        if r.status_code != 200:
+            continue
+        post = _jobposting(r.text) or (_from_text(r.text) if emp.get("text_fallback") else None)
         if not post:
+            ecache[u] = {"local": False, "checked": str(today)}
             continue
         loc_obj = post.get("jobLocation") or {}
         if isinstance(loc_obj, list):
             loc_obj = loc_obj[0] if loc_obj else {}
         addr = loc_obj.get("address") or {}
-        loc = f"{addr.get('addressLocality') or ''}, {addr.get('postalCode') or ''}"
-        if not _thanet(loc + " " + u, places):
+        if isinstance(addr, str):
+            addr = {"addressLocality": addr}
+        loc = ", ".join(x for x in [addr.get("streetAddress") if emp.get("use_street") else "", addr.get("addressLocality") or "", addr.get("postalCode") or ""] if x)
+        local = _thanet(loc, places) or (mode != "all" and _thanet(u.replace("-", " "), places))
+        ecache[u] = {"local": bool(local), "checked": str(today)}
+        if not local:
             continue
         sal = ((post.get("baseSalary") or {}).get("value") or {})
         pay = ""
-        if isinstance(sal, dict) and (sal.get("value") or sal.get("minValue")):
-            v = sal.get("value") or sal.get("minValue")
+        if isinstance(sal, dict):
+            v = sal.get("value") or sal.get("minValue") or ""
+            hi = sal.get("maxValue")
             unit = str(sal.get("unitText", "")).upper()
-            pay = f"£{v} " + ("an hour" if unit == "HOUR" else "a year" if unit == "YEAR" else "")
-        closing = _date(post.get("validThrough"))
+            if v and "£" in str(v):
+                pay = str(v)
+            elif v:
+                pay = f"£{v}" + (f" to £{hi}" if hi else "") + (" an hour" if unit == "HOUR" else " a year" if unit == "YEAR" else "")
         et = post.get("employmentType") or ""
         et = et[0] if isinstance(et, list) and et else et
+        closing = _date(post.get("validThrough"))
+        ident = (post.get("identifier") or {}).get("value") if isinstance(post.get("identifier"), dict) else None
         job = {
-            "id": f"emp:{emp['name'].lower()}:" + str((post.get("identifier") or {}).get("value") or u.rsplit("/", 1)[-1]),
+            "id": f"emp:{emp['name'].lower()}:" + str(ident or re.sub(r"\W+", "", u[-40:])),
             "title": _text(post.get("title")),
             "employer": emp["name"],
             "pay": pay,
             "hours": {"FULL_TIME": "Full-time", "PART_TIME": "Part-time"}.get(str(et).upper(), ""),
-            "location": loc, "job_type": "",
+            "location": loc or u, "job_type": "",
             "posted": str(_date(post.get("datePosted")) or ""),
             "description": _text(post.get("description"))[:12000],
             "closed_notice": False, "url": u, "source": emp["name"],
         }
         if closing:
             job["closing"] = str(closing)
-        else:   # listed today, no closing date published: show for a week, re-checked daily
+        else:   # listed on their site today but no closing date published: re-checked every morning
             job["closing"] = str(today + dt.timedelta(days=int(emp.get("show_days_without_closing", 8))))
             job["closing_estimated"] = True
             job["listed_only"] = True
         jobs.append(job)
-    log(f"{emp['name']}: {len(jobs)} local jobs read")
+    left = sum(1 for u in job_urls if u not in ecache)
+    log(f"{emp['name']}: opened {opened} adverts, {len(jobs)} local jobs" + (f", {left} still to read on later runs" if left else ""))
     return jobs

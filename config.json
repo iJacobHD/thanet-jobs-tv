@@ -79,16 +79,179 @@
   "adzuna_max_days_old": 10,
   "search_locations": [
     "Margate",
-    "Canterbury"
+    "Canterbury",
+    "Dover",
+    "Ashford",
+    "Sittingbourne"
   ],
-  "area_name": "Thanet \u00b7 Herne Bay \u00b7 Whitstable \u00b7 Canterbury",
+  "area_name": "Within 90 mins of Thanet by public transport",
   "employers": [
     {
       "name": "Morrisons",
       "base": "https://www.morrisons.jobs",
-      "sitemap": "/sitemap.xml",
+      "mode": "slug",
       "job_path": "/jobs/",
       "crawl_delay": 15
+    },
+    {
+      "name": "Asda",
+      "base": "https://www.asda.jobs",
+      "mode": "slug",
+      "job_path": "/jobs/",
+      "crawl_delay": 15
+    },
+    {
+      "name": "Tesco",
+      "base": "https://careers.tesco.com",
+      "mode": "slug",
+      "sitemaps": [
+        "/careers/sitemap_index.xml"
+      ],
+      "url_rewrite": [
+        "/cs_CZ/",
+        "/en_GB/"
+      ],
+      "job_path": "/JobDetail/.+",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Lidl",
+      "base": "https://careers.lidl.co.uk",
+      "mode": "slug",
+      "job_path": "/jobs/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "M&S",
+      "base": "https://jobs.marksandspencer.com",
+      "mode": "slug",
+      "job_path": "/job-search/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Co-op",
+      "base": "https://jobs.coop.co.uk",
+      "mode": "location_pages",
+      "location_path": "/location/",
+      "job_link": "^/job/[^\\\"]+/22964/\\d+",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Waitrose / John Lewis",
+      "base": "https://www.jlpjobs.com",
+      "mode": "all",
+      "sitemaps": [
+        "/jobs-sitemap.xml"
+      ],
+      "job_path": "/job/",
+      "crawl_delay": 10
+    },
+    {
+      "name": "Boots",
+      "base": "https://www.boots.jobs",
+      "mode": "all",
+      "job_path": "/job/\\d+",
+      "crawl_delay": 1,
+      "max_new_pages_per_run": 400
+    },
+    {
+      "name": "Sainsbury's",
+      "base": "https://www.sainsburys.jobs",
+      "mode": "all",
+      "sitemaps": [
+        "/job-sitemap.xml"
+      ],
+      "job_path": "/jobs/description/",
+      "crawl_delay": 10,
+      "text_fallback": true,
+      "max_new_pages_per_run": 120
     }
-  ]
+  ],
+  "commute": {
+    "_note": "Door-to-door minutes from central Margate/Ramsgate by public transport: average train time (timetable data) + ~25 min to walk to the station, wait, and walk at the other end. Towns over max_minutes are left out.",
+    "max_minutes": 90,
+    "towns": {
+      "Margate": 25,
+      "Cliftonville": 30,
+      "Westgate": 30,
+      "Garlinge": 30,
+      "Westwood": 30,
+      "Broadstairs": 30,
+      "St Peter": 35,
+      "St. Peter": 35,
+      "Ramsgate": 30,
+      "Birchington": 35,
+      "Minster": 35,
+      "Manston": 40,
+      "Cliffsend": 40,
+      "Monkton": 45,
+      "Acol": 40,
+      "St Nicholas": 45,
+      "Thanet": 35,
+      "Herne Bay": 40,
+      "Herne": 45,
+      "Beltinge": 45,
+      "Reculver": 50,
+      "Greenhill": 45,
+      "Broomfield": 50,
+      "Studd Hill": 45,
+      "Whitstable": 45,
+      "Tankerton": 50,
+      "Chestfield": 45,
+      "Swalecliffe": 45,
+      "Canterbury": 55,
+      "Sturry": 50,
+      "Hersden": 55,
+      "Blean": 60,
+      "Hampton": 50,
+      "Thanington": 60,
+      "Harbledown": 60,
+      "Sandwich": 55,
+      "Deal": 65,
+      "Walmer": 70,
+      "Faversham": 55,
+      "Sittingbourne": 70,
+      "Ashford": 75,
+      "Dover": 80,
+      "Whitfield": 85,
+      "Westwood Cross": 30,
+      "Westwood Retail Park": 30
+    },
+    "postcodes": {
+      "CT1": 55,
+      "CT2": 55,
+      "CT3": 65,
+      "CT4": 70,
+      "CT5": 45,
+      "CT6": 40,
+      "CT7": 35,
+      "CT8": 30,
+      "CT9": 25,
+      "CT10": 30,
+      "CT11": 30,
+      "CT12": 35,
+      "CT13": 55,
+      "CT14": 65,
+      "CT16": 80,
+      "CT17": 80,
+      "ME13": 55,
+      "ME10": 70,
+      "TN23": 75,
+      "TN24": 75
+    },
+    "too_far_examples": {
+      "Folkestone": 93,
+      "Hythe": 105,
+      "Chatham": 95,
+      "Rochester": 100,
+      "Gillingham": 90,
+      "Maidstone": 120,
+      "London": 120
+    }
+  },
+  "employers_not_possible": {
+    "Aldi": "vacancy site sits behind a Cloudflare bot check",
+    "Work Hub (DWP)": "blocks automated access",
+    "Indeed": "no public feed"
+  }
 }

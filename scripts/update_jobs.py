@@ -204,8 +204,22 @@ def parse_detail(html, jid):
 
 
 # --------------------------------------------------------------------------- classify
+def commute_minutes(location, cfg):
+    """Door-to-door public transport minutes for a job location, from the commute table."""
+    com = cfg.get("commute")
+    if not com:
+        return None
+    for name in sorted(com["towns"], key=len, reverse=True):
+        if re.search(r"\b" + re.escape(name) + r"\b", location, re.I):
+            return com["towns"][name]
+    m = re.search(r"\b([A-Z]{1,2}\d{1,2})\s*\d[A-Z]{2}\b|\b([A-Z]{1,2}\d{1,2})\b", location.upper())
+    if m:
+        return com["postcodes"].get(m.group(1) or m.group(2))
+    return None
+
+
 def town_of(location, places):
-    places = sorted(places, key=len, reverse=True)   # "Herne Bay" before "Herne"
+    places = sorted(places, key=lambda p: (("Westwood" not in p), -len(p)))   # Westwood Cross first, then longest names
     for p in places:
         if re.search(r"\b" + re.escape(p) + r"\b", location, re.I):
             if p.upper().startswith("CT"):
@@ -232,7 +246,10 @@ def classify(job, cfg, today):
     forced = job["id"] in cfg.get("extra_allow_ids", [])
 
     if not any(re.search(r"\b" + re.escape(p) + r"\b", job["location"], re.I) for p in cfg["allowed_places"]):
-        return False, f"not in Thanet ({job['location'] or 'no location'})", {}
+        return False, f"outside the commute area ({job['location'] or 'no location'})", {}
+    mins = commute_minutes(job["location"], cfg)
+    if cfg.get("commute") and (mins is None or mins > cfg["commute"].get("max_minutes", 90)):
+        return False, f"over {cfg['commute'].get('max_minutes', 90)} min door to door ({job['location']})", {}
     closing = parse_date_iso(job["closing"])
     if job.get("closed_notice"):
         return False, "advert says closed", {}
@@ -274,6 +291,7 @@ def classify(job, cfg, today):
         "licence": needs_licence(job),
         "no_experience": bool(_any(NO_EXPERIENCE, text)),
         "days_left": days_left,
+        "travel_minutes": mins,
     }
     return True, "ok", flags
 
@@ -377,6 +395,10 @@ def main():
     args = ap.parse_args()
 
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
+    com = cfg.get("commute")
+    if com:   # the commute table decides which places count
+        mx = com.get("max_minutes", 90)
+        cfg["allowed_places"] = [p for p, m in {**com["towns"], **com["postcodes"]}.items() if m <= mx]
     dump = json.load(open(args.from_dump, encoding="utf-8")) if args.from_dump else None
     if dump is not None and "pages" in dump:      # file saved by the Work Hub collector bookmark
         print(f"Using collected file from {dump.get('collected')} ({dump.get('thanet')} Thanet adverts)")
@@ -412,8 +434,17 @@ def main():
         if cfg.get("use_nhs_jobs", True):
             run("NHS Jobs", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
                                      for j in sources.nhs_jobs(places, loc, 10)])
+        emp_cache_path = os.path.join(ROOT, "data", "employer_cache.json")
+        try:
+            emp_cache = json.load(open(emp_cache_path, encoding="utf-8"))
+        except (OSError, ValueError):
+            emp_cache = {}
         for emp in cfg.get("employers", []):
-            run(emp["name"], lambda emp=emp: sources.employer_sitemap(emp, places, today))
+            if emp.get("enabled", True):
+                run(emp["name"], lambda emp=emp: sources.employer_site(emp, places, today, emp_cache))
+        os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
+        with open(emp_cache_path, "w", encoding="utf-8") as fh:
+            json.dump(emp_cache, fh, indent=0)
         az_id, az_key = os.environ.get("ADZUNA_APP_ID", "").strip(), os.environ.get("ADZUNA_APP_KEY", "").strip()
         if az_id and az_key and cfg.get("use_adzuna", True):
             run("Adzuna", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
@@ -485,6 +516,7 @@ def main():
                 "contract": job["job_type"],
                 "closing": job["closing"],
                 "licence": flags["licence"],
+                "travel_minutes": flags.get("travel_minutes"),
                 "no_experience": flags["no_experience"],
                 "url": job["url"],
                 "source": job.get("source", "DWP Find a Job"),

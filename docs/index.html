@@ -64,9 +64,9 @@
 <body>
 <div id="stage">
   <header>
-    <span class="kicker" id="area">Hiring now · Thanet · Herne Bay · Whitstable · Canterbury</span>
+    <span class="kicker" id="area">Hiring now · Thanet &amp; East Kent</span>
     <h1>Local jobs</h1>
-    <p class="sub">No experience needed. Point your <b>phone camera</b> at a code to see the job and apply.</p>
+    <p class="sub">No experience needed · all within 90 mins of Thanet by bus or train. Point your <b>phone camera</b> at a code to apply.</p>
   </header>
   <main id="slide"></main>
   <footer>
@@ -144,6 +144,7 @@
         <div class="chips">
           <span class="chip">📍 ${esc(j.town)}</span>
           <span class="chip pay">${esc(j.pay)}</span>
+          ${j.travel_minutes && j.travel_minutes > 45 ? `<span class="chip">🚆 ~${j.travel_minutes} min</span>` : ""}
           ${j.hours ? `<span class="chip">${esc(j.hours)}</span>` : ""}
         </div>
         <div class="foot">
@@ -178,7 +179,6 @@
       // if a row of chips is too wide, drop the least important (last) chip rather than cut it off
       slide.querySelectorAll(".chips").forEach(c => { while (c.scrollWidth > c.clientWidth + 1 && c.children.length > 2) c.lastElementChild.remove(); });
     }
-    if (data && data.area) document.getElementById("area").textContent = "Hiring now · " + data.area;
     if (data && data.source) document.getElementById("source").textContent = "Source: " + data.source + ". Always check the full advert before applying.";
     if (data && data.generated) {
       const g = new Date(data.generated);
