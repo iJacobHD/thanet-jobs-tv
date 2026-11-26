@@ -35,56 +35,7 @@
 "checked": "2026-11-26"
 }
 },
-"Tesco": {
-"https://careers.tesco.com/en_GB/careers/JobDetail/Duty-Pharmacy-Manager-Ashford-Crooksfoot-P-T/198937": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/en_GB/careers/JobDetail/Duty-Pharmacy-Manager-Whitstable-Extra/200090": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/en_GB/careers/JobDetail/Pharmacy-Manager-Faversham/220817": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/en_GB/careers/JobDetail/Customer-Delivery-Driver-Ashford-Crooksfoot-Extra/221052": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/en_GB/careers/JobDetail/Customer-Delivery-Driver-Whitstable-Extra/221600": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Colleague-Chelmsford-Broomfield-Rd-Express/221775": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Duty-Pharmacy-Manager-Ashford-Crooksfoot-P-T/198937": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Duty-Pharmacy-Manager-Whitstable-Extra/200090": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Pharmacy-Manager-Faversham/220817": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Customer-Delivery-Driver-Ashford-Crooksfoot-Extra/221052": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Customer-Delivery-Driver-Whitstable-Extra/221600": {
-"local": true,
-"checked": "2026-11-26"
-},
-"https://careers.tesco.com/hu_HU/careers/JobDetail/Tesco-Colleague-Chelmsford-Broomfield-Rd-Express/221775": {
-"local": true,
-"checked": "2026-11-26"
-}
-},
+"Tesco": {},
 "Lidl": {},
 "M&S": {
 "https://jobs.marksandspencer.com/job-search/in-store/kent-kent/christmas-customer-assistant-food-sittingbourne-simply-food/300008384944532": {
@@ -208,7 +159,7 @@
 "checked": "2026-11-26"
 },
 "https://www.jlpjobs.com/job/supermarket-assistant-guernsey-221693/": {
-"local": true,
+"local": false,
 "checked": "2026-11-26"
 },
 "https://www.jlpjobs.com/job/7-5t-customer-delivery-driver-installer-221814/": {
@@ -276,10 +227,6 @@
 "checked": "2026-11-26"
 },
 "https://www.jlpjobs.com/job/customer-delivery-driver-supermarket-assistant-222140/": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.jlpjobs.com/job/insight-manager-brand-cx-tracking-222151/": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -885,10 +832,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.boots.jobs/job/75860180": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.boots.jobs/job/75860168": {
 "local": false,
 "checked": "2026-11-26"
@@ -978,10 +921,6 @@
 "checked": "2026-11-26"
 },
 "https://www.boots.jobs/job/75860025": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.boots.jobs/job/75859888": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -1377,10 +1316,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.boots.jobs/job/75858906": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.boots.jobs/job/75858900": {
 "local": false,
 "checked": "2026-11-26"
@@ -1498,10 +1433,6 @@
 "checked": "2026-11-26"
 },
 "https://www.boots.jobs/job/75858448": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.boots.jobs/job/75858443": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -1857,10 +1788,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.boots.jobs/job/75856613": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.boots.jobs/job/75856601": {
 "local": false,
 "checked": "2026-11-26"
@@ -1934,6 +1861,1598 @@
 "checked": "2026-11-26"
 },
 "https://www.boots.jobs/job/75856428": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75861387": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856415": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856291": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856247": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856246": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856235": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856234": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856233": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856230": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856229": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856224": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856222": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856221": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856219": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856167": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856137": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856103": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856102": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75856045": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855930": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855929": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855928": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855909": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855901": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855900": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855886": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855885": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855877": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855875": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855874": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855862": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855861": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855859": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855858": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855853": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855851": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855849": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855841": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855838": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855837": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855474": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855436": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855413": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855408": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855325": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855300": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855236": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855211": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855210": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855208": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855207": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855205": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855187": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855185": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855184": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855183": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855177": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855176": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855152": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855150": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855148": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855121": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855120": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855116": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855101": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855099": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855096": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855095": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75855094": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854892": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854891": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854876": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854850": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854813": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854808": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854807": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854795": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854794": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854781": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854779": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854778": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854766": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854697": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854696": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854536": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854518": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854517": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854504": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854494": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854488": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854485": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854484": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854483": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854456": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854455": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854453": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854452": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854416": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854389": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854376": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854364": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854362": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854361": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854324": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854311": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854282": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854172": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854171": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854148": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854141": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854130": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854126": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854125": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854123": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854117": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854116": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75854015": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853988": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853980": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853861": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853859": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853848": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853838": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853837": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853834": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853833": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853805": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853804": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853722": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853720": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853719": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853612": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853594": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853586": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853558": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853542": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853541": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853524": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853516": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853514": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853509": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853496": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853492": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853488": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853461": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853460": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853459": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853422": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853400": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853397": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853396": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853391": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853390": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853389": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853379": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853334": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853254": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853200": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853197": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853196": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853180": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853178": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853177": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853148": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853145": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853144": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853141": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853139": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853138": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853133": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853121": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853118": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853116": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853115": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853114": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853109": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853090": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853087": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75853035": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852880": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852866": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852864": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852855": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852854": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852845": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852841": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852840": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852832": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852807": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852804": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852792": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852773": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852766": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852765": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852699": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852697": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852688": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852668": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852559": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852532": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852519": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852518": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852517": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852516": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852514": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852485": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852456": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852439": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852403": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852270": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852260": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852212": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852210": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852209": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852207": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852202": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852194": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852105": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75852056": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851867": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851834": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851819": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851806": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851805": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851804": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851803": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851771": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851748": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851745": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851710": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851700": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851690": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851687": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851685": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851549": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851418": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851356": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851347": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851257": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851235": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851215": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851214": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851213": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851201": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851200": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851084": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851033": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851031": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851030": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75851004": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850996": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850992": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850981": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850979": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850977": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850874": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850857": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850843": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850812": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850726": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850673": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850646": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850585": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850576": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850384": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850353": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850351": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850350": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850347": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850346": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850340": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850312": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850307": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850238": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850177": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75850147": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849984": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849978": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849976": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849972": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849955": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849938": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849935": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849911": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849910": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849871": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849870": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849868": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849862": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849767": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849725": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849630": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849600": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849502": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849501": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849370": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849351": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849064": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75849001": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848894": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848879": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848877": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848858": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848601": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848577": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848537": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848507": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848506": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848504": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848503": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848406": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75848320": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847984": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847983": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847562": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847559": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847558": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847548": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847544": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847542": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847541": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847540": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847539": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847538": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847533": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847478": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847337": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847305": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847304": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847285": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847259": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847238": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847205": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847126": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847085": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75847019": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846981": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846906": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846882": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846834": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846683": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846667": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846604": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846522": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846486": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846423": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846368": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846354": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846337": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846322": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846316": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846311": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75846288": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845937": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845932": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845913": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845912": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845908": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845907": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845905": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845903": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845890": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845881": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845880": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845874": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845853": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845852": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845640": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845506": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845504": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845502": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845501": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845481": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845479": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845457": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845412": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845389": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845272": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845183": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845161": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845152": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845130": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845128": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845125": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845122": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845046": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845045": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845044": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845043": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75845025": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844903": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844880": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844723": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844706": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844681": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844648": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844647": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.boots.jobs/job/75844535": {
 "local": false,
 "checked": "2026-11-26"
 }
@@ -2075,10 +3594,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.sainsburys.jobs/jobs/description/400092823/": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.sainsburys.jobs/jobs/description/400092858/": {
 "local": false,
 "checked": "2026-11-26"
@@ -2127,10 +3642,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.sainsburys.jobs/jobs/description/400097020/": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.sainsburys.jobs/jobs/description/400097078/": {
 "local": false,
 "checked": "2026-11-26"
@@ -2148,10 +3659,6 @@
 "checked": "2026-11-26"
 },
 "https://www.sainsburys.jobs/jobs/description/400097513/": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.sainsburys.jobs/jobs/description/400097108/": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -2331,19 +3838,11 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.sainsburys.jobs/jobs/description/400101071/": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.sainsburys.jobs/jobs/description/400101125/": {
 "local": false,
 "checked": "2026-11-26"
 },
 "https://www.sainsburys.jobs/jobs/description/400100662/": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.sainsburys.jobs/jobs/description/400099112/": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -2367,10 +3866,6 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.sainsburys.jobs/jobs/description/400094527/": {
-"local": false,
-"checked": "2026-11-26"
-},
 "https://www.sainsburys.jobs/jobs/description/400099946/": {
 "local": false,
 "checked": "2026-11-26"
@@ -2388,10 +3883,6 @@
 "checked": "2026-11-26"
 },
 "https://www.sainsburys.jobs/jobs/description/400100309/": {
-"local": false,
-"checked": "2026-11-26"
-},
-"https://www.sainsburys.jobs/jobs/description/400095786/": {
 "local": false,
 "checked": "2026-11-26"
 },
@@ -2415,8 +3906,1532 @@
 "local": false,
 "checked": "2026-11-26"
 },
-"https://www.sainsburys.jobs/jobs/description/400101124/": {
+"https://www.sainsburys.jobs/jobs/description/400075691/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400094818/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101578/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101585/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400091963/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400097609/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400090551/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101257/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101534/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098878/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101075/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098135/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098215/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098724/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101178/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101532/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099014/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099110/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101572/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099286/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099474/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099553/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101256/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098711/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101362/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098684/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099820/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099977/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099630/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100092/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100168/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101088/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100364/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100454/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100888/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101110/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100459/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101267/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098674/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098584/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100562/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100496/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100587/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100582/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100594/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100652/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099375/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100690/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100695/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100696/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099472/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100737/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101301/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100790/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101337/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100991/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400097941/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098418/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098652/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098763/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101260/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099305/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099637/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098822/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099132/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099773/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099796/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099837/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101064/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100812/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101213/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100058/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098438/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100771/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101292/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101312/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100835/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098871/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101317/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100960/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100981/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098063/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101030/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101049/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101092/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098558/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101195/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099830/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101230/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101214/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101275/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100347/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101449/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101455/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101447/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100399/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101472/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101474/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099804/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101473/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101467/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101508/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101503/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400100592/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101528/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101560/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400101567/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400097885/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098100/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098179/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098760/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098808/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098781/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098955/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400098324/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099321/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099341/": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.sainsburys.jobs/jobs/description/400099521/": {
+"local": false,
+"checked": "2026-11-26"
+}
+},
+"Primark": {},
+"Next": {
+"https://careers.next.co.uk/jobs/513": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/21153": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/74627": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/74679": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/75476": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/74732": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/75056": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/74296": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/72980": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/74232": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/75769": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/75761": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76006": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78250": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78310": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77982": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77837": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78101": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78407": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78349": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78350": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78323": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78347": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78279": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78293": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77682": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78067": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78018": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78160": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77756": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77683": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78031": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77804": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78126": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77709": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77877": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77981": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77595": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77650": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77708": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78095": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78083": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78020": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77872": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78134": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77615": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77796": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78054": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78121": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78268": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78167": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78300": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78356": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77793": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78329": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78328": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78274": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78299": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78107": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77755": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77684": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78104": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78392": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78269": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78335": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77935": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78354": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78301": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78289": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/78373": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76887": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76292": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77023": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76962": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77167": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77172": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77124": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76265": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76837": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76662": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76660": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76132": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76595": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76827": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76224": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76766": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77044": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/76104": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77530": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77175": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77529": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77168": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77365": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77408": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77024": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77221": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77481": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77457": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77459": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77492": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77506": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77533": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77480": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77528": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77527": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://careers.next.co.uk/jobs/77567": {
+"local": false,
+"checked": "2026-11-26"
+}
+},
+"McDonald's": {
+"https://people.mcdonalds.co.uk/job-search/restaurant-2610@51.0949278,1.0440897/kent/shift-leader/pdx-mc-56275c5b-0bf3-4d35-b844-ac512ad160e3-109492": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://people.mcdonalds.co.uk/job-search/restaurant-1095@51.4418976,0.7573367/kent/crew-member/pdx-mc-7b0e34a0-4e7f-4b52-a48c-1acf7f6c2e19-78318": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://people.mcdonalds.co.uk/job-search/restaurant-2105@51.2900767,1.3423337/kent/maintenance-person/pdx-mc-999275ca-8341-4ec9-80dd-c631b5326f7f-82104": {
 "local": true,
+"checked": "2026-11-26"
+},
+"https://people.mcdonalds.co.uk/job-search/restaurant-108@51.3867313,1.3813109/kent/customer-care/pdx-mc-2e5e16c8-ebc4-4353-9ac4-0032082873c5-78316": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://people.mcdonalds.co.uk/job-search/restaurant-1018@51.3510841,0.7057053/kent/overnight-crew-member/pdx-mc-11801ea6-a19f-4c8d-9160-4abb1953ebf1-78307": {
+"local": false,
+"checked": "2026-11-26"
+}
+},
+"B&M": {
+"https://bmretailweb.itssystems.co.uk/vacancies/22762/maintenance-engineer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/22811/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/22820/merchandiser.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/22909/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/22928/class-1-hgv-driver.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/22986/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23068/stock-and-systems-administrator.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23084/customer-service-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23110/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23122/finance-business-partner.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23126/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23142/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23165/people-business-partner.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23176/designate-deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23178/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23181/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23182/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23184/floor-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23185/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23188/floor-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23193/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23194/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23208/warehouse-team-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23212/designate-deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23215/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23216/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23217/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23221/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23232/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23235/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23237/temporary-security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23238/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23242/warehouse-maintenance-engineer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23244/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23245/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23248/store-manager-designate.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23249/store-manager-designate.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23257/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23259/security-officer.html": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23260/replenishment-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23262/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23263/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23265/floor-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23266/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23267/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23268/treasury-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23272/health-and-safety-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23276/customer-service-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23278/dc--warehouse-team-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23280/temporary-seasonal-customer-service-assistant.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23281/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23282/internal-communications-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23284/assistant-merchandiser.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23294/seasonal-store-colleague.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23296/data-engineer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23308/hgv-class-1-tramper.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23309/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23311/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23312/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23313/junior-buyer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23314/assistant-buyer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23316/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23317/project-manager--12-month-ftc.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23320/seasonal-store-colleague.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23321/operating-model-analyst--12-month-ftc.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23322/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23327/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23328/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23329/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23331/pmo-analyst.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23334/customer-service-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23335/cloud-engineer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23336/seasonal-store-colleague.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23338/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23340/visual-merchandiser.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23341/visual-merchandising-assistant.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23343/floor-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23344/replenishment-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23345/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23346/replenishment-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23347/customer-service-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23348/business-analyst.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23350/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23352/product-technologist.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23353/data-lead-ftc.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23355/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23357/floor-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23358/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23359/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23361/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23362/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23363/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23366/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23367/store-manager-designate.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23368/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23369/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23371/customer-service-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23372/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23373/deputy-store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23375/merchandiser.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23376/floor-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23377/branch-merchandiser.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23378/assistant-buyer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23380/group-internal-auditor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23381/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23386/customs-specialist.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23387/replenishment-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23388/data-analyst.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23391/store-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23397/customer-service-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23402/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23403/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23404/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23405/security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23406/trade-planning-assistant.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23409/temporary-security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23410/temporary-security-officer.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23411/customer-service-assistant.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23415/register-your-interest-for-retail-management-opportunities.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23416/register-your-interest-for-retail-management-opportunities.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23417/register-your-interest-for-retail-management-opportunities.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://bmretailweb.itssystems.co.uk/vacancies/23418/customer-service-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+}
+},
+"Wickes / Toolstation / Travis Perkins": {
+"https://www.tpplccareers.co.uk/job/senior-store-assistant-keyholder-in-canterbury-jid-5849": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/utilities-technical-sales-specialist-south-in-ashford-basingstoke-braintree-canning-town-jid-44055": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/kitchen-surveyor-in-ashford-jid-44756": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/national-sales-administrator-in-ashford-jid-44776": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/hire-fitter-driver-in-canterbury-jid-44812": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/warehouse-operative-monday-to-friday-in-ashford-jid-44833": {
+"local": true,
+"checked": "2026-11-26"
+},
+"https://www.tpplccareers.co.uk/job/area-sales-representative-in-ashford-jid-44849": {
+"local": true,
+"checked": "2026-11-26"
+}
+},
+"Currys": {},
+"Travelodge": {
+"https://www.travelodge.co.uk/vacancies/vacancies/1703/senior-cluster-revenue-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/1998/revenue-accountant.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2064/procurement-manager--maintenance.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2116/technical-business-analyst.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2146/assistant-hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2153/hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2176/assistant-hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2178/hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2180/legal-counsel.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2181/senior-compliance--safety-operations-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2185/cluster-revenue-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2187/hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2188/assistant-hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2193/customer-service-quality-analyst.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2195/customer-relations-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2213/it-service-continuity-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2218/head-of-treasury-and-investor-relations.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2220/assistant-hotel-manager.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2222/customer-resolutions-supervisor.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2223/assistant-hotel-manager--part-time-12-month-fixed-term-contract.html": {
+"local": false,
+"checked": "2026-11-26"
+},
+"https://www.travelodge.co.uk/vacancies/vacancies/2226/maintenance-engineer.html": {
+"local": false,
 "checked": "2026-11-26"
 }
 }
