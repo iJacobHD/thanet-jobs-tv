@@ -356,6 +356,66 @@
       "title_re": "job-list-title\">([^<]+)",
       "location_re": "itemprop=\"address\">([^<]+)",
       "crawl_delay": 10
+    },
+    {
+      "name": "KFC",
+      "base": "https://careers.kfc.co.uk",
+      "mode": "slug",
+      "job_path": "/jobs/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Royal Mail",
+      "base": "https://careers.royalmailgroup.com",
+      "mode": "phenom",
+      "search_path": "/gb/en/search-results",
+      "job_prefix": "/gb/en/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Compass Group (Chartwells, Eurest, Medirest)",
+      "base": "https://jobs.compass-group.co.uk",
+      "mode": "all",
+      "job_path": "/job/\\d+",
+      "crawl_delay": 1,
+      "max_new_pages_per_run": 300,
+      "employer": "Compass Group"
+    },
+    {
+      "name": "Care UK",
+      "base": "https://www.careuk.com",
+      "mode": "slug",
+      "job_path": "/careers/vacancies/sys-",
+      "crawl_delay": 3
+    },
+    {
+      "name": "OCS",
+      "base": "https://jobs.ocs.com",
+      "mode": "all",
+      "job_path": "/vacancies/\\d+",
+      "crawl_delay": 2,
+      "max_new_pages_per_run": 250
+    },
+    {
+      "name": "Specsavers",
+      "base": "https://careers.specsavers.com",
+      "mode": "slug",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "PizzaExpress",
+      "base": "https://jobs.pizzaexpress.com",
+      "mode": "all",
+      "job_path": "/job/\\d+",
+      "crawl_delay": 2
+    },
+    {
+      "name": "Shepherd Neame (pubs & hotels)",
+      "base": "https://www.peoplebank.com",
+      "mode": "peoplebank",
+      "listing": "/pb3/corporate/shepherdneame/advertsearch.php?p_Location=&p_Department=&do_search=Show+Vacancies",
+      "employer": "Shepherd Neame"
     }
   ],
   "commute": {
@@ -473,13 +533,19 @@
     "Nando's": "careers site returns a blank 'unavailable' page to automated visits",
     "Elev8": "small local business - no careers site or feed",
     "Deichmann": "jobs only appear after filling in their search form - no feed",
-    "Mitie (security)": "careers site sits behind a bot check - its adverts reach Reed / Find a Job"
+    "Mitie (security)": "careers site sits behind a bot check - its adverts reach Reed / Find a Job",
+    "Domino's": "stores are franchised - careers site only lists head-office/driver jobs",
+    "Burger King, Stonegate, PureGym, Holland & Barrett, HC-One, Loungers": "no readable job list (search runs inside their page)",
+    "Holiday Inn (IHG)": "careers site blocks automated reading",
+    "Stagecoach": "old careers site is gone"
   },
   "exclude_places": [
     "Guernsey",
     "Jersey",
     "St Peter Port",
-    "Isle of Man"
+    "Isle of Man",
+    "Surrey",
+    "Middlesex"
   ],
   "use_apprenticeships": true
 }

@@ -834,3 +834,43 @@ def apprenticeships_site(places, centres=None, log=print, delay=2):
             time.sleep(delay)
     log(f"Find an apprenticeship (website): {len(jobs)} apprenticeships in our area")
     return jobs
+
+
+# Ordnance Survey grid (hectometres) of our towns - for sites that give a map position instead of a town
+OS_TOWNS = {"Margate": (6355, 1705), "Ramsgate": (6380, 1650), "Broadstairs": (6390, 1678), "Westgate-on-Sea": (6325, 1700),
+            "Birchington": (6305, 1690), "Canterbury": (6150, 1578), "Whitstable": (6110, 1665), "Herne Bay": (6175, 1680),
+            "Faversham": (6015, 1615), "Dover": (6320, 1415), "Deal": (6375, 1525), "Sandwich": (6330, 1580),
+            "Ashford": (6010, 1425), "Sittingbourne": (5905, 1635)}
+
+
+def _os_town(e, n, within=60):
+    best = min(OS_TOWNS.items(), key=lambda kv: (kv[1][0] - e) ** 2 + (kv[1][1] - n) ** 2)
+    d = ((best[1][0] - e) ** 2 + (best[1][1] - n) ** 2) ** 0.5
+    return best[0] if d <= within else None
+
+
+def peoplebank(emp, places, today, cache, log=print):
+    """Peoplebank vacancy list (Shepherd Neame pubs and hotels). Each row has the venue's OS grid position."""
+    s, base = _session(), "https://www.peoplebank.com"
+    t = s.get(base + emp["listing"], timeout=40).text
+    jobs = []
+    rows = re.findall(r'<div class="result"([^>]*)>([\s\S]*?)</div>\s*</div>', t)
+    for attrs, body in rows:
+        e = re.search(r'easting="(\d+)"', attrs)
+        n = re.search(r'northing="(\d+)"', attrs)
+        venue = (re.search(r'data-location="([^"]*)"', attrs) or [None, ""])[1]
+        town = _os_town(int(e.group(1)), int(n.group(1))) if e and n else None
+        if not town:
+            continue
+        title = _text((re.search(r'<h2[^>]*>([\s\S]*?)</h2>', body) or [None, ""])[1])
+        closing = _anydate((re.search(r"Closing Date\s*([\d/]+)", body) or [None, ""])[1])
+        href = (re.search(r'href="(/pbank/owa/pbk24w12\.main\?p=[^"]+)"', body) or [None, ""])[1]
+        if not (title and closing and href):
+            continue
+        jobs.append(_job(emp, href.split("p=")[-1][:24], title, f"{html.unescape(venue)}, {town}", base + href, today,
+                         closing=closing, description=(re.search(r'data-department="([^"]*)"', attrs) or [None, ""])[1]))
+    log(f"{emp['name']}: {len(rows)} adverts listed, {len(jobs)} local jobs")
+    return jobs
+
+
+SPECIAL_MODES["peoplebank"] = peoplebank
