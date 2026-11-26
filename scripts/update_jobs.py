@@ -261,7 +261,8 @@ def classify(job, cfg, today):
         amin = annual_min(job["pay"])
         if amin and amin > cfg.get("max_annual_salary", 32000):
             return False, f"salary too high for entry level ({job['pay']})", {}
-        if amin and "nhs" in f"{job['employer']} {job['title']}".lower() and amin > cfg.get("nhs_max_annual_salary", 25500):
+        if amin and ("nhs" in f"{job['employer']} {job['title']}".lower() or job.get("source") == "NHS Jobs") \
+                and amin > cfg.get("nhs_max_annual_salary", 25500):
             return False, f"NHS Band 3+ pay - usually needs experience ({job['pay']})", {}
 
     flags = {
@@ -378,20 +379,45 @@ def main():
     f = Fetcher(cfg.get("request_delay_seconds", 1.0), dump)
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
 
-    # Source: Reed's official API when a key is set (fully automatic), otherwise Work Hub.
-    reed_key = os.environ.get("REED_API_KEY", "").strip()
-    reed_jobs = None
-    if reed_key and dump is None:
-        from reed_source import fetch
-        reed_jobs = fetch(reed_key, cfg["search_location"], 10, places=cfg["allowed_places"])
-        if not reed_jobs:
-            print("Reed returned no jobs. Keeping the previous jobs.json.")
+    # Sources: official job feeds (Reed, Teaching Vacancies, NHS Jobs, Adzuna). Fully automatic.
+    reed_jobs = None          # = jobs from the feeds (name kept for the code below)
+    used, failed = [], []
+    if dump is None:
+        import sources
+        places = cfg["allowed_places"]
+        collected = []
+
+        def run(name, fn):
+            try:
+                js = fn()
+                collected.extend(js)
+                used.append(name)
+            except Exception as e:      # one feed failing never stops the others
+                print(f"!! {name} failed: {e}")
+                failed.append(name)
+
+        reed_key = os.environ.get("REED_API_KEY", "").strip()
+        if reed_key:
+            from reed_source import fetch
+            run("Reed", lambda: [dict(j, id="reed:" + j["id"], source="Reed")
+                                 for j in fetch(reed_key, cfg["search_location"], 10, places=places)])
+        if cfg.get("use_teaching_vacancies", True):
+            run("Teaching Vacancies", lambda: sources.teaching_vacancies(places))
+        if cfg.get("use_nhs_jobs", True):
+            run("NHS Jobs", lambda: sources.nhs_jobs(places, cfg["search_location"], 10))
+        az_id, az_key = os.environ.get("ADZUNA_APP_ID", "").strip(), os.environ.get("ADZUNA_APP_KEY", "").strip()
+        if az_id and az_key and cfg.get("use_adzuna", True):
+            run("Adzuna", lambda: sources.adzuna(az_id, az_key, places, cfg["search_location"],
+                                                 max_days_old=cfg.get("adzuna_max_days_old", 10)))
+        if not collected:
+            print("No jobs from any feed. Keeping the previous jobs.json.")
             sys.exit(1)
+        reed_jobs = collected
 
     # 1. collect job ids from the search results
     loc = cfg["search_location"]
-    ids, page, total = ([j["id"] for j in reed_jobs] if reed_jobs else []), 1, None
     reed_by_id = {j["id"]: j for j in reed_jobs or []}
+    ids, page, total = list(reed_by_id), 1, None
     while reed_jobs is None and page <= cfg.get("max_search_pages", 40):
         status, html = f.get(f"/jobs/search?location={loc}&pageNumber={page}")
         if status != 200:
@@ -451,20 +477,33 @@ def main():
                 "licence": flags["licence"],
                 "no_experience": flags["no_experience"],
                 "url": job["url"],
+                "source": job.get("source", "DWP Find a Job"),
+                "posted": job.get("posted", ""),
+                "closing_estimated": bool(job.get("closing_estimated")),
                 "qr": {"size": size, "path": svg},
             })
 
-    kept.sort(key=lambda j: (j["closing"], j["title"]))
+    if failed:
+        try:
+            prev = json.load(open(os.path.join(ROOT, "docs", "jobs.json"), encoding="utf-8"))
+            carried = [j for j in prev.get("jobs", []) if j.get("source") in failed and j.get("closing", "") > str(today)]
+            kept += carried
+            print(f"Kept {len(carried)} jobs from yesterday for feeds that failed today: {', '.join(failed)}")
+        except (OSError, ValueError):
+            pass
+    kept.sort(key=lambda j: (j.get("closing_estimated", False), j["closing"], j["title"]))
     seen_keys, unique = set(), []
     for j in kept:
-        k = (j["title"].lower(), j["employer"].lower(), j["town"].lower())
+        k = (re.sub(r"[^a-z0-9]", "", j["title"].lower()), j["town"].lower())
         if k not in seen_keys:
             seen_keys.add(k)
             unique.append(j)
-    kept = unique
+    kept = sorted(unique, key=lambda j: (j["closing"], j["title"]))
     out = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source": ("reed.co.uk (official Reed Jobseeker API)" if reed_jobs is not None else
+        "source": (", ".join(used + [f + " (yesterday's)" for f in failed]) +
+                   (". Teaching Vacancies and NHS Jobs data under the Open Government Licence v3.0" if used else "")
+                   if reed_jobs is not None else
                    "DWP Find a Job (jobs.service.gov.uk) - contains public sector information licensed under the Open Government Licence v3.0"),
         "count": len(kept),
         "jobs": kept,

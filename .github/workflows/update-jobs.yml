@@ -31,15 +31,12 @@ jobs:
           pip install -r requirements.txt playwright pillow
           python -m playwright install --with-deps chromium
 
-      - name: Fetch and filter jobs (Reed)
+      - name: Fetch and filter jobs (Reed, Teaching Vacancies, NHS Jobs, Adzuna)
         env:
           REED_API_KEY: ${{ secrets.REED_API_KEY }}
-        run: |
-          if [ -n "$REED_API_KEY" ]; then
-            python scripts/update_jobs.py
-          else
-            echo "::warning::No REED_API_KEY secret yet - remaking the video from the last job list."
-          fi
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python scripts/update_jobs.py
 
       - name: Make slides and MP4
         run: python scripts/render_slides.py

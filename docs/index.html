@@ -132,18 +132,20 @@
   function card(j) {
     const left = daysLeft(j.closing);
     const n = j.qr.size + 8;
-    const closes = left <= 3 ? `Closes soon: ${fmtDate(j.closing)}` : `Apply by ${fmtDate(j.closing)}`;
+    const closes = j.closing_estimated
+      ? `Posted ${fmtDate(j.posted)} · apply soon`
+      : (left <= 3 ? `Closes soon: ${fmtDate(j.closing)}` : `Apply by ${fmtDate(j.closing)}`);
     return `<article class="job">
       <div class="info">
         <div class="title">${esc(j.title)}</div>
-        <div class="employer">${esc(j.employer)}</div>
+        <div class="employer">${esc(j.employer)}${j.source ? ` <span style="opacity:.7">· via ${esc(j.source)}</span>` : ""}</div>
         <div class="chips">
           <span class="chip">📍 ${esc(j.town)}</span>
           <span class="chip pay">${esc(j.pay)}</span>
           ${j.hours ? `<span class="chip">${esc(j.hours)}</span>` : ""}
         </div>
         <div class="foot">
-          <div class="closes ${left <= 3 ? "soon" : ""}">${closes}</div>
+          <div class="closes ${left <= 3 && !j.closing_estimated ? "soon" : ""}">${closes}</div>
           ${j.licence ? `<span class="chip lic">🚗 Licence needed</span>` : (j.no_experience ? `<span class="chip noexp">✓ Training given</span>` : "")}
         </div>
       </div>
