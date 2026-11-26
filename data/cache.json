@@ -341,7 +341,7 @@
 },
 "reed:57595005": {
 "title": "Head Housekeeper",
-"reason": "ok",
+"reason": "not entry level (title: 'Head')",
 "checked": "2026-11-26"
 },
 "reed:57550050": {
@@ -396,7 +396,7 @@
 },
 "reed:57467324": {
 "title": "HLTA",
-"reason": "ok",
+"reason": "not entry level (title: 'HLTA')",
 "checked": "2026-11-26"
 },
 "reed:57565735": {
@@ -481,12 +481,12 @@
 },
 "reed:57595583": {
 "title": "Company Secretary - Qualified or PQ - Canterbury - Financial Services.",
-"reason": "ok",
+"reason": "not entry level (title: 'Secretary')",
 "checked": "2026-11-26"
 },
 "reed:57560876": {
 "title": "SEN Tutor",
-"reason": "ok",
+"reason": "not entry level (title: 'Tutor')",
 "checked": "2026-11-26"
 },
 "reed:57559614": {
@@ -551,7 +551,7 @@
 },
 "reed:57583239": {
 "title": "Computer Science Graduate - Systems Support / Consultancy",
-"reason": "ok",
+"reason": "not entry level (title: 'Graduate')",
 "checked": "2026-11-26"
 },
 "reed:57595619": {
@@ -711,7 +711,7 @@
 },
 "reed:57570972": {
 "title": "SEN Tutor",
-"reason": "ok",
+"reason": "not entry level (title: 'Tutor')",
 "checked": "2026-11-26"
 },
 "reed:57599823": {
@@ -736,7 +736,7 @@
 },
 "reed:57546319": {
 "title": "Company Secretary - Qualified or PQ - Canterbury - Financial Services",
-"reason": "ok",
+"reason": "not entry level (title: 'Secretary')",
 "checked": "2026-11-26"
 },
 "reed:57546316": {
@@ -761,7 +761,7 @@
 },
 "reed:57518727": {
 "title": "Company Secretary - Qualified or PQ - Canterbury - Financial Services..n",
-"reason": "ok",
+"reason": "not entry level (title: 'Secretary')",
 "checked": "2026-11-26"
 },
 "reed:57517515": {
@@ -916,7 +916,7 @@
 },
 "reed:57488950": {
 "title": "CNC Setter // Whistable, Kent",
-"reason": "ok",
+"reason": "not entry level (title: 'Setter')",
 "checked": "2026-11-26"
 },
 "reed:57485457": {
@@ -1006,7 +1006,7 @@
 },
 "nhs:5752284": {
 "title": "Head Housekeeper",
-"reason": "ok",
+"reason": "not entry level (title: 'Head')",
 "checked": "2026-11-26"
 },
 "nhs:5720627": {
@@ -1044,44 +1044,9 @@
 "reason": "not entry level (title: 'Consultant')",
 "checked": "2026-11-26"
 },
-"nhs:5740295": {
-"title": "Locum Consultant in Anaesthetics",
-"reason": "not entry level (title: 'Consultant')",
-"checked": "2026-11-26"
-},
-"nhs:5743165": {
-"title": "Mental Health Together Navigator",
-"reason": "not entry level (title: 'Navigator')",
-"checked": "2026-11-26"
-},
-"nhs:5737054": {
-"title": "Bowel Cancer Screening Administrative Supervisor",
-"reason": "not entry level (title: 'Supervisor')",
-"checked": "2026-11-26"
-},
-"nhs:5749180": {
-"title": "Care Assistant - Care Home",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"nhs:5745682": {
-"title": "Clinical Services Care Co-Ordinator",
-"reason": "not entry level (title: 'Co-Ordinator')",
-"checked": "2026-11-26"
-},
-"nhs:5745247": {
-"title": "Neurophysiology Consultant",
-"reason": "not entry level (title: 'Consultant')",
-"checked": "2026-11-26"
-},
 "nhs:5715993": {
 "title": "Bank Practitioner, Urgent Treatment Centre",
 "reason": "not entry level (title: 'Practitioner')",
-"checked": "2026-11-26"
-},
-"nhs:5731470": {
-"title": "Staff Nurse Ward Ashford",
-"reason": "not entry level (title: 'Nurse')",
 "checked": "2026-11-26"
 },
 "nhs:5734085": {
@@ -1106,7 +1071,7 @@
 },
 "nhs:5726222": {
 "title": "Echocardiographer (Cardiac Physiologist)",
-"reason": "ok",
+"reason": "not entry level (title: 'Physiologist')",
 "checked": "2026-11-26"
 },
 "nhs:5748312": {
@@ -1147,6 +1112,21 @@
 "emp:morrisons:3322": {
 "title": "Pharmacy Manager",
 "reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"tv:0601dea5-1dcc-4d26-a9aa-42198d11f199": {
+"title": "Exam Invigilator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5743504": {
+"title": "Information Business Partner",
+"reason": "not entry level (title: 'Partner')",
+"checked": "2026-11-26"
+},
+"nhs:5750384": {
+"title": "Practice Nurse with Chronic Disease Management Experience",
+"reason": "not entry level (title: 'Nurse')",
 "checked": "2026-11-26"
 }
 }

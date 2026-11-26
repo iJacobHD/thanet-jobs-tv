@@ -1,4 +1,4 @@
-Run 2026-11-26T15:05:51Z  kept 55 of 235
+Run 2026-11-26T15:13:35Z  kept 47 of 231
 
 KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57574966
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57574803
@@ -15,30 +15,22 @@ KEEP | Evening & Weekend Care Assistant                             | ok | https
 KEEP | Care Professional-                                           | ok | https://www.reed.co.uk/jobs/care-professional/57529071
 KEEP | Care Professional_Broadstairs_T054                           | ok | https://www.reed.co.uk/jobs/care-professionalbroadstairst054/57528465
 KEEP | Cleaner                                                      | ok | https://www.reed.co.uk/jobs/cleaner/57599485
-KEEP | Head Housekeeper                                             | ok | https://www.reed.co.uk/jobs/head-housekeeper/57595005
 KEEP | Recovery Worker and Waking Night Recovery Worker - Mental He | ok | https://www.reed.co.uk/jobs/recovery-worker-and-waking-night-recovery-worker-mental-health/57408989
 KEEP | Part Time Bar Staff                                          | ok | https://www.reed.co.uk/jobs/part-time-bar-staff/57547772
 KEEP | SEN Teaching Assistant                                       | ok | https://www.reed.co.uk/jobs/sen-teaching-assistant/57565187
 KEEP | Sales Negotiator                                             | ok | https://www.reed.co.uk/jobs/sales-negotiator/57531786
-KEEP | HLTA                                                         | ok | https://www.reed.co.uk/jobs/hlta/57467324
 KEEP | Care Assistant                                               | ok | https://www.reed.co.uk/jobs/care-assistant/57410043
 KEEP | Support Worker                                               | ok | https://www.reed.co.uk/jobs/support-worker/57410088
 KEEP | SEN Teaching Assistant                                       | ok | https://www.reed.co.uk/jobs/sen-teaching-assistant/57482921
 KEEP | Sports coach                                                 | ok | https://www.reed.co.uk/jobs/sports-coach/57467381
-KEEP | Company Secretary - Qualified or PQ - Canterbury - Financial | ok | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-services/57595583
-KEEP | SEN Tutor                                                    | ok | https://www.reed.co.uk/jobs/sen-tutor/57560876
 KEEP | Hostel In-Reach Recovery Worker                              | ok | https://www.reed.co.uk/jobs/hostel-in-reach-recovery-worker/57601604
 KEEP | Operative // Bridge, Kent                                    | ok | https://www.reed.co.uk/jobs/operative-bridge-kent/57501050
 KEEP | Machine Operator                                             | ok | https://www.reed.co.uk/jobs/machine-operator/57483549
 KEEP | Customer Service Administrator | Immediate start!            | ok | https://www.reed.co.uk/jobs/customer-service-administrator--immediate-start/57482485
-KEEP | Computer Science Graduate - Systems Support / Consultancy    | ok | https://www.reed.co.uk/jobs/computer-science-graduate-systems-support-consultancy/57583239
 KEEP | Operative // Bridge, Kent                                    | ok | https://www.reed.co.uk/jobs/operative-bridge-kent/57545789
 KEEP | Recruitment Assistant | Part-Time | Immediate start!         | ok | https://www.reed.co.uk/jobs/recruitment-assistant--part-time--immediate-start/57484069
-KEEP | SEN Tutor                                                    | ok | https://www.reed.co.uk/jobs/sen-tutor/57570972
 KEEP | Canterbury Cl                                                | ok | https://www.reed.co.uk/jobs/canterbury-cl/57568856
 KEEP | Recruitment Assistant | Part-Time | Immediate start!         | ok | https://www.reed.co.uk/jobs/recruitment-assistant--part-time--immediate-start/57552178
-KEEP | Company Secretary - Qualified or PQ - Canterbury - Financial | ok | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-services/57546319
-KEEP | Company Secretary - Qualified or PQ - Canterbury - Financial | ok | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-servicesn/57518727
 KEEP | Temporary HR Administrator | Immediate Start!                | ok | https://www.reed.co.uk/jobs/temporary-hr-administrator--immediate-start/57472643
 KEEP | Care Professional_Canterbury_T065                            | ok | https://www.reed.co.uk/jobs/care-professionalcanterburyt065/57532197
 KEEP | Part Time Kitchen Assistant                                  | ok | https://www.reed.co.uk/jobs/part-time-kitchen-assistant/57527538
@@ -48,11 +40,11 @@ KEEP | Postal Delivery Driver (Postie)                              | ok | https
 KEEP | Care Professional-                                           | ok | https://www.reed.co.uk/jobs/care-professional/57530252
 KEEP | Care Professional- Canterbury                                | ok | https://www.reed.co.uk/jobs/care-professional-canterbury/57529392
 KEEP | Chef Apprenticeship                                          | ok | https://www.reed.co.uk/jobs/chef-apprenticeship/57527429
-KEEP | CNC Setter // Whistable, Kent                                | ok | https://www.reed.co.uk/jobs/cnc-setter-whistable-kent/57488950
 KEEP | Full Time Care Assistant **Drivers Only**                    | ok | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57594760
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57579341
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57578063
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57577225
+KEEP | Exam Invigilator                                             | ok | https://teaching-vacancies.service.gov.uk/jobs/exam-invigilator-0601dea5-1dcc-4d26-a9aa-42198d11f199
 KEEP | Medical receptionist                                         | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A3025-26-0006
 KEEP | Reception/ Admin                                             | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A2988-26-0001
 KEEP | Care Assistant - Bank - Care Home                            | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/E0177-26-00056
@@ -60,37 +52,34 @@ KEEP | Receptionist/Telephonist                                     | ok | https
 KEEP | Healthcare Support Worker - QEQM Hospital                    | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00023
 KEEP | Receptionist                                                 | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A0624-26-0008
 KEEP | Practice Cleaner                                             | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A0624-26-0009
-KEEP | Head Housekeeper                                             | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/L0034-26-00139
-KEEP | Food & Beverage Assistant                                    | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/E0177-26-00285
 KEEP | Care Assistant - Nights                                      | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/L0034-26-00130
-KEEP | Care Assistant - Care Home                                   | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/E0177-26-00287
+KEEP | Food & Beverage Assistant                                    | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/E0177-26-00285
 KEEP | Housekeeping Assistant - Care Home                           | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/E0177-26-00286
-KEEP | Echocardiographer (Cardiac Physiologist)                     | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A2876-26-0027
 KEEP | Customer Assistant - Service                                 | ok | https://www.morrisons.jobs/jobs/customer-assistant-service-in-herne-bay.7093
-SKIP | Administrator                                                | NHS Band 3+ pay - usually needs experience (£25760.00 to £27476.00) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-00007
 SKIP | Medical Education Support Administrator                      | NHS Band 3+ pay - usually needs experience (£25760.00 to £27476.00) (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00008
-SKIP | PA - Leading Professional services company - Canterbury.     | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/pa-leading-professional-services-company-canterbury/57595599
-SKIP | PA - Leading Professional services company - Canterbury      | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/pa-leading-professional-services-company-canterbury/57546315
+SKIP | Administrator                                                | NHS Band 3+ pay - usually needs experience (£25760.00 to £27476.00) (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-00007
 SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/telehandler/57500939
 SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/welfare-labourer/57479118
+SKIP | PA - Leading Professional services company - Canterbury.     | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/pa-leading-professional-services-company-canterbury/57595599
+SKIP | PA - Leading Professional services company - Canterbury      | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/pa-leading-professional-services-company-canterbury/57546315
 SKIP | Health & Rehabilitation Care Assistant                       | asks for experience ('Band 3') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9846-26-0707
-SKIP | Maintenance Operative                                        | asks for experience ('Experience Essential') | https://www.reed.co.uk/jobs/maintenance-operative/57532802
-SKIP | Line Leader                                                  | asks for experience ('Experience Required') | https://www.reed.co.uk/jobs/line-leader/57465864
-SKIP | Family & Childcare Legal Secretary - Canterbury              | asks for experience ('Previous experience as') | https://www.reed.co.uk/jobs/family-amp-childcare-legal-secretary-canterbury/57544006
-SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604475
-SKIP | Legal Cashier                                                | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/legal-cashier/57545888
-SKIP | Finance & Administration Assistant                           | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/finance-amp-administration-assistant/57524648
+SKIP | Maintenance Operative                                        | asks for experience ('Experience Essential') (cached) | https://www.reed.co.uk/jobs/maintenance-operative/57532802
+SKIP | Line Leader                                                  | asks for experience ('Experience Required') (cached) | https://www.reed.co.uk/jobs/line-leader/57465864
+SKIP | Family & Childcare Legal Secretary - Canterbury              | asks for experience ('Previous experience as') (cached) | https://www.reed.co.uk/jobs/family-amp-childcare-legal-secretary-canterbury/57544006
 SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
-SKIP | Ecologist                                                    | asks for experience ('Previous experience within') | https://www.reed.co.uk/jobs/ecologist/57533208
-SKIP | Panel Beater - Whitstable                                    | asks for experience ('Proven experience as') | https://www.reed.co.uk/jobs/panel-beater-whitstable/57545568
-SKIP | Panel Beater                                                 | asks for experience ('Proven experience as') | https://www.reed.co.uk/jobs/panel-beater/57485457
-SKIP | Finance Administrator | Dover | £28k                         | asks for experience ('Proven experience in') | https://www.reed.co.uk/jobs/finance-administrator--dover--16328k/57589618
-SKIP | Trainee Payroll Admin - Fantastic Canterbury firm - Great Tr | asks for experience ('experienced professionals') | https://www.reed.co.uk/jobs/trainee-payroll-admin-fantastic-canterbury-firm-great-training/57595580
-SKIP | Trainee Payroll Admin - Fantastic Canterbury firm - Great Tr | asks for experience ('experienced professionals') | https://www.reed.co.uk/jobs/trainee-payroll-admin-fantastic-canterbury-firm-great-training/57546323
-SKIP | Children’s Healthcare Assistant                              | asks for experience ('looking for an experienced') | https://www.reed.co.uk/jobs/childrens-healthcare-assistant/57459382
-SKIP | Teaching Assistant                                           | asks for experience ('looking for experienced') | https://www.reed.co.uk/jobs/teaching-assistant/57565321
+SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604475
+SKIP | Legal Cashier                                                | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/legal-cashier/57545888
+SKIP | Finance & Administration Assistant                           | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/finance-amp-administration-assistant/57524648
+SKIP | Ecologist                                                    | asks for experience ('Previous experience within') (cached) | https://www.reed.co.uk/jobs/ecologist/57533208
+SKIP | Panel Beater - Whitstable                                    | asks for experience ('Proven experience as') (cached) | https://www.reed.co.uk/jobs/panel-beater-whitstable/57545568
+SKIP | Panel Beater                                                 | asks for experience ('Proven experience as') (cached) | https://www.reed.co.uk/jobs/panel-beater/57485457
+SKIP | Finance Administrator | Dover | £28k                         | asks for experience ('Proven experience in') (cached) | https://www.reed.co.uk/jobs/finance-administrator--dover--16328k/57589618
+SKIP | Trainee Payroll Admin - Fantastic Canterbury firm - Great Tr | asks for experience ('experienced professionals') (cached) | https://www.reed.co.uk/jobs/trainee-payroll-admin-fantastic-canterbury-firm-great-training/57595580
+SKIP | Trainee Payroll Admin - Fantastic Canterbury firm - Great Tr | asks for experience ('experienced professionals') (cached) | https://www.reed.co.uk/jobs/trainee-payroll-admin-fantastic-canterbury-firm-great-training/57546323
+SKIP | Children’s Healthcare Assistant                              | asks for experience ('looking for an experienced') (cached) | https://www.reed.co.uk/jobs/childrens-healthcare-assistant/57459382
+SKIP | Teaching Assistant                                           | asks for experience ('looking for experienced') (cached) | https://www.reed.co.uk/jobs/teaching-assistant/57565321
 SKIP | KSC Teaching Assistant                                       | asks for experience ('looking for experienced') (cached) | https://teaching-vacancies.service.gov.uk/jobs/ksc-teaching-assistant
-SKIP | Academic Note Taker                                          | asks for experience ('will have experience') | https://www.reed.co.uk/jobs/academic-note-taker/57475887
+SKIP | Academic Note Taker                                          | asks for experience ('will have experience') (cached) | https://www.reed.co.uk/jobs/academic-note-taker/57475887
 SKIP | Mechanical Engineer                                          | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/mechanical-engineer/57505441
 SKIP | Multi Skilled Engineer                                       | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/multi-skilled-engineer/57505700
 SKIP | Vehicle Technician                                           | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/vehicle-technician/57463380
@@ -98,140 +87,147 @@ SKIP | Vehicle Paint Sprayer                                        | expired / 
 SKIP | Dermatologist                                                | expired / closing too soon (2026-11-26) | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-0315
 SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/traffic-marshall/57492714
 SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/labourer/57500932
-SKIP | Audiologist/Hearing Aid Dispenser                            | needs a qualification/licence ('HCPC') | https://www.reed.co.uk/jobs/audiologist-hearing-aid-dispenser/57509563
-SKIP | Management Accountant                                        | not entry level (title: 'Accountant') | https://www.reed.co.uk/jobs/management-accountant/57602948
-SKIP | Trust Accountant - High Profile Team - Great Progression.... | not entry level (title: 'Accountant') | https://www.reed.co.uk/jobs/trust-accountant-high-profile-team-great-progression/57595625
-SKIP | Jnr Management Accountant - Canterbury - CIMA Training.      | not entry level (title: 'Accountant') | https://www.reed.co.uk/jobs/jnr-management-accountant-canterbury-cima-training/57595590
-SKIP | Jnr Management Accountant - Canterbury - CIMA Training       | not entry level (title: 'Accountant') | https://www.reed.co.uk/jobs/jnr-management-accountant-canterbury-cima-training/57546316
-SKIP | Health And Safety Advisor                                    | not entry level (title: 'Advisor') | https://www.reed.co.uk/jobs/health-and-safety-advisor/57574709
-SKIP | Service Advisor                                              | not entry level (title: 'Advisor') | https://www.reed.co.uk/jobs/service-advisor/57572360
+SKIP | Audiologist/Hearing Aid Dispenser                            | needs a qualification/licence ('HCPC') (cached) | https://www.reed.co.uk/jobs/audiologist-hearing-aid-dispenser/57509563
+SKIP | Management Accountant                                        | not entry level (title: 'Accountant') (cached) | https://www.reed.co.uk/jobs/management-accountant/57602948
+SKIP | Trust Accountant - High Profile Team - Great Progression.... | not entry level (title: 'Accountant') (cached) | https://www.reed.co.uk/jobs/trust-accountant-high-profile-team-great-progression/57595625
+SKIP | Jnr Management Accountant - Canterbury - CIMA Training.      | not entry level (title: 'Accountant') (cached) | https://www.reed.co.uk/jobs/jnr-management-accountant-canterbury-cima-training/57595590
+SKIP | Jnr Management Accountant - Canterbury - CIMA Training       | not entry level (title: 'Accountant') (cached) | https://www.reed.co.uk/jobs/jnr-management-accountant-canterbury-cima-training/57546316
 SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') (cached) | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
-SKIP | Pastry Chef                                                  | not entry level (title: 'Chef') | https://www.reed.co.uk/jobs/pastry-chef/57550050
-SKIP | Chef                                                         | not entry level (title: 'Chef') | https://www.reed.co.uk/jobs/chef/57527098
-SKIP | Sous Chef                                                    | not entry level (title: 'Chef') | https://www.reed.co.uk/jobs/sous-chef/57526496
-SKIP | Clinical Services Care Co-Ordinator                          | not entry level (title: 'Co-Ordinator') | https://beta.jobs.nhs.uk/candidate/jobadvert/A3620-26-00000
+SKIP | Health And Safety Advisor                                    | not entry level (title: 'Advisor') (cached) | https://www.reed.co.uk/jobs/health-and-safety-advisor/57574709
+SKIP | Service Advisor                                              | not entry level (title: 'Advisor') (cached) | https://www.reed.co.uk/jobs/service-advisor/57572360
+SKIP | Pastry Chef                                                  | not entry level (title: 'Chef') (cached) | https://www.reed.co.uk/jobs/pastry-chef/57550050
+SKIP | Chef                                                         | not entry level (title: 'Chef') (cached) | https://www.reed.co.uk/jobs/chef/57527098
+SKIP | Sous Chef                                                    | not entry level (title: 'Chef') (cached) | https://www.reed.co.uk/jobs/sous-chef/57526496
 SKIP | Safeguarding Co-ordinator                                    | not entry level (title: 'Co-ordinator') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A0700-26-00001
-SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') | https://www.reed.co.uk/jobs/optical-consultant-foundation/57548069
-SKIP | IT Systems & Business Solutions Consultant - Canterbury      | not entry level (title: 'Consultant') | https://www.reed.co.uk/jobs/it-systems-amp-business-solutions-consultant-canterbury/57587019
-SKIP | Consultant in Anaesthetics (KCH)                             | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00013
-SKIP | Locum Consultant in Anaesthetics                             | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00012
-SKIP | Neurophysiology Consultant                                   | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00018
-SKIP | Consultant Dermatologist                                     | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0639
-SKIP | Consultant in Intensive Care Medicine and Anaesthetics       | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0633
 SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') (cached) | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
+SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') (cached) | https://www.reed.co.uk/jobs/optical-consultant-foundation/57548069
+SKIP | IT Systems & Business Solutions Consultant - Canterbury      | not entry level (title: 'Consultant') (cached) | https://www.reed.co.uk/jobs/it-systems-amp-business-solutions-consultant-canterbury/57587019
 SKIP | Consultant Gastroenterologist                                | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0620
 SKIP | Consultant in Critical Care (QEH)                            | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00017
 SKIP | Consultant Psychiatrist - Thanet Community Older People      | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-0890
 SKIP | Consultant in Palliative Medicine (QEH)                      | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00020
-SKIP | Technical Coordinator                                        | not entry level (title: 'Coordinator') | https://www.reed.co.uk/jobs/technical-coordinator/57475873
-SKIP | Complex Care Coordinator                                     | not entry level (title: 'Coordinator') | https://www.reed.co.uk/jobs/complex-care-coordinator/57410106
+SKIP | Consultant in Anaesthetics (KCH)                             | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00013
+SKIP | Consultant in Intensive Care Medicine and Anaesthetics       | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0633
+SKIP | Consultant Dermatologist                                     | not entry level (title: 'Consultant') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0639
+SKIP | Technical Coordinator                                        | not entry level (title: 'Coordinator') (cached) | https://www.reed.co.uk/jobs/technical-coordinator/57475873
+SKIP | Complex Care Coordinator                                     | not entry level (title: 'Coordinator') (cached) | https://www.reed.co.uk/jobs/complex-care-coordinator/57410106
 SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-00010
 SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-0387
-SKIP | IT & Business Technology Consulting Director - Canterbury    | not entry level (title: 'Director') | https://www.reed.co.uk/jobs/it-amp-business-technology-consulting-director-canterbury/57587036
-SKIP | Qualified Electrician                                        | not entry level (title: 'Electrician') | https://www.reed.co.uk/jobs/qualified-electrician/57473561
-SKIP | Manufacturing Engineer                                       | not entry level (title: 'Engineer') | https://www.reed.co.uk/jobs/manufacturing-engineer/57607001
+SKIP | IT & Business Technology Consulting Director - Canterbury    | not entry level (title: 'Director') (cached) | https://www.reed.co.uk/jobs/it-amp-business-technology-consulting-director-canterbury/57587036
+SKIP | Qualified Electrician                                        | not entry level (title: 'Electrician') (cached) | https://www.reed.co.uk/jobs/qualified-electrician/57473561
+SKIP | Manufacturing Engineer                                       | not entry level (title: 'Engineer') (cached) | https://www.reed.co.uk/jobs/manufacturing-engineer/57607001
 SKIP | Field Sales                                                  | not entry level (title: 'Field Sales') (cached) | https://www.reed.co.uk/jobs/field-sales/57598099
 SKIP | Hydraulic Fitter                                             | not entry level (title: 'Fitter') (cached) | https://www.reed.co.uk/jobs/hydraulic-fitter/57557993
-SKIP | Salaried GP                                                  | not entry level (title: 'GP') | https://beta.jobs.nhs.uk/candidate/jobadvert/A2757-26-0012
 SKIP | Salaried GP - St Peters Surgery                              | not entry level (title: 'GP') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/B0082-26-0088
 SKIP | Salaried GP                                                  | not entry level (title: 'GP') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A2604-26-0002
 SKIP | Salaried GP -Birchington Medical Centre                      | not entry level (title: 'GP') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/B0082-26-0087
-SKIP | Head of Audiology                                            | not entry level (title: 'Head of') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00022
-SKIP | Early Years Lead Practitioner                                | not entry level (title: 'Lead') | https://teaching-vacancies.service.gov.uk/jobs/early-years-lead-practitioner-the-canterbury-academy-trust
-SKIP | Maths Lecturer                                               | not entry level (title: 'Lecturer') | https://teaching-vacancies.service.gov.uk/jobs/maths-lecturer-ekc-group-broadstairs-kent
-SKIP | Wealth Manager                                               | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/wealth-manager/57614924
-SKIP | Registered Manager                                           | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/registered-manager/57610409
-SKIP | Interim Client Manager                                       | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/interim-client-manager/57582214
-SKIP | Learning & Development Manager                               | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/learning-amp-development-manager/57591455
-SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualified/57546289
-SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualified/57439571
-SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualifiedm/57518733
-SKIP | Finance Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/finance-manager/57499163
-SKIP | Business Development Manager - Financial or Professional Ser | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/business-development-manager-financial-or-professional-services-canterbury/57439572
-SKIP | Audit Manager (NFP)                                          | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/audit-manager-nfp/57496282
-SKIP | Service Desk Manager                                         | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/service-desk-manager/57479160
-SKIP | Relationship Manager - Complex Care                          | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/relationship-manager-complex-care/57410061
-SKIP | General Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/general-manager/57578904
-SKIP | General Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/general-manager/57578907
-SKIP | Senior Medical Education Manager KCH                         | not entry level (title: 'Manager') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00015
-SKIP | Pharmacy Manager                                             | not entry level (title: 'Manager') | https://www.morrisons.jobs/jobs/pharmacy-manager-in-canterbury.6882
+SKIP | Salaried GP                                                  | not entry level (title: 'GP') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A2757-26-0012
+SKIP | Computer Science Graduate - Systems Support / Consultancy    | not entry level (title: 'Graduate') | https://www.reed.co.uk/jobs/computer-science-graduate-systems-support-consultancy/57583239
+SKIP | HLTA                                                         | not entry level (title: 'HLTA') | https://www.reed.co.uk/jobs/hlta/57467324
+SKIP | Head of Audiology                                            | not entry level (title: 'Head of') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00022
+SKIP | Head Housekeeper                                             | not entry level (title: 'Head') | https://www.reed.co.uk/jobs/head-housekeeper/57595005
+SKIP | Head Housekeeper                                             | not entry level (title: 'Head') | https://beta.jobs.nhs.uk/candidate/jobadvert/L0034-26-00139
+SKIP | Early Years Lead Practitioner                                | not entry level (title: 'Lead') (cached) | https://teaching-vacancies.service.gov.uk/jobs/early-years-lead-practitioner-the-canterbury-academy-trust
+SKIP | Maths Lecturer                                               | not entry level (title: 'Lecturer') (cached) | https://teaching-vacancies.service.gov.uk/jobs/maths-lecturer-ekc-group-broadstairs-kent
 SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
 SKIP | General Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/general-manager/57594937
 SKIP | Key Account Manager                                          | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/key-account-manager/57562716
 SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
 SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
-SKIP | Machine Minder // Chartham, Kent                             | not entry level (title: 'Minder') | https://www.reed.co.uk/jobs/machine-minder-chartham-kent/57524017
-SKIP | Mental Health Together Navigator                             | not entry level (title: 'Navigator') | https://beta.jobs.nhs.uk/candidate/jobadvert/B0347-26-00000
+SKIP | Wealth Manager                                               | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/wealth-manager/57614924
+SKIP | Registered Manager                                           | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/registered-manager/57610409
+SKIP | Interim Client Manager                                       | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/interim-client-manager/57582214
+SKIP | Learning & Development Manager                               | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/learning-amp-development-manager/57591455
+SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualified/57546289
+SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualified/57439571
+SKIP | Snr Corporate Governance Manager/ Company Secretary - Canter | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/snr-corporate-governance-manager-company-secretary-canterbury-cgi-qualifiedm/57518733
+SKIP | Finance Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/finance-manager/57499163
+SKIP | Business Development Manager - Financial or Professional Ser | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/business-development-manager-financial-or-professional-services-canterbury/57439572
+SKIP | Audit Manager (NFP)                                          | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/audit-manager-nfp/57496282
+SKIP | Service Desk Manager                                         | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/service-desk-manager/57479160
+SKIP | Relationship Manager - Complex Care                          | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/relationship-manager-complex-care/57410061
+SKIP | General Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/general-manager/57578904
+SKIP | General Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/general-manager/57578907
+SKIP | Senior Medical Education Manager KCH                         | not entry level (title: 'Manager') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00015
+SKIP | Pharmacy Manager                                             | not entry level (title: 'Manager') (cached) | https://www.morrisons.jobs/jobs/pharmacy-manager-in-canterbury.6882
+SKIP | Machine Minder // Chartham, Kent                             | not entry level (title: 'Minder') (cached) | https://www.reed.co.uk/jobs/machine-minder-chartham-kent/57524017
 SKIP | Mental Health Together Navigator                             | not entry level (title: 'Navigator') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/B0347-26-00002
-SKIP | Rapid Response Nurse                                         | not entry level (title: 'Nurse') | https://www.reed.co.uk/jobs/rapid-response-nurse/57410086
-SKIP | Registered Nurse                                             | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9846-26-00015
-SKIP | Staff Nurse Ward Canterbury                                  | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/E0005-26-0046
-SKIP | Staff Nurse Ward Ashford                                     | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/E0005-26-0045
-SKIP | Casual Bank Nurse - Medical Devices                          | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/E0472-26-0116
+SKIP | Practice Nurse with Chronic Disease Management Experience    | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/A2876-26-00001
+SKIP | Rapid Response Nurse                                         | not entry level (title: 'Nurse') (cached) | https://www.reed.co.uk/jobs/rapid-response-nurse/57410086
 SKIP | Registered General Nurse                                     | not entry level (title: 'Nurse') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/B0497-26-00000
-SKIP | Part Time Networker & Community Engagement Officer           | not entry level (title: 'Officer') | https://www.reed.co.uk/jobs/part-time-networker-amp-community-engagement-officer/57529243
-SKIP | Full Time Networker & Community Engagement Officer (Medway,  | not entry level (title: 'Officer') | https://www.reed.co.uk/jobs/full-time-networker-amp-community-engagement-officer-medway-canterbury-amp-sittingbourne-areas/57528701
-SKIP | Chief Operating Officer                                      | not entry level (title: 'Officer') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00001
-SKIP | Audit Partner | Equity Potential | Private Equity-Backed Gro | not entry level (title: 'Partner') | https://www.reed.co.uk/jobs/audit-partner--equity-potential--private-equity-backed-growth/57595606
-SKIP | Relief Pharmacist                                            | not entry level (title: 'Pharmacist') | https://www.reed.co.uk/jobs/relief-pharmacist/57547938
-SKIP | Clinical Pharmacist                                          | not entry level (title: 'Pharmacist') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-00004
-SKIP | Bank Practitioner, Urgent Treatment Centre                   | not entry level (title: 'Practitioner') | https://beta.jobs.nhs.uk/candidate/jobadvert/A5994-26-0006
-SKIP | Car Sales Executive                                          | not entry level (title: 'Sales Executive') | https://www.reed.co.uk/jobs/car-sales-executive/57591148
-SKIP | P/T Client Sales Executive *Dog friendly office*             | not entry level (title: 'Sales Executive') | https://www.reed.co.uk/jobs/p-t-client-sales-executive-dog-friendly-office/57599823
-SKIP | P/T Client Sales Executive *Dog friendly office*             | not entry level (title: 'Sales Executive') | https://www.reed.co.uk/jobs/p-t-client-sales-executive-dog-friendly-office/57517515
-SKIP | PT Senior Payroll Officer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/pt-senior-payroll-officer/57558881
-SKIP | Senior Finance Assistant                                     | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-finance-assistant/57524659
-SKIP | Audit Senior                                                 | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/audit-senior/57469169
-SKIP | Interim Senior Accountant                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/interim-senior-accountant/57576103
-SKIP | Mixed Tax Senior                                             | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/mixed-tax-senior/57589651
-SKIP | Senior Care Assistant - Nights                               | not entry level (title: 'Senior') | https://beta.jobs.nhs.uk/candidate/jobadvert/L0034-26-00117
+SKIP | Registered Nurse                                             | not entry level (title: 'Nurse') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9846-26-00015
+SKIP | Staff Nurse Ward Canterbury                                  | not entry level (title: 'Nurse') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/E0005-26-0046
+SKIP | Casual Bank Nurse - Medical Devices                          | not entry level (title: 'Nurse') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/E0472-26-0116
+SKIP | Part Time Networker & Community Engagement Officer           | not entry level (title: 'Officer') (cached) | https://www.reed.co.uk/jobs/part-time-networker-amp-community-engagement-officer/57529243
+SKIP | Full Time Networker & Community Engagement Officer (Medway,  | not entry level (title: 'Officer') (cached) | https://www.reed.co.uk/jobs/full-time-networker-amp-community-engagement-officer-medway-canterbury-amp-sittingbourne-areas/57528701
+SKIP | Chief Operating Officer                                      | not entry level (title: 'Officer') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00001
+SKIP | Information Business Partner                                 | not entry level (title: 'Partner') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00016
+SKIP | Audit Partner | Equity Potential | Private Equity-Backed Gro | not entry level (title: 'Partner') (cached) | https://www.reed.co.uk/jobs/audit-partner--equity-potential--private-equity-backed-growth/57595606
+SKIP | Relief Pharmacist                                            | not entry level (title: 'Pharmacist') (cached) | https://www.reed.co.uk/jobs/relief-pharmacist/57547938
+SKIP | Clinical Pharmacist                                          | not entry level (title: 'Pharmacist') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-00004
+SKIP | Echocardiographer (Cardiac Physiologist)                     | not entry level (title: 'Physiologist') | https://beta.jobs.nhs.uk/candidate/jobadvert/A2876-26-0027
+SKIP | Bank Practitioner, Urgent Treatment Centre                   | not entry level (title: 'Practitioner') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/A5994-26-0006
+SKIP | Car Sales Executive                                          | not entry level (title: 'Sales Executive') (cached) | https://www.reed.co.uk/jobs/car-sales-executive/57591148
+SKIP | P/T Client Sales Executive *Dog friendly office*             | not entry level (title: 'Sales Executive') (cached) | https://www.reed.co.uk/jobs/p-t-client-sales-executive-dog-friendly-office/57599823
+SKIP | P/T Client Sales Executive *Dog friendly office*             | not entry level (title: 'Sales Executive') (cached) | https://www.reed.co.uk/jobs/p-t-client-sales-executive-dog-friendly-office/57517515
+SKIP | Company Secretary - Qualified or PQ - Canterbury - Financial | not entry level (title: 'Secretary') | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-services/57595583
+SKIP | Company Secretary - Qualified or PQ - Canterbury - Financial | not entry level (title: 'Secretary') | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-services/57546319
+SKIP | Company Secretary - Qualified or PQ - Canterbury - Financial | not entry level (title: 'Secretary') | https://www.reed.co.uk/jobs/company-secretary-qualified-or-pq-canterbury-financial-servicesn/57518727
 SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57581325
 SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57492425
+SKIP | PT Senior Payroll Officer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/pt-senior-payroll-officer/57558881
+SKIP | Senior Finance Assistant                                     | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-finance-assistant/57524659
+SKIP | Audit Senior                                                 | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/audit-senior/57469169
+SKIP | Interim Senior Accountant                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/interim-senior-accountant/57576103
+SKIP | Mixed Tax Senior                                             | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/mixed-tax-senior/57589651
 SKIP | Senior Clinical Fellow in Anaesthetics ST3 (QEQM)            | not entry level (title: 'Senior') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0640
-SKIP | Commercial Property Solicitor                                | not entry level (title: 'Solicitor') | https://www.reed.co.uk/jobs/commercial-property-solicitor/57591296
+SKIP | Senior Care Assistant - Nights                               | not entry level (title: 'Senior') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/L0034-26-00117
+SKIP | CNC Setter // Whistable, Kent                                | not entry level (title: 'Setter') | https://www.reed.co.uk/jobs/cnc-setter-whistable-kent/57488950
+SKIP | Commercial Property Solicitor                                | not entry level (title: 'Solicitor') (cached) | https://www.reed.co.uk/jobs/commercial-property-solicitor/57591296
 SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') (cached) | https://www.reed.co.uk/jobs/employment-specialist/57513221
-SKIP | Cover Supervisor                                             | not entry level (title: 'Supervisor') | https://www.reed.co.uk/jobs/cover-supervisor/57484384
-SKIP | Cover Supervisor                                             | not entry level (title: 'Supervisor') | https://www.reed.co.uk/jobs/cover-supervisor/57489397
-SKIP | Payroll Bureau Supervisor                                    | not entry level (title: 'Supervisor') | https://www.reed.co.uk/jobs/payroll-bureau-supervisor/57487999
-SKIP | Bowel Cancer Screening Administrative Supervisor             | not entry level (title: 'Supervisor') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00002
-SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/sen-teacher/57565183
-SKIP | Class Teacher                                                | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/class-teacher/57565735
-SKIP | Supply Teacher                                               | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/supply-teacher/57482900
-SKIP | Teacher                                                      | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/teacher/57467184
-SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/sen-teacher/57468071
-SKIP | Maths Teacher                                                | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/maths-teacher/57554885
-SKIP | Supply Teacher                                               | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/supply-teacher/57489349
-SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/sen-teacher/57516367
-SKIP | Teacher of Physical Education                                | not entry level (title: 'Teacher') | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-physical-education-st-anselm-s-catholic-school-canterbury-canterbury-kent
-SKIP | Teacher of DT                                                | not entry level (title: 'Teacher') | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-dt-the-whitstable-school-whitstable-kent
-SKIP | Class Teacher                                                | not entry level (title: 'Teacher') | https://teaching-vacancies.service.gov.uk/jobs/class-teacher-reculver-church-of-england-primary-school-herne-bay-kent
+SKIP | Cover Supervisor                                             | not entry level (title: 'Supervisor') (cached) | https://www.reed.co.uk/jobs/cover-supervisor/57484384
+SKIP | Cover Supervisor                                             | not entry level (title: 'Supervisor') (cached) | https://www.reed.co.uk/jobs/cover-supervisor/57489397
+SKIP | Payroll Bureau Supervisor                                    | not entry level (title: 'Supervisor') (cached) | https://www.reed.co.uk/jobs/payroll-bureau-supervisor/57487999
 SKIP | Teacher                                                      | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/teacher/57524530
 SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/secondary-teacher/57468003
+SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/sen-teacher/57565183
+SKIP | Class Teacher                                                | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/class-teacher/57565735
+SKIP | Supply Teacher                                               | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/supply-teacher/57482900
+SKIP | Teacher                                                      | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/teacher/57467184
+SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/sen-teacher/57468071
+SKIP | Maths Teacher                                                | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/maths-teacher/57554885
+SKIP | Supply Teacher                                               | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/supply-teacher/57489349
+SKIP | SEN Teacher                                                  | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/sen-teacher/57516367
+SKIP | Teacher of Physical Education                                | not entry level (title: 'Teacher') (cached) | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-physical-education-st-anselm-s-catholic-school-canterbury-canterbury-kent
+SKIP | Teacher of DT                                                | not entry level (title: 'Teacher') (cached) | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-dt-the-whitstable-school-whitstable-kent
+SKIP | Class Teacher                                                | not entry level (title: 'Teacher') (cached) | https://teaching-vacancies.service.gov.uk/jobs/class-teacher-reculver-church-of-england-primary-school-herne-bay-kent
 SKIP | Teacher of DT and Food Technology                            | not entry level (title: 'Teacher') (cached) | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-dt-and-food-technology-the-charles-dickens-school
 SKIP | Teacher of Geography                                         | not entry level (title: 'Teacher') (cached) | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-geography-f7fd8315-510c-432b-906f-0985e57bc7d3
-SKIP | Production Team Leader                                       | not entry level (title: 'Team Leader') | https://www.reed.co.uk/jobs/production-team-leader/57559614
-SKIP | Team Leader                                                  | not entry level (title: 'Team Leader') | https://www.reed.co.uk/jobs/team-leader/57579318
-SKIP | Pharmacy Technician                                          | not entry level (title: 'Technician') | https://beta.jobs.nhs.uk/candidate/jobadvert/M0042-92314
-SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firm/57595619
-SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firmd/57546311
-SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firm/57595600
-SKIP | Systematic Family Psychotherapist                            | pay range suggests commission/senior role (£57528.00 to £64750.00) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9294-26-0507
+SKIP | Production Team Leader                                       | not entry level (title: 'Team Leader') (cached) | https://www.reed.co.uk/jobs/production-team-leader/57559614
+SKIP | Team Leader                                                  | not entry level (title: 'Team Leader') (cached) | https://www.reed.co.uk/jobs/team-leader/57579318
+SKIP | Pharmacy Technician                                          | not entry level (title: 'Technician') (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/M0042-92314
+SKIP | SEN Tutor                                                    | not entry level (title: 'Tutor') | https://www.reed.co.uk/jobs/sen-tutor/57560876
+SKIP | SEN Tutor                                                    | not entry level (title: 'Tutor') | https://www.reed.co.uk/jobs/sen-tutor/57570972
+SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') (cached) | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firm/57595619
+SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') (cached) | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firmd/57546311
+SKIP | Partner Level Tax accountant - Grow and develop your own tea | not entry level (title: 'accountant') (cached) | https://www.reed.co.uk/jobs/partner-level-tax-accountant-grow-and-develop-your-own-team-pe-backed-300-person-firm/57595600
+SKIP | Systematic Family Psychotherapist                            | pay range suggests commission/senior role (£57528.00 to £64750.00) (cached) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9294-26-0507
 SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) (cached) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
-SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57594770
-SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57594776
-SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57535335
-SKIP | Full Time Care Assistant (Guaranteed/Contracted Hours)- **Dr | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-guaranteed-contracted-hours-drivers-only/57530412
-SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57528763
-SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529600
-SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529416
-SKIP | Recruitment & Retention Officer (Multi-site)                 | self-employed ('Franchise') | https://www.reed.co.uk/jobs/recruitment-amp-retention-officer-multi-site/57529483
-SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57529833
-SKIP | Full Time Care Assistant (Guaranteed/Contracted Hours)- **Dr | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-guaranteed-contracted-hours-drivers-only/57530143
-SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529049
+SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57594770
+SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57594776
 SKIP | Mobile Optometrist                                           | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
-SKIP | Self employed IFA's required                                 | self-employed ('Self employ') | https://www.reed.co.uk/jobs/self-employed-ifas-required/57029213
-SKIP | Senior Site Manager                                          | self-employed ('Subcontractor') | https://www.reed.co.uk/jobs/senior-site-manager/57506895
-SKIP | Commercial Finance / Asset Finance Brokers required (self em | self-employed ('self employ') | https://www.reed.co.uk/jobs/commercial-finance-asset-finance-brokers-required-self-employed/57029092
-SKIP | Project Manager                                              | self-employed ('subcontractor') | https://www.reed.co.uk/jobs/project-manager/57492735
+SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57535335
+SKIP | Full Time Care Assistant (Guaranteed/Contracted Hours)- **Dr | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-guaranteed-contracted-hours-drivers-only/57530412
+SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57528763
+SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529600
+SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529416
+SKIP | Recruitment & Retention Officer (Multi-site)                 | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/recruitment-amp-retention-officer-multi-site/57529483
+SKIP | Care Assistants (Full Time, Part Time, Evenings & Weekends)  | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/care-assistants-full-time-part-time-evenings-amp-weekends-drivers-only/57529833
+SKIP | Full Time Care Assistant (Guaranteed/Contracted Hours)- **Dr | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-guaranteed-contracted-hours-drivers-only/57530143
+SKIP | Full Time Care Assistant **Drivers Only**                    | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/full-time-care-assistant-drivers-only/57529049
+SKIP | Self employed IFA's required                                 | self-employed ('Self employ') (cached) | https://www.reed.co.uk/jobs/self-employed-ifas-required/57029213
+SKIP | Senior Site Manager                                          | self-employed ('Subcontractor') (cached) | https://www.reed.co.uk/jobs/senior-site-manager/57506895
+SKIP | Commercial Finance / Asset Finance Brokers required (self em | self-employed ('self employ') (cached) | https://www.reed.co.uk/jobs/commercial-finance-asset-finance-brokers-required-self-employed/57029092
+SKIP | Project Manager                                              | self-employed ('subcontractor') (cached) | https://www.reed.co.uk/jobs/project-manager/57492735
 SKIP | Financial Controller                                         | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/financial-controller/57601284
 SKIP | Maths Teacher                                                | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/maths-teacher/57533142
