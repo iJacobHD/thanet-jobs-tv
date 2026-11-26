@@ -1069,16 +1069,6 @@
 "reason": "not entry level (title: 'Consultant')",
 "checked": "2026-11-26"
 },
-"nhs:5726222": {
-"title": "Echocardiographer (Cardiac Physiologist)",
-"reason": "not entry level (title: 'Physiologist')",
-"checked": "2026-11-26"
-},
-"nhs:5748312": {
-"title": "Head of Audiology",
-"reason": "not entry level (title: 'Head of')",
-"checked": "2026-11-26"
-},
 "nhs:5701608": {
 "title": "Casual Bank Nurse - Medical Devices",
 "reason": "not entry level (title: 'Nurse')",
@@ -1127,6 +1117,2086 @@
 "nhs:5750384": {
 "title": "Practice Nurse with Chronic Disease Management Experience",
 "reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"reed:57558447": {
+"title": "Payroll Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"reed:57553118": {
+"title": "HR Administrator",
+"reason": "asks for experience ('previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57536036": {
+"title": "Purchase Ledger Clerk",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57476520": {
+"title": "Electrical & Mechanical Maintenance Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57470748": {
+"title": "Quality Assurance Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57530601": {
+"title": "Care Professional- Sandwich",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57616669": {
+"title": "Corporate Tax Senior Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57616573": {
+"title": "Private Client Tax Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57599079": {
+"title": "SEN Tutor",
+"reason": "not entry level (title: 'Tutor')",
+"checked": "2026-11-26"
+},
+"reed:57611917": {
+"title": "Accounts Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57494673": {
+"title": "Sales Negotiator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57582634": {
+"title": "Payroll Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57565775": {
+"title": "Class Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57565749": {
+"title": "Class Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57565723": {
+"title": "Class Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57581571": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57565340": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('looking for experienced')",
+"checked": "2026-11-26"
+},
+"reed:57565299": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('looking for experienced')",
+"checked": "2026-11-26"
+},
+"reed:57565256": {
+"title": "Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57565252": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('looking for experienced')",
+"checked": "2026-11-26"
+},
+"reed:57565242": {
+"title": "Cover Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"reed:57565205": {
+"title": "Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57565191": {
+"title": "Caretaker",
+"reason": "asks for experience ('Previous experience as')",
+"checked": "2026-11-26"
+},
+"reed:57565148": {
+"title": "Care Support Assistant - Special Needs",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57565138": {
+"title": "Aspiring Social Worker",
+"reason": "not entry level (title: 'Social Worker')",
+"checked": "2026-11-26"
+},
+"reed:57413746": {
+"title": "Registered Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"reed:57563358": {
+"title": "Nursery Practitioner",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"reed:57563331": {
+"title": "Nursery Practitioner",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"reed:57596986": {
+"title": "Market Research Field Interviewer Car Required Part-time",
+"reason": "self-employed ('be your own boss')",
+"checked": "2026-11-26"
+},
+"reed:57487899": {
+"title": "Care Assistant",
+"reason": "asks for experience ('Are you an experienced')",
+"checked": "2026-11-26"
+},
+"reed:57480233": {
+"title": "Healthcare Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57596106": {
+"title": "Electrical Installations Lecturer",
+"reason": "not entry level (title: 'Lecturer')",
+"checked": "2026-11-26"
+},
+"reed:57410103": {
+"title": "Support Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57410090": {
+"title": "Support Worker",
+"reason": "asks for experience ('Are you an experienced')",
+"checked": "2026-11-26"
+},
+"reed:57410053": {
+"title": "Support Worker",
+"reason": "asks for experience ('Are you an experienced')",
+"checked": "2026-11-26"
+},
+"reed:57410059": {
+"title": "Healthcare Assistant",
+"reason": "asks for experience ('experienced Support Worker')",
+"checked": "2026-11-26"
+},
+"reed:57410048": {
+"title": "Support Worker Weekends Only",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57410044": {
+"title": "Care Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57570709": {
+"title": "Team Leader",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"reed:57604474": {
+"title": "Home Visits Optical Assistant",
+"reason": "asks for experience ('Previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57604463": {
+"title": "Home Visits Optical Assistant",
+"reason": "asks for experience ('Previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57483949": {
+"title": "Kitchen Sales Designer",
+"reason": "not entry level (title: 'Designer')",
+"checked": "2026-11-26"
+},
+"reed:57545545": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('previous experience working')",
+"checked": "2026-11-26"
+},
+"reed:57545474": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('previous experience working')",
+"checked": "2026-11-26"
+},
+"reed:57545432": {
+"title": "Supply Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57545423": {
+"title": "Supply Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57540395": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57538776": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57538480": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('experienced Teaching Assistant')",
+"checked": "2026-11-26"
+},
+"reed:57538419": {
+"title": "Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57537277": {
+"title": "SEMH Behaviour Support Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57537272": {
+"title": "SEN Intervention Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57585172": {
+"title": "Support Worker Male ONLY",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57527980": {
+"title": "Care Support Assistant - Special Needs",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57524579": {
+"title": "Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:56957895": {
+"title": "Optometrist",
+"reason": "pay range suggests commission/senior role (\u00a365000.0 to \u00a365000.0 a year)",
+"checked": "2026-11-26"
+},
+"reed:57512924": {
+"title": "Behaviour Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57512909": {
+"title": "Primary Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57512902": {
+"title": "1:1 SEN Teaching Assistant - Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57512870": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:56275866": {
+"title": "Audiology Partner",
+"reason": "not entry level (title: 'Partner')",
+"checked": "2026-11-26"
+},
+"reed:57504373": {
+"title": "Caretaker",
+"reason": "asks for experience ('Previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57502601": {
+"title": "Year 5 Tutor",
+"reason": "not entry level (title: 'Tutor')",
+"checked": "2026-11-26"
+},
+"reed:57484313": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57474596": {
+"title": "History Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57471016": {
+"title": "Cover Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57470989": {
+"title": "Primary school Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57465691": {
+"title": "Aspiring Social Worker",
+"reason": "not entry level (title: 'Social Worker')",
+"checked": "2026-11-26"
+},
+"reed:57465658": {
+"title": "Care Support Assistant - Special Needs",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57465258": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57464835": {
+"title": "ASD Specialist Learning Support Assistant",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57589065": {
+"title": "Production Operative // Deal, Kent",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57616364": {
+"title": "Band 5 Substance Misuse Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"reed:57615952": {
+"title": "Audit Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57615845": {
+"title": "Accounts and Audit Senior",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57615842": {
+"title": "Corporate Tax Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57615252": {
+"title": "Polish Speaking Credit Controller",
+"reason": "not entry level (title: 'Controller')",
+"checked": "2026-11-26"
+},
+"reed:57587066": {
+"title": "Revenue Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57586735": {
+"title": "Data Entry Administrator | Sittingbourne | Start ASAP | Temp",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57614427": {
+"title": "Finance Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57583988": {
+"title": "Sea Freight Administrator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57566535": {
+"title": "Credit Controller",
+"reason": "not entry level (title: 'Controller')",
+"checked": "2026-11-26"
+},
+"reed:57611884": {
+"title": "Temporary PA/Secretary | Immediate start!",
+"reason": "not entry level (title: 'Secretary')",
+"checked": "2026-11-26"
+},
+"reed:57582970": {
+"title": "Warehouse Operative // Faversham",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57566415": {
+"title": "Temporary Fire Marshall/Waking Watch",
+"reason": "asks for experience ('previous experience within')",
+"checked": "2026-11-26"
+},
+"reed:57582261": {
+"title": "Exhibition Labourer / Driver / Warehouse Operative",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57582249": {
+"title": "Lead Carpenter / Joiner",
+"reason": "self-employed ('self-employ')",
+"checked": "2026-11-26"
+},
+"reed:57581922": {
+"title": "Finance Manager",
+"reason": "self-employed ('subcontractor')",
+"checked": "2026-11-26"
+},
+"reed:57581913": {
+"title": "Senior Quantity Surveyor",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57581243": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57598322": {
+"title": "Book keeper | Ashford | \u00a340k",
+"reason": "asks for experience ('experience essential')",
+"checked": "2026-11-26"
+},
+"reed:57580312": {
+"title": "IPS Employment Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57608586": {
+"title": "Ashford Handyman needed",
+"reason": "asks for experience ('looking for an experienced')",
+"checked": "2026-11-26"
+},
+"reed:57579997": {
+"title": "Sittingbourne Roofer",
+"reason": "asks for experience ('Proven experience as')",
+"checked": "2026-11-26"
+},
+"reed:57579992": {
+"title": "Roofer Multi-Trader",
+"reason": "salary too high for entry level (\u00a340660.0 to \u00a340660.0 a year)",
+"checked": "2026-11-26"
+},
+"reed:57579985": {
+"title": "Groundworks Multi-Trader",
+"reason": "salary too high for entry level (\u00a340660.0 to \u00a340660.0 a year)",
+"checked": "2026-11-26"
+},
+"reed:57579972": {
+"title": "Floor Layer",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57598027": {
+"title": "Industrial Refrigeration Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57579911": {
+"title": "Groundworker / Multi",
+"reason": "asks for experience ('Proven experience as')",
+"checked": "2026-11-26"
+},
+"reed:57029211": {
+"title": "Self employed IFA's required",
+"reason": "self-employed ('Self employ')",
+"checked": "2026-11-26"
+},
+"reed:57028585": {
+"title": "Commercial Finance / Asset Finance Brokers required (self employed)",
+"reason": "self-employed ('self employ')",
+"checked": "2026-11-26"
+},
+"reed:57572696": {
+"title": "Temporary Office Support | 9.30am to 4pm | Must drive!",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57607263": {
+"title": "Payroll Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57606994": {
+"title": "Welder",
+"reason": "not entry level (title: 'Welder')",
+"checked": "2026-11-26"
+},
+"reed:57571925": {
+"title": "Administrator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57571464": {
+"title": "Head Housekeeper",
+"reason": "not entry level (title: 'Head')",
+"checked": "2026-11-26"
+},
+"reed:57595964": {
+"title": "Senior Finance Business Partner",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57595958": {
+"title": "Payroll Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57561036": {
+"title": "Family Connections Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57560161": {
+"title": "Project Manager | Ashford | \u00a340k",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57560148": {
+"title": "Contracts & Business Development Manager | \u00a345k+com",
+"reason": "self-employed ('subcontractor')",
+"checked": "2026-11-26"
+},
+"reed:57560058": {
+"title": "Office Coordinator | Marketing company | WFH | \u00a324k",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"reed:57603688": {
+"title": "Office Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57559473": {
+"title": "Refuse Loader",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57593154": {
+"title": "Bench Joiner",
+"reason": "not entry level (title: 'Joiner')",
+"checked": "2026-11-26"
+},
+"reed:57558683": {
+"title": "SEND TA",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57592848": {
+"title": "Wedding & Events Coordinator",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"reed:57592808": {
+"title": "Book keeper | Ashford | \u00a340k",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57592787": {
+"title": "CAD Designer | Excellent Benefits | Up to \u00a340k",
+"reason": "not entry level (title: 'Designer')",
+"checked": "2026-11-26"
+},
+"reed:57602734": {
+"title": "Outreach Tutor",
+"reason": "not entry level (title: 'Tutor')",
+"checked": "2026-11-26"
+},
+"reed:57601717": {
+"title": "Outreach Recovery Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57557663": {
+"title": "Client Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57556553": {
+"title": "Drama Graduate - Teaching Assistant",
+"reason": "not entry level (title: 'Graduate')",
+"checked": "2026-11-26"
+},
+"reed:57556549": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57600172": {
+"title": "Store Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57589726": {
+"title": "Client Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57589678": {
+"title": "Corporate Tax Senior",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57589671": {
+"title": "Personal Tax Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57589620": {
+"title": "Accounts & Tax Director",
+"reason": "not entry level (title: 'Director')",
+"checked": "2026-11-26"
+},
+"reed:57554918": {
+"title": "Maths Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57589572": {
+"title": "Credit Controller | Sage line 50/200 | \u00a336k | Dover",
+"reason": "not entry level (title: 'Controller')",
+"checked": "2026-11-26"
+},
+"reed:57589474": {
+"title": "Accountancy Administrator | Xero Essential | \u00a332k",
+"reason": "asks for experience ('experience is essential')",
+"checked": "2026-11-26"
+},
+"reed:57554531": {
+"title": "Sen Teaching Assistant",
+"reason": "asks for experience ('20 years of experience')",
+"checked": "2026-11-26"
+},
+"reed:57553988": {
+"title": "Medical Administrator | Immediate start!",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57553131": {
+"title": "P/T Client Sales Executive *Dog friendly office*",
+"reason": "not entry level (title: 'Sales Executive')",
+"checked": "2026-11-26"
+},
+"reed:57553126": {
+"title": "AI Sales Consultant | Hybrid, \u00a346k OTE, 28 days A/L+BH's",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"reed:57553119": {
+"title": "Customer Service Representative (French Speaking)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57553099": {
+"title": "P/T Client Sales Executive *Dog friendly office*",
+"reason": "not entry level (title: 'Sales Executive')",
+"checked": "2026-11-26"
+},
+"reed:57552224": {
+"title": "Assembly Operative // Ashford, Kent",
+"reason": "asks for experience ('Must have previous experience')",
+"checked": "2026-11-26"
+},
+"reed:57552147": {
+"title": "Joinery CNC Programmer",
+"reason": "not entry level (title: 'CNC')",
+"checked": "2026-11-26"
+},
+"reed:57542726": {
+"title": "Commercial Support Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57440487": {
+"title": "Head of Procurement",
+"reason": "not entry level (title: 'Head of')",
+"checked": "2026-11-26"
+},
+"reed:57540957": {
+"title": "Accountancy Administrator | Xero Essential | \u00a331k",
+"reason": "asks for experience ('experience is essential')",
+"checked": "2026-11-26"
+},
+"reed:57540460": {
+"title": "Compliance & Quality Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"reed:57540035": {
+"title": "Travel Agent",
+"reason": "asks for experience ('Experience required')",
+"checked": "2026-11-26"
+},
+"reed:57539542": {
+"title": "Electrical Project Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57538183": {
+"title": "Sample Collection Driver",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57537632": {
+"title": "SEN Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"reed:57537621": {
+"title": "Psychology Graduate - SEN Teaching Assistant",
+"reason": "not entry level (title: 'Graduate')",
+"checked": "2026-11-26"
+},
+"reed:57537595": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57537569": {
+"title": "QC Quality Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"reed:57505130": {
+"title": "Vehicle Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"reed:57533619": {
+"title": "Accounts Semi-Senior",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57531258": {
+"title": "Gas Engineer & Plumber",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57524417": {
+"title": "Multi Trader",
+"reason": "asks for experience ('Proven experience as')",
+"checked": "2026-11-26"
+},
+"reed:57523976": {
+"title": "Sales & Commercial Executive Assistant",
+"reason": "asks for experience ('Previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57523468": {
+"title": "Production Operative // Dover, Kent // Day Shifts",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57523423": {
+"title": "Production Operative // Dover, Kent // Rotating shifts",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57522196": {
+"title": "Junior Mechanical Design Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57522194": {
+"title": "Mechanical Design Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57521803": {
+"title": "H2H Customer Coordinator - Sittingbourne - New",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"reed:57521625": {
+"title": "HR Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"reed:57521170": {
+"title": "Assembly Operative // Ashford, Kent",
+"reason": "asks for experience ('Must have previous experience')",
+"checked": "2026-11-26"
+},
+"reed:57520359": {
+"title": "Reach Truck Operative \u2013 Night Shift \u2013 \u00a316.49ph",
+"reason": "asks for experience ('Previous experience operating')",
+"checked": "2026-11-26"
+},
+"reed:57520024": {
+"title": "Recovery Worker",
+"reason": "asks for experience ('will have experience')",
+"checked": "2026-11-26"
+},
+"reed:57519734": {
+"title": "Team Leader / Senior Employment Specialist",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"reed:57519115": {
+"title": "Merchandiser",
+"reason": "salary too high for entry level (\u00a334000.0 to \u00a334000.0 a year)",
+"checked": "2026-11-26"
+},
+"reed:57518331": {
+"title": "Master Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"reed:57516970": {
+"title": "Mechanical Design Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57516872": {
+"title": "Social Worker - UASC / Kent Intake Unit (KIU) - Late Shift",
+"reason": "not entry level (title: 'Social Worker')",
+"checked": "2026-11-26"
+},
+"reed:57516801": {
+"title": "New Business Development Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57516596": {
+"title": "Accountancy Administrator | Xero Essential | \u00a330k",
+"reason": "asks for experience ('experience is essential')",
+"checked": "2026-11-26"
+},
+"reed:57514763": {
+"title": "BUSINESS SUPPORT ADMINISTRATOR",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57514080": {
+"title": "Senior Paraplanner",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"reed:57513688": {
+"title": "Workshop Engineer (Plant)",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57513449": {
+"title": "Service Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"reed:57429763": {
+"title": "Data Protection Manager | Ashford | \u00a355k",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57507440": {
+"title": "Remote Mortgage Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"reed:57507274": {
+"title": "Customer Service Order Processor",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57507082": {
+"title": "French speaking Account Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57506950": {
+"title": "Customer Service Order Processor",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57505138": {
+"title": "Diagnostic Vehicle Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"reed:57504500": {
+"title": "Vehicle Mechanic",
+"reason": "not entry level (title: 'Mechanic')",
+"checked": "2026-11-26"
+},
+"reed:57501505": {
+"title": "Finance Business Partner - Operations / Cost Focus",
+"reason": "not entry level (title: 'Partner')",
+"checked": "2026-11-26"
+},
+"reed:57500919": {
+"title": "Machine Operative // Deal, Kent",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57500652": {
+"title": "Registered Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57500191": {
+"title": "Order Processor Full time",
+"reason": "asks for experience ('Previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57498789": {
+"title": "Plant Fitter",
+"reason": "not entry level (title: 'Fitter')",
+"checked": "2026-11-26"
+},
+"reed:57496616": {
+"title": "Store Manager // Ashford, Kent",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57495966": {
+"title": "2nd Line Service Desk Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57493981": {
+"title": "Accountancy Administrator | Xero Essential",
+"reason": "asks for experience ('experience is essential')",
+"checked": "2026-11-26"
+},
+"reed:57493584": {
+"title": "MIG Welder",
+"reason": "not entry level (title: 'Welder')",
+"checked": "2026-11-26"
+},
+"reed:57493573": {
+"title": "Powder Coating Operative",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57491231": {
+"title": "Field Service Engineer (Full Training on Compressors)",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57490979": {
+"title": "Heating Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57489728": {
+"title": "PMLD Teaching Assistant",
+"reason": "asks for experience ('previous experience in')",
+"checked": "2026-11-26"
+},
+"reed:57489649": {
+"title": "Higher Level Teaching Assistant (HLTA)",
+"reason": "not entry level (title: 'HLTA')",
+"checked": "2026-11-26"
+},
+"reed:57488799": {
+"title": "Production Manager // Ashford, Kent // \u00a345k",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57487787": {
+"title": "Medical Receptionist | Immediate Start!",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57483501": {
+"title": "CNC Setter",
+"reason": "not entry level (title: 'Setter')",
+"checked": "2026-11-26"
+},
+"reed:57483437": {
+"title": "Refrigeration Maintenance Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57483184": {
+"title": "Industrial Refrigeration Engineer / Chiller Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57482504": {
+"title": "Temporary Bookkeeper | Sage 50 | Immediate start!",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57480711": {
+"title": "Communications Executive",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57480614": {
+"title": "Digital Marketing Executive",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57480510": {
+"title": "Accounts Assistant | Hybrid | German Speaking",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57480463": {
+"title": "Part-Time Medical Receptionist | Immediate Start!",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57480091": {
+"title": "Machinist // Ashford, Kent",
+"reason": "not entry level (title: 'Machinist')",
+"checked": "2026-11-26"
+},
+"reed:57073232": {
+"title": "Car Sales Executive",
+"reason": "not entry level (title: 'Sales Executive')",
+"checked": "2026-11-26"
+},
+"reed:57479524": {
+"title": "Machine Operative // Deal, Kent",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57479415": {
+"title": "CNC Programmer",
+"reason": "not entry level (title: 'CNC')",
+"checked": "2026-11-26"
+},
+"reed:57394942": {
+"title": "French Account Manager | \u00a330k - \u00a332k",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57382792": {
+"title": "European Transport Planner",
+"reason": "not entry level (title: 'Planner')",
+"checked": "2026-11-26"
+},
+"reed:57478852": {
+"title": "Workshop Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57477785": {
+"title": "Customer Service Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57477639": {
+"title": "Bookkeeper || ASAP Start || Temporary",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57476509": {
+"title": "Customer Service Administrator | SAP | 1 day WFH",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57476186": {
+"title": "Travel Agent",
+"reason": "asks for experience ('Experience required')",
+"checked": "2026-11-26"
+},
+"reed:57475058": {
+"title": "Maintenance Engineer",
+"reason": "not entry level (title: 'Engineer')",
+"checked": "2026-11-26"
+},
+"reed:57473680": {
+"title": "Administrator",
+"reason": "asks for experience ('Proven experience in')",
+"checked": "2026-11-26"
+},
+"reed:57473114": {
+"title": "Facilities Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57472840": {
+"title": "Paraplanner",
+"reason": "asks for experience ('Previous experience working')",
+"checked": "2026-11-26"
+},
+"reed:57471217": {
+"title": "IT Support Analyst",
+"reason": "not entry level (title: 'Analyst')",
+"checked": "2026-11-26"
+},
+"reed:57467463": {
+"title": "SEN Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57467185": {
+"title": "Cover Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"reed:57467124": {
+"title": "Teaching Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57331643": {
+"title": "Accounts Receivable Assistant | Hybrid | 6 month contract",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57029098": {
+"title": "Commercial Finance / Asset Finance Brokers required (self employed)",
+"reason": "self-employed ('self employ')",
+"checked": "2026-11-26"
+},
+"reed:57311616": {
+"title": "Warehouse Operatives",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57406817": {
+"title": "Property Sales",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57609572": {
+"title": "Care Assistant (Days)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57609576": {
+"title": "Care Assistant (Weekends)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57609560": {
+"title": "Live-In Care Assistant",
+"reason": "asks for experience ('Previous experience of')",
+"checked": "2026-11-26"
+},
+"reed:57609561": {
+"title": "Care Assistant (Evenings)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57594789": {
+"title": "Full Time Care Assistant **Drivers Only**",
+"reason": "self-employed ('Franchise')",
+"checked": "2026-11-26"
+},
+"reed:57594628": {
+"title": "Housekeeper",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57585525": {
+"title": "Caterlink - Catering Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57577238": {
+"title": "Kitchen Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57564791": {
+"title": "Postal Delivery Drivers",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57551363": {
+"title": "Parcel Delivery Driver",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57551340": {
+"title": "Postal Delivery Driver (Postie)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57551066": {
+"title": "Postal Delivery Drivers",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57551086": {
+"title": "Postperson with Driving",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57549894": {
+"title": "Caterlink - Catering Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57550123": {
+"title": "Caterlink - Catering Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57550041": {
+"title": "Chef",
+"reason": "not entry level (title: 'Chef')",
+"checked": "2026-11-26"
+},
+"reed:57550040": {
+"title": "Chef",
+"reason": "not entry level (title: 'Chef')",
+"checked": "2026-11-26"
+},
+"reed:57535327": {
+"title": "Care Professional- Driving required",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530652": {
+"title": "Care Assistant (Deal) Part time",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530662": {
+"title": "Care Assistant - Part time",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530602": {
+"title": "Care Assistant (Evenings)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530422": {
+"title": "Care Professional \u2013 Evening and Weekends",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530320": {
+"title": "Care Assistant- Weekends",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57530101": {
+"title": "Copy of Deputy Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57529648": {
+"title": "Full Time Networker & Community Engagement Officer (Medway, Sittingbourne, Canterbury & Surrounding areas)",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57529624": {
+"title": "Full Time Networker & Community Engagement Officer (Medway, Canterbury, Sittingbourne & Surrounding areas)",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57529528": {
+"title": "Care Professional- Faversham",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57529447": {
+"title": "Care Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57529401": {
+"title": "CARE ASSISTANT - Evenings & Weekends",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57529139": {
+"title": "Live In Care professional",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57528921": {
+"title": "Care Assistants (Full Time, Part Time, Evenings & Weekends) **Drivers Only**",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57528895": {
+"title": "Care Assistant (Morning,Evenings)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57528881": {
+"title": "Part-Time, Evenings & Weekend CARE Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57528800": {
+"title": "Live-In Care Assistant",
+"reason": "asks for experience ('Previous experience of')",
+"checked": "2026-11-26"
+},
+"reed:57528820": {
+"title": "Copy of Part Time Networker & Community Engagement Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57528698": {
+"title": "Full Time Care Assistant (Guaranteed/Contracted Hours)- **Drivers Only**",
+"reason": "self-employed ('Franchise')",
+"checked": "2026-11-26"
+},
+"reed:57528635": {
+"title": "Live-In Care Assistant",
+"reason": "asks for experience ('Previous experience of')",
+"checked": "2026-11-26"
+},
+"reed:57510679": {
+"title": "Operations \u2013 Import Customs Clearance Coordinator",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"reed:57599436": {
+"title": "EHC Assessment Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57599218": {
+"title": "Part Time Shift Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"reed:57599237": {
+"title": "Part Time Bar Staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57598821": {
+"title": "Trading Standards Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"reed:57594987": {
+"title": "Trading Standards Investigator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57568991": {
+"title": "Housekeeping Team Member - Part time",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57564830": {
+"title": "Process Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"reed:57568389": {
+"title": "HGV Class 2 Drivers",
+"reason": "needs a qualification/licence ('HGV')",
+"checked": "2026-11-26"
+},
+"reed:57560453": {
+"title": "Care Assistant (Weekends)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57560432": {
+"title": "Care Assistant (Evenings)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57560439": {
+"title": "Care Assistant (Days)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57555960": {
+"title": "Assistant Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57550014": {
+"title": "Caterlink - Relief Catering Assistant. Must Drive in Ashford, Dover & Surrounding Area",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57550004": {
+"title": "Caterlink - Catering Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57549874": {
+"title": "Chef Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"reed:57547622": {
+"title": "Delivery Driver 3.5T",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57529617": {
+"title": "Full Time Care Assistant **Drivers Only**",
+"reason": "self-employed ('Franchise')",
+"checked": "2026-11-26"
+},
+"reed:57528854": {
+"title": "Care Assistant (Days)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57527298": {
+"title": "Housekeeper",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"reed:57527179": {
+"title": "Waiting Staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:owns-view-infant-school-ashford-kent": {
+"title": "1:1 Teaching Assistant - linked to funding",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:teacher-0-6-fte-aspire-school": {
+"title": "Teacher (0.6 FTE)",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"tv:istant-breakfast-club-and-pre-school": {
+"title": "Childcare Assistant - Breakfast Club and Pre-school",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:hool-club-bysing-wood-primary-school": {
+"title": "Childcare Assistant - After School Club",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:ing-church-of-england-primary-school": {
+"title": "Teaching Assistant",
+"reason": "asks for experience ('experienced teaching assistant')",
+"checked": "2026-11-26"
+},
+"tv:al-supervisor-minterne-junior-school": {
+"title": "Midday Meal Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"tv:student-engagement-support-officer": {
+"title": "Student Engagement & Support Officer",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"tv:rk-primary-school-sittingbourne-kent": {
+"title": "Midday Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"tv:srp-inclusion-specialist": {
+"title": "SRP Inclusion Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"tv:exam-invigilator-goodwin-academy": {
+"title": "Exam Invigilator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:ed-to-funding-sandwich-infant-school": {
+"title": "SEN Teaching Assistant - linked to funding",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:-educational-needs-support-assistant": {
+"title": "SENSA (Special Educational Needs Support Assistant)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:earning-support-assistant-ta-level-5": {
+"title": "Apprenticeship - Learning Support Assistant (TA Level 5)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:earning-support-assistant-ta-level-3": {
+"title": "Apprenticeship - Learning Support Assistant (TA Level 3)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:phy-maternity-cover-the-abbey-school": {
+"title": "Teacher of Geography (Maternity Cover)",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"tv:daa00c52-4cb3-49ae-96a7-0b1a26720419": {
+"title": "1:1 Teaching Assistant - Linked to Funding",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:kennington-church-of-england-academy": {
+"title": "SENCO Assistant",
+"reason": "not entry level (title: 'SENCO')",
+"checked": "2026-11-26"
+},
+"tv:urch-of-england-academy-ashford-kent": {
+"title": "1:1 Teaching Assistant - linked to funding",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:logy-the-abbey-school-faversham-kent": {
+"title": "Teacher of Food Technology",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"tv:ass-teacher-meadhurst-primary-school": {
+"title": "Reception Class Teacher",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"tv:9a5fdbba-17b9-4156-ae5e-1dc6557c2ad0": {
+"title": "Teacher of English",
+"reason": "not entry level (title: 'Teacher')",
+"checked": "2026-11-26"
+},
+"tv:68d43039-a2cf-4b4d-9603-4be5efef9002": {
+"title": "Estates Caretaker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:1a85bcdf-e84f-4060-8f3f-e4ebd6982f38": {
+"title": "Estates Site Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"nhs:5577088": {
+"title": "Activities Coordinator",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"nhs:5715634": {
+"title": "PCN - Paramedic/ANP/ACP",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5701956": {
+"title": "Finance Administrator (Accounts Assistant)",
+"reason": "NHS Band 3+ pay - usually needs experience (\u00a327550.00 to \u00a329000.00)",
+"checked": "2026-11-26"
+},
+"nhs:5717065": {
+"title": "Dermatologist",
+"reason": "not entry level (title: 'Dermatologist')",
+"checked": "2026-11-26"
+},
+"nhs:5749180": {
+"title": "Care Assistant - Care Home",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5634184": {
+"title": "ACP Bank Workers",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5734963": {
+"title": "PCN Clinical Pharmacist",
+"reason": "not entry level (title: 'Pharmacist')",
+"checked": "2026-11-26"
+},
+"nhs:5729128": {
+"title": "Facilities Operative",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5741892": {
+"title": "Care Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5543563": {
+"title": "Anatomical Pathology Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"nhs:5571159": {
+"title": "Senior Health Care Assistant",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"nhs:5576406": {
+"title": "Locum GP",
+"reason": "not entry level (title: 'GP')",
+"checked": "2026-11-26"
+},
+"nhs:5747145": {
+"title": "Wound Clinic Practitioner",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"nhs:5707546": {
+"title": "Consultant Psychiatrist - Deal Community",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5721257": {
+"title": "Higher Clerical Officer (Breast Screening)",
+"reason": "not entry level (title: 'Officer')",
+"checked": "2026-11-26"
+},
+"nhs:5737333": {
+"title": "Locum Immunology & Allergy Consultant",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5736466": {
+"title": "Community Matron",
+"reason": "pay range suggests commission/senior role (\u00a357528.00 to \u00a364750.00)",
+"checked": "2026-11-26"
+},
+"nhs:5740295": {
+"title": "Locum Consultant in Anaesthetics",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5743165": {
+"title": "Mental Health Together Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5737054": {
+"title": "Bowel Cancer Screening Administrative Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"nhs:5745682": {
+"title": "Clinical Services Care Co-Ordinator",
+"reason": "not entry level (title: 'Co-Ordinator')",
+"checked": "2026-11-26"
+},
+"nhs:5745247": {
+"title": "Neurophysiology Consultant",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5731470": {
+"title": "Staff Nurse Ward Ashford",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5730982": {
+"title": "Practice Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5749231": {
+"title": "Mind and Body Practitioner Ref: 0202ZS",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"nhs:5682138": {
+"title": "salaried general practitioner",
+"reason": "not entry level (title: 'practitioner')",
+"checked": "2026-11-26"
+},
+"nhs:5717357": {
+"title": "Salaried GP, St James Surgery",
+"reason": "not entry level (title: 'GP')",
+"checked": "2026-11-26"
+},
+"nhs:5729359": {
+"title": "INT Senior General Practitioner (GP)",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"nhs:5682192": {
+"title": "Advanced Nurse Practitioner",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5743169": {
+"title": "Mental Health Together Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5737172": {
+"title": "Urgent Treatment Centre Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"nhs:5721303": {
+"title": "Onsite Clinical Pharmacist IP - Dover",
+"reason": "not entry level (title: 'Pharmacist')",
+"checked": "2026-11-26"
+},
+"nhs:5699686": {
+"title": "GP Consultant",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5729689": {
+"title": "Prescription Clerk",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5720377": {
+"title": "Enabler Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"nhs:5731294": {
+"title": "Midwifery Practice Education Facilitator",
+"reason": "pay range suggests commission/senior role (\u00a349387.00 to \u00a356515.00)",
+"checked": "2026-11-26"
+},
+"nhs:5730071": {
+"title": "Advanced Pharmacy (Sexual health and HIV services)",
+"reason": "not entry level (title: 'Pharmac')",
+"checked": "2026-11-26"
+},
+"nhs:5739001": {
+"title": "Locum Consultant in Obstetrics and Gynaecology",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5749695": {
+"title": "Care Assistant - Care Home",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5720376": {
+"title": "Enabler",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5735694": {
+"title": "Operational Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"nhs:5738820": {
+"title": "Consultant in Obstetrics and Gynaecology",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5747041": {
+"title": "Emergency Department Senior Administrator and Flow Coordinator",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"nhs:5746859": {
+"title": "Care Coordinator",
+"reason": "not entry level (title: 'Coordinator')",
+"checked": "2026-11-26"
+},
+"nhs:5738794": {
+"title": "Matron- Emergency Department",
+"reason": "asks for experience ('looking for an experienced')",
+"checked": "2026-11-26"
+},
+"nhs:5736358": {
+"title": "Specialist Screening Practitioner - Bowel Cancer Screening",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-26"
+},
+"nhs:5749840": {
+"title": "Registered Nurse (RGN) - Care Home",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5733302": {
+"title": "Bank GP",
+"reason": "not entry level (title: 'GP')",
+"checked": "2026-11-26"
+},
+"nhs:5745293": {
+"title": "Consultant Oral & Maxillofacial Surgery (OMFS)",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5751011": {
+"title": "Care Assistant - Nights",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5399771": {
+"title": "Pharmacy Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"nhs:5743166": {
+"title": "Mental Health Together Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5741109": {
+"title": "Liaison Psychiatry Practitioner",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"nhs:5745024": {
+"title": "Neighbourhood Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5739372": {
+"title": "Clinical Nurse Specialist - Children's Diabetes",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5739227": {
+"title": "Decontamination Technician",
+"reason": "not entry level (title: 'Technician')",
+"checked": "2026-11-26"
+},
+"nhs:5749809": {
+"title": "Operational Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5754548": {
+"title": "Business Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"nhs:5730069": {
+"title": "Discharge Practitioner",
+"reason": "not entry level (title: 'Practitioner')",
+"checked": "2026-11-26"
+},
+"nhs:5720651": {
+"title": "Pharmacy Support Worker",
+"reason": "not entry level (title: 'Pharmac')",
+"checked": "2026-11-26"
+},
+"nhs:5749160": {
+"title": "Weekend Receptionist",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5747866": {
+"title": "Senior Medicines Optimisation Pharmacist",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-26"
+},
+"nhs:5747983": {
+"title": "Consultant Geriatrician",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5749169": {
+"title": "Night Care Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5737339": {
+"title": "Healthcare Assistant - Kestrel Ward",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:morrisons:4110": {
+"title": "Store Colleague",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:morrisons:4568": {
+"title": "Market Street Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:asda:R-112600": {
+"title": "Team Leader",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"emp:asda:R-112424": {
+"title": "Store Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:asda:R-111829": {
+"title": "Pharmacy Colleague",
+"reason": "not entry level (title: 'Pharmac')",
+"checked": "2026-11-26"
+},
+"emp:asda:R-111793": {
+"title": "Practice Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:tesco:198937": {
+"title": "Duty Pharmacy Manager - Ashford Crooksfoot P/T",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:tesco:200090": {
+"title": "Duty Pharmacy Manager - Whitstable Extra",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:tesco:220817": {
+"title": "Pharmacy Manager - Faversham",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:tesco:221052": {
+"title": "Customer Delivery Driver - Ashford Crooksfoot Extra",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:tesco:221600": {
+"title": "Customer Delivery Driver - Whitstable Extra",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:tesco:221775": {
+"title": "Tesco Colleague - Chelmsford Broomfield Rd Express",
+"reason": "outside the commute area (Chelmsford, CM14DP)",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008384944532": {
+"title": "Christmas Customer Assistant - Food - Sittingbourne Simply Food",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008384944821": {
+"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385020576": {
+"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385027578": {
+"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385061245": {
+"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385075098": {
+"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385073564": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385093847": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385126766": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385137310": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385144597": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385136844": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385173228": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385155584": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385186257": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385189160": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385184733": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:m&s:300008385195452": {
+"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:co-op:1074141": {
+"title": "Customer Team Member",
+"reason": "outside the commute area (Wimborne, BH21 3LA)",
+"checked": "2026-11-26"
+},
+"emp:co-op:1073535": {
+"title": "Customer Team Member",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:co-op:1074035": {
+"title": "Customer Team Leader",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"emp:waitrose / john lewis:221693": {
+"title": "Supermarket Assistant (Guernsey)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:boots:75861045": {
+"title": "No7 Seasonal Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"emp:boots:75856621": {
+"title": "Seasonal Customer Advisor",
+"reason": "not entry level (title: 'Advisor')",
+"checked": "2026-11-26"
+},
+"emp:sainsbury's:nsburysjobsjobsdescription400100825": {
+"title": "Customer Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:sainsbury's:nsburysjobsjobsdescription400100816": {
+"title": "Customer Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:sainsbury's:nsburysjobsjobsdescription400097146": {
+"title": "Customer and Trading Manager \u2013 Online",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-26"
+},
+"emp:sainsbury's:nsburysjobsjobsdescription400101124": {
+"title": "Customer Assistant",
+"reason": "ok",
 "checked": "2026-11-26"
 }
 }
