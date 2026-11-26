@@ -4,20 +4,20 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
 
 * **Where the jobs come from:** DWP Find a Job (Work Hub, jobs.service.gov.uk). Its terms allow reasonable automated copying as long as DWP is credited, and the display does credit it.
 * **What gets shown:** jobs in Thanet that are still open, entry level, and **not self-employed**.
-* **How it updates:** Work Hub blocks GitHub's servers, so a member of staff collects the jobs. On Work Hub they click the **Collect Thanet jobs** bookmark, then upload the saved file. That upload starts the robot, which filters the jobs, makes the QR codes, and rebuilds the web board and the USB slides in about 5 minutes. **Staff instructions:** https://ijacobhd.github.io/thanet-jobs-tv/staff.html
-* **Expired jobs disappear automatically.** The web board checks closing dates on every slide. The robot also rebuilds the USB slides every morning, leaving out anything closing within 4 days.
+* **The button:** https://ijacobhd.github.io/thanet-jobs-tv/week.html has a yellow **Jobs for this week** button. It downloads an MP4 that shows 15 seconds per slide and is already turned 270° for the sideways TV. Every job in it stays open for at least the next 7 days. Copy it onto the USB stick and play it on repeat. `Update USB stick.bat` can do the copying for you.
+* **How it updates:** every morning, GitHub fetches jobs from **Reed's official API**, filters them, and remakes the board, the slides and the MP4. Nobody has to run anything, and nothing touches Work Hub. This needs a free Reed API key saved as the repository secret `REED_API_KEY` (Settings → Secrets and variables → Actions).
+* **Expired jobs:** the web board drops a job on its closing day. The video only includes jobs open for 7+ more days (`usb_min_days_open` in config.json), so replacing it on the stick once a week is enough.
 
 ```
 config.json                     what counts as Thanet, salary caps, blocked employers
 scripts/update_jobs.py          fetch, filter and write docs/jobs.json
 scripts/qr.py                   QR code maker (no extra libraries needed)
-scripts/render_slides.py        makes the JPG slides for the USB stick
+scripts/render_slides.py        makes the JPG slides and jobs-this-week.mp4
+scripts/reed_source.py          fetches jobs from Reed's official API
 Update USB stick.bat            double-click on a Windows PC to put the newest slides on the stick
 docs/usb/                       the latest JPG slides + slides.zip (rewritten by the robot)
 docs/index.html                 the TV display
-docs/staff.html                 staff instructions + the Collect Thanet jobs bookmark
-docs/collector.js               what the bookmark runs on Work Hub (read-only)
-incoming/                       upload collected job files here (the robot removes them after use)
+docs/week.html                  the "Jobs for this week" button page
 docs/jobs.json                  current jobs (rewritten by the robot)
 data/report.txt                 every job checked and WHY it was kept or skipped
 .github/workflows/update-jobs.yml   runs the updater every 3 hours
