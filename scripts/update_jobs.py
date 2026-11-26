@@ -87,7 +87,11 @@ SENIOR_TITLES = [
     r"\badvis[oe]r\b", r"\bnavigator\b", r"\binspector\b", r"\bsurveyor\b", r"\bminder\b",
     r"\bsite manager\b", r"\bestimator\b", r"\bfitter\b", r"\bwelder\b", r"\bmechanic\b",
     r"\bjoiner\b", r"\bcarpenter\b", r"\bbricklayer\b", r"\bplasterer\b", r"\bpainter and decorator\b",
-    r"\bfield sales\b", r"\bsales executive\b", r"\bbusiness development\b", r"\bpartner\b", r"\bassociate (?:dentist|director)\b",
+    r"\bfield sales\b", r"\bsales executive\b", r"\bbusiness development\b",
+    r"\bhlta\b", r"\bhigher level teaching\b", r"\bsetter\b", r"\bsecretary\b", r"\bgraduate\b",
+    r"\btutor\b", r"\bphysiologist\b", r"\bechocardiograph", r"\bhead\b", r"\bqualified\b",
+    r"\bradiograph", r"\bpharmac", r"\bparalegal\b", r"\bsurveyor\b", r"\barchitect\b",
+    r"\bcnc\b", r"\bmachinist\b", r"\bpsycholog", r"\bcounsell?or\b", r"\bsenco\b", r"\bpartner\b", r"\bassociate (?:dentist|director)\b",
 ]
 NO_EXPERIENCE = [
     r"no (?:previous |prior )?experience\s*(?:is )?(?:needed|necessary|required|neccessary)?",
