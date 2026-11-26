@@ -52,5 +52,6 @@ jobs:
             echo "No changes"
           else
             git commit -m "Update jobs $(date -u +'%Y-%m-%d %H:%M')"
+            git pull --rebase -X theirs || true
             git push
           fi
