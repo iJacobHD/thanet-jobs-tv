@@ -84,11 +84,6 @@
 "reason": "not entry level (title: 'Lecturer')",
 "checked": "2026-11-26"
 },
-"tv:ic-school-canterbury-canterbury-kent": {
-"title": "Teacher of Physical Education",
-"reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-26"
-},
 "tv:he-whitstable-school-whitstable-kent": {
 "title": "Teacher of DT",
 "reason": "not entry level (title: 'Teacher')",
@@ -214,11 +209,6 @@
 "reason": "not entry level (title: 'Manager')",
 "checked": "2026-11-26"
 },
-"tv:0601dea5-1dcc-4d26-a9aa-42198d11f199": {
-"title": "Exam Invigilator",
-"reason": "ok",
-"checked": "2026-11-26"
-},
 "nhs:5743504": {
 "title": "Information Business Partner",
 "reason": "not entry level (title: 'Partner')",
@@ -227,11 +217,6 @@
 "nhs:5750384": {
 "title": "Practice Nurse with Chronic Disease Management Experience",
 "reason": "not entry level (title: 'Nurse')",
-"checked": "2026-11-26"
-},
-"tv:teacher-0-6-fte-aspire-school": {
-"title": "Teacher (0.6 FTE)",
-"reason": "not entry level (title: 'Teacher')",
 "checked": "2026-11-26"
 },
 "tv:istant-breakfast-club-and-pre-school": {
@@ -271,11 +256,6 @@
 },
 "tv:-educational-needs-support-assistant": {
 "title": "SENSA (Special Educational Needs Support Assistant)",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"tv:earning-support-assistant-ta-level-5": {
-"title": "Apprenticeship - Learning Support Assistant (TA Level 5)",
 "reason": "ok",
 "checked": "2026-11-26"
 },
@@ -482,11 +462,6 @@
 "nhs:5721303": {
 "title": "Onsite Clinical Pharmacist IP - Dover",
 "reason": "not entry level (title: 'Pharmacist')",
-"checked": "2026-11-26"
-},
-"nhs:5699686": {
-"title": "GP Consultant",
-"reason": "not entry level (title: 'Consultant')",
 "checked": "2026-11-26"
 },
 "nhs:5729689": {
@@ -812,11 +787,6 @@
 "nhs:5748312": {
 "title": "Head of Audiology",
 "reason": "not entry level (title: 'Head of')",
-"checked": "2026-11-26"
-},
-"nhs:5734293": {
-"title": "Payroll Administrator",
-"reason": "NHS Band 3+ pay - usually needs experience (\u00a327315.00)",
 "checked": "2026-11-26"
 },
 "nhs:5695721": {
@@ -3214,11 +3184,6 @@
 "reason": "ok",
 "checked": "2026-11-26"
 },
-"tv:-anselm-s-catholic-school-canterbury": {
-"title": "SENCo",
-"reason": "not entry level (title: 'SENCo')",
-"checked": "2026-11-26"
-},
 "tv:ngland-primary-school-herne-bay-kent": {
 "title": "Class Teacher",
 "reason": "not entry level (title: 'Teacher')",
@@ -3234,11 +3199,6 @@
 "reason": "ok",
 "checked": "2026-11-26"
 },
-"tv:echnology-the-charles-dickens-school": {
-"title": "Teacher of DT and Food Technology",
-"reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-26"
-},
 "nhs:5660895": {
 "title": "Receptionist",
 "reason": "ok",
@@ -3247,16 +3207,6 @@
 "nhs:5733521": {
 "title": "Administrator",
 "reason": "NHS Band 3+ pay - usually needs experience (\u00a325760.00 to \u00a327476.00)",
-"checked": "2026-11-26"
-},
-"nhs:5739372": {
-"title": "Clinical Nurse Specialist - Children's Diabetes",
-"reason": "not entry level (title: 'Nurse')",
-"checked": "2026-11-26"
-},
-"nhs:5739227": {
-"title": "Decontamination Technician",
-"reason": "not entry level (title: 'Technician')",
 "checked": "2026-11-26"
 },
 "nhs:5749809": {
@@ -3322,6 +3272,281 @@
 "emp:smyths toys:NightPackAssistantAshford1378171057": {
 "title": "Night Pack Assistant",
 "reason": "ok",
+"checked": "2026-11-26"
+},
+"tv:g-assistant-meadhurst-primary-school": {
+"title": "Lead Teaching Assistant",
+"reason": "not entry level (title: 'Lead')",
+"checked": "2026-11-26"
+},
+"tv:ministrator-highworth-grammar-school": {
+"title": "Safeguarding Administrator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5672284": {
+"title": "Practice Cleaner",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"nhs:5707556": {
+"title": "Consultant Psychiatrist - Thanet Community Older People",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"nhs:5738961": {
+"title": "Medical Education Support Administrator",
+"reason": "NHS Band 3+ pay - usually needs experience (\u00a325760.00 to \u00a327476.00)",
+"checked": "2026-11-26"
+},
+"nhs:5743167": {
+"title": "Mental Health Together Navigator",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-26"
+},
+"nhs:5748561": {
+"title": "Registered General Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-26"
+},
+"nhs:5745293": {
+"title": "Consultant Oral & Maxillofacial Surgery (OMFS)",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061718": {
+"title": "Apprentice Pharmacy Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000064351": {
+"title": "Level 3 SEND Teaching Assistant Apprenticeship \u2013 Enterprise Learning Alliance",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062218": {
+"title": "Apprentice Healthcare Support Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062220": {
+"title": "Apprentice Healthcare Support Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000064054": {
+"title": "Kia Light Vehicle Apprentice Technician - Canterbury",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062036": {
+"title": "Business administrator apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062224": {
+"title": "Apprentice Healthcare Support Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000064108": {
+"title": "Apprentice Dental Nurse - Canterbury",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000063556": {
+"title": "Digital Business Administrator Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062221": {
+"title": "Apprentice Healthcare Support Worker",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000064239": {
+"title": "Early Years Level 3 apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061693": {
+"title": "Apprentice Pharmacy Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061703": {
+"title": "Apprentice Pharmacy Assistant",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000060115": {
+"title": "Apprentice Dental Nurse - Whitstable",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061760": {
+"title": "Student Reception and Administration Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000058759": {
+"title": "Early Years Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061632": {
+"title": "Administrative Assistant Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000034825": {
+"title": "Apprentice Dental Nurse - Dover",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000061287": {
+"title": "Early Years Educator Apprenticeship TN25 6JY",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000062948": {
+"title": "Coffee Packing & Operations Apprentice",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000065542": {
+"title": "Business Admin Apprentice - Kent - Ringway",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000047934": {
+"title": "Dental Nurse Apprentice - Ashford",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000033080": {
+"title": "Apprentice Dental Nurse - Sittingbourne",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"faa:VAC2000063408": {
+"title": "Apprentice Contracts Administrator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:oncareerscomvacancies930cleanerhtml": {
+"title": "Cleaner",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:rscomvacancies1923kitchenstaffhtml": {
+"title": "Kitchen staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:rscomvacancies1924kitchenstaffhtml": {
+"title": "Kitchen staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:areerscomvacancies2721barstaffhtml": {
+"title": "Bar staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:ncareerscomvacancies2760cleanerhtml": {
+"title": "Cleaner",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:ncareerscomvacancies2896cleanerhtml": {
+"title": "Cleaner",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:eerscomvacancies2898housekeeperhtml": {
+"title": "Housekeeper",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:areerscomvacancies2899barstaffhtml": {
+"title": "Bar staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:wetherspoon:rscomvacancies3026kitchenstaffhtml": {
+"title": "Kitchen staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:harvester / toby carvery / miller & carter (m&b):2851341": {
+"title": "Head Chef - Live in",
+"reason": "not entry level (title: 'Chef')",
+"checked": "2026-11-26"
+},
+"emp:harvester / toby carvery / miller & carter (m&b):2859917": {
+"title": "Santa",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:harvester / toby carvery / miller & carter (m&b):2864547": {
+"title": "Innkeeper's Collection Night Porter",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:harvester / toby carvery / miller & carter (m&b):2866711": {
+"title": "Shift Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-26"
+},
+"emp:harvester / toby carvery / miller & carter (m&b):2871569": {
+"title": "Part Time Waiting Staff",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):867": {
+"title": "Domestic Assistant (Part-Time)",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):866": {
+"title": "Service Desk Operator",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):864": {
+"title": "Porter",
+"reason": "ok",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):860": {
+"title": "Business Support PA to the Director of Facilities (Part Time)",
+"reason": "not entry level (title: 'Director')",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):857": {
+"title": "Electrician - Hospital Estates",
+"reason": "not entry level (title: 'Electrician')",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):856": {
+"title": "Domestic Team Leader (Part-Time Weekends)",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):854": {
+"title": "Mechanical and Electrical Team Leader (12 Month Fixed Term Contract)",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):847": {
+"title": "Mechanical and Electrical Team Leader (12 Month Fixed Term Contract)",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-26"
+},
+"emp:2gether support solutions (east kent hospitals):832": {
+"title": "Mechanical and Electrical Technician (Mechanical Bias)",
+"reason": "not entry level (title: 'Technician')",
 "checked": "2026-11-26"
 }
 }
