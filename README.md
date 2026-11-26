@@ -10,7 +10,9 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
   * **Teaching Vacancies** (Department for Education) needs no key and has closing dates. It covers school support jobs like teaching assistants, cleaners and catering.
   * **NHS Jobs** needs no key and has closing dates. It covers GP receptionists, care homes, healthcare assistants and similar.
   * **Adzuna** (secrets `ADZUNA_APP_ID` + `ADZUNA_APP_KEY`, optional) pulls from lots of other job sites, but gives no closing dates. Only jobs posted in the last 10 days are used, and they're shown as "Posted …, apply soon".
+  * **Employers' own careers sites** (list in `config.json` → `employers`, starting with **Morrisons**): read from the site's public sitemap and the job details built into each advert, opening only adverts in our towns and waiting between requests as the site asks. These have no closing date, so they show as "Open on Morrisons careers · apply soon" and are re-checked every morning.
   * If a feed is down, yesterday's jobs from that feed are kept.
+* **Area:** Thanet, Herne Bay, Whitstable and Canterbury (`allowed_places` and `search_locations` in `config.json`).
 * **Expired jobs:** the web board drops a job on its closing day. The video only includes jobs open for 7+ more days (`usb_min_days_open` in config.json), so replacing it on the stick once a week is enough.
 
 ```

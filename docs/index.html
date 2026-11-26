@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jobs in Thanet</title>
+<title>Local jobs – Thanet, Herne Bay, Whitstable, Canterbury</title>
 <style>
   :root{
     --bg:#0c2340; --bg2:#123259; --card:#ffffff; --ink:#0b0c0c; --muted:#4b5563;
@@ -64,8 +64,8 @@
 <body>
 <div id="stage">
   <header>
-    <span class="kicker">Hiring now · Thanet</span>
-    <h1>Jobs in Thanet</h1>
+    <span class="kicker" id="area">Hiring now · Thanet · Herne Bay · Whitstable · Canterbury</span>
+    <h1>Local jobs</h1>
     <p class="sub">No experience needed. Point your <b>phone camera</b> at a code to see the job and apply.</p>
   </header>
   <main id="slide"></main>
@@ -132,7 +132,9 @@
   function card(j) {
     const left = daysLeft(j.closing);
     const n = j.qr.size + 8;
-    const closes = j.closing_estimated
+    const closes = j.listed_only
+      ? `Open on ${esc(j.source)} careers · apply soon`
+      : j.closing_estimated
       ? `Posted ${fmtDate(j.posted)} · apply soon`
       : (left <= 3 ? `Closes soon: ${fmtDate(j.closing)}` : `Apply by ${fmtDate(j.closing)}`);
     return `<article class="job">
@@ -176,6 +178,7 @@
       // if a row of chips is too wide, drop the least important (last) chip rather than cut it off
       slide.querySelectorAll(".chips").forEach(c => { while (c.scrollWidth > c.clientWidth + 1 && c.children.length > 2) c.lastElementChild.remove(); });
     }
+    if (data && data.area) document.getElementById("area").textContent = "Hiring now · " + data.area;
     if (data && data.source) document.getElementById("source").textContent = "Source: " + data.source + ". Always check the full advert before applying.";
     if (data && data.generated) {
       const g = new Date(data.generated);

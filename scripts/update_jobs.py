@@ -201,6 +201,7 @@ def parse_detail(html, jid):
 
 # --------------------------------------------------------------------------- classify
 def town_of(location, places):
+    places = sorted(places, key=len, reverse=True)   # "Herne Bay" before "Herne"
     for p in places:
         if re.search(r"\b" + re.escape(p) + r"\b", location, re.I):
             if p.upper().startswith("CT"):
@@ -400,15 +401,20 @@ def main():
         if reed_key:
             from reed_source import fetch
             run("Reed", lambda: [dict(j, id="reed:" + j["id"], source="Reed")
-                                 for j in fetch(reed_key, cfg["search_location"], 10, places=places)])
+                                 for loc in cfg.get("search_locations", [cfg["search_location"]])
+                                 for j in fetch(reed_key, loc, 10, places=places)])
         if cfg.get("use_teaching_vacancies", True):
             run("Teaching Vacancies", lambda: sources.teaching_vacancies(places))
         if cfg.get("use_nhs_jobs", True):
-            run("NHS Jobs", lambda: sources.nhs_jobs(places, cfg["search_location"], 10))
+            run("NHS Jobs", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
+                                     for j in sources.nhs_jobs(places, loc, 10)])
+        for emp in cfg.get("employers", []):
+            run(emp["name"], lambda emp=emp: sources.employer_sitemap(emp, places, today))
         az_id, az_key = os.environ.get("ADZUNA_APP_ID", "").strip(), os.environ.get("ADZUNA_APP_KEY", "").strip()
         if az_id and az_key and cfg.get("use_adzuna", True):
-            run("Adzuna", lambda: sources.adzuna(az_id, az_key, places, cfg["search_location"],
-                                                 max_days_old=cfg.get("adzuna_max_days_old", 10)))
+            run("Adzuna", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
+                                   for j in sources.adzuna(az_id, az_key, places, loc,
+                                                           max_days_old=cfg.get("adzuna_max_days_old", 10))])
         if not collected:
             print("No jobs from any feed. Keeping the previous jobs.json.")
             sys.exit(1)
@@ -480,6 +486,7 @@ def main():
                 "source": job.get("source", "DWP Find a Job"),
                 "posted": job.get("posted", ""),
                 "closing_estimated": bool(job.get("closing_estimated")),
+                "listed_only": bool(job.get("listed_only")),
                 "qr": {"size": size, "path": svg},
             })
 
@@ -506,6 +513,7 @@ def main():
                    if reed_jobs is not None else
                    "DWP Find a Job (jobs.service.gov.uk) - contains public sector information licensed under the Open Government Licence v3.0"),
         "count": len(kept),
+        "area": cfg.get("area_name", "Thanet"),
         "jobs": kept,
     }
     os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)

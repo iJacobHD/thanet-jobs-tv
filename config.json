@@ -25,7 +25,31 @@
     "CT9",
     "CT10",
     "CT11",
-    "CT12"
+    "CT12",
+    "Herne Bay",
+    "Herne",
+    "Whitstable",
+    "Canterbury",
+    "Sturry",
+    "Tankerton",
+    "Chestfield",
+    "Swalecliffe",
+    "Beltinge",
+    "Hersden",
+    "Blean",
+    "Broomfield",
+    "Greenhill",
+    "Reculver",
+    "Studd Hill",
+    "Hampton",
+    "Thanington",
+    "Harbledown",
+    "CT1",
+    "CT2",
+    "CT3",
+    "CT4",
+    "CT5",
+    "CT6"
   ],
   "hide_when_days_left_below": 1,
   "max_annual_salary": 32000,
@@ -52,5 +76,19 @@
   "use_teaching_vacancies": true,
   "use_nhs_jobs": true,
   "use_adzuna": true,
-  "adzuna_max_days_old": 10
+  "adzuna_max_days_old": 10,
+  "search_locations": [
+    "Margate",
+    "Canterbury"
+  ],
+  "area_name": "Thanet \u00b7 Herne Bay \u00b7 Whitstable \u00b7 Canterbury",
+  "employers": [
+    {
+      "name": "Morrisons",
+      "base": "https://www.morrisons.jobs",
+      "sitemap": "/sitemap.xml",
+      "job_path": "/jobs/",
+      "crawl_delay": 15
+    }
+  ]
 }

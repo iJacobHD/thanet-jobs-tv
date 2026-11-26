@@ -156,3 +156,82 @@ def adzuna(app_id, app_key, places, location="Margate", km=16, max_days_old=10, 
         time.sleep(delay)
     log(f"Adzuna: {len(jobs)} Thanet jobs posted in the last {max_days_old} days")
     return jobs
+
+
+# --------------------------------------------------------------------------- Employer careers sites
+def employer_sitemap(emp, places, today, log=print):
+    """
+    Reads an employer's own careers site through its public sitemap + the structured
+    JobPosting data on each advert (the data Google Jobs uses).
+    Only adverts whose web address names one of our towns are opened, at the site's crawl-delay.
+    A job is treated as open because it is listed on the employer's site today; if the advert has
+    no closing date it is shown as "listed - apply soon" and re-checked every morning.
+    """
+    import json as _json
+    s = requests.Session()
+    s.headers.update(UA)
+    base = emp["base"].rstrip("/")
+    delay = float(emp.get("crawl_delay", 10))
+    r = s.get(base + emp.get("sitemap", "/sitemap.xml"), timeout=30)
+    r.raise_for_status()
+    urls = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
+    urls = [u for u in urls if emp.get("job_path", "/jobs/") in u]
+    towns = [p.lower().replace(" ", "-").replace(".", "") for p in places if not re.fullmatch(r"CT\d+", p)]
+    local = [u for u in urls if re.search(r"(?:^|[-/])(?:" + "|".join(map(re.escape, towns)) + r")(?:[-./]|$)", u.lower())]
+    log(f"{emp['name']}: {len(urls)} adverts on their site, {len(local)} name a local town")
+    jobs = []
+    for u in local:
+        time.sleep(delay)
+        try:
+            p = s.get(u, timeout=30)
+            if p.status_code != 200:
+                continue
+        except requests.RequestException:
+            continue
+        post = None
+        for block in re.findall(r'<script[^>]*application/ld\+json[^>]*>([\s\S]*?)</script>', p.text):
+            try:
+                data = _json.loads(block)
+            except ValueError:
+                continue
+            for d in (data if isinstance(data, list) else data.get("@graph", [data])):
+                if isinstance(d, dict) and d.get("@type") == "JobPosting":
+                    post = d
+        if not post:
+            continue
+        loc_obj = post.get("jobLocation") or {}
+        if isinstance(loc_obj, list):
+            loc_obj = loc_obj[0] if loc_obj else {}
+        addr = loc_obj.get("address") or {}
+        loc = f"{addr.get('addressLocality') or ''}, {addr.get('postalCode') or ''}"
+        if not _thanet(loc + " " + u, places):
+            continue
+        sal = ((post.get("baseSalary") or {}).get("value") or {})
+        pay = ""
+        if isinstance(sal, dict) and (sal.get("value") or sal.get("minValue")):
+            v = sal.get("value") or sal.get("minValue")
+            unit = str(sal.get("unitText", "")).upper()
+            pay = f"£{v} " + ("an hour" if unit == "HOUR" else "a year" if unit == "YEAR" else "")
+        closing = _date(post.get("validThrough"))
+        et = post.get("employmentType") or ""
+        et = et[0] if isinstance(et, list) and et else et
+        job = {
+            "id": f"emp:{emp['name'].lower()}:" + str((post.get("identifier") or {}).get("value") or u.rsplit("/", 1)[-1]),
+            "title": _text(post.get("title")),
+            "employer": emp["name"],
+            "pay": pay,
+            "hours": {"FULL_TIME": "Full-time", "PART_TIME": "Part-time"}.get(str(et).upper(), ""),
+            "location": loc, "job_type": "",
+            "posted": str(_date(post.get("datePosted")) or ""),
+            "description": _text(post.get("description"))[:12000],
+            "closed_notice": False, "url": u, "source": emp["name"],
+        }
+        if closing:
+            job["closing"] = str(closing)
+        else:   # listed today, no closing date published: show for a week, re-checked daily
+            job["closing"] = str(today + dt.timedelta(days=int(emp.get("show_days_without_closing", 8))))
+            job["closing_estimated"] = True
+            job["listed_only"] = True
+        jobs.append(job)
+    log(f"{emp['name']}: {len(jobs)} local jobs read")
+    return jobs
