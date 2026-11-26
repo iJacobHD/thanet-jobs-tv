@@ -285,6 +285,39 @@
       "job_path": "/vacancies/vacancies/\\d+",
       "fields": true,
       "crawl_delay": 10
+    },
+    {
+      "name": "Smyths Toys",
+      "base": "https://careers.smythstoys.com",
+      "mode": "slug",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Hollywood Bowl",
+      "base": "https://careers.hollywoodbowlgroup.co.uk",
+      "mode": "all",
+      "job_path": "/job/",
+      "crawl_delay": 3
+    },
+    {
+      "name": "Hobbycraft",
+      "base": "https://hobbycraft.current-vacancies.com",
+      "mode": "networx",
+      "page": "/Careers/VSP-1112",
+      "client_id": 1112,
+      "onboarding_page_id": -17731
+    },
+    {
+      "name": "Hotel Chocolat",
+      "base": "https://jobsearch.hotelchocolat.com",
+      "mode": "listing",
+      "listing": "/jobs/search/-1/{page}",
+      "max_pages": 20,
+      "job_link": "/jobs/job/",
+      "title_re": "job-list-title\">([^<]+)",
+      "location_re": "itemprop=\"address\">([^<]+)",
+      "crawl_delay": 10
     }
   ],
   "commute": {
@@ -397,7 +430,11 @@
     "Indeed": "no public feed",
     "Dunelm": "job list only appears after accepting cookies in a browser - no feed",
     "Pets at Home": "job search runs in their page script only - no feed or sitemap of jobs",
-    "Superdrug / The Perfume Shop": "adverts go through a third-party (inploi) - already reaches Reed/DWP"
+    "Superdrug / The Perfume Shop": "adverts go through a third-party (inploi) - already reaches Reed/DWP",
+    "Vue": "careers site refuses automated visits (403)",
+    "Nando's": "careers site returns a blank 'unavailable' page to automated visits",
+    "Elev8": "small local business - no careers site or feed",
+    "Deichmann": "jobs only appear after filling in their search form - no feed"
   },
   "exclude_places": [
     "Guernsey",

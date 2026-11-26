@@ -375,8 +375,11 @@ def _microdata(html_text):
         m = re.search(r'itemprop="%s"[^>]*?content="([^"]*)"' % name, html_text) or \
             re.search(r'itemprop="%s"[^>]*>([\s\S]{0,300}?)</' % name, html_text)
         return _text(m.group(1)) if m else ""
-    title = prop("title") or _text((re.search(r"<h1[^>]*>([\s\S]*?)</h1>", html_text) or [None, ""])[1])
-    loc = " ".join(x for x in [prop("addressLocality"), prop("addressRegion"), prop("postalCode")] if x)
+    title = (prop("title")
+             or _text((re.search(r'data-careersite-propertyid="title"[^>]*>([\s\S]{0,200}?)</', html_text) or [None, ""])[1])
+             or _text((re.search(r"<h1[^>]*>([\s\S]*?)</h1>", html_text) or [None, ""])[1])
+             or re.split(r"\s+(?:Job Details|\||-)\s+", _text((re.search(r"<title>([\s\S]*?)</title>", html_text) or [None, ""])[1]))[0])
+    loc = " ".join(x for x in [prop("streetAddress"), prop("addressLocality"), prop("addressRegion"), prop("postalCode")] if x)
     if not (title and loc):
         return None
     return {"title": title, "description": prop("description")[:12000] or _text(html_text)[:12000],
@@ -659,5 +662,32 @@ def aspnet_grid(emp, places, today, cache, log=print):
     return jobs
 
 
-SPECIAL_MODES = {"listing": listing_pages, "costa": costa, "phenom": phenom, "xml_feed": xml_feed,
+def networx(emp, places, today, cache, log=print):
+    """Networx 'current-vacancies.com' careers sites (Hobbycraft): the JSON list its own search page loads."""
+    import json as _json
+    s, base = _session(), emp["base"].rstrip("/")
+    page = s.get(base + emp["page"], timeout=40).text
+    token = re.search(r'name="__RequestVerificationToken"[^>]*value="([^"]+)"', page)
+    data = {"ClientID": int(emp["client_id"]), "OnboardingPageID": int(emp.get("onboarding_page_id", 0)),
+            "DynamicFields": [], "SearchResultFields": [], "CurrentPage": 1, "PageSearchResults": True,
+            "SearchResultPageSize": 500, "keywords": "", "Locations": ["0"]}
+    form = {"data": _json.dumps(data), "hdnNewWorld": "True"}
+    if token:
+        form["__RequestVerificationToken"] = token.group(1)
+    d = s.post(base + "/Careers/SearchVacancies", data=form, timeout=60).json()
+    jobs = []
+    for x in d.get("Data", []):
+        loc = ", ".join(v for v in [x.get("Location"), x.get("Postcode")] if v)
+        if not _thanet(loc, places):
+            continue
+        desc = x.get("JobDescription") or ""
+        jobs.append(_job(emp, x.get("VacancyID"), x.get("VacancyTitle"), loc, x.get("ApplyLink"), today,
+                         pay=x.get("8383_Salary") or _pay_in_text(desc), hours=_hours(desc[:400]),
+                         closing=_anydate(x.get("ExpiryDate")), posted=str(_anydate(x.get("CreatedDate")) or ""),
+                         description=desc))
+    log(f"{emp['name']}: {len(d.get('Data', []))} adverts, {len(jobs)} local jobs")
+    return jobs
+
+
+SPECIAL_MODES = {"networx": networx, "listing": listing_pages, "costa": costa, "phenom": phenom, "xml_feed": xml_feed,
                  "greenhouse": greenhouse, "aspnet_grid": aspnet_grid}

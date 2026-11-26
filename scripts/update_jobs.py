@@ -43,6 +43,7 @@ SELF_EMPLOYED = [
 NOT_NEEDED = [
     r"no (?:previous |prior |formal )?(?:experience|qualifications?)\s*(?:is |are )?(?:needed|necessary|required|neccessary|essential)?",
     r"(?:experience|qualifications?)[^.]{0,160}(?:not essential|not required|not necessary|not a necessity|advantageous|an advantage|desirable|a bonus|a plus|beneficial|preferred but|welcome but)",
+    r"(?:licen[cs]e|certificate|card|qualification)s?[^.]{0,40}(?:is |are |would be )?(?:preferred|desirable|advantageous|an advantage|a bonus|a plus|beneficial|not essential|not required)",
     r"routes? towards?[^.]{0,160}", r"qualified teacher (?:training|status)[^.]{0,40}if desired",
     r"not necessarily your experience", r"key skills\s*/?\s*experience required",
     r"whether you have years of experience", r"experience and skills? (?:we.re|we are) looking for",
