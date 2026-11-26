@@ -347,7 +347,7 @@ def tidy_pay(pay, description=""):
         if re.search(r"a day|per day|daily", p, re.I):
             return f"{rng}/day"
         if re.search(r"hour|/hr|p/?h|per hr", p, re.I) or float(lo.replace(",", "")) < 100:
-            if float(lo.replace(",", "")) < 10:      # e.g. "£3 night premium" - not the real wage
+            if float(lo.replace(",", "")) < 7:       # e.g. "£3 night premium" - not the real wage (apprentice rates are ~£7.55+)
                 return "See advert"
             return f"{rng}/hr"
         extra = " pro rata" if "pro rata" in p.lower() else ""
@@ -357,6 +357,8 @@ def tidy_pay(pay, description=""):
         return f"{_money(m.group(1))}/hr"
     if "national minimum" in p.lower():
         return "Minimum wage or above"
+    if "apprentice minimum" in p.lower():
+        return "Apprentice wage"
     return "See advert"
 
 
@@ -444,6 +446,9 @@ def main():
         if cfg.get("use_nhs_jobs", True):
             run("NHS Jobs", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
                                      for j in sources.nhs_jobs(places, loc, 10)])
+        faa_key = os.environ.get("FAA_API_KEY", "").strip()
+        if faa_key and cfg.get("use_apprenticeships", True):
+            run("Find an apprenticeship", lambda: sources.apprenticeships(faa_key, places))
         emp_cache_path = os.path.join(ROOT, "data", "employer_cache.json")
         try:
             emp_cache = json.load(open(emp_cache_path, encoding="utf-8"))
@@ -555,7 +560,7 @@ def main():
     out = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": (", ".join(used + [f + " (yesterday's)" for f in failed]) +
-                   (". Teaching Vacancies and NHS Jobs data under the Open Government Licence v3.0" if used else "")
+                   (". Teaching Vacancies, NHS Jobs and Find an apprenticeship data under the Open Government Licence v3.0" if used else "")
                    if reed_jobs is not None else
                    "DWP Find a Job (jobs.service.gov.uk) - contains public sector information licensed under the Open Government Licence v3.0"),
         "count": len(kept),

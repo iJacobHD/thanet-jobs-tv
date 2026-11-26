@@ -59,6 +59,25 @@
   .meta{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:26px;color:#c3d1e3}
   .meta b{color:#fff;font-size:30px}
   .source{font-size:21px;color:#9fb2c9;margin-top:10px}
+
+  /* Layout A: 6 slim cards per slide */
+  #stage{padding:44px 44px 30px}
+  header{margin-bottom:20px}
+  h1{font-size:80px;margin:12px 0 8px}
+  .sub{font-size:28px}
+  footer{margin-top:20px}
+  #slide{gap:16px}
+  .job{border-radius:18px}
+  .job .info{padding:14px 20px 12px 24px;border-left-width:12px}
+  .title{font-size:39px;line-height:1.06}
+  .employer{font-size:24px;margin-top:3px}
+  .chips{gap:8px;padding-top:6px}
+  .chip{font-size:22px;padding:4px 13px}
+  .foot{margin-top:6px}
+  .closes{font-size:22px}
+  .qr{width:236px;flex:0 0 236px;padding:8px}
+  .qr svg{width:196px;height:196px}
+  .qr span{font-size:16px;margin-top:4px}
 </style>
 </head>
 <body>
@@ -81,8 +100,8 @@
   // ---------- settings (override in the URL, e.g. index.html?rotate=90&seconds=20) ----------
   const q = new URLSearchParams(location.search);
   const ROTATE   = parseInt(q.get("rotate") ?? "270", 10);   // 0, 90, 180 or 270
-  const SECONDS  = Math.max(5, parseInt(q.get("seconds") ?? "15", 10));
-  const PER_PAGE = Math.max(1, parseInt(q.get("perpage") ?? "4", 10));
+  const SECONDS  = Math.max(5, parseInt(q.get("seconds") ?? "12", 10));
+  const PER_PAGE = Math.max(1, parseInt(q.get("perpage") ?? "6", 10));
   const SRC      = q.get("src") || "jobs.json";
   const REFRESH_MIN = 10;
   const USB      = q.get("usb") === "1";                     // static picture mode (for USB slideshows)
@@ -140,7 +159,7 @@
     return `<article class="job">
       <div class="info">
         <div class="title">${esc(j.title)}</div>
-        <div class="employer">${esc(j.employer)}${j.source ? ` <span style="opacity:.7">· via ${esc(j.source)}</span>` : ""}</div>
+        <div class="employer">${esc(j.employer)}</div>
         <div class="chips">
           <span class="chip">📍 ${esc(j.town)}</span>
           <span class="chip pay">${esc(j.pay)}</span>
@@ -172,7 +191,7 @@
       document.body.dataset.pages = 0;
     } else {
       slide.innerHTML = jobs.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE).map(card).join("");
-      // keep the 4-slot layout even on a short last page
+      // keep the same layout even on a short last page
       for (let i = jobs.length - page * PER_PAGE; i < PER_PAGE && i >= 0; i++) slide.insertAdjacentHTML("beforeend", `<div style="flex:1 1 0"></div>`);
       pageEl.textContent = `Page ${page + 1} of ${pages}  ·  ${jobs.length} jobs`;
       document.body.dataset.pages = pages;

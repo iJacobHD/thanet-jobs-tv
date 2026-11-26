@@ -712,3 +712,74 @@ def networx(emp, places, today, cache, log=print):
 
 SPECIAL_MODES = {"networx": networx, "listing": listing_pages, "costa": costa, "phenom": phenom, "xml_feed": xml_feed,
                  "greenhouse": greenhouse, "aspnet_grid": aspnet_grid}
+
+
+# --------------------------------------------------------------------------- Find an apprenticeship (GOV.UK)
+def apprenticeships(api_key, places, centres=None, log=print, delay=0.5):
+    """
+    Official 'Display advert API' (v2) from Find an apprenticeship (Department for Education).
+    Needs a free subscription key from developer.apprenticeships.education.gov.uk (secret FAA_API_KEY).
+    Every advert has a real closing date. Searches around each centre and keeps adverts in our towns.
+    """
+    centres = centres or [("Margate", 51.389, 1.386, 25), ("Ashford", 51.146, 0.875, 10), ("Sittingbourne", 51.340, 0.734, 8)]
+    s = _session()
+    s.headers.update({"Ocp-Apim-Subscription-Key": api_key, "X-Version": "2"})
+    url = "https://api.apprenticeships.education.gov.uk/vacancies/vacancy"
+    jobs, seen = [], set()
+
+    def g(d, *keys):
+        for k in keys:
+            if isinstance(d, dict):
+                for kk in (k, k[:1].upper() + k[1:]):
+                    if kk in d and d[kk] not in (None, ""):
+                        return d[kk]
+        return None
+
+    for name, lat, lon, miles in centres:
+        page, pages = 1, 1
+        while page <= pages and page <= 20:
+            r = s.get(url, params={"Lat": lat, "Lon": lon, "DistanceInMiles": miles, "PageNumber": page,
+                                   "PageSize": 100, "Sort": "AgeDesc", "FilterBySubscription": "false"}, timeout=60)
+            r.raise_for_status()
+            d = r.json()
+            pages = int(g(d, "totalPages") or 1)
+            for v in g(d, "vacancies") or []:
+                ref = str(g(v, "vacancyReference") or "")
+                if not ref or ref in seen:
+                    continue
+                seen.add(ref)
+                addrs = g(v, "addresses") or ([g(v, "address")] if g(v, "address") else [])
+                addr = addrs[0] if addrs else {}
+                loc = ", ".join(str(x) for x in [g(addr, "addressLine1"), g(addr, "addressLine2"), g(addr, "addressLine3"),
+                                                 g(addr, "addressLine4"), g(addr, "postcode")] if x)
+                if not _thanet(loc, places):
+                    continue
+                w = g(v, "wage") or {}
+                wt = str(g(w, "wageType") or "")
+                amt = g(w, "wageAmount")
+                if amt:
+                    a = float(amt)
+                    pay = f"£{a:,.0f} a year" if a > 1000 else f"£{a:.2f} an hour"
+                elif "Apprentice" in wt:
+                    pay = "Apprentice minimum wage"
+                elif "NationalMinimum" in wt or "LivingWage" in wt:
+                    pay = "National minimum wage or above"
+                else:
+                    pay = str(g(w, "wageAdditionalInformation") or "")
+                hrs = g(v, "hoursPerWeek")
+                desc = _text(" ".join(str(x) for x in [g(v, "description"), g(v, "outcomeDescription"),
+                                                       g(w, "workingWeekDescription"), (g(v, "course") or {}).get("title") if isinstance(g(v, "course"), dict) else ""] if x))
+                closing = _date(g(v, "closingDate"))
+                jobs.append({
+                    "id": "faa:" + ref, "title": _text(g(v, "title")), "employer": _text(g(v, "employerName")),
+                    "pay": pay, "hours": "Part-time" if hrs and float(hrs) < 30 else "Full-time",
+                    "location": loc, "job_type": "Apprenticeship", "posted": str(_date(g(v, "postedDate")) or ""),
+                    "description": desc[:12000], "closed_notice": False,
+                    "url": g(v, "vacancyUrl") or f"https://www.findapprenticeship.service.gov.uk/apprenticeship/{ref}",
+                    "source": "Find an apprenticeship", "closing": str(closing) if closing else "",
+                })
+            page += 1
+            time.sleep(delay)
+    jobs = [j for j in jobs if j["closing"]]
+    log(f"Find an apprenticeship: {len(jobs)} apprenticeships in our area")
+    return jobs

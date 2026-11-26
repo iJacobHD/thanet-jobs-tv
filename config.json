@@ -72,7 +72,7 @@
   "nhs_max_annual_salary": 25500,
   "usb_rotate": 270,
   "usb_min_days_open": 7,
-  "video_seconds_per_slide": 15,
+  "video_seconds_per_slide": 12,
   "use_teaching_vacancies": true,
   "use_nhs_jobs": true,
   "use_adzuna": true,
@@ -480,5 +480,6 @@
     "Jersey",
     "St Peter Port",
     "Isle of Man"
-  ]
+  ],
+  "use_apprenticeships": true
 }

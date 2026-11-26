@@ -4,12 +4,13 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
 
 * **Where the jobs come from:** DWP Find a Job (Work Hub, jobs.service.gov.uk). Its terms allow reasonable automated copying as long as DWP is credited, and the display does credit it.
 * **What gets shown:** jobs in Thanet that are still open, entry level, and **not self-employed**.
-* **The button:** https://ijacobhd.github.io/thanet-jobs-tv/week.html has a yellow **Jobs for this week** button. It downloads an MP4 that shows 15 seconds per slide and is already turned 270° for the sideways TV. Every job in it stays open for at least the next 7 days. Copy it onto the USB stick and play it on repeat. `Update USB stick.bat` can do the copying for you.
+* **The button:** https://ijacobhd.github.io/thanet-jobs-tv/week.html has a yellow **Jobs for this week** button. It downloads an MP4 that shows 12 seconds per slide and is already turned 270° for the sideways TV. Every job in it stays open for at least the next 7 days. Copy it onto the USB stick and play it on repeat. `Update USB stick.bat` can do the copying for you.
 * **How it updates:** every morning, GitHub collects jobs from several official job feeds, removes duplicates, filters them, and remakes the board, the slides and the MP4. Nobody has to run anything, and nothing touches Work Hub.
   * **Reed** (secret `REED_API_KEY`) has closing dates.
   * **Teaching Vacancies** (Department for Education) needs no key and has closing dates. It covers school support jobs like teaching assistants, cleaners and catering.
   * **NHS Jobs** needs no key and has closing dates. It covers GP receptionists, care homes, healthcare assistants and similar.
   * **Adzuna** (secrets `ADZUNA_APP_ID` + `ADZUNA_APP_KEY`, optional) pulls from lots of other job sites, but gives no closing dates. Only jobs posted in the last 10 days are used, and they're shown as "Posted …, apply soon".
+  * **Find an apprenticeship** (GOV.UK, Department for Education): official Display advert API. Needs a free key saved as the `FAA_API_KEY` secret (get one at developer.apprenticeships.education.gov.uk). Switches on by itself once the key is there.
   * **Employers' own careers sites** (list in `config.json` → `employers`):
     * Supermarkets: Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Sainsbury's, Iceland / The Food Warehouse.
     * Westwood Cross and the retail parks: Boots, Primark, Next, TK Maxx / Homesense, B&M, The Range, Halfords, Wickes / Toolstation, Currys, JD Sports, Smyths Toys, Hobbycraft, Hotel Chocolat, Hollywood Bowl.
@@ -58,7 +59,7 @@ Each scheduled run also makes picture slides: `docs/usb/JOBS_01.jpg`, `JOBS_02.j
 1. Plug the stick into any Windows PC.
 2. Double-click **Update USB stick.bat**. It downloads the newest slides, deletes the old `JOBS_*.jpg` files from the `JOBS` folder on the stick, and copies the new ones in. Nothing else on the stick is touched.
 3. Put the stick back in the TV.
-4. Open the TV's Photos/Media app and start a slideshow of the `JOBS` folder. Set it to repeat, with about 15 seconds per slide.
+4. Open the TV's Photos/Media app and start a slideshow of the `JOBS` folder. Set it to repeat, with about 12 seconds per slide.
 
 **Important:** pictures on a stick can't update themselves. To stop expired jobs showing, slides only include jobs that stay open for **at least 4 more days** from when they were made (`usb_min_days_open` in `config.json`). **Refresh the stick at least twice a week (e.g. Monday and Thursday)** and nothing on the TV will be past its closing date. If your TV shows the slides upside down, set `"usb_rotate": 90` in `config.json`.
 
