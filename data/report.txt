@@ -1,109 +1,41 @@
-Run 2026-11-26T13:24:28Z  kept 27 of 195
+Run 2026-11-26T14:19:08Z  kept 17 of 39
 
-KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae37ec7eb629aedf42c1c2d
-KEEP | Support Worker                                               | ok | https://www.jobs.service.gov.uk/jobs/6af58aaa5ddccbfd39db4202
-KEEP | Field Interviewer - Part Time - Car required                 | ok | https://www.jobs.service.gov.uk/jobs/6b0470f68416cf7e522e0f14
-KEEP | Healthcare Support Worker - QEQM Hospital                    | ok | https://www.jobs.service.gov.uk/jobs/6b06bc49dbc8ab84eb7e52bc
-KEEP | Reception/ Admin                                             | ok | https://www.jobs.service.gov.uk/jobs/6aebc82086839092c863fb76
-KEEP | Receptionist                                                 | ok | https://www.jobs.service.gov.uk/jobs/6af3b0e45ddccbfd39aac50a
-KEEP | Practice Cleaner                                             | ok | https://www.jobs.service.gov.uk/jobs/6afb99ee55f177b7a102903e
-KEEP | Receptionist/Telephonist                                     | ok | https://www.jobs.service.gov.uk/jobs/6b002871834a07ae16fe007d
-KEEP | Healthcare Support Worker - QEQM Hospital | East Kent Hospit | ok | https://www.jobs.service.gov.uk/jobs/6aeb4355d9834f943e5d4f2b
-KEEP | Breakfast Club Assistant                                     | ok | https://www.jobs.service.gov.uk/jobs/6ae21cec73425b592619a13e
-KEEP | Bank Receptionist                                            | ok | https://www.jobs.service.gov.uk/jobs/6afd9109043e5c2692416338
-KEEP | Nursery/EYFS Teaching Assistant                              | ok | https://www.jobs.service.gov.uk/jobs/6aeb09ca52719924504ab127
-KEEP | Kitchen Assistant                                            | ok | https://www.jobs.service.gov.uk/jobs/6b00886b6318029352119802
-KEEP | Healthcare Support Worker - QEQM Hospital | East Kent Hospit | ok | https://www.jobs.service.gov.uk/jobs/6b06b7a98416cf7e5272c570
-KEEP | Bar Team Member                                              | ok | https://www.jobs.service.gov.uk/jobs/6b06ccb04560216823a2ea8b
-KEEP | Customer Team Member                                         | ok | https://www.jobs.service.gov.uk/jobs/6b06b1d08416cf7e5271faa1
-KEEP | Retail Stock Counter - Thanet - £14.34 p/hr*                 | ok | https://www.jobs.service.gov.uk/jobs/6b02b92663180293523d3a8d
-KEEP | 24179 - Receptionist - Canterbury, Folkestone, Ashford  Rams | ok | https://www.jobs.service.gov.uk/jobs/6af6e6855ddccbfd390183f2
-KEEP | Female Support Worker                                        | ok | https://www.jobs.service.gov.uk/jobs/6ae9c50f9b30c7c6809f527b
-KEEP | Support Worker                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae9c646c0bcb2f3824ae286
-KEEP | Factory Operative                                            | ok | https://www.jobs.service.gov.uk/jobs/6af62d925ddccbfd39efba65
-KEEP | Complex Care Worker/PA 10hrs per week flexible @ £15.00/hr i | ok | https://www.jobs.service.gov.uk/jobs/6a62e7b81ffe646b1719ac29
-KEEP | Care Assistant for a person P/T@ £16.00 per hr in CT10 - Bro | ok | https://www.jobs.service.gov.uk/jobs/6a16a27ba1489754c8dadf79
-KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae78b01baea710107f02100
-KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae766e9baea710107ed2b90
-KEEP | Care Assistant                                               | ok | https://www.jobs.service.gov.uk/jobs/6ae766f4f390770d291dfeda
-KEEP | Warehouse Operative                                          | ok | https://www.jobs.service.gov.uk/jobs/6af36e1c5ddccbfd39a1a60f
-SKIP | Support Time Recovery Worker | Kent and Medway Mental Health | NHS Band 3+ pay - usually needs experience (£25,760 - £27,476 per annum) | https://www.jobs.service.gov.uk/jobs/6af742d257f727c85b879454
-SKIP | Medical Education Support Administrator | East Kent Hospital | NHS Band 3+ pay - usually needs experience (£25,760 - £27,476 per annum) | https://www.jobs.service.gov.uk/jobs/6afeeac2bce65bde923f0a29
-SKIP | Medical Education Support Administrator                      | NHS Band 3+ pay - usually needs experience (£25,760 to £27,476 a year) | https://www.jobs.service.gov.uk/jobs/6afef6bdba6abc4abb1c71b9
-SKIP | Health  Rehabilitation Care Assistant                        | NHS Band 3+ pay - usually needs experience (£25,760 to £27,476 a year) | https://www.jobs.service.gov.uk/jobs/6afb05795ddccbfd39669b4c
-SKIP | Health  Rehabilitation Care Assistant | Kent Community Healt | asks for experience ('Band 3') | https://www.jobs.service.gov.uk/jobs/6af59ea4efb020ed984fe4c1
-SKIP | Maternity Support Worker | East Kent Hospitals University NH | asks for experience ('Band 4') | https://www.jobs.service.gov.uk/jobs/6af31a2e5ddccbfd39970af0
-SKIP | Personal assistant                                           | asks for experience ('Experience with children with special needs is a must') | https://www.jobs.service.gov.uk/jobs/6aea54a152719924503a1f58
-SKIP | Personal Assistant/Carer                                     | asks for experience ('Experienced carer') | https://www.jobs.service.gov.uk/jobs/6aface3e57f727c85bda6546
-SKIP | Personal Care Assistant for a young man P/T@ £15.00/hr in Ra | asks for experience ('Experienced in care (essential') | https://www.jobs.service.gov.uk/jobs/6ab9e9c8b1d85ee6888530fb
-SKIP | Cook                                                         | asks for experience ('Have experience in a similar role') | https://www.jobs.service.gov.uk/jobs/6afd5d89a7c2faba4c511344
-SKIP | Trainee Classic Car Technician                               | asks for experience ('Previous experience in') | https://www.jobs.service.gov.uk/jobs/6b050efd8416cf7e52419379
-SKIP | Finance Administrator (Accounts Assistant)                   | asks for experience ('Proven experience in') | https://www.jobs.service.gov.uk/jobs/6ae8be2f9f3790d58f9c133e
-SKIP | Care Assistant                                               | asks for experience ('experience is essential') | https://www.jobs.service.gov.uk/jobs/6b0582728416cf7e524f3095
-SKIP | KSC Teaching Assistant                                       | asks for experience ('looking for experienced') | https://www.jobs.service.gov.uk/jobs/6aed11b5fa4a125cbdb4a1cc
-SKIP | Female support worker                                        | asks for experience ('previous experience in') | https://www.jobs.service.gov.uk/jobs/6b082bab37f7fbd856ede03e
-SKIP | SEND Teaching Assistant                                      | asks for experience ('will have experience') | https://www.jobs.service.gov.uk/jobs/6ac8f5d010fa3dcfbef5d01a
-SKIP | SEND Teaching Assistant                                      | asks for experience ('will have experience') | https://www.jobs.service.gov.uk/jobs/6ac8ecdbbce00b7bfece9ba1
-SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae05a511ffc3902b655b363
-SKIP | Specialist Stroke Speech and Language Therapist | Kent Commu | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae079bd9991b23a7bdbe5bd
-SKIP | Quality Assurance Multi-Skilled Operative                    | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae0886ac85e5ec2da5937a1
-SKIP | Greenhouse Operative                                         | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae088171ffc3902b656c02e
-SKIP | Warehouse Operative                                          | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae089c2c85e5ec2da594148
-SKIP | Halfords Autocentre Thanet - Autocare Technician Apprentices | expired / closing too soon (2026-11-26) | https://www.jobs.service.gov.uk/jobs/6ae081179991b23a7bdc18a2
-SKIP | Smoke Free Pregnancy Advisor for Maternity - Thanet area     | not entry level (title: 'Advisor') | https://www.jobs.service.gov.uk/jobs/6aec7d14a148e29a63976d4d
-SKIP | Buyer                                                        | not entry level (title: 'Buyer') | https://www.jobs.service.gov.uk/jobs/6aec76556dc23220be391bdb
-SKIP | Bank Chef                                                    | not entry level (title: 'Chef') | https://www.jobs.service.gov.uk/jobs/6b00340d11e0a00921b3356e
-SKIP | Safeguarding Co-ordinator                                    | not entry level (title: 'Co-ordinator') | https://www.jobs.service.gov.uk/jobs/6b00460b834a07ae1601ab43
-SKIP | Consultant in Anaesthetics (QEH) | East Kent Hospitals Unive | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aec9ed2a148e29a639b4f8f
-SKIP | Consultant Gastroenterologist                                | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6afc81298bdf4a80f0bfeb18
-SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6af31a2e57f727c85b12b9d1
-SKIP | Consultant in Acute Medicine | East Kent Hospitals Universit | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6af449a7efb020ed982995fc
-SKIP | Consultant in Critical Care (QEH)                            | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042bbf8416cf7e522441a9
-SKIP | Consultant Psychiatrist - Thanet Community Older People | Ke | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aeb4352669374343693b151
-SKIP | Consultant in Palliative Medicine (QEH)                      | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042fb08416cf7e5224dfbe
-SKIP | Consultant in Critical Care (QEH) | East Kent Hospitals Univ | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042f988416cf7e5224dd3f
-SKIP | Consultant in Palliative Medicine (QEH) | East Kent Hospital | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6b042f998416cf7e5224dd63
-SKIP | Locum Consultant                                             | not entry level (title: 'Consultant') | https://www.jobs.service.gov.uk/jobs/6aff22d511e0a00921958a92
-SKIP | Client Project Coordinator                                   | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6b0729b4f4e9f3c42725b56c
-SKIP | Purchasing Coordinator                                       | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6b06e2364560216823a5f142
-SKIP | Compliance Coordinator                                       | not entry level (title: 'Coordinator') | https://www.jobs.service.gov.uk/jobs/6af712f75ddccbfd3906fba1
-SKIP | Deputy Headteacher                                           | not entry level (title: 'Deputy') | https://www.jobs.service.gov.uk/jobs/6aedae9dfa4a125cbdc1ae4a
-SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6afc462da3bc9c86f464559d
-SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6b043740dbc8ab84eb310139
-SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://www.jobs.service.gov.uk/jobs/6aba9f774e30a13628214439
-SKIP | Graphic and Multimedia Designer                              | not entry level (title: 'Designer') | https://www.jobs.service.gov.uk/jobs/6af2dd2e57f727c85b0922b3
-SKIP | Trust Doctor in Intensive Care Medicine (ST1) | East Kent Ho | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6af30cbfefb020ed98066b73
-SKIP | Community CAMHS Speciality Doctor | Kent and Medway Mental H | not entry level (title: 'Doctor') | https://www.jobs.service.gov.uk/jobs/6aeb022fe0e8b4d9c50c23b2
-SKIP | Process  Maintenance Engineer                                | not entry level (title: 'Engineer') | https://www.jobs.service.gov.uk/jobs/6b05e14545602168238534a0
-SKIP | Salaried GP - St Peters Surgery                              | not entry level (title: 'GP') | https://www.jobs.service.gov.uk/jobs/6ae85c47c9309ef2a40fceb2
-SKIP | Locum GP                                                     | not entry level (title: 'GP') | https://www.jobs.service.gov.uk/jobs/6ae5309df390770d29f1bf4e
-SKIP | Maintenance Inspector                                        | not entry level (title: 'Inspector') | https://www.jobs.service.gov.uk/jobs/6af5b6d35ddccbfd39e0f439
-SKIP | Maths Lecturer                                               | not entry level (title: 'Lecturer') | https://www.jobs.service.gov.uk/jobs/6b076f933940099fbb47007e
-SKIP | Assistant Manager - Broadstairs                              | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6afd8554e160390923cad99e
-SKIP | Care Manager                                                 | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6afdcd5eba6abc4abbfad511
-SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b00753663180293520f509c
-SKIP | Registered Manager                                           | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b06daec4560216823a50b85
-SKIP | Residential Service Manager                                  | not entry level (title: 'Manager') | https://www.jobs.service.gov.uk/jobs/6b06daf9dbc8ab84eb85a848
-SKIP | 6-Colour Machine Minder ** RELOCATION PACKAGE AVAILABLE**    | not entry level (title: 'Minder') | https://www.jobs.service.gov.uk/jobs/6af70acc5ddccbfd39061ebe
-SKIP | Mental Health Together Navigator                             | not entry level (title: 'Navigator') | https://www.jobs.service.gov.uk/jobs/6b0076fcd578832238e4eb5d
-SKIP | Registered General Nurse                                     | not entry level (title: 'Nurse') | https://www.jobs.service.gov.uk/jobs/6b05a6a18416cf7e5254113e
-SKIP | Marketing Officer                                            | not entry level (title: 'Officer') | https://www.jobs.service.gov.uk/jobs/6aeb4ad4d9834f943e5e502f
-SKIP | Planner                                                      | not entry level (title: 'Planner') | https://www.jobs.service.gov.uk/jobs/6afd9dcfe160390923cebb5a
-SKIP | Wound Clinic Practitioner                                    | not entry level (title: 'Practitioner') | https://www.jobs.service.gov.uk/jobs/6b058481dbc8ab84eb5ad796
-SKIP | Assistant Healthcare Scientist (Blood Sciences)              | not entry level (title: 'Scientist') | https://www.jobs.service.gov.uk/jobs/6af5e4a0efb020ed9858a339
-SKIP | Senior Care Assistant - Nights                               | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6af715a25ddccbfd39074539
-SKIP | Senior Healthcare Support Worker | East Kent Hospitals Unive | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06beaf45602168239e28a8
-SKIP | Senior Healthcare Support Worker - Outpatients | East Kent H | not entry level (title: 'Senior') | https://www.jobs.service.gov.uk/jobs/6b06b7a845602168239d50d5
-SKIP | Teacher of DT and Food Technology                            | not entry level (title: 'Teacher') | https://www.jobs.service.gov.uk/jobs/6af4faa15ddccbfd39cea665
-SKIP | Team Leader - Ramsgate                                       | not entry level (title: 'Team Leader') | https://www.jobs.service.gov.uk/jobs/6afd786f043e5c26923d475b
-SKIP | Senior Employment Specialist / Team Leader                   | not entry level (title: 'Team Leader') | https://www.jobs.service.gov.uk/jobs/6af46f035ddccbfd39bd2c18
-SKIP | Children's Specialist Speech and Language Therapist | Kent C | not entry level (title: 'Therapist') | https://www.jobs.service.gov.uk/jobs/6aea0fa2a37b5b00dd749af0
-SKIP | Specialist Speech and Language Therapist | East Kent Hospita | not entry level (title: 'Therapist') | https://www.jobs.service.gov.uk/jobs/6af2fa8a57f727c85b0e4411
-SKIP | Locum consultant in General Medicine                         | not entry level (title: 'consultant') | https://www.jobs.service.gov.uk/jobs/6af736b6efb020ed987c71f3
-SKIP | Assistant shop manager                                       | not entry level (title: 'manager') | https://www.jobs.service.gov.uk/jobs/6afb2b03a3bc9c86f4425259
-SKIP | Female care team leader - Driver essential                   | not entry level (title: 'team leader') | https://www.jobs.service.gov.uk/jobs/6af6e0865ddccbfd39007d77
-SKIP | Delivery Driver                                              | self-employed ('Self-employ') | https://www.jobs.service.gov.uk/jobs/6b05006445602168236b52e3
-SKIP | site manager                                                 | self-employed ('freelance') | https://www.jobs.service.gov.uk/jobs/6af7584757f727c85b89696b
-SKIP | Mystery Shopper                                              | self-employed ('self-employ') | https://www.jobs.service.gov.uk/jobs/6aeb36ac52719924505178cd
-SKIP | Deliver with Deliveroo – Flexible Food Delivery Driver Jobs  | self-employed/blocked employer (Deliveroo) | https://www.jobs.service.gov.uk/jobs/6af58039efb020ed984c0a13
-SKIP | Part-time Cleaner                                            | self-employed/blocked employer (Maid2Clean) | https://www.jobs.service.gov.uk/jobs/6af50d7b5ddccbfd39d05236
+KEEP | Field Sales                                                  | ok | https://www.reed.co.uk/jobs/field-sales/57598099
+KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57574966
+KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57574803
+KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57576325
+KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57579607
+KEEP | Care Assistant                                               | ok | https://www.reed.co.uk/jobs/care-assistant/57410096
+KEEP | Purchasing Administrator                                     | ok | https://www.reed.co.uk/jobs/purchasing-administrator/57603141
+KEEP | Hydraulic Fitter                                             | ok | https://www.reed.co.uk/jobs/hydraulic-fitter/57557993
+KEEP | SEN Teaching Assistant / Learning Support Assistant          | ok | https://www.reed.co.uk/jobs/sen-teaching-assistant-learning-support-assistant/57489443
+KEEP | Customer Service Administrator | Immediate start!            | ok | https://www.reed.co.uk/jobs/customer-service-administrator--immediate-start/57482470
+KEEP | Caterlink - Catering Assistant                               | ok | https://www.reed.co.uk/jobs/caterlink-catering-assistant/57604533
+KEEP | Santa                                                        | ok | https://www.reed.co.uk/jobs/santa/57547745
+KEEP | Evening & Weekend Care Assistant                             | ok | https://www.reed.co.uk/jobs/evening-amp-weekend-care-assistant/57529387
+KEEP | Care Professional_Broadstairs_T054                           | ok | https://www.reed.co.uk/jobs/care-professionalbroadstairst054/57528465
+KEEP | Cleaner                                                      | ok | https://www.reed.co.uk/jobs/cleaner/57599485
+KEEP | Recovery Worker and Waking Night Recovery Worker - Mental He | ok | https://www.reed.co.uk/jobs/recovery-worker-and-waking-night-recovery-worker-mental-health/57408989
+KEEP | Part Time Bar Staff                                          | ok | https://www.reed.co.uk/jobs/part-time-bar-staff/57547772
+SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/telehandler/57500939
+SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/welfare-labourer/57479118
+SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
+SKIP | Mechanical Engineer                                          | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/mechanical-engineer/57505441
+SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/traffic-marshall/57492714
+SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/labourer/57500932
+SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
+SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
+SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
+SKIP | General Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/general-manager/57594937
+SKIP | Key Account Manager                                          | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/key-account-manager/57562716
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57581325
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57492425
+SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') | https://www.reed.co.uk/jobs/employment-specialist/57513221
+SKIP | Teacher                                                      | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/teacher/57524530
+SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/secondary-teacher/57468003
+SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
+SKIP | Mobile Optometrist                                           | self-employed ('Franchise') | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
+SKIP | Financial Controller                                         | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/financial-controller/57601284
+SKIP | Maths Teacher                                                | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/maths-teacher/57533142
