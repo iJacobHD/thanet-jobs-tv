@@ -11,7 +11,7 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
   * **NHS Jobs** needs no key and has closing dates. It covers GP receptionists, care homes, healthcare assistants and similar.
   * **Adzuna** (secrets `ADZUNA_APP_ID` + `ADZUNA_APP_KEY`, optional) pulls from lots of other job sites, but gives no closing dates. Only jobs posted in the last 10 days are used, and they're shown as "Posted …, apply soon".
   * **Apprenticeship board** (`apprenticeships.html`-style: `index.html?board=apprenticeships`, green design) with its own video `usb/apprenticeships-this-week.mp4` and its own button on the download page. It takes every apprenticeship in the area from all sources; apprenticeships skip the experience/qualification/pay rules because they are paid training by design.
-  * **Find an apprenticeship** (GOV.UK, Department for Education): official Display advert API. Needs a free key saved as the `FAA_API_KEY` secret (get one at developer.apprenticeships.education.gov.uk). Switches on by itself once the key is there.
+  * **Find an apprenticeship** (GOV.UK, Department for Education): read from its public search pages (about 10 pages a day, no key needed). If a free Display advert API key is ever saved as the `FAA_API_KEY` secret, the official API is used instead.
   * **Employers' own careers sites** (list in `config.json` → `employers`):
     * Supermarkets: Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Sainsbury's, Iceland / The Food Warehouse.
     * Westwood Cross and the retail parks: Boots, Primark, Next, TK Maxx / Homesense, B&M, The Range, Halfords, Wickes / Toolstation, Currys, JD Sports, Smyths Toys, Hobbycraft, Hotel Chocolat, Hollywood Bowl.

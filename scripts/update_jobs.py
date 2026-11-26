@@ -528,8 +528,9 @@ def main():
             run("NHS Jobs", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
                                      for j in sources.nhs_jobs(places, loc, 10)])
         faa_key = os.environ.get("FAA_API_KEY", "").strip()
-        if faa_key and cfg.get("use_apprenticeships", True):
-            run("Find an apprenticeship", lambda: sources.apprenticeships(faa_key, places))
+        if cfg.get("use_apprenticeships", True):     # official API if a key is saved, otherwise the public website
+            run("Find an apprenticeship", (lambda: sources.apprenticeships(faa_key, places)) if faa_key
+                else (lambda: sources.apprenticeships_site(places)))
         emp_cache_path = os.path.join(ROOT, "data", "employer_cache.json")
         try:
             emp_cache = json.load(open(emp_cache_path, encoding="utf-8"))

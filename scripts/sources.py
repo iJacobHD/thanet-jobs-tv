@@ -783,3 +783,54 @@ def apprenticeships(api_key, places, centres=None, log=print, delay=0.5):
     jobs = [j for j in jobs if j["closing"]]
     log(f"Find an apprenticeship: {len(jobs)} apprenticeships in our area")
     return jobs
+
+
+def apprenticeships_site(places, centres=None, log=print, delay=2):
+    """
+    Find an apprenticeship (GOV.UK) without an API key: its own public search-results pages,
+    which list title, employer, address, wage, closing date and posted date for every advert.
+    About 10 page loads a day, 2 seconds apart.
+    """
+    centres = centres or [("Margate", 30), ("Ashford, Kent", 10), ("Sittingbourne", 8)]
+    s = _session()
+    base = "https://www.findapprenticeship.service.gov.uk"
+    jobs, seen = [], set()
+    for loc, miles in centres:
+        for page in range(1, 31):
+            try:
+                r = s.get(base + "/apprenticeships", params={"location": loc, "distance": miles, "pageNumber": page}, timeout=40)
+            except requests.RequestException:
+                break
+            if r.status_code != 200:
+                break
+            items = re.findall(r'<li class="das-search-results__list-item[\s\S]*?</li>', r.text)
+            if not items:
+                break
+            for li in items:
+                m = re.search(r'href="/apprenticeship/(VAC\d+)"', li)
+                if not m or m.group(1) in seen:
+                    continue
+                ref = m.group(1)
+                seen.add(ref)
+                ps = [_text(x) for x in re.findall(r"<p[^>]*>([\s\S]*?)</p>", li)]
+                title = _text((re.search(r'-vacancy-title">([\s\S]*?)</span>', li) or [None, ""])[1])
+                employer = ps[0] if ps else ""
+                address = ps[1] if len(ps) > 1 else ""
+                field = lambda name: next((x[len(name):].strip() for x in ps if x.startswith(name)), "")
+                closing = _anydate((re.search(r"Closes[^()]*\(([^)]+)\)", _text(li)) or [None, ""])[1]) \
+                    or _anydate((re.search(r"Closes on ([^<]+)", _text(li)) or [None, ""])[1])
+                posted = _anydate((re.search(r"Posted (?:on )?(\d{1,2} \w+ \d{4})", _text(li)) or [None, ""])[1])
+                if not _thanet(address, places) or not closing:
+                    continue
+                jobs.append({
+                    "id": "faa:" + ref, "title": title, "employer": employer,
+                    "pay": field("Wage"), "hours": "", "location": address, "job_type": "Apprenticeship",
+                    "posted": str(posted or ""), "description": "Training course: " + field("Training course"),
+                    "closed_notice": False, "url": f"{base}/apprenticeship/{ref}",
+                    "source": "Find an apprenticeship", "closing": str(closing),
+                })
+            if f"pageNumber={page + 1}" not in r.text:
+                break
+            time.sleep(delay)
+    log(f"Find an apprenticeship (website): {len(jobs)} apprenticeships in our area")
+    return jobs
