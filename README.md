@@ -16,6 +16,7 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
     * Supermarkets: Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose/John Lewis, Sainsbury's, Iceland / The Food Warehouse.
     * Westwood Cross and the retail parks: Boots, Primark, Next, TK Maxx / Homesense, B&M, The Range, Halfords, Wickes / Toolstation, Currys, JD Sports, Smyths Toys, Hobbycraft, Hotel Chocolat, Hollywood Bowl.
     * Food, pubs and hotels: McDonald's, Greggs, Costa Coffee, Wetherspoon, Harvester / Toby Carvery / Miller & Carter, Premier Inn / Beefeater / Brewers Fayre, Travelodge.
+    * More food, pubs and care: KFC, PizzaExpress, Zizzi, Shepherd Neame pubs & hotels, Compass Group (school/hospital catering), OCS (cleaning), Care UK and Barchester care homes, Specsavers, Royal Mail, East Kent College Group.
     * Hospitals: 2gether Support Solutions (porters, domestics, catering at QEQM Margate, Kent & Canterbury, William Harvey) - NHS Trust jobs come through NHS Jobs.
     * Each site is read the way it publishes jobs: its sitemap and the job details built into each advert, its own job feed or public jobs API, or its search-results pages. Only adverts in our towns are opened, and the reader waits between requests as each site asks.
     * Where a site gives a closing date it is used. Where it gives none, the job shows as "Open on X careers · apply soon" and is re-checked every morning.

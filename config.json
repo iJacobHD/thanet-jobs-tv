@@ -416,6 +416,31 @@
       "mode": "peoplebank",
       "listing": "/pb3/corporate/shepherdneame/advertsearch.php?p_Location=&p_Department=&do_search=Show+Vacancies",
       "employer": "Shepherd Neame"
+    },
+    {
+      "name": "Barchester care homes",
+      "employer": "Barchester",
+      "base": "https://jobs.barchester.com",
+      "mode": "all",
+      "job_path": "/job/barchester/",
+      "crawl_delay": 2,
+      "max_new_pages_per_run": 250
+    },
+    {
+      "name": "Zizzi",
+      "base": "https://careers.zizzi.co.uk",
+      "mode": "all",
+      "job_path": "/job/",
+      "crawl_delay": 2
+    },
+    {
+      "name": "East Kent College Group",
+      "employer": "EKC Group",
+      "base": "https://jobs.ekcgroup.ac.uk",
+      "mode": "all",
+      "job_path": "/vacancies/\\d+",
+      "fields": true,
+      "crawl_delay": 2
     }
   ],
   "commute": {
@@ -537,7 +562,10 @@
     "Domino's": "stores are franchised - careers site only lists head-office/driver jobs",
     "Burger King, Stonegate, PureGym, Holland & Barrett, HC-One, Loungers": "no readable job list (search runs inside their page)",
     "Holiday Inn (IHG)": "careers site blocks automated reading",
-    "Stagecoach": "old careers site is gone"
+    "Stagecoach": "old careers site is gone",
+    "The Gym Group, B&Q, H&M (Workday sites)": "Workday refuses automated requests, even for its sitemap",
+    "Starbucks, Pizza Hut, Subway": "franchised stores recruit locally - not on a central careers site",
+    "Screwfix, Kent County Council, Thanet District Council, Southeastern, Port of Dover, Sodexo, Evri, River Island, Mountain Warehouse, Haven": "no readable job list, or the careers page could not be found/opened"
   },
   "exclude_places": [
     "Guernsey",
