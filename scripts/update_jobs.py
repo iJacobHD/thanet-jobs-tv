@@ -382,7 +382,7 @@ def main():
         new = [i for i in found if i not in ids]
         ids += new
         print(f"search page {page}: {len(found)} jobs ({len(ids)} so far of {total})")
-        if not new or (total and len(ids) >= total):
+        if not found or (total and page >= -(-total // 10)):
             break
         page += 1
     if not ids:

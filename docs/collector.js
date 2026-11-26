@@ -53,7 +53,8 @@
       }).join("") + "</main>";
       msg(`Reading search results: page ${p}${total ? " of " + Math.ceil(total / 10) : ""}`);
       bar(total ? Math.min(0.3, (p * 10 / total) * 0.3) : 0.1);
-      if (!fresh || (total && seen.size >= total)) break;
+      // stop when a page comes back empty or we've reached the last page
+      if (!cards.length || (total && p >= Math.ceil(total / 10))) break;
     }
 
     // 2. each Thanet advert
