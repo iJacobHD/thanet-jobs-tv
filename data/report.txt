@@ -1,4 +1,4 @@
-Run 2026-11-26T14:23:27Z  kept 13 of 39
+Run 2026-11-26T14:50:15Z  kept 18 of 63
 
 KEEP | Kitchen Assistant                                            | ok | https://www.reed.co.uk/jobs/kitchen-assistant/57574966
 KEEP | Bar & Waiting Staff                                          | ok | https://www.reed.co.uk/jobs/bar-amp-waiting-staff/57574803
@@ -15,27 +15,51 @@ KEEP | Care Professional_Broadstairs_T054                           | ok | https
 KEEP | Cleaner                                                      | ok | https://www.reed.co.uk/jobs/cleaner/57599485
 KEEP | Recovery Worker and Waking Night Recovery Worker - Mental He | ok | https://www.reed.co.uk/jobs/recovery-worker-and-waking-night-recovery-worker-mental-health/57408989
 KEEP | Part Time Bar Staff                                          | ok | https://www.reed.co.uk/jobs/part-time-bar-staff/57547772
-SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/telehandler/57500939
-SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') (cached) | https://www.reed.co.uk/jobs/welfare-labourer/57479118
-SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') (cached) | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
+KEEP | Reception/ Admin                                             | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A2988-26-0001
+KEEP | Receptionist/Telephonist                                     | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A0700-26-00000
+KEEP | Healthcare Support Worker - QEQM Hospital                    | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00023
+KEEP | Receptionist                                                 | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A0624-26-0008
+KEEP | Practice Cleaner                                             | ok | https://beta.jobs.nhs.uk/candidate/jobadvert/A0624-26-0009
+SKIP | Medical Education Support Administrator                      | NHS Band 3+ pay - usually needs experience (£25760.00 to £27476.00) | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00008
+SKIP | Telehandler                                                  | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/telehandler/57500939
+SKIP | Welfare Labourer                                             | asks for experience ('Are you an experienced') | https://www.reed.co.uk/jobs/welfare-labourer/57479118
+SKIP | Health & Rehabilitation Care Assistant                       | asks for experience ('Band 3') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9846-26-0707
+SKIP | Home Visits Optical Assistant                                | asks for experience ('Previous experience in') | https://www.reed.co.uk/jobs/home-visits-optical-assistant/57604462
+SKIP | KSC Teaching Assistant                                       | asks for experience ('looking for experienced') | https://teaching-vacancies.service.gov.uk/jobs/ksc-teaching-assistant
 SKIP | Mechanical Engineer                                          | expired / closing too soon (2026-11-26) | https://www.reed.co.uk/jobs/mechanical-engineer/57505441
-SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/traffic-marshall/57492714
-SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') (cached) | https://www.reed.co.uk/jobs/labourer/57500932
-SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') (cached) | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
-SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') (cached) | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
+SKIP | Dermatologist                                                | expired / closing too soon (2026-11-26) | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-0315
+SKIP | Traffic Marshall                                             | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/traffic-marshall/57492714
+SKIP | Labourer                                                     | needs a qualification/licence ('CSCS') | https://www.reed.co.uk/jobs/labourer/57500932
+SKIP | SHE Advisor - Ramsgate                                       | not entry level (title: 'Advisor') | https://www.reed.co.uk/jobs/she-advisor-ramsgate/57600688
+SKIP | Safeguarding Co-ordinator                                    | not entry level (title: 'Co-ordinator') | https://beta.jobs.nhs.uk/candidate/jobadvert/A0700-26-00001
+SKIP | Optical Consultant - Foundation                              | not entry level (title: 'Consultant') | https://www.reed.co.uk/jobs/optical-consultant-foundation/57547792
+SKIP | Consultant Gastroenterologist                                | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0620
+SKIP | Consultant in Critical Care (QEH)                            | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00017
+SKIP | Consultant Psychiatrist - Thanet Community Older People      | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9380-26-0890
+SKIP | Consultant in Palliative Medicine (QEH)                      | not entry level (title: 'Consultant') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-00020
+SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-00010
+SKIP | Dermatologist                                                | not entry level (title: 'Dermatologist') | https://beta.jobs.nhs.uk/candidate/jobadvert/A1797-26-0387
 SKIP | Field Sales                                                  | not entry level (title: 'Field Sales') | https://www.reed.co.uk/jobs/field-sales/57598099
 SKIP | Hydraulic Fitter                                             | not entry level (title: 'Fitter') | https://www.reed.co.uk/jobs/hydraulic-fitter/57557993
-SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
-SKIP | General Manager                                              | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/general-manager/57594937
-SKIP | Key Account Manager                                          | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/key-account-manager/57562716
-SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
-SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') (cached) | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
-SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57581325
-SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') (cached) | https://www.reed.co.uk/jobs/senior-software-developer/57492425
-SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') (cached) | https://www.reed.co.uk/jobs/employment-specialist/57513221
-SKIP | Teacher                                                      | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/teacher/57524530
-SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') (cached) | https://www.reed.co.uk/jobs/secondary-teacher/57468003
-SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) (cached) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
-SKIP | Mobile Optometrist                                           | self-employed ('Franchise') (cached) | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
-SKIP | Financial Controller                                         | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/financial-controller/57601284
-SKIP | Maths Teacher                                                | self-employed ('umbrella company') (cached) | https://www.reed.co.uk/jobs/maths-teacher/57533142
+SKIP | Salaried GP - St Peters Surgery                              | not entry level (title: 'GP') | https://beta.jobs.nhs.uk/candidate/jobadvert/B0082-26-0088
+SKIP | Salaried GP                                                  | not entry level (title: 'GP') | https://beta.jobs.nhs.uk/candidate/jobadvert/A2604-26-0002
+SKIP | Salaried GP -Birchington Medical Centre                      | not entry level (title: 'GP') | https://beta.jobs.nhs.uk/candidate/jobadvert/B0082-26-0087
+SKIP | Housing Manager (Maternity Cover)                            | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/housing-manager-maternity-cover/57597734
+SKIP | General Manager                                              | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/general-manager/57594937
+SKIP | Key Account Manager                                          | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/key-account-manager/57562716
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57556175
+SKIP | Caterlink - Catering Manager                                 | not entry level (title: 'Manager') | https://www.reed.co.uk/jobs/caterlink-catering-manager/57549965
+SKIP | Mental Health Together Navigator                             | not entry level (title: 'Navigator') | https://beta.jobs.nhs.uk/candidate/jobadvert/B0347-26-00002
+SKIP | Registered General Nurse                                     | not entry level (title: 'Nurse') | https://beta.jobs.nhs.uk/candidate/jobadvert/B0497-26-00000
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57581325
+SKIP | Senior Software Developer                                    | not entry level (title: 'Senior') | https://www.reed.co.uk/jobs/senior-software-developer/57492425
+SKIP | Senior Clinical Fellow in Anaesthetics ST3 (QEQM)            | not entry level (title: 'Senior') | https://beta.jobs.nhs.uk/candidate/jobadvert/C9344-26-0640
+SKIP | Employment Specialist                                        | not entry level (title: 'Specialist') | https://www.reed.co.uk/jobs/employment-specialist/57513221
+SKIP | Teacher                                                      | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/teacher/57524530
+SKIP | Secondary Teacher                                            | not entry level (title: 'Teacher') | https://www.reed.co.uk/jobs/secondary-teacher/57468003
+SKIP | Teacher of DT and Food Technology                            | not entry level (title: 'Teacher') | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-dt-and-food-technology-the-charles-dickens-school
+SKIP | Teacher of Geography                                         | not entry level (title: 'Teacher') | https://teaching-vacancies.service.gov.uk/jobs/teacher-of-geography-f7fd8315-510c-432b-906f-0985e57bc7d3
+SKIP | Future Pathways tutor                                        | salary too high for entry level (£32140.0 to £35035.0 a year) | https://www.reed.co.uk/jobs/future-pathways-tutor/57585608
+SKIP | Mobile Optometrist                                           | self-employed ('Franchise') | https://www.reed.co.uk/jobs/mobile-optometrist/57548442
+SKIP | Financial Controller                                         | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/financial-controller/57601284
+SKIP | Maths Teacher                                                | self-employed ('umbrella company') | https://www.reed.co.uk/jobs/maths-teacher/57533142
