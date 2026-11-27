@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pathway – find your way into a new sector | East Kent Jobs</title>
+<meta name="description" content="Upload your CV or tick what you have done, and see which job sectors you could move into in East Kent – and how.">
+<style>
+  :root{--navy:#0b2a4a;--navy2:#123b63;--ink:#0b0c0c;--muted:#505a5f;--yellow:#ffdd00;--lime:#a4c639;--green:#00703c;--line:#d8dde3;--bg:#f3f5f7;--warn:#b42318}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.45}
+  a{color:#1d4f91}
+  header.top{background:var(--navy);color:#fff}
+  header.top .in{max-width:880px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  header.top a{color:#fff;text-decoration:none;font-weight:700}
+  header.top .tag{background:var(--yellow);color:var(--ink);padding:2px 8px;border-radius:4px;font-size:14px;letter-spacing:.04em}
+  header.top nav{margin-left:auto;display:flex;gap:16px;font-size:16px}
+  header.top nav a{font-weight:600;opacity:.9}
+  main{max-width:880px;margin:0 auto;padding:22px 20px 60px}
+  .hero{background:var(--navy);color:#fff;border-radius:18px;padding:28px 26px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-60px;top:0;bottom:0;width:220px;background:linear-gradient(115deg,transparent 0 30%,var(--navy2) 30% 55%,var(--lime) 55% 62%,transparent 62%)}
+  .hero h1{font-size:38px;line-height:1.05;margin:0 0 6px;position:relative;z-index:1;max-width:560px}
+  .hero h1 span{color:var(--lime)}
+  .hero p{margin:0;font-size:19px;opacity:.95;position:relative;z-index:1;max-width:520px}
+  h2{font-size:26px;margin:30px 0 10px;line-height:1.15}
+  h3{font-size:20px;margin:0 0 6px}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+  @media (max-width:640px){.choices{grid-template-columns:1fr}.hero h1{font-size:31px}}
+  .choice{background:#fff;border:2px solid var(--line);border-radius:16px;padding:20px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:block;text-decoration:none}
+  .choice:hover,.choice:focus{border-color:var(--navy);outline:none}
+  .choice .ic{font-size:34px;display:block;margin-bottom:6px}
+  .choice b{font-size:21px;display:block}
+  .choice small{color:var(--muted);font-size:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:14px 0}
+  .privacy{display:flex;gap:10px;align-items:flex-start;background:#e8f4ec;border:1px solid #bfe0c9;border-radius:12px;padding:12px 14px;font-size:16px;margin:14px 0}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;border:0;border-radius:12px;padding:14px 20px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.2)}
+  .btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy);box-shadow:none}
+  .btn.small{padding:9px 14px;font-size:16px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .drop{border:3px dashed #9fb0c2;border-radius:16px;padding:26px;text-align:center;background:#fff;cursor:pointer}
+  .drop.over{border-color:var(--green);background:#f1faf4}
+  .drop input{display:none}
+  textarea{width:100%;min-height:140px;font:inherit;font-size:16px;padding:12px;border:2px solid var(--line);border-radius:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:2px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:var(--ink)}
+  .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .chip.on-static{background:#e6f4ea;border-color:#c5e5cf;color:#0b4f2a;cursor:default}
+  .chip.gap{background:#fff4d6;border-color:#f1d78a;color:#5c4400;cursor:default}
+  .jobs-tick{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+  .jobs-tick label{display:flex;gap:10px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font-weight:600;font-size:17px}
+  .jobs-tick input{width:22px;height:22px;accent-color:var(--navy)}
+  .jobs-tick label:has(input:checked){border-color:var(--navy);background:#eef3f9}
+  .match{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0;text-decoration:none;color:inherit}
+  .match:hover{border-color:var(--navy)}
+  .match .ic{font-size:30px;width:42px;text-align:center}
+  .match .body{flex:1;min-width:0}
+  .match b{font-size:19px}
+  .meter{height:10px;background:#e3e8ee;border-radius:99px;overflow:hidden;margin:6px 0 4px}
+  .meter i{display:block;height:100%;background:var(--lime)}
+  .match small{color:var(--muted);font-size:15px}
+  .go{font-weight:800;color:var(--navy);white-space:nowrap}
+  .badge{display:inline-block;font-size:13px;font-weight:800;padding:2px 8px;border-radius:6px;background:var(--yellow);color:var(--ink);vertical-align:middle;margin-left:6px;letter-spacing:.03em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+  .tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center;font-weight:700}
+  .tile:hover{border-color:var(--navy)}
+  .tile .ic{font-size:26px}
+  .tile.soon{opacity:.75;font-weight:600}
+  .sector-head{display:flex;gap:16px;align-items:center;background:var(--navy);color:#fff;border-radius:18px;padding:22px 24px}
+  .sector-head .ic{font-size:48px}
+  .sector-head h1{margin:0;font-size:34px;line-height:1.05}
+  .sector-head p{margin:4px 0 0;opacity:.9}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media (max-width:640px){.facts{grid-template-columns:1fr}}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+  .fact h3{display:flex;gap:10px;align-items:center;font-size:18px}
+  .fact h3 .ic{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:19px;flex:0 0 38px}
+  ul{padding-left:22px;margin:6px 0}
+  li{margin:3px 0}
+  ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+  ol.steps li{counter-increment:s;position:relative;padding:14px 14px 14px 62px;background:#fff;border:1px solid var(--line);border-radius:14px;margin:10px 0}
+  ol.steps li:before{content:counter(s);position:absolute;left:14px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--lime);color:var(--navy);font-weight:900;display:flex;align-items:center;justify-content:center}
+  ol.steps b{display:block;font-size:18px}
+  .bridge{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:640px){.bridge{grid-template-columns:1fr}}
+  .bridge .col{background:#fff;border-radius:14px;padding:16px;border:1px solid var(--line)}
+  .bridge .have{border-top:6px solid var(--green)}
+  .bridge .need{border-top:6px solid var(--yellow)}
+  .gapitem{margin:10px 0}
+  .gapitem b{display:block}
+  .gapitem span{color:var(--muted);font-size:16px}
+  .livejobs a.j{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;text-decoration:none;color:inherit}
+  .livejobs a.j b{display:block}
+  .livejobs a.j small{color:var(--muted)}
+  .muted{color:var(--muted)}
+  .note{font-size:15px;color:var(--muted)}
+  .back{display:inline-block;margin-bottom:12px;font-weight:700;text-decoration:none}
+  .status{font-weight:700;margin-top:10px}
+  .status.err{color:var(--warn)}
+  footer.site{max-width:880px;margin:0 auto;padding:0 20px 40px;font-size:15px;color:var(--muted)}
+  @media print{header.top,.noprint,footer.site{display:none!important}body{background:#fff;font-size:13px}.card,.fact,.bridge .col,ol.steps li{break-inside:avoid}.sector-head,.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a href="#"><span class="tag">PATHWAY</span></a>
+  <a href="#">East Kent Jobs</a>
+  <nav><a href="#sectors">All sectors</a><a href="../">Jobs board</a></nav>
+</div></header>
+<main id="app"><p>Loading…</p></main>
+<footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs come from the <a href="../">East Kent Jobs board</a>.</footer>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const P = window.PATHWAY, app = document.getElementById("app");
+  const S = id => P.SECTORS.find(s => s.id === id);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  // the person's skills live only in this page (and the address bar), never saved or sent anywhere
+  let mine = new Set();
+  let board = null;   // live jobs from the main site, loaded once
+  let adding = false; // keep "add a skill" open while tapping
+
+  const loadBoard = () => board || (board = Promise.all(["../jobs.json", "../apprenticeships.json"].map(u =>
+    fetch(u, { cache: "no-store" }).then(r => r.json()).then(d => d.jobs || []).catch(() => [])))
+    .then(([jobs, apps]) => ({ jobs, apps })));
+
+  // ---------------------------------------------------------------- reading a CV on the device
+  const norm = t => " " + t.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9&+'#\-]+/g, " ") + " ";
+  function skillsFromText(text) {
+    const t = norm(text), found = new Set();
+    for (const [id, sk] of Object.entries(P.SKILLS))
+      if (sk.words.some(w => t.includes(" " + norm(w).trim() + " "))) found.add(id);
+    return found;
+  }
+  async function readFile(file) {
+    const name = file.name.toLowerCase();
+    if (name.endsWith(".pdf")) {
+      const pdfjs = await import("./lib/pdf.min.mjs");
+      pdfjs.GlobalWorkerOptions.workerSrc = new URL("./lib/pdf.worker.min.mjs", location.href).href;
+      const doc = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
+      let out = "";
+      for (let i = 1; i <= Math.min(doc.numPages, 10); i++)
+        out += (await (await doc.getPage(i)).getTextContent()).items.map(x => x.str).join(" ") + "\n";
+      return out;
+    }
+    if (name.endsWith(".docx")) {
+      await new Promise((ok, bad) => { if (window.JSZip) return ok(); const s = document.createElement("script"); s.src = "lib/jszip.min.js"; s.onload = ok; s.onerror = bad; document.head.appendChild(s); });
+      const zip = await JSZip.loadAsync(await file.arrayBuffer());
+      const xml = await zip.file("word/document.xml").async("string");
+      return xml.replace(/<\/w:p>/g, "\n").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+    }
+    if (name.endsWith(".txt") || file.type.startsWith("text/")) return await file.text();
+    if (name.endsWith(".doc")) throw new Error("Old Word files (.doc) can't be read here. Save it as .docx or PDF, or paste the text below.");
+    throw new Error("Please use a PDF, Word (.docx) or text file – or paste your CV text below.");
+  }
+
+  // ---------------------------------------------------------------- matching
+  function score(sector, skills) {
+    const w = Object.entries(sector.skills), total = w.reduce((a, [, v]) => a + v, 0);
+    const got = w.filter(([k]) => skills.has(k)).reduce((a, [, v]) => a + v, 0);
+    return total ? got / total : 0;
+  }
+  const ranked = skills => P.SECTORS.map(s => ({ s, p: score(s, skills) })).sort((a, b) => b.p - a.p || (b.s.full ? 1 : 0) - (a.s.full ? 1 : 0));
+  const qs = () => mine.size ? "?s=" + [...mine].join(",") : "";
+
+  // ---------------------------------------------------------------- views
+  function home() {
+    app.innerHTML = `
+      <section class="hero"><h1>Find your <span>pathway</span> into a new sector</h1>
+        <p>See which kinds of work you could move into from what you have already done – and exactly what you need to get there.</p></section>
+      <div class="choices">
+        <a class="choice" href="#cv"><span class="ic">📄</span><b>I have a CV</b><small>Upload it and we will pick out your skills.</small></a>
+        <a class="choice" href="#tick"><span class="ic">✅</span><b>I don't have a CV</b><small>Tick the jobs you have done instead. Takes 1 minute.</small></a>
+      </div>
+      <h2>Or look at a sector</h2>
+      ${grid()}`;
+  }
+  function grid() {
+    return `<div class="grid">${P.SECTORS.map(s => `<a class="tile ${s.full ? "" : "soon"}" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span><span>${esc(s.name)}</span></a>`).join("")}</div>
+      <p class="note">Full guides are ready for Construction, Health & Social Care and Warehouse. The others show the skills they want and live local jobs, with full guides coming soon.</p>`;
+  }
+  function sectorsView() {
+    app.innerHTML = `<a class="back" href="#">← Back</a><h2 style="margin-top:0">All sectors</h2>${grid()}`;
+  }
+
+  function cvView() {
+    app.innerHTML = `<a class="back" href="#">← Back</a>
+      <h2 style="margin-top:0">Upload your CV</h2>
+      <div class="privacy"><span>🔒</span><span><b>Your CV stays on this device.</b> It is read here in your browser. Nothing is uploaded, sent or saved.</span></div>
+      <label class="drop" id="drop"><input type="file" id="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
+        <div style="font-size:40px">📄</div><b style="font-size:20px">Choose your CV</b><div class="muted">PDF or Word (.docx). On a phone you can pick it from your files.</div></label>
+      <p class="status" id="st"></p>
+      <details class="card"><summary><b>Or paste your CV text</b></summary>
+        <textarea id="paste" placeholder="Paste your CV here…"></textarea>
+        <div class="row" style="margin-top:10px"><button class="btn small" id="usepaste">Use this text</button></div></details>
+      <p class="note">No CV? <a href="#tick">Tick the jobs you have done instead</a>.</p>`;
+    const st = document.getElementById("st"), drop = document.getElementById("drop");
+    const handle = async file => {
+      if (!file) return;
+      st.className = "status"; st.textContent = "Reading your CV…";
+      try {
+        const text = await readFile(file);
+        if (text.replace(/\s/g, "").length < 40) throw new Error("We couldn't find any text in that file (it may be a scanned picture). Paste the text below, or tick your jobs instead.");
+        done(skillsFromText(text));
+      } catch (e) { st.className = "status err"; st.textContent = e.message || "Sorry, that file couldn't be read."; }
+    };
+    document.getElementById("file").onchange = e => handle(e.target.files[0]);
+    drop.ondragover = e => { e.preventDefault(); drop.classList.add("over"); };
+    drop.ondragleave = () => drop.classList.remove("over");
+    drop.ondrop = e => { e.preventDefault(); drop.classList.remove("over"); handle(e.dataTransfer.files[0]); };
+    document.getElementById("usepaste").onclick = () => {
+      const t = document.getElementById("paste").value;
+      if (t.trim().length < 40) { st.className = "status err"; st.textContent = "Please paste a bit more of your CV."; return; }
+      done(skillsFromText(t));
+    };
+    function done(found) {
+      mine = found;
+      if (!mine.size) { st.className = "status err"; st.textContent = "We couldn't spot any skills. Try ticking your jobs instead."; return; }
+      location.hash = "#results" + qs();
+    }
+  }
+
+  function tickView() {
+    app.innerHTML = `<a class="back" href="#">← Back</a>
+      <h2 style="margin-top:0">What have you done before?</h2>
+      <p>Tick anything you have done – paid work, volunteering, or helping family and friends all count.</p>
+      <div class="jobs-tick">${P.JOBS.map(([n], i) => `<label><input type="checkbox" value="${i}"> ${esc(n)}</label>`).join("")}</div>
+      <div class="row" style="margin-top:18px"><button class="btn" id="next">See my pathways →</button></div>`;
+    document.getElementById("next").onclick = () => {
+      mine = new Set();
+      app.querySelectorAll("input:checked").forEach(c => P.JOBS[+c.value][1].forEach(k => mine.add(k)));
+      if (!mine.size) { alert("Tick at least one thing you have done."); return; }
+      location.hash = "#results" + qs();
+    };
+  }
+
+  function resultsView() {
+    if (!mine.size) return location.hash = "#";
+    const r = ranked(mine), top = r.slice(0, 6);
+    app.innerHTML = `<a class="back" href="#">← Start again</a>
+      <h2 style="margin-top:0">Skills you bring</h2>
+      <div id="sk"><p class="muted">Tap one to remove it if it isn't right.</p>
+      <div class="chips">${Object.entries(P.SKILLS).filter(([id]) => mine.has(id)).map(([id, s]) => `<button class="chip" data-id="${id}" aria-pressed="true">✓ ${esc(s.name)}</button>`).join("")}</div>
+      <details class="card" ${adding ? "open" : ""} id="addsk"><summary><b>+ Add a skill we missed</b></summary><div class="chips" style="margin-top:10px">${Object.entries(P.SKILLS).filter(([id]) => !mine.has(id)).map(([id, s]) => `<button class="chip" data-id="${id}" aria-pressed="false">+ ${esc(s.name)}</button>`).join("")}</div></details></div>
+      <h2>Your best matches</h2>
+      <div id="list">${top.map(matchRow).join("")}</div>
+      <details class="card"><summary><b>See all 34 sectors</b></summary><div>${r.slice(6).map(matchRow).join("")}</div></details>`;
+    app.querySelector("#sk").onclick = e => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      mine.has(b.dataset.id) ? mine.delete(b.dataset.id) : mine.add(b.dataset.id);
+      adding = document.getElementById("addsk").open;
+      const y = scrollY; history.replaceState(null, "", "#results" + qs()); resultsView(); scrollTo(0, y);
+    };
+  }
+  function matchRow({ s, p }) {
+    const pc = Math.round(p * 100);
+    const words = pc >= 70 ? "Strong match" : pc >= 45 ? "Good match – a few things to add" : pc >= 20 ? "Some skills transfer" : "Bigger step – still possible";
+    return `<a class="match" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span>
+      <span class="body"><b>${esc(s.name)}</b>${s.full ? "" : ' <span class="badge" style="background:#e3e8ee">GUIDE SOON</span>'}
+      <span class="meter"><i style="width:${Math.max(pc, 3)}%"></i></span><small>${pc}% · ${words}</small></span>
+      <span class="go">Pathway →</span></a>`;
+  }
+
+  async function sectorView(id) {
+    const s = S(id); if (!s) return home();
+    const hasMe = mine.size > 0;
+    const want = Object.entries(s.skills).sort((a, b) => b[1] - a[1]);
+    const have = want.filter(([k]) => mine.has(k)), need = want.filter(([k]) => !mine.has(k));
+    const pc = Math.round(score(s, mine) * 100);
+    app.innerHTML = `<a class="back noprint" href="${hasMe ? "#results" + qs() : "#sectors"}">← ${hasMe ? "Back to my matches" : "All sectors"}</a>
+      <div class="sector-head"><span class="ic">${s.icon}</span><div><h1>${esc(s.name)}</h1><p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
+      ${hasMe ? `<h2>Your bridge into ${esc(s.name)}</h2>
+        <div class="bridge">
+          <div class="col have"><h3>✅ What you already have</h3>${have.length ? `<div class="chips">${have.map(([k]) => `<span class="chip on-static">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
+            <p class="note">Put these near the top of your CV when you apply.</p>` : `<p class="muted">Nothing direct yet – but this sector trains new starters. Follow the steps below.</p>`}</div>
+          <div class="col need"><h3>➕ What to add</h3>${need.length ? need.map(([k, w]) => `<div class="gapitem"><b>${esc(P.SKILLS[k].name)}${w === 2 ? ' <span class="badge">KEY</span>' : ""}</b><span>${esc((s.gaps && s.gaps[k]) || P.SKILLS[k].get)}</span></div>`).join("") : `<p>You have everything this sector looks for. Start applying!</p>`}</div>
+        </div>` : `<div class="card noprint"><b>Want this matched to you?</b> <a href="#cv">Upload your CV</a> or <a href="#tick">tick the jobs you have done</a> and we will show what transfers and what to add.</div>`}
+      ${s.full ? fullGuide(s) : `<h2>Skills this sector looks for</h2>
+        <div class="chips">${want.map(([k, w]) => `<span class="chip ${w === 2 ? "gap" : ""}">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
+        <div class="card">📘 <b>Full guide coming soon.</b> Your work coach can tell you about courses and routes into ${esc(s.name.toLowerCase())} now.</div>`}
+      <h2>Jobs on our board right now</h2><div id="live" class="livejobs"><p class="muted">Loading local jobs…</p></div>
+      <h2>Free help to get there</h2>
+      ${P.FUNDING.map(f => `<div class="card" style="margin:10px 0"><b>${esc(f.t)}</b><br><span class="muted">${esc(f.d)}</span></div>`).join("")}
+      <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()">🖨 Print this pathway</button><a class="btn" href="../">See all jobs →</a></div>`;
+    window.scrollTo(0, 0);
+    const { jobs, apps } = await loadBoard();
+    const hit = j => s.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w));
+    const list = jobs.filter(hit), alist = apps.filter(hit);
+    const live = document.getElementById("live"); if (!live) return;
+    const hourly = list.map(j => (j.pay.match(/^£([\d.]+)(?:–£([\d.]+))?\/hr/) || []).slice(1).filter(Boolean).map(Number)).filter(x => x.length).map(x => x[0]).sort((a, b) => a - b);
+    const payLine = hourly.length >= 3 ? `<p><b>Typical pay here now:</b> £${hourly[0].toFixed(2)} – £${hourly[hourly.length - 1].toFixed(2)} an hour, most around <b>£${hourly[Math.floor(hourly.length / 2)].toFixed(2)}</b> (from ${hourly.length} adverts on our board). The legal minimum for 21+ is £12.71 an hour.</p>` : "";
+    live.innerHTML = (payLine) + (list.length || alist.length
+      ? list.slice(0, 6).map(j => jobLink(j)).join("") + (alist.length ? `<p><b>Apprenticeships:</b></p>` + alist.slice(0, 3).map(j => jobLink(j)).join("") : "") +
+        `<p class="note">${list.length} job${list.length === 1 ? "" : "s"}${alist.length ? ` and ${alist.length} apprenticeship${alist.length === 1 ? "" : "s"}` : ""} in this sector on our board today. <a href="../">See the full board</a>.</p>`
+      : `<p class="muted">None on our board today – new jobs are added every morning. <a href="../">See all jobs</a>.</p>`);
+  }
+  const jobLink = j => `<a class="j" href="../go.html?j=${encodeURIComponent(j.go || "")}" ${j.go ? "" : `onclick="location.href='${esc(j.url)}';return false"`}><b>${esc(j.title)}</b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
+
+  function fullGuide(s) {
+    return `<h2>What is it like?</h2><p>${esc(s.about)}</p>
+      <div class="facts">
+        <div class="fact"><h3><span class="ic">👀</span>What to expect</h3><ul>${s.expect.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="fact"><h3><span class="ic">💼</span>Jobs to start in</h3><ul>${s.roles.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="fact"><h3><span class="ic">🧭</span>Experience needed</h3><p>${esc(s.needs.experience)}</p></div>
+        <div class="fact"><h3><span class="ic">📜</span>Qualifications & licences</h3><p>${esc(s.needs.quals)}</p></div>
+      </div>
+      <h2>Your pathway, step by step</h2>
+      <ol class="steps">${s.steps.map(x => `<li><b>${esc(x.t)}</b>${esc(x.d)}</li>`).join("")}</ol>
+      <h2>Useful links</h2><ul>${s.links.map(([t, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("")}</ul>`;
+  }
+
+  // ---------------------------------------------------------------- router (#cv, #tick, #results?s=a,b, #sector/id?s=a,b)
+  function route() {
+    const [path, query] = location.hash.slice(1).split("?");
+    const s = new URLSearchParams(query || "").get("s");
+    if (s !== null) mine = new Set(s.split(",").filter(k => P.SKILLS[k]));
+    const [view, arg] = path.split("/");
+    if (view === "cv") cvView();
+    else if (view === "tick") tickView();
+    else if (view === "results") resultsView();
+    else if (view === "sector") sectorView(arg);
+    else if (view === "sectors") sectorsView();
+    else home();
+    if (view !== "sector") window.scrollTo(0, 0);
+  }
+  addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body>
+</html>
