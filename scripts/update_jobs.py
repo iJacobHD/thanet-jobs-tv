@@ -408,7 +408,7 @@ def write_careers(careers, failed, used, cfg, today):
     print(f"careers.json: {len(out)} experienced / qualified jobs")
 
 
-def write_health(found_by, failed, cfg, today):
+def write_health(found_by, failed, cfg, today, secs_by=None):
     """Spot broken readers: a source that has found nothing for 7+ days usually means its website changed."""
     path = os.path.join(ROOT, "data", "source_health.json")
     try:
@@ -419,6 +419,9 @@ def write_health(found_by, failed, cfg, today):
         e = h.setdefault(name, {"first_seen": str(today), "last_found": ""})
         e["last_count"] = found_by.get(name, 0)
         e["failed_today"] = name in failed
+        e["fail_streak"] = e.get("fail_streak", 0) + 1 if name in failed else 0
+        if secs_by and name in secs_by:       # rolling average run time, used by the discovery governor
+            e["secs"] = round(0.7 * e.get("secs", secs_by[name]) + 0.3 * secs_by[name], 1)
         if found_by.get(name, 0) > 0:
             e["last_found"] = str(today)
     with open(path, "w", encoding="utf-8") as fh:
@@ -674,20 +677,24 @@ def main():
     used, failed = [], []
     if dump is None:
         import sources
+        import platforms  # noqa: F401  (adds the Lever/SmartRecruiters/... readers)
         places = cfg["allowed_places"]
         collected = []
 
-        found_by = {}
+        found_by, secs_by = {}, {}
 
         def run(name, fn):
+            t0 = time.time()
             try:
                 js = fn()
                 collected.extend(js)
                 used.append(name)
                 found_by[name] = len(js)
+                secs_by[name] = round(time.time() - t0, 1)
             except Exception as e:      # one feed failing never stops the others
                 print(f"!! {name} failed: {e}")
                 failed.append(name)
+                secs_by[name] = round(time.time() - t0, 1)
 
         reed_key = os.environ.get("REED_API_KEY", "").strip()
         if reed_key:
@@ -711,7 +718,13 @@ def main():
             emp_cache = {}
         # Rotation: sites that were cut off by the time limit (or never finished) go first, so none is missed twice running
         done = emp_cache.setdefault("_finished", {})
-        order = sorted((e for e in cfg.get("employers", []) if e.get("enabled", True)), key=lambda e: done.get(e["name"], ""))
+        try:      # companies the discovery robot found and switched on (scripts/discover.py)
+            auto = [e for e in json.load(open(os.path.join(ROOT, "data", "auto_employers.json"), encoding="utf-8")) if e.get("enabled", True)]
+        except (OSError, ValueError):
+            auto = []
+        manual = {e["name"] for e in cfg.get("employers", [])}
+        allemp = cfg.get("employers", []) + [e for e in auto if e["name"] not in manual]
+        order = sorted((e for e in allemp if e.get("enabled", True)), key=lambda e: done.get(e["name"], ""))
         for emp in order:
             run(emp["name"], lambda emp=emp: sources.employer_site(emp, places, today, emp_cache))
             if time.time() <= sources.DEADLINE and emp["name"] not in failed:
@@ -724,7 +737,7 @@ def main():
             run("Adzuna", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
                                    for j in sources.adzuna(az_id, az_key, places, loc,
                                                            max_days_old=cfg.get("adzuna_max_days_old", 10))])
-        write_health(found_by, failed, cfg, today)
+        write_health(found_by, failed, cfg, today, secs_by)
         if not collected:
             print("No jobs from any feed. Keeping the previous jobs.json.")
             sys.exit(1)

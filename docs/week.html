@@ -49,6 +49,7 @@
       It takes about an hour. This page shows when the new videos are ready.</p>
   </div>
 
+  <p class="small" id="srcs"></p>
   <p class="small" id="health" style="display:none;background:#fff4d6;border:1px solid #f1d78a;border-radius:8px;padding:10px 12px;color:#5c4400"></p>
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.<br>
      Helping someone change sector? Use <a href="pathway/"><b>Pathway</b></a> – upload a CV or tick past jobs to see their best routes.</p>
@@ -65,6 +66,11 @@
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
     document.getElementById("info").textContent = `${i.count ? i.count + " jobs, " : ""}${i.slides} slides, made ${d}. The robot remakes both videos every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
+  // how many sources the robot reads, and how close to its limit it is
+  fetch("sources.json?t=" + Date.now()).then(r => r.json()).then(x => {
+    document.getElementById("srcs").innerHTML = `📡 Reading <b>${x.manual_sources + x.auto_sources} company websites</b> plus Reed, NHS Jobs, Teaching Vacancies and Find an apprenticeship. ` +
+      `${x.auto_sources} were found automatically; ${x.still_to_check} more are queued to be tested. Morning time used: ${x.time_used_pct}% of the safe limit.`;
+  }).catch(() => {});
   // weekly health check: company sites that have found nothing for 7+ days probably changed their website
   fetch("health.json?t=" + Date.now()).then(r => r.json()).then(h => {
     if (!h.stale || !h.stale.length) return;

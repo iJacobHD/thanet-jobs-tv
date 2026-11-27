@@ -110,3 +110,9 @@ After each run, open `data/report.txt` to see every job checked and the reason i
 - **TV board and videos**: entry-level jobs only (`docs/jobs.json`). Video capped at `video_max_pages` (35 pages, ~7 min); if there are more jobs, the best ones for newcomers are kept (no experience needed, close to Thanet, no licence, closing within 2 weeks).
 - **Pathway careers side**: local jobs that were left off the board *only* because they need experience, qualifications or are senior go to `docs/careers.json`. Pathway shows them under "Where it can lead" on each sector page and on the "All jobs in East Kent" page. They never appear on the TV.
 - **Health check**: `data/source_health.json` records the last day each source found jobs. Any source with nothing for 7+ days is listed in `docs/health.json` and shown as a warning on the download page.
+
+## Discovery robot (added 27 Nov 2026)
+- `data/candidates.json`: companies to try, by sector (the roles each sector hires most). Add more any time.
+- `scripts/discover.py` runs nightly (`.github/workflows/discover.yml`, 01:31 UTC): it works out which job system each careers site uses (Greenhouse, Lever, SmartRecruiters, Workable, Recruitee, Pinpoint, Ashby, Personio, Teamtailor, or a sitemap with JobPosting data), tests it and switches it on in `data/auto_employers.json`.
+- Governor: only adds while company sites use under 75% of the morning time limit (`secs` in `data/source_health.json`), max 300 auto sources. Parks sources with no local jobs for 30 days or 3 failed mornings; re-tests parked/unreadable ones later (30-90 days). Respects robots.txt.
+- Results: `data/discovery.json` (per company) and `docs/sources.json` (summary shown on week.html).

@@ -1,0 +1,1287 @@
+[
+ {
+  "name": "Avery Healthcare",
+  "sector": "health-care",
+  "careers": "https://www.averyhealthcare.co.uk/careers/"
+ },
+ {
+  "name": "Bupa care homes",
+  "sector": "health-care",
+  "careers": "https://careers.bupa.co.uk/"
+ },
+ {
+  "name": "Hallmark Care Homes",
+  "sector": "health-care",
+  "careers": "https://www.hallmarkcarehomes.co.uk/careers"
+ },
+ {
+  "name": "Agincare",
+  "sector": "health-care",
+  "careers": "https://www.agincare.com/careers/"
+ },
+ {
+  "name": "Bluebird Care",
+  "sector": "health-care",
+  "careers": "https://www.bluebirdcare.co.uk/careers/"
+ },
+ {
+  "name": "Right at Home UK",
+  "sector": "health-care",
+  "careers": "https://www.rightathome.co.uk/careers/"
+ },
+ {
+  "name": "Caremark",
+  "sector": "health-care",
+  "careers": "https://www.caremark.co.uk/careers"
+ },
+ {
+  "name": "Helping Hands",
+  "sector": "health-care",
+  "careers": "https://www.helpinghands.co.uk/careers/"
+ },
+ {
+  "name": "Anchor",
+  "sector": "health-care",
+  "careers": "https://www.anchor.org.uk/careers"
+ },
+ {
+  "name": "Sanctuary Care",
+  "sector": "health-care",
+  "careers": "https://www.sanctuary-care.co.uk/careers"
+ },
+ {
+  "name": "Achieve Together",
+  "sector": "health-care",
+  "careers": "https://www.achievetogether.co.uk/careers/"
+ },
+ {
+  "name": "Voyage Care",
+  "sector": "health-care",
+  "careers": "https://www.voyagecare.com/careers/"
+ },
+ {
+  "name": "Choice Support",
+  "sector": "health-care",
+  "careers": "https://www.choicesupport.org.uk/jobs"
+ },
+ {
+  "name": "Mencap",
+  "sector": "health-care",
+  "careers": "https://www.mencap.org.uk/jobs"
+ },
+ {
+  "name": "Pilgrims Hospices",
+  "sector": "health-care",
+  "careers": "https://www.pilgrimshospices.org/jobs/"
+ },
+ {
+  "name": "Demelza",
+  "sector": "health-care",
+  "careers": "https://www.demelza.org.uk/jobs"
+ },
+ {
+  "name": "Kent Autistic Trust",
+  "sector": "health-care",
+  "careers": "https://www.kentautistictrust.org/jobs/"
+ },
+ {
+  "name": "Optima Care",
+  "sector": "health-care",
+  "careers": "https://www.optimacare.co.uk/careers/"
+ },
+ {
+  "name": "Avante Care and Support",
+  "sector": "health-care",
+  "careers": "https://www.avantecare.org.uk/jobs/"
+ },
+ {
+  "name": "Home Instead",
+  "sector": "health-care",
+  "careers": "https://www.homeinstead.co.uk/careers/"
+ },
+ {
+  "name": "Runwood Homes",
+  "sector": "health-care",
+  "careers": "https://www.runwoodhomes.co.uk/careers/"
+ },
+ {
+  "name": "Care Concern Group",
+  "sector": "health-care",
+  "careers": "https://www.careconcerngroup.co.uk/careers/"
+ },
+ {
+  "name": "Healthcare Homes",
+  "sector": "health-care",
+  "careers": "https://www.healthcarehomes.co.uk/careers/"
+ },
+ {
+  "name": "Brighterkind",
+  "sector": "health-care",
+  "careers": "https://www.brighterkind.com/careers/"
+ },
+ {
+  "name": "Hadley Healthcare",
+  "sector": "health-care",
+  "careers": "https://www.hadleyhealthcare.co.uk/careers/"
+ },
+ {
+  "name": "Oasis Dental Care",
+  "sector": "health-care",
+  "careers": "https://www.oasisdentalcare.co.uk/careers/"
+ },
+ {
+  "name": "Boots Opticians",
+  "sector": "health-care",
+  "careers": "https://www.boots.jobs/"
+ },
+ {
+  "name": "Lloyds Pharmacy Clinical Homecare",
+  "sector": "health-care",
+  "careers": "https://www.lloydsclinical.com/careers/"
+ },
+ {
+  "name": "Greene King",
+  "sector": "hospitality",
+  "careers": "https://careers.greeneking.co.uk/"
+ },
+ {
+  "name": "Marston's",
+  "sector": "hospitality",
+  "careers": "https://www.marstons.co.uk/careers/"
+ },
+ {
+  "name": "Fuller's",
+  "sector": "hospitality",
+  "careers": "https://www.fullers.co.uk/careers"
+ },
+ {
+  "name": "Turtle Bay",
+  "sector": "hospitality",
+  "careers": "https://www.turtlebay.co.uk/careers"
+ },
+ {
+  "name": "Prezzo",
+  "sector": "hospitality",
+  "careers": "https://www.prezzo.co.uk/careers/"
+ },
+ {
+  "name": "Wagamama",
+  "sector": "hospitality",
+  "careers": "https://careers.wagamama.com/"
+ },
+ {
+  "name": "Côte",
+  "sector": "hospitality",
+  "careers": "https://www.cote.co.uk/careers"
+ },
+ {
+  "name": "Five Guys",
+  "sector": "hospitality",
+  "careers": "https://fiveguys.co.uk/careers/"
+ },
+ {
+  "name": "Pret A Manger",
+  "sector": "hospitality",
+  "careers": "https://www.pret.co.uk/en-GB/careers"
+ },
+ {
+  "name": "Caffè Nero",
+  "sector": "hospitality",
+  "careers": "https://careers.caffenero.com/"
+ },
+ {
+  "name": "The Restaurant Group (Frankie & Benny's)",
+  "sector": "hospitality",
+  "careers": "https://www.trgplc.com/careers/"
+ },
+ {
+  "name": "Bill's",
+  "sector": "hospitality",
+  "careers": "https://bills-website.co.uk/careers/"
+ },
+ {
+  "name": "Park Holidays UK",
+  "sector": "hospitality",
+  "careers": "https://www.parkholidays.com/careers"
+ },
+ {
+  "name": "Parkdean Resorts",
+  "sector": "hospitality",
+  "careers": "https://www.parkdeanresorts.co.uk/careers/"
+ },
+ {
+  "name": "Dreamland Margate",
+  "sector": "hospitality",
+  "careers": "https://www.dreamland.co.uk/jobs"
+ },
+ {
+  "name": "Hilton",
+  "sector": "hospitality",
+  "careers": "https://jobs.hilton.com/"
+ },
+ {
+  "name": "Best Western",
+  "sector": "hospitality",
+  "careers": "https://www.bestwestern.co.uk/careers"
+ },
+ {
+  "name": "Gail's Bakery",
+  "sector": "hospitality",
+  "careers": "https://gailsbread.co.uk/careers/"
+ },
+ {
+  "name": "Starbucks franchise (Euro Garages / EG)",
+  "sector": "hospitality",
+  "careers": "https://www.eg.group/careers/"
+ },
+ {
+  "name": "Tim Hortons UK",
+  "sector": "hospitality",
+  "careers": "https://timhortons.co.uk/careers"
+ },
+ {
+  "name": "Bella Italia / Casual Dining Group",
+  "sector": "hospitality",
+  "careers": "https://www.casualdininggroup.co.uk/careers/"
+ },
+ {
+  "name": "Brewdog",
+  "sector": "hospitality",
+  "careers": "https://www.brewdog.com/uk/careers"
+ },
+ {
+  "name": "Poundland",
+  "sector": "retail",
+  "careers": "https://careers.poundland.co.uk/"
+ },
+ {
+  "name": "Home Bargains",
+  "sector": "retail",
+  "careers": "https://www.homebargains.co.uk/careers"
+ },
+ {
+  "name": "Matalan",
+  "sector": "retail",
+  "careers": "https://careers.matalan.co.uk/"
+ },
+ {
+  "name": "New Look",
+  "sector": "retail",
+  "careers": "https://careers.newlook.com/"
+ },
+ {
+  "name": "Frasers Group (Sports Direct)",
+  "sector": "retail",
+  "careers": "https://careers.frasers.group/"
+ },
+ {
+  "name": "Card Factory",
+  "sector": "retail",
+  "careers": "https://www.cardfactory.co.uk/careers/"
+ },
+ {
+  "name": "The Works",
+  "sector": "retail",
+  "careers": "https://www.theworks.co.uk/careers"
+ },
+ {
+  "name": "WHSmith",
+  "sector": "retail",
+  "careers": "https://www.whsmithcareers.co.uk/"
+ },
+ {
+  "name": "Savers",
+  "sector": "retail",
+  "careers": "https://www.savers.co.uk/careers"
+ },
+ {
+  "name": "Clarks",
+  "sector": "retail",
+  "careers": "https://careers.clarks.com/"
+ },
+ {
+  "name": "Lush",
+  "sector": "retail",
+  "careers": "https://www.lush.com/uk/en/jobs"
+ },
+ {
+  "name": "Vision Express",
+  "sector": "retail",
+  "careers": "https://careers.visionexpress.com/"
+ },
+ {
+  "name": "Timpson",
+  "sector": "retail",
+  "careers": "https://www.timpson-group.co.uk/careers/"
+ },
+ {
+  "name": "Robert Dyas",
+  "sector": "retail",
+  "careers": "https://www.robertdyas.co.uk/careers"
+ },
+ {
+  "name": "Shoe Zone",
+  "sector": "retail",
+  "careers": "https://www.shoezone.com/Careers"
+ },
+ {
+  "name": "Peacocks",
+  "sector": "retail",
+  "careers": "https://careers.peacocks.co.uk/"
+ },
+ {
+  "name": "Farmfoods",
+  "sector": "retail",
+  "careers": "https://www.farmfoods.co.uk/careers/"
+ },
+ {
+  "name": "Heron Foods",
+  "sector": "retail",
+  "careers": "https://www.heronfoods.com/careers/"
+ },
+ {
+  "name": "One Stop",
+  "sector": "retail",
+  "careers": "https://www.onestop.co.uk/careers/"
+ },
+ {
+  "name": "Jollyes",
+  "sector": "retail",
+  "careers": "https://www.jollyes.co.uk/careers"
+ },
+ {
+  "name": "Poundstretcher",
+  "sector": "retail",
+  "careers": "https://www.poundstretcher.co.uk/careers"
+ },
+ {
+  "name": "Argos",
+  "sector": "retail",
+  "careers": "https://www.argos-careers.co.uk/"
+ },
+ {
+  "name": "Waterstones",
+  "sector": "retail",
+  "careers": "https://www.waterstones.com/careers"
+ },
+ {
+  "name": "Pandora UK",
+  "sector": "retail",
+  "careers": "https://careers.pandoragroup.com/"
+ },
+ {
+  "name": "Claire's",
+  "sector": "retail",
+  "careers": "https://careers.claires.com/"
+ },
+ {
+  "name": "Wilko (The Range)",
+  "sector": "retail",
+  "careers": "https://www.therange.co.uk/careers/"
+ },
+ {
+  "name": "DPD UK",
+  "sector": "warehouse",
+  "careers": "https://careers.dpd.co.uk/"
+ },
+ {
+  "name": "DHL",
+  "sector": "warehouse",
+  "careers": "https://careers.dhl.com/"
+ },
+ {
+  "name": "GXO",
+  "sector": "warehouse",
+  "careers": "https://gxo.com/careers/"
+ },
+ {
+  "name": "Wincanton",
+  "sector": "warehouse",
+  "careers": "https://www.wincanton.co.uk/careers/"
+ },
+ {
+  "name": "Yodel",
+  "sector": "warehouse",
+  "careers": "https://www.yodel.co.uk/careers"
+ },
+ {
+  "name": "Kuehne+Nagel",
+  "sector": "warehouse",
+  "careers": "https://jobs.kuehne-nagel.com/"
+ },
+ {
+  "name": "Culina Group",
+  "sector": "warehouse",
+  "careers": "https://www.culinagroup.co.uk/careers/"
+ },
+ {
+  "name": "Hornby",
+  "sector": "warehouse",
+  "careers": "https://www.hornby.com/uk-en/careers"
+ },
+ {
+  "name": "Bidfood",
+  "sector": "warehouse",
+  "careers": "https://www.bidfood.co.uk/careers/"
+ },
+ {
+  "name": "Brakes",
+  "sector": "warehouse",
+  "careers": "https://www.brake.co.uk/careers/"
+ },
+ {
+  "name": "Booker",
+  "sector": "warehouse",
+  "careers": "https://www.bookergroup.com/careers"
+ },
+ {
+  "name": "Fowler Welch",
+  "sector": "warehouse",
+  "careers": "https://www.fowlerwelch.com/careers/"
+ },
+ {
+  "name": "Menzies Distribution",
+  "sector": "warehouse",
+  "careers": "https://www.menziesdistribution.com/careers/"
+ },
+ {
+  "name": "DFDS",
+  "sector": "logistics",
+  "careers": "https://www.dfds.com/en/about/careers"
+ },
+ {
+  "name": "P&O Ferries",
+  "sector": "logistics",
+  "careers": "https://www.poferries.com/en/careers"
+ },
+ {
+  "name": "Getlink / Eurotunnel",
+  "sector": "logistics",
+  "careers": "https://www.getlinkgroup.com/uk/careers/"
+ },
+ {
+  "name": "Stobart",
+  "sector": "logistics",
+  "careers": "https://www.stobart.com/careers/"
+ },
+ {
+  "name": "Ocado",
+  "sector": "logistics",
+  "careers": "https://careers.ocadogroup.com/"
+ },
+ {
+  "name": "UPS",
+  "sector": "logistics",
+  "careers": "https://www.jobs-ups.co.uk/"
+ },
+ {
+  "name": "FedEx",
+  "sector": "logistics",
+  "careers": "https://careers.fedex.com/"
+ },
+ {
+  "name": "Thanet Earth",
+  "sector": "agriculture",
+  "careers": "https://www.thanetearth.com/jobs"
+ },
+ {
+  "name": "Fresca Group",
+  "sector": "agriculture",
+  "careers": "https://www.frescagroup.co.uk/careers/"
+ },
+ {
+  "name": "AC Goatham & Son",
+  "sector": "agriculture",
+  "careers": "https://www.acgoatham.co.uk/careers/"
+ },
+ {
+  "name": "BerryWorld",
+  "sector": "agriculture",
+  "careers": "https://www.berryworld.com/careers"
+ },
+ {
+  "name": "Hugh Lowe Farms",
+  "sector": "agriculture",
+  "careers": "https://www.hughlowefarms.co.uk/jobs/"
+ },
+ {
+  "name": "Clock House Farm",
+  "sector": "agriculture",
+  "careers": "https://www.clockhousefarm.co.uk/jobs"
+ },
+ {
+  "name": "Produce World",
+  "sector": "agriculture",
+  "careers": "https://www.produceworld.co.uk/careers"
+ },
+ {
+  "name": "Wilkin & Sons",
+  "sector": "agriculture",
+  "careers": "https://www.tiptree.com/careers"
+ },
+ {
+  "name": "Kier",
+  "sector": "construction",
+  "careers": "https://www.kier.co.uk/careers/"
+ },
+ {
+  "name": "Morgan Sindall",
+  "sector": "construction",
+  "careers": "https://www.morgansindall.com/careers/"
+ },
+ {
+  "name": "Balfour Beatty",
+  "sector": "construction",
+  "careers": "https://careers.balfourbeatty.com/"
+ },
+ {
+  "name": "Barratt Developments",
+  "sector": "construction",
+  "careers": "https://www.barrattcareers.co.uk/"
+ },
+ {
+  "name": "Persimmon Homes",
+  "sector": "construction",
+  "careers": "https://www.persimmonhomes.com/corporate/careers/"
+ },
+ {
+  "name": "Bellway",
+  "sector": "construction",
+  "careers": "https://www.bellway.co.uk/careers"
+ },
+ {
+  "name": "Taylor Wimpey",
+  "sector": "construction",
+  "careers": "https://www.taylorwimpey.co.uk/corporate/careers"
+ },
+ {
+  "name": "Jenner Group",
+  "sector": "construction",
+  "careers": "https://www.jenner.co.uk/careers/"
+ },
+ {
+  "name": "Gallagher Group",
+  "sector": "construction",
+  "careers": "https://www.gallagher-group.co.uk/careers/"
+ },
+ {
+  "name": "Mears Group",
+  "sector": "construction",
+  "careers": "https://www.mearsgroup.co.uk/careers/"
+ },
+ {
+  "name": "Lovell",
+  "sector": "construction",
+  "careers": "https://www.lovell.co.uk/careers/"
+ },
+ {
+  "name": "Wates",
+  "sector": "construction",
+  "careers": "https://www.wates.co.uk/careers/"
+ },
+ {
+  "name": "Amey",
+  "sector": "construction",
+  "careers": "https://www.amey.co.uk/careers/"
+ },
+ {
+  "name": "Clarion Housing",
+  "sector": "construction",
+  "careers": "https://www.clarionhg.com/careers"
+ },
+ {
+  "name": "Places for People",
+  "sector": "construction",
+  "careers": "https://www.placesforpeople.co.uk/careers"
+ },
+ {
+  "name": "Town & Country Housing",
+  "sector": "construction",
+  "careers": "https://www.tchg.org.uk/careers"
+ },
+ {
+  "name": "Southern Housing",
+  "sector": "construction",
+  "careers": "https://www.southernhousing.org.uk/careers"
+ },
+ {
+  "name": "Speedy Hire",
+  "sector": "construction",
+  "careers": "https://www.speedyservices.com/careers"
+ },
+ {
+  "name": "Jewson",
+  "sector": "construction",
+  "careers": "https://www.jewson.co.uk/careers"
+ },
+ {
+  "name": "Selco",
+  "sector": "construction",
+  "careers": "https://www.selcobw.com/careers"
+ },
+ {
+  "name": "Securitas UK",
+  "sector": "security",
+  "careers": "https://www.securitas.uk.com/careers/"
+ },
+ {
+  "name": "Corps Security",
+  "sector": "security",
+  "careers": "https://www.corpssecurity.co.uk/careers/"
+ },
+ {
+  "name": "Wilson James",
+  "sector": "security",
+  "careers": "https://www.wilsonjames.co.uk/careers/"
+ },
+ {
+  "name": "Allied Universal (G4S)",
+  "sector": "security",
+  "careers": "https://www.g4s.com/en-gb/careers"
+ },
+ {
+  "name": "Showsec",
+  "sector": "security",
+  "careers": "https://www.showsec.co.uk/careers/"
+ },
+ {
+  "name": "Bidvest Noonan",
+  "sector": "security",
+  "careers": "https://www.bidvestnoonan.com/careers/"
+ },
+ {
+  "name": "Carlisle Support Services",
+  "sector": "security",
+  "careers": "https://www.carlislesupportservices.com/careers/"
+ },
+ {
+  "name": "ICTS UK",
+  "sector": "security",
+  "careers": "https://www.icts.co.uk/careers/"
+ },
+ {
+  "name": "Kings Security",
+  "sector": "security",
+  "careers": "https://www.kings-security.co.uk/careers/"
+ },
+ {
+  "name": "Ward Security",
+  "sector": "security",
+  "careers": "https://www.ward-security.co.uk/careers/"
+ },
+ {
+  "name": "ISS UK",
+  "sector": "facilities",
+  "careers": "https://www.uk.issworld.com/careers"
+ },
+ {
+  "name": "Churchill Group",
+  "sector": "facilities",
+  "careers": "https://www.churchillservices.com/careers/"
+ },
+ {
+  "name": "Atalian Servest",
+  "sector": "facilities",
+  "careers": "https://www.atalianservest.co.uk/careers/"
+ },
+ {
+  "name": "Aramark UK",
+  "sector": "facilities",
+  "careers": "https://www.aramark.co.uk/careers"
+ },
+ {
+  "name": "Elior UK",
+  "sector": "facilities",
+  "careers": "https://www.elior.co.uk/careers"
+ },
+ {
+  "name": "Caterlink",
+  "sector": "facilities",
+  "careers": "https://www.caterlinkltd.co.uk/careers/"
+ },
+ {
+  "name": "Engie UK",
+  "sector": "facilities",
+  "careers": "https://www.engie.co.uk/careers/"
+ },
+ {
+  "name": "CBRE",
+  "sector": "facilities",
+  "careers": "https://careers.cbre.com/"
+ },
+ {
+  "name": "Cleanology",
+  "sector": "facilities",
+  "careers": "https://www.cleanology.com/careers/"
+ },
+ {
+  "name": "Accent Catering",
+  "sector": "facilities",
+  "careers": "https://www.accentcatering.co.uk/careers/"
+ },
+ {
+  "name": "Busy Bees",
+  "sector": "childcare",
+  "careers": "https://www.busybeeschildcare.co.uk/careers"
+ },
+ {
+  "name": "Bright Horizons UK",
+  "sector": "childcare",
+  "careers": "https://careers.brighthorizons.co.uk/"
+ },
+ {
+  "name": "Kids Planet",
+  "sector": "childcare",
+  "careers": "https://www.kidsplanetdaynurseries.co.uk/careers/"
+ },
+ {
+  "name": "Kido",
+  "sector": "childcare",
+  "careers": "https://kido.school/careers"
+ },
+ {
+  "name": "Monkey Puzzle",
+  "sector": "childcare",
+  "careers": "https://www.monkeypuzzledaynurseries.com/careers/"
+ },
+ {
+  "name": "Little Garden Day Nurseries",
+  "sector": "childcare",
+  "careers": "https://www.littlegardendaynurseries.co.uk/careers"
+ },
+ {
+  "name": "University of Kent",
+  "sector": "education",
+  "careers": "https://jobs.kent.ac.uk/"
+ },
+ {
+  "name": "Canterbury Christ Church University",
+  "sector": "education",
+  "careers": "https://jobs.canterbury.ac.uk/"
+ },
+ {
+  "name": "Coastal Academies Trust",
+  "sector": "education",
+  "careers": "https://www.coastalacademies.org/vacancies"
+ },
+ {
+  "name": "Thinking Schools Academy Trust",
+  "sector": "education",
+  "careers": "https://www.tsatrust.org.uk/vacancies"
+ },
+ {
+  "name": "Kent Catholic Schools' Partnership",
+  "sector": "education",
+  "careers": "https://www.kcsp.org.uk/vacancies/"
+ },
+ {
+  "name": "Simon Langton schools",
+  "sector": "education",
+  "careers": "https://www.thelangton.org.uk/vacancies"
+ },
+ {
+  "name": "Kent Adult Education",
+  "sector": "education",
+  "careers": "https://www.kentadulteducation.co.uk/about-us/jobs/"
+ },
+ {
+  "name": "Canterbury City Council",
+  "sector": "public-sector",
+  "careers": "https://www.canterbury.gov.uk/jobs"
+ },
+ {
+  "name": "Dover District Council",
+  "sector": "public-sector",
+  "careers": "https://www.dover.gov.uk/jobs"
+ },
+ {
+  "name": "Folkestone & Hythe District Council",
+  "sector": "public-sector",
+  "careers": "https://www.folkestone-hythe.gov.uk/jobs"
+ },
+ {
+  "name": "Swale Borough Council",
+  "sector": "public-sector",
+  "careers": "https://swale.gov.uk/jobs"
+ },
+ {
+  "name": "Kent Police",
+  "sector": "public-sector",
+  "careers": "https://www.kent.police.uk/careers/"
+ },
+ {
+  "name": "Kent Fire and Rescue",
+  "sector": "public-sector",
+  "careers": "https://www.kent.fire-uk.org/careers"
+ },
+ {
+  "name": "Kent Community Health NHS",
+  "sector": "public-sector",
+  "careers": "https://www.kentcht.nhs.uk/working-with-us/"
+ },
+ {
+  "name": "East Kent Hospitals",
+  "sector": "public-sector",
+  "careers": "https://www.ekhuft.nhs.uk/careers/"
+ },
+ {
+  "name": "UK Power Networks",
+  "sector": "energy",
+  "careers": "https://www.ukpowernetworks.co.uk/careers"
+ },
+ {
+  "name": "Southern Water",
+  "sector": "energy",
+  "careers": "https://www.southernwater.co.uk/careers"
+ },
+ {
+  "name": "SGN",
+  "sector": "energy",
+  "careers": "https://www.sgn.co.uk/careers"
+ },
+ {
+  "name": "Vattenfall UK",
+  "sector": "energy",
+  "careers": "https://group.vattenfall.com/uk/careers"
+ },
+ {
+  "name": "RWE UK",
+  "sector": "energy",
+  "careers": "https://uk-ireland.rwe.com/careers"
+ },
+ {
+  "name": "Ørsted UK",
+  "sector": "energy",
+  "careers": "https://orsted.co.uk/careers"
+ },
+ {
+  "name": "British Gas (Centrica)",
+  "sector": "energy",
+  "careers": "https://www.centrica.com/careers/"
+ },
+ {
+  "name": "Octopus Energy",
+  "sector": "energy",
+  "careers": "https://octopus.energy/careers/"
+ },
+ {
+  "name": "Veolia UK",
+  "sector": "green",
+  "careers": "https://www.veolia.co.uk/careers"
+ },
+ {
+  "name": "Biffa",
+  "sector": "green",
+  "careers": "https://www.biffa.co.uk/careers"
+ },
+ {
+  "name": "FCC Environment",
+  "sector": "green",
+  "careers": "https://www.fccenvironment.co.uk/careers"
+ },
+ {
+  "name": "Suez / Renewi",
+  "sector": "green",
+  "careers": "https://www.renewi.com/en-gb/careers"
+ },
+ {
+  "name": "Serco",
+  "sector": "green",
+  "careers": "https://www.serco.com/uk/careers"
+ },
+ {
+  "name": "Urbaser UK",
+  "sector": "green",
+  "careers": "https://www.urbaser.co.uk/careers/"
+ },
+ {
+  "name": "DS Smith Kemsley",
+  "sector": "manufacturing",
+  "careers": "https://www.dssmith.com/careers"
+ },
+ {
+  "name": "Smurfit Westrock",
+  "sector": "manufacturing",
+  "careers": "https://www.smurfitwestrock.com/careers"
+ },
+ {
+  "name": "Saica Pack UK",
+  "sector": "manufacturing",
+  "careers": "https://www.saica.com/en/careers"
+ },
+ {
+  "name": "Bakkavor",
+  "sector": "manufacturing",
+  "careers": "https://www.bakkavor.com/careers"
+ },
+ {
+  "name": "Kerry Foods",
+  "sector": "manufacturing",
+  "careers": "https://jobs.kerry.com/"
+ },
+ {
+  "name": "Coca-Cola Europacific Partners",
+  "sector": "manufacturing",
+  "careers": "https://www.cocacolaep.com/careers/"
+ },
+ {
+  "name": "Hovis",
+  "sector": "manufacturing",
+  "careers": "https://www.hovis.co.uk/careers"
+ },
+ {
+  "name": "Warburtons",
+  "sector": "manufacturing",
+  "careers": "https://www.warburtons.co.uk/careers/"
+ },
+ {
+  "name": "Moy Park",
+  "sector": "manufacturing",
+  "careers": "https://www.moypark.com/careers"
+ },
+ {
+  "name": "2 Sisters Food Group",
+  "sector": "manufacturing",
+  "careers": "https://www.2sfg.com/careers/"
+ },
+ {
+  "name": "Discovery Park (Sandwich)",
+  "sector": "life-sciences",
+  "careers": "https://www.discovery-park.co.uk/jobs/"
+ },
+ {
+  "name": "Eurofins UK",
+  "sector": "life-sciences",
+  "careers": "https://careers.eurofins.com/"
+ },
+ {
+  "name": "Viatris",
+  "sector": "life-sciences",
+  "careers": "https://www.viatris.com/en/careers"
+ },
+ {
+  "name": "Pfizer UK",
+  "sector": "life-sciences",
+  "careers": "https://www.pfizer.co.uk/careers"
+ },
+ {
+  "name": "Saga",
+  "sector": "finance",
+  "careers": "https://corporate.saga.co.uk/careers/"
+ },
+ {
+  "name": "OSB Group (Kent Reliance)",
+  "sector": "finance",
+  "careers": "https://www.osb.co.uk/careers"
+ },
+ {
+  "name": "Nationwide",
+  "sector": "finance",
+  "careers": "https://careers.nationwide.co.uk/"
+ },
+ {
+  "name": "Lloyds Banking Group",
+  "sector": "finance",
+  "careers": "https://www.lloydsbankinggroupcareers.com/"
+ },
+ {
+  "name": "Santander UK",
+  "sector": "finance",
+  "careers": "https://www.santanderjobs.co.uk/"
+ },
+ {
+  "name": "Metro Bank",
+  "sector": "finance",
+  "careers": "https://www.metrobankonline.co.uk/about-us/careers/"
+ },
+ {
+  "name": "Capita",
+  "sector": "customer-services",
+  "careers": "https://www.capita.com/careers"
+ },
+ {
+  "name": "Concentrix UK",
+  "sector": "customer-services",
+  "careers": "https://jobs.concentrix.com/"
+ },
+ {
+  "name": "Teleperformance UK",
+  "sector": "customer-services",
+  "careers": "https://www.teleperformance.com/en-gb/careers/"
+ },
+ {
+  "name": "Everyone Active",
+  "sector": "sport",
+  "careers": "https://www.everyoneactive.com/careers/"
+ },
+ {
+  "name": "Better (GLL)",
+  "sector": "sport",
+  "careers": "https://www.gll.org/careers"
+ },
+ {
+  "name": "Places Leisure",
+  "sector": "sport",
+  "careers": "https://www.placesleisure.org/careers/"
+ },
+ {
+  "name": "Freedom Leisure",
+  "sector": "sport",
+  "careers": "https://www.freedom-leisure.co.uk/careers/"
+ },
+ {
+  "name": "JD Gyms",
+  "sector": "sport",
+  "careers": "https://www.jdgyms.co.uk/careers"
+ },
+ {
+  "name": "Anytime Fitness UK",
+  "sector": "sport",
+  "careers": "https://www.anytimefitness.co.uk/careers/"
+ },
+ {
+  "name": "David Lloyd",
+  "sector": "sport",
+  "careers": "https://www.davidlloyd.co.uk/careers"
+ },
+ {
+  "name": "Kent Cricket",
+  "sector": "sport",
+  "careers": "https://www.kentcricket.co.uk/careers"
+ },
+ {
+  "name": "English Heritage",
+  "sector": "leisure",
+  "careers": "https://www.english-heritage.org.uk/about-us/jobs/"
+ },
+ {
+  "name": "National Trust",
+  "sector": "leisure",
+  "careers": "https://careers.nationaltrust.org.uk/"
+ },
+ {
+  "name": "Canterbury Cathedral",
+  "sector": "leisure",
+  "careers": "https://www.canterbury-cathedral.org/about/jobs/"
+ },
+ {
+  "name": "Leeds Castle",
+  "sector": "leisure",
+  "careers": "https://www.leeds-castle.com/jobs"
+ },
+ {
+  "name": "Turner Contemporary",
+  "sector": "leisure",
+  "careers": "https://turnercontemporary.org/about/jobs/"
+ },
+ {
+  "name": "Marlowe Theatre",
+  "sector": "leisure",
+  "careers": "https://marlowetheatre.com/jobs/"
+ },
+ {
+  "name": "Theatre Royal Margate",
+  "sector": "leisure",
+  "careers": "https://www.theatreroyalmargate.com/jobs"
+ },
+ {
+  "name": "Merlin Entertainments",
+  "sector": "leisure",
+  "careers": "https://www.merlincareers.com/"
+ },
+ {
+  "name": "Cineworld",
+  "sector": "leisure",
+  "careers": "https://www.cineworld.co.uk/careers"
+ },
+ {
+  "name": "Odeon",
+  "sector": "leisure",
+  "careers": "https://careers.odeon.co.uk/"
+ },
+ {
+  "name": "Namco Funscape",
+  "sector": "leisure",
+  "careers": "https://www.namco.co.uk/careers"
+ },
+ {
+  "name": "Dogs Trust",
+  "sector": "animal-care",
+  "careers": "https://careers.dogstrust.org.uk/"
+ },
+ {
+  "name": "The Aspinall Foundation (Howletts)",
+  "sector": "animal-care",
+  "careers": "https://www.aspinallfoundation.org/jobs/"
+ },
+ {
+  "name": "Wildwood Trust",
+  "sector": "animal-care",
+  "careers": "https://wildwoodtrust.org/jobs"
+ },
+ {
+  "name": "RSPCA",
+  "sector": "animal-care",
+  "careers": "https://www.rspca.org.uk/getinvolved/jobs"
+ },
+ {
+  "name": "Blue Cross",
+  "sector": "animal-care",
+  "careers": "https://www.bluecross.org.uk/jobs"
+ },
+ {
+  "name": "PDSA",
+  "sector": "animal-care",
+  "careers": "https://www.pdsa.org.uk/get-involved/jobs"
+ },
+ {
+  "name": "Cats Protection",
+  "sector": "animal-care",
+  "careers": "https://www.cats.org.uk/careers"
+ },
+ {
+  "name": "Medivet",
+  "sector": "animal-care",
+  "careers": "https://careers.medivet.co.uk/"
+ },
+ {
+  "name": "IVC Evidensia",
+  "sector": "animal-care",
+  "careers": "https://careers.ivcevidensia.co.uk/"
+ },
+ {
+  "name": "Vets4Pets",
+  "sector": "animal-care",
+  "careers": "https://careers.vets4pets.com/"
+ },
+ {
+  "name": "Pets Corner",
+  "sector": "animal-care",
+  "careers": "https://www.petscorner.co.uk/careers"
+ },
+ {
+  "name": "British Heart Foundation",
+  "sector": "voluntary",
+  "careers": "https://www.bhf.org.uk/how-you-can-help/volunteer-and-work/jobs"
+ },
+ {
+  "name": "Cancer Research UK",
+  "sector": "voluntary",
+  "careers": "https://www.cancerresearchuk.org/careers"
+ },
+ {
+  "name": "Oxfam",
+  "sector": "voluntary",
+  "careers": "https://jobs.oxfam.org.uk/"
+ },
+ {
+  "name": "Sue Ryder",
+  "sector": "voluntary",
+  "careers": "https://www.sueryder.org/jobs/"
+ },
+ {
+  "name": "Porchlight",
+  "sector": "voluntary",
+  "careers": "https://www.porchlight.org.uk/jobs"
+ },
+ {
+  "name": "Kent Wildlife Trust",
+  "sector": "voluntary",
+  "careers": "https://www.kentwildlifetrust.org.uk/jobs"
+ },
+ {
+  "name": "Age UK",
+  "sector": "voluntary",
+  "careers": "https://www.ageuk.org.uk/about-us/careers/"
+ },
+ {
+  "name": "YMCA Kent",
+  "sector": "voluntary",
+  "careers": "https://www.ymcakent.org/jobs/"
+ },
+ {
+  "name": "Salvation Army",
+  "sector": "voluntary",
+  "careers": "https://www.salvationarmy.org.uk/jobs"
+ },
+ {
+  "name": "Barnardo's",
+  "sector": "voluntary",
+  "careers": "https://www.barnardos.org.uk/jobs"
+ },
+ {
+  "name": "Scope",
+  "sector": "voluntary",
+  "careers": "https://www.scope.org.uk/jobs/"
+ },
+ {
+  "name": "Shelter",
+  "sector": "voluntary",
+  "careers": "https://jobs.shelter.org.uk/"
+ },
+ {
+  "name": "Go-Ahead (bus)",
+  "sector": "passenger-transport",
+  "careers": "https://www.go-ahead.com/careers"
+ },
+ {
+  "name": "Arriva UK Bus",
+  "sector": "passenger-transport",
+  "careers": "https://www.arrivabus.co.uk/careers"
+ },
+ {
+  "name": "National Express",
+  "sector": "passenger-transport",
+  "careers": "https://careers.nationalexpressgroup.com/"
+ },
+ {
+  "name": "First Bus",
+  "sector": "passenger-transport",
+  "careers": "https://www.firstbus.co.uk/careers"
+ },
+ {
+  "name": "Regis / Supercuts",
+  "sector": "beauty",
+  "careers": "https://www.regissalons.co.uk/careers"
+ },
+ {
+  "name": "Rush Hair",
+  "sector": "beauty",
+  "careers": "https://www.rush.co.uk/careers"
+ },
+ {
+  "name": "Toni & Guy",
+  "sector": "beauty",
+  "careers": "https://www.toniandguy.com/careers"
+ },
+ {
+  "name": "The Body Shop",
+  "sector": "beauty",
+  "careers": "https://www.thebodyshop.com/en-gb/careers"
+ },
+ {
+  "name": "Benefit Cosmetics",
+  "sector": "beauty",
+  "careers": "https://www.benefitcosmetics.com/en-gb/careers"
+ },
+ {
+  "name": "Pertemps",
+  "sector": "recruitment",
+  "careers": "https://www.pertemps.co.uk/careers/"
+ },
+ {
+  "name": "Staffline",
+  "sector": "recruitment",
+  "careers": "https://www.staffline.co.uk/careers/"
+ },
+ {
+  "name": "Canterbury Festival",
+  "sector": "arts-media",
+  "careers": "https://canterburyfestival.co.uk/jobs"
+ },
+ {
+  "name": "Folkestone Creative Foundation",
+  "sector": "arts-media",
+  "careers": "https://www.creativefoundation.org.uk/jobs"
+ }
+]
