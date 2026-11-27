@@ -560,9 +560,11 @@ def listing_pages(emp, places, today, cache, log=print):
     for k in list(ecache):                   # forget adverts that are no longer listed
         if k not in listed:
             del ecache[k]
+    check = emp.get("check_detail")          # listing rows don't say where: open the advert and look there
+    budget, opened = int(emp.get("max_new_pages_per_run", 60)), 0
     for href, row in rows:
         text = _text(row)
-        if not _thanet(text, places) or re.search(r"internal only", text, re.I):
+        if re.search(r"internal only", text, re.I) or (not check and not _thanet(text, places)):
             continue
         title = _text((re.search(emp.get("title_re", r"<a\b[^>]*>([\s\S]*?)</a>"), row) or [None, ""])[1])
         loc = _text((re.search(emp["location_re"], row) or [None, text])[1]) if emp.get("location_re") else text
@@ -570,13 +572,20 @@ def listing_pages(emp, places, today, cache, log=print):
         pay = _pay_in_text(text)
         desc = ""
         if emp.get("open_local", True):
+            if opened >= budget and not (ecache.get(href) and _fresh(ecache[href], today)):
+                continue                        # read the rest on the next run
             d, was = _cached_detail(s, emp, href, delay, ecache, today)
             reused += was
+            opened += not was
             if d is None or d == "later":
                 continue
             closing = closing or d[0]
             pay = pay or d[1]
             desc = d[2]
+            if check and not _thanet(text, places):
+                if not _thanet(desc[:4000], places):
+                    continue
+                loc = next((p for p in places if re.search(r"\b" + re.escape(p) + r"\b", desc[:4000], re.I)), loc)
         posted = _anydate((re.search(r"Posted on\s*(.{6,30})", text) or [None, ""])[1])
         ident = (re.findall(r"\d{3,}", href) or [re.sub(r"\W+", "", href[-40:])])[-1]
         jobs.append(_job(emp, ident, title, loc, href, today, pay=pay,

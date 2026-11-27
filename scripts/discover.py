@@ -177,7 +177,52 @@ def probe(c, places, today, log):
         if emp:
             emp["name"] = c["name"]
             return "ok: sitemap", emp
+    # Last try - works for most UK job systems (Tribepad, Hireful, iTrent, Oleeo, Trac...): a page that
+    # simply lists vacancy links. Read the list, open each advert (remembered for a week) and keep local ones.
+    for o in [url] + [x for x in origins[1:4]] + [f"https://{d}/" for d in sorted(SEEN.get(c["name"], [])) if re.search(VACANCY_HOSTS, d)]:
+        emp = try_listing(c, o, s, places, today, log)
+        if emp:
+            return "ok: vacancy list", emp
     return "no readable job feed", None
+
+
+VACANCY_HOSTS = r"tribepad|hireful|webitrent|tal\.net|trac\.jobs|jobtrain|eploy|cezanne|vacancies|recruit|jobs\.|careers\."
+VACANCY_LINK = (r"(?:/vacanc(?:y|ies)/[^\"'#?]*\w|/jobs?/(?:view/|details?/|vacancy/)?[^\"'#?]*\d{3,}[^\"'#?]*"
+                r"|ETREC107GF\.open[^\"']*|[?&](?:vacancy_?id|VacancyID|jobid|job_id|id)=\d+|/job-details?/[^\"'#?]+|/opportunit(?:y|ies)/[^\"'#?]*\d+)")
+
+
+def try_listing(c, url, s, places, today, log):
+    try:
+        r = s.get(url, timeout=30)
+    except requests.RequestException:
+        return None
+    rp = robots_for(r.url, s)
+    links = []
+    for href in re.findall(r'href="([^"]+)"', r.text):
+        full = urllib.parse.urljoin(r.url, html_unescape(href))
+        if re.search(VACANCY_LINK, full, re.I) and full not in links and rp.can_fetch(UA["User-Agent"], full):
+            links.append(full)
+    if not (3 <= len(links) <= 120):        # too few = not a vacancy list; too many = national firm, too slow to open every advert
+        return None
+    origin = "{0.scheme}://{0.netloc}".format(urllib.parse.urlsplit(r.url))
+    path = r.url[len(origin):] or "/"
+    common = os.path.commonprefix([urllib.parse.urlsplit(l).path for l in links])
+    common = common[:common.rfind("/") + 1] if "/" in common else ""
+    link_re = re.escape(common) if len(common) > 1 else VACANCY_LINK
+    emp = {"name": c["name"], "mode": "listing", "base": origin, "listing": path.replace("{", "{{").replace("}", "}}"),
+           "job_link": link_re, "max_pages": 1, "check_detail": True, "crawl_delay": max(2, int(rp.crawl_delay(UA["User-Agent"]) or 2)),
+           "row_chars": 600, "max_new_pages_per_run": 40}
+    try:
+        jobs = sources.listing_pages(dict(emp, max_new_pages_per_run=12), places, today, {}, log=log)
+    except Exception:
+        return None
+    emp["found_local_at_test"] = len(jobs)
+    return emp
+
+
+def html_unescape(x):
+    import html as _h
+    return _h.unescape(x)
 
 
 def try_networx(c, domain, s, places, today, log):
