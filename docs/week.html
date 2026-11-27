@@ -52,11 +52,19 @@
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.</p>
 </div>
 <script>
+  // file name carries the date and time the video was made, e.g. "Jobs this week - Fri 27 Nov 2026, 10.43.mp4"
+  const stamp = iso => {
+    const d = new Date(iso);
+    return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" }).replace(/,/g, "") +
+      ", " + d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }).replace(":", ".");
+  };
   fetch("usb/info.json?t=" + Date.now()).then(r => r.json()).then(i => {
+    document.getElementById("dl").download = `Jobs this week - ${stamp(i.made)}.mp4`;
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
     document.getElementById("info").textContent = `${i.count ? i.count + " jobs, " : ""}${i.slides} slides, made ${d}. The robot remakes both videos every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
   fetch("usb/info-apprenticeships.json?t=" + Date.now()).then(r => r.json()).then(i => {
+    document.getElementById("dl2").download = `Apprenticeships this week - ${stamp(i.made)}.mp4`;
     document.getElementById("info2").textContent = `${i.count} apprenticeship${i.count === 1 ? "" : "s"} in this week's video (${i.slides} slide${i.slides === 1 ? "" : "s"}).`;
   }).catch(() => { document.getElementById("info2").textContent = "Apprenticeship video, remade every morning."; });
   // Live update status from GitHub's public API (no sign-in needed to read it)
