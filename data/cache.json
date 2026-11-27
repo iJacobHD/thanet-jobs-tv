@@ -34,19 +34,9 @@
 "reason": "not entry level (title: 'GP')",
 "checked": "2026-11-26"
 },
-"nhs:5745304": {
-"title": "Consultant in Palliative Medicine (QEH)",
-"reason": "not entry level (title: 'Consultant')",
-"checked": "2026-11-26"
-},
 "tv:-lecturer-ekc-group-broadstairs-kent": {
 "title": "Maths Lecturer",
 "reason": "not entry level (title: 'Lecturer')",
-"checked": "2026-11-26"
-},
-"tv:he-whitstable-school-whitstable-kent": {
-"title": "Teacher of DT",
-"reason": "not entry level (title: 'Teacher')",
 "checked": "2026-11-26"
 },
 "nhs:5695179": {
@@ -154,11 +144,6 @@
 "reason": "not entry level (title: 'Officer')",
 "checked": "2026-11-26"
 },
-"emp:morrisons:4260": {
-"title": "Customer Assistant - Service",
-"reason": "ok",
-"checked": "2026-11-27"
-},
 "emp:morrisons:3322": {
 "title": "Pharmacy Manager",
 "reason": "not entry level (title: 'Manager')",
@@ -204,18 +189,8 @@
 "reason": "not entry level (title: 'Supervisor')",
 "checked": "2026-11-26"
 },
-"tv:srp-inclusion-specialist": {
-"title": "SRP Inclusion Specialist",
-"reason": "not entry level (title: 'Specialist')",
-"checked": "2026-11-26"
-},
 "tv:-educational-needs-support-assistant": {
 "title": "SENSA (Special Educational Needs Support Assistant)",
-"reason": "ok",
-"checked": "2026-11-27"
-},
-"tv:earning-support-assistant-ta-level-3": {
-"title": "Apprenticeship - Learning Support Assistant (TA Level 3)",
 "reason": "ok",
 "checked": "2026-11-27"
 },
@@ -273,16 +248,6 @@
 "title": "PCN - Paramedic/ANP/ACP",
 "reason": "ok",
 "checked": "2026-11-27"
-},
-"nhs:5701956": {
-"title": "Finance Administrator (Accounts Assistant)",
-"reason": "NHS Band 3+ pay - usually needs experience (\u00a327550.00 to \u00a329000.00)",
-"checked": "2026-11-26"
-},
-"nhs:5717065": {
-"title": "Dermatologist",
-"reason": "not entry level (title: 'Dermatologist')",
-"checked": "2026-11-26"
 },
 "nhs:5749180": {
 "title": "Care Assistant - Care Home",
@@ -499,19 +464,9 @@
 "reason": "not entry level (title: 'Technician')",
 "checked": "2026-11-26"
 },
-"nhs:5743166": {
-"title": "Mental Health Together Navigator",
-"reason": "not entry level (title: 'Navigator')",
-"checked": "2026-11-26"
-},
 "nhs:5741109": {
 "title": "Liaison Psychiatry Practitioner",
 "reason": "not entry level (title: 'Practitioner')",
-"checked": "2026-11-26"
-},
-"nhs:5745024": {
-"title": "Neighbourhood Nurse",
-"reason": "not entry level (title: 'Nurse')",
 "checked": "2026-11-26"
 },
 "nhs:5754548": {
@@ -522,11 +477,6 @@
 "nhs:5730069": {
 "title": "Discharge Practitioner",
 "reason": "not entry level (title: 'Practitioner')",
-"checked": "2026-11-26"
-},
-"nhs:5720651": {
-"title": "Pharmacy Support Worker",
-"reason": "not entry level (title: 'Pharmac')",
 "checked": "2026-11-26"
 },
 "nhs:5749160": {
@@ -579,91 +529,6 @@
 "reason": "not entry level (title: 'Manager')",
 "checked": "2026-11-26"
 },
-"emp:m&s:300008384944821": {
-"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385020576": {
-"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385027578": {
-"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385061245": {
-"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385075098": {
-"title": "Christmas Customer Assistant - Food (Through The Night) - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385073564": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385093847": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385126766": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385137310": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385144597": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385136844": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385173228": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385155584": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385186257": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385189160": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385184733": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
-"emp:m&s:300008385195452": {
-"title": "Christmas Customer Assistant - Food - Warren Park Ashford",
-"reason": "ok",
-"checked": "2026-11-26"
-},
 "emp:co-op:1074141": {
 "title": "Customer Team Member",
 "reason": "outside the commute area (Wimborne, BH21 3LA)",
@@ -688,16 +553,6 @@
 "title": "Customer and Trading Manager \u2013 Online",
 "reason": "not entry level (title: 'Manager')",
 "checked": "2026-11-26"
-},
-"tv:rst-primary-school-ashford-middlesex": {
-"title": "Sports Coach",
-"reason": "ok",
-"checked": "2026-11-27"
-},
-"tv:cec9e63a-49f8-4319-be16-fb115b2050ae": {
-"title": "Teaching Assistant",
-"reason": "ok",
-"checked": "2026-11-27"
 },
 "tv:ist-teacher-meadhurst-primary-school": {
 "title": "Specialist Teacher",
@@ -746,8 +601,8 @@
 },
 "emp:the range:68749": {
 "title": "Warehouse Assistant - Part Time",
-"reason": "needs a qualification/licence ('counterbalance licence')",
-"checked": "2026-11-26"
+"reason": "ok",
+"checked": "2026-11-27"
 },
 "emp:the range:66849": {
 "title": "Customer Service Assistant - Part Time",
@@ -814,15 +669,10 @@
 "reason": "not entry level (title: 'Teacher')",
 "checked": "2026-11-26"
 },
-"reed:57513221": {
-"title": "Employment Specialist",
-"reason": "not entry level (title: 'Specialist')",
-"checked": "2026-11-26"
-},
 "reed:57500932": {
 "title": "Labourer",
-"reason": "needs a qualification/licence ('CSCS')",
-"checked": "2026-11-26"
+"reason": "ok",
+"checked": "2026-11-27"
 },
 "reed:57500939": {
 "title": "Telehandler",
@@ -831,8 +681,8 @@
 },
 "reed:57492714": {
 "title": "Traffic Marshall",
-"reason": "needs a qualification/licence ('CSCS')",
-"checked": "2026-11-26"
+"reason": "ok",
+"checked": "2026-11-27"
 },
 "reed:57468003": {
 "title": "Secondary Teacher",
@@ -907,11 +757,6 @@
 "reed:57600688": {
 "title": "SHE Advisor - Ramsgate",
 "reason": "not entry level (title: 'Advisor')",
-"checked": "2026-11-26"
-},
-"reed:57553118": {
-"title": "HR Administrator",
-"reason": "asks for experience ('previous experience in')",
 "checked": "2026-11-26"
 },
 "reed:57533142": {
@@ -1077,11 +922,6 @@
 "reed:57565735": {
 "title": "Class Teacher",
 "reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-26"
-},
-"reed:57610409": {
-"title": "Registered Manager",
-"reason": "not entry level (title: 'Manager')",
 "checked": "2026-11-26"
 },
 "reed:57410043": {
@@ -1624,11 +1464,6 @@
 "reason": "not entry level (title: 'Practitioner')",
 "checked": "2026-11-26"
 },
-"reed:57596986": {
-"title": "Market Research Field Interviewer Car Required Part-time",
-"reason": "self-employed ('be your own boss')",
-"checked": "2026-11-26"
-},
 "reed:57487899": {
 "title": "Care Assistant",
 "reason": "asks for experience ('Are you an experienced')",
@@ -1683,11 +1518,6 @@
 "title": "Care Assistant",
 "reason": "ok",
 "checked": "2026-11-27"
-},
-"reed:57570709": {
-"title": "Team Leader",
-"reason": "not entry level (title: 'Team Leader')",
-"checked": "2026-11-26"
 },
 "reed:57604474": {
 "title": "Home Visits Optical Assistant",
@@ -2509,11 +2339,6 @@
 "reason": "not entry level (title: 'Mechanic')",
 "checked": "2026-11-26"
 },
-"reed:57501505": {
-"title": "Finance Business Partner - Operations / Cost Focus",
-"reason": "not entry level (title: 'Partner')",
-"checked": "2026-11-26"
-},
 "reed:57500919": {
 "title": "Machine Operative // Deal, Kent",
 "reason": "ok",
@@ -3084,16 +2909,6 @@
 "reason": "ok",
 "checked": "2026-11-27"
 },
-"tv:ngland-primary-school-herne-bay-kent": {
-"title": "Class Teacher",
-"reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-26"
-},
-"tv:exam-invigilator-goodwin-academy": {
-"title": "Exam Invigilator",
-"reason": "ok",
-"checked": "2026-11-27"
-},
 "tv:ed-to-funding-sandwich-infant-school": {
 "title": "SEN Teaching Assistant - linked to funding",
 "reason": "ok",
@@ -3107,11 +2922,6 @@
 "nhs:5733521": {
 "title": "Administrator",
 "reason": "NHS Band 3+ pay - usually needs experience (\u00a325760.00 to \u00a327476.00)",
-"checked": "2026-11-26"
-},
-"nhs:5749809": {
-"title": "Operational Navigator",
-"reason": "not entry level (title: 'Navigator')",
 "checked": "2026-11-26"
 },
 "emp:tesco:198937": {
@@ -3128,11 +2938,6 @@
 "title": "Pharmacy Manager - Faversham",
 "reason": "not entry level (title: 'Manager')",
 "checked": "2026-11-26"
-},
-"emp:tesco:221052": {
-"title": "Customer Delivery Driver - Ashford Crooksfoot Extra",
-"reason": "ok",
-"checked": "2026-11-27"
 },
 "emp:tesco:221600": {
 "title": "Customer Delivery Driver - Whitstable Extra",
@@ -3519,11 +3324,6 @@
 "reason": "ok",
 "checked": "2026-11-27"
 },
-"tv:teacher-0-6-fte-aspire-school": {
-"title": "Teacher (0.6 FTE)",
-"reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-27"
-},
 "tv:ic-school-canterbury-canterbury-kent": {
 "title": "Teacher of Physical Education",
 "reason": "not entry level (title: 'Teacher')",
@@ -3531,16 +3331,6 @@
 },
 "tv:0601dea5-1dcc-4d26-a9aa-42198d11f199": {
 "title": "Exam Invigilator",
-"reason": "ok",
-"checked": "2026-11-27"
-},
-"tv:echnology-the-charles-dickens-school": {
-"title": "Teacher of DT and Food Technology",
-"reason": "not entry level (title: 'Teacher')",
-"checked": "2026-11-27"
-},
-"tv:earning-support-assistant-ta-level-5": {
-"title": "Apprenticeship - Learning Support Assistant (TA Level 5)",
 "reason": "ok",
 "checked": "2026-11-27"
 },
@@ -3552,16 +3342,6 @@
 "nhs:5734293": {
 "title": "Payroll Administrator",
 "reason": "NHS Band 3+ pay - usually needs experience (\u00a327315.00)",
-"checked": "2026-11-27"
-},
-"nhs:5739372": {
-"title": "Clinical Nurse Specialist - Children's Diabetes",
-"reason": "not entry level (title: 'Nurse')",
-"checked": "2026-11-27"
-},
-"nhs:5739227": {
-"title": "Decontamination Technician",
-"reason": "not entry level (title: 'Technician')",
 "checked": "2026-11-27"
 },
 "emp:wetherspoon:rscomvacancies3182kitchenstaffhtml": {
@@ -3639,56 +3419,6 @@
 "reason": "not entry level (title: 'Chef')",
 "checked": "2026-11-27"
 },
-"emp:care uk:SYS-8850": {
-"title": "Lifestyle Co-ordinator Bank",
-"reason": "not entry level (title: 'Co-ordinator')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-9251": {
-"title": "Care Assistant",
-"reason": "ok",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-9253": {
-"title": "Activities Co-Ordinator",
-"reason": "not entry level (title: 'Co-Ordinator')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-10571": {
-"title": "Team Leader Care Nights",
-"reason": "outside the commute area (Willesborough, Kent ?? '')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-10090": {
-"title": "Activities Co-ordinator",
-"reason": "outside the commute area (Willesborough, Kent ?? '')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-9350": {
-"title": "Care Assistant Bank",
-"reason": "ok",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-9898": {
-"title": "Nurse Manager Bank",
-"reason": "not entry level (title: 'Manager')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-10569": {
-"title": "Care Assistant Nights",
-"reason": "outside the commute area (Willesborough, Kent ?? '')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-10089": {
-"title": "Care Assistant",
-"reason": "outside the commute area (Willesborough, Kent ?? '')",
-"checked": "2026-11-27"
-},
-"emp:care uk:SYS-10087": {
-"title": "Team Leader Care",
-"reason": "outside the commute area (Willesborough, Kent ?? '')",
-"checked": "2026-11-27"
-},
 "emp:ocs:vacancies64456cleaningoperativehtml": {
 "title": "Cleaning Operative",
 "reason": "ok",
@@ -3747,6 +3477,161 @@
 "emp:shepherd neame (pubs & hotels):cfbinZocgegign3oZ0S60SYO": {
 "title": "Bar Team Member",
 "reason": "ok",
+"checked": "2026-11-27"
+},
+"reed:57619102": {
+"title": "IPS Employment Specialist",
+"reason": "not entry level (title: 'Specialist')",
+"checked": "2026-11-27"
+},
+"reed:57618757": {
+"title": "Team Leader",
+"reason": "not entry level (title: 'Team Leader')",
+"checked": "2026-11-27"
+},
+"reed:57619262": {
+"title": "Registered Manager",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-27"
+},
+"reed:57619720": {
+"title": "Partner Level Tax accountant - Grow and develop your own team - PE Backed 300 person firm x",
+"reason": "not entry level (title: 'accountant')",
+"checked": "2026-11-27"
+},
+"reed:57619461": {
+"title": "Children\u2019s Social Work Team Manager, Youth Justice Team, Canterbury area",
+"reason": "not entry level (title: 'Manager')",
+"checked": "2026-11-27"
+},
+"reed:57619135": {
+"title": "Hub Volunteer Support Worker",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"reed:57619687": {
+"title": "Support Worker",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"tv:owns-view-infant-school-ashford-kent": {
+"title": "1:1 Teaching Assistant - linked to funding",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"tv:-anselm-s-catholic-school-canterbury": {
+"title": "SENCo",
+"reason": "not entry level (title: 'SENCo')",
+"checked": "2026-11-27"
+},
+"nhs:5755678": {
+"title": "Senior Occupational Therapist",
+"reason": "not entry level (title: 'Senior')",
+"checked": "2026-11-27"
+},
+"nhs:5724184": {
+"title": "Health & Rehabilitation Care Assistant",
+"reason": "asks for experience ('Band 3')",
+"checked": "2026-11-27"
+},
+"nhs:5731362": {
+"title": "Dermatologist",
+"reason": "not entry level (title: 'Dermatologist')",
+"checked": "2026-11-27"
+},
+"nhs:5741258": {
+"title": "Receptionist/Telephonist",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"nhs:5742057": {
+"title": "Safeguarding Co-ordinator",
+"reason": "not entry level (title: 'Co-ordinator')",
+"checked": "2026-11-27"
+},
+"nhs:5745154": {
+"title": "Consultant in Critical Care (QEH)",
+"reason": "not entry level (title: 'Consultant')",
+"checked": "2026-11-27"
+},
+"nhs:5750210": {
+"title": "Healthcare Support Worker - QEQM Hospital",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"nhs:5756457": {
+"title": "Housekeeping Assistant - Bank",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"nhs:5756614": {
+"title": "Registered Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-27"
+},
+"nhs:5755718": {
+"title": "Clinical Psychologist/Counselling Psychologist/Psychotherapist",
+"reason": "not entry level (title: 'Psycholog')",
+"checked": "2026-11-27"
+},
+"nhs:5756458": {
+"title": "Care Assistant",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"nhs:5756680": {
+"title": "Medical Receptionist (Care Navigator)",
+"reason": "not entry level (title: 'Navigator')",
+"checked": "2026-11-27"
+},
+"nhs:5735632": {
+"title": "General Practice Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-27"
+},
+"nhs:5756606": {
+"title": "Registered Nurse",
+"reason": "not entry level (title: 'Nurse')",
+"checked": "2026-11-27"
+},
+"emp:morrisons:5186": {
+"title": "Customer Assistant - Online",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:morrisons:5189": {
+"title": "Customer Assistant - Market Street & Cafe",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:morrisons:5190": {
+"title": "Customer Assistant - Replenishment",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:m&s:300008384864101": {
+"title": "Christmas Customer Assistant - Food - Sittingbourne Simply Food",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:sainsbury's:nsburysjobsjobsdescription400101670": {
+"title": "Customer Assistant",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:compass group (chartwells, eurest, medirest):75860415": {
+"title": "Catering Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
+"checked": "2026-11-27"
+},
+"emp:compass group (chartwells, eurest, medirest):75859739": {
+"title": "Catering Assistant",
+"reason": "ok",
+"checked": "2026-11-27"
+},
+"emp:compass group (chartwells, eurest, medirest):75859736": {
+"title": "Catering Supervisor",
+"reason": "not entry level (title: 'Supervisor')",
 "checked": "2026-11-27"
 }
 }
