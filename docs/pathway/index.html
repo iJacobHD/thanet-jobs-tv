@@ -222,7 +222,7 @@
   }
   function grid() {
     return `<div class="grid">${P.SECTORS.map(s => `<a class="tile ${s.full ? "" : "soon"}" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span><span>${esc(s.name)}</span></a>`).join("")}</div>
-      <p class="note">Full guides are ready for Construction, Health & Social Care and Warehouse. The others show the skills they want and live local jobs, with full guides coming soon.</p>`;
+      <p class="note">Every sector has a full guide: what it is like, what you need, the steps to get in and live local jobs.</p>`;
   }
   function sectorsView() {
     app.innerHTML = `${head("All sectors", "Tap a sector to see what it is like and how to get in.", "#", "Back")}${grid()}`;
