@@ -375,5 +375,238 @@
   "auto": true,
   "sector": "health-care",
   "added": "2026-11-27"
+ },
+ {
+  "name": "LGC",
+  "mode": "smartrecruiters",
+  "slug": "LGCGroup",
+  "enabled": true,
+  "auto": true,
+  "sector": "life-sciences",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Kreston Reeves",
+  "mode": "pinpoint",
+  "slug": "krestonreeves",
+  "enabled": true,
+  "auto": true,
+  "sector": "life-sciences",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "iLoF",
+  "mode": "smartrecruiters",
+  "slug": "ILoF-IntelligentLabOnFiber",
+  "enabled": true,
+  "auto": true,
+  "sector": "life-sciences",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Achieve Together",
+  "mode": "listing",
+  "base": "https://careers.achievetogether.co.uk",
+  "listing": "/",
+  "job_link": "/jobs/job/",
+  "max_pages": 1,
+  "check_detail": true,
+  "crawl_delay": 10,
+  "row_chars": 600,
+  "max_new_pages_per_run": 40,
+  "found_local_at_test": 0,
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Mencap",
+  "mode": "listing",
+  "base": "https://jobs.mencap.org.uk",
+  "listing": "/",
+  "job_link": "/vacancies/",
+  "max_pages": 1,
+  "check_detail": true,
+  "crawl_delay": 2,
+  "row_chars": 600,
+  "max_new_pages_per_run": 40,
+  "found_local_at_test": 0,
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Avante Care and Support",
+  "mode": "listing",
+  "base": "https://careers.avantecare.org.uk",
+  "listing": "/",
+  "job_link": "/jobs/job/",
+  "max_pages": 1,
+  "check_detail": true,
+  "crawl_delay": 10,
+  "row_chars": 600,
+  "max_new_pages_per_run": 40,
+  "found_local_at_test": 0,
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://www.boots.jobs",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Boots Opticians",
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://apply.marstonscareers.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Marston's",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.turtlebay.co.uk",
+  "sitemaps": [
+   "/index-sitemap.xml",
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Turtle Bay",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.cote.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Côte",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.wagamama.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "The Restaurant Group (Frankie & Benny's)",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.gailsbread.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Gail's Bakery",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.brewdog.com",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Brewdog",
+  "enabled": true,
+  "auto": true,
+  "sector": "hospitality",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Card Factory",
+  "mode": "listing",
+  "base": "https://www.cardfactoryinvestors.com",
+  "listing": "/",
+  "job_link": "/tools/PressReleases/GetPressRelease/",
+  "max_pages": 1,
+  "check_detail": true,
+  "crawl_delay": 2,
+  "row_chars": 600,
+  "max_new_pages_per_run": 40,
+  "found_local_at_test": 0,
+  "enabled": true,
+  "auto": true,
+  "sector": "retail",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.tesco.com",
+  "sitemaps": [
+   "/careers/sitemap_index.xml"
+  ],
+  "job_path": "/hu_HU/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "One Stop",
+  "enabled": true,
+  "auto": true,
+  "sector": "retail",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Poundstretcher",
+  "mode": "listing",
+  "base": "https://poundstretcher.current-vacancies.com",
+  "listing": "/",
+  "job_link": "/Jobs/Advert/",
+  "max_pages": 1,
+  "check_detail": true,
+  "crawl_delay": 2,
+  "row_chars": 600,
+  "max_new_pages_per_run": 40,
+  "found_local_at_test": 0,
+  "enabled": true,
+  "auto": true,
+  "sector": "retail",
+  "added": "2026-11-27"
  }
 ]

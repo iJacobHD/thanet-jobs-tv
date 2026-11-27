@@ -4,7 +4,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.averyhealthcare.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Bupa care homes": {
@@ -19,7 +19,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.hallmarkcarehomes.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.hallmarkcarehomes.co.uk",
    "facebook.com",
@@ -31,7 +31,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.agincare.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "agincare-careers.tal.net",
    "agincare-media-offload.s3.eu-west-2.amazonaws.com"
@@ -42,7 +42,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.bluebirdcare.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Right at Home UK": {
@@ -50,7 +50,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.rightathome.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Caremark": {
@@ -58,7 +58,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.caremark.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Helping Hands": {
@@ -66,7 +66,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.helpinghands.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "helpinghandshomecare.co.uk",
    "jobs.helpinghandshomecare.co.uk",
@@ -89,15 +89,15 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.sanctuary-care.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Achieve Together": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - added",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.achievetogether.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "careers.achievetogether.co.uk",
    "tribepad.com"
@@ -108,7 +108,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.voyagecare.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.voyagecare.com"
   ]
@@ -118,15 +118,15 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.choicesupport.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Mencap": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - added",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.mencap.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "jobs.mencap.org.uk"
   ]
@@ -136,7 +136,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.pilgrimshospices.org/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "pilgrimshospicecareers.ciphr-irecruit.com"
   ]
@@ -156,7 +156,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.kentautistictrust.org/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Optima Care": {
@@ -164,18 +164,18 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.optimacare.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "indeed.com",
    "uk.indeed.com"
   ]
  },
  "Avante Care and Support": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - added",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.avantecare.org.uk/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "careers.avantecare.org.uk",
    "tribepad.com"
@@ -186,7 +186,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.homeinstead.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Runwood Homes": {
@@ -194,7 +194,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.runwoodhomes.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "08bddcf9dcfa772d51a79557cae63b4b.reach-ats.com",
    "candidate.runwoodcareers.co.uk",
@@ -209,7 +209,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.careconcerngroup.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Healthcare Homes": {
@@ -217,7 +217,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.healthcarehomes.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Brighterkind": {
@@ -225,7 +225,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.brighterkind.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Hadley Healthcare": {
@@ -233,7 +233,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.hadleyhealthcare.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Oasis Dental Care": {
@@ -241,15 +241,15 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.oasisdentalcare.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Boots Opticians": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.boots.jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": []
  },
  "Lloyds Pharmacy Clinical Homecare": {
@@ -257,7 +257,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.lloydsclinical.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.lloydsclinical.com",
    "facebook.com",
@@ -270,15 +270,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.greeneking.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Marston's": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.marstons.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "apply.marstonscareers.co.uk",
    "marstonscareers.co.uk",
@@ -291,15 +291,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.fullers.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Turtle Bay": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.turtlebay.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "jobs.turtlebay.co.uk",
    "storage.googleapis.com",
@@ -311,7 +311,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.prezzo.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Wagamama": {
@@ -319,15 +319,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.wagamama.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Côte": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.cote.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "careers.cote.co.uk"
   ]
@@ -351,15 +351,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.caffenero.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "The Restaurant Group (Frankie & Benny's)": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.trgplc.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "careers.brunningandprice.co.uk",
    "careers.trggroupltd.com",
@@ -372,7 +372,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://bills-website.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Park Holidays UK": {
@@ -380,7 +380,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.parkholidays.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Parkdean Resorts": {
@@ -388,7 +388,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.parkdeanresorts.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Dreamland Margate": {
@@ -396,7 +396,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.dreamland.co.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Hilton": {
@@ -422,15 +422,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.bestwestern.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Gail's Bakery": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://gailsbread.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "jobs.gailsbread.co.uk"
   ]
@@ -440,7 +440,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.eg.group/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Tim Hortons UK": {
@@ -448,7 +448,7 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://timhortons.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Bella Italia / Casual Dining Group": {
@@ -456,15 +456,15 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.casualdininggroup.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Brewdog": {
-  "status": "ok: sitemap - waiting: time limit reached",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.brewdog.com/uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "jobs.brewdog.com"
   ]
@@ -474,7 +474,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.poundland.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Home Bargains": {
@@ -482,7 +482,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.homebargains.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "facebook.com",
    "jobs.home.bargains"
@@ -493,7 +493,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.matalan.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "New Look": {
@@ -501,7 +501,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.newlook.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Frasers Group (Sports Direct)": {
@@ -509,15 +509,15 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.frasers.group/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Card Factory": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - added",
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.cardfactory.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "cardfactoryinvestors.com"
   ]
@@ -527,7 +527,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.theworks.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "WHSmith": {
@@ -546,7 +546,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.savers.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Clarks": {
@@ -554,7 +554,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.clarks.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Lush": {
@@ -562,7 +562,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.lush.com/uk/en/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Vision Express": {
@@ -570,7 +570,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.visionexpress.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Timpson": {
@@ -578,7 +578,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.timpson-group.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Robert Dyas": {
@@ -586,7 +586,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.robertdyas.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Shoe Zone": {
@@ -594,7 +594,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.shoezone.com/Careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Peacocks": {
@@ -602,7 +602,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://careers.peacocks.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Farmfoods": {
@@ -610,7 +610,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.farmfoods.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "jobs.farmfoods.co.uk"
   ]
@@ -620,7 +620,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.heronfoods.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.heronfoods.com",
    "cdn1.site-media.eu",
@@ -631,11 +631,11 @@
   ]
  },
  "One Stop": {
-  "status": "no readable job feed",
+  "status": "ok: sitemap - added",
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.onestop.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "careers.tesco.com",
    "tesco.com"
@@ -646,15 +646,15 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.jollyes.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Poundstretcher": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - added",
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.poundstretcher.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-27",
   "seen": [
    "poundstretcher.co.uk",
    "poundstretcher.current-vacancies.com"
@@ -665,7 +665,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.argos-careers.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Waterstones": {
@@ -673,7 +673,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.waterstones.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Pandora UK": {
@@ -702,7 +702,7 @@
   "checked": "2026-11-27",
   "sector": "retail",
   "careers": "https://www.therange.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "DPD UK": {
@@ -710,7 +710,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://careers.dpd.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "DHL": {
@@ -758,7 +758,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.yodel.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kuehne+Nagel": {
@@ -780,7 +780,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.culinagroup.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "culinacareers.co.uk"
   ]
@@ -790,7 +790,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.hornby.com/uk-en/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Bidfood": {
@@ -808,7 +808,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.brake.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "brakescareers.uk",
    "www.brakescareers.co.uk"
@@ -819,7 +819,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.bookergroup.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Fowler Welch": {
@@ -838,7 +838,7 @@
   "checked": "2026-11-27",
   "sector": "warehouse",
   "careers": "https://www.menziesdistribution.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "DFDS": {
@@ -846,7 +846,7 @@
   "checked": "2026-11-27",
   "sector": "logistics",
   "careers": "https://www.dfds.com/en/about/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "P&O Ferries": {
@@ -874,7 +874,7 @@
   "checked": "2026-11-27",
   "sector": "logistics",
   "careers": "https://www.stobart.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Ocado": {
@@ -896,7 +896,7 @@
   "checked": "2026-11-27",
   "sector": "logistics",
   "careers": "https://www.jobs-ups.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "FedEx": {
@@ -916,7 +916,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.thanetearth.com/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Fresca Group": {
@@ -924,7 +924,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.frescagroup.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "AC Goatham & Son": {
@@ -932,7 +932,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.acgoatham.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "BerryWorld": {
@@ -940,7 +940,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.berryworld.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "fruitfuljobs.com",
    "pinata.com.au"
@@ -951,7 +951,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.hughlowefarms.co.uk/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Clock House Farm": {
@@ -959,7 +959,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.clockhousefarm.co.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "clockhousefarm.co.uk"
   ]
@@ -969,7 +969,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.produceworld.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Wilkin & Sons": {
@@ -977,7 +977,7 @@
   "checked": "2026-11-27",
   "sector": "agriculture",
   "careers": "https://www.tiptree.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kier": {
@@ -997,7 +997,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.morgansindall.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Balfour Beatty": {
@@ -1005,7 +1005,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://careers.balfourbeatty.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Barratt Developments": {
@@ -1026,17 +1026,17 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.persimmonhomes.com/corporate/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "isw.changeworknow.co.uk"
   ]
  },
  "Bellway": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.bellway.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": [
    "6614ba13f8e162b8dcfe32de54d41773.bellwaycareers.co.uk",
    "bellwaycareers.co.uk",
@@ -1049,7 +1049,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.taylorwimpey.co.uk/corporate/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Jenner Group": {
@@ -1057,7 +1057,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.jenner.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "www.domainstore.co.uk"
   ]
@@ -1067,7 +1067,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.gallagher-group.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Mears Group": {
@@ -1085,7 +1085,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.lovell.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "corporate.lovell.co.uk",
    "lovell.latest-jobs.co.uk",
@@ -1137,7 +1137,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.placesforpeople.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Town & Country Housing": {
@@ -1145,18 +1145,15 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.tchg.org.uk/careers",
-  "next_check": "2026-11-27",
-  "seen": [
-   "careers.tch.org.uk",
-   "tch.org.uk"
-  ]
+  "next_check": "2026-12-11",
+  "seen": []
  },
  "Southern Housing": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.southernhousing.org.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "whatsapp.com"
   ]
@@ -1166,7 +1163,7 @@
   "checked": "2026-11-27",
   "sector": "construction",
   "careers": "https://www.speedyservices.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "assets.speedyhire.com",
    "images4.cmp.optimizely.com",
@@ -1206,7 +1203,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.securitas.uk.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Corps Security": {
@@ -1214,7 +1211,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.corpssecurity.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Wilson James": {
@@ -1222,7 +1219,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.wilsonjames.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.wilsonjames.co.uk",
    "wilsonjames.co.uk"
@@ -1233,7 +1230,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.g4s.com/en-gb/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Showsec": {
@@ -1241,17 +1238,17 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.showsec.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "showsec.co.uk"
   ]
  },
  "Bidvest Noonan": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.bidvestnoonan.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": [
    "bidvestnoonan.com",
    "careers.bidvestnoonan.com",
@@ -1283,7 +1280,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.kings-security.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Ward Security": {
@@ -1291,7 +1288,7 @@
   "checked": "2026-11-27",
   "sector": "security",
   "careers": "https://www.ward-security.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "ISS UK": {
@@ -1299,7 +1296,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.uk.issworld.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "145604164.fs1.hubspotusercontent-eu1.net"
   ]
@@ -1320,7 +1317,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.atalianservest.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Aramark UK": {
@@ -1328,7 +1325,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.aramark.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Elior UK": {
@@ -1336,7 +1333,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.elior.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "elior.com",
    "www.elior.com"
@@ -1359,7 +1356,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.engie.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "CBRE": {
@@ -1367,7 +1364,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://careers.cbre.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Cleanology": {
@@ -1375,7 +1372,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.cleanology.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Accent Catering": {
@@ -1383,7 +1380,7 @@
   "checked": "2026-11-27",
   "sector": "facilities",
   "careers": "https://www.accentcatering.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "accentcatering.livevacancies.co.uk",
    "careers.accentcatering.co.uk",
@@ -1397,7 +1394,7 @@
   "checked": "2026-11-27",
   "sector": "childcare",
   "careers": "https://www.busybeeschildcare.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Bright Horizons UK": {
@@ -1405,7 +1402,7 @@
   "checked": "2026-11-27",
   "sector": "childcare",
   "careers": "https://careers.brighthorizons.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Kids Planet": {
@@ -1421,7 +1418,7 @@
   "checked": "2026-11-27",
   "sector": "childcare",
   "careers": "https://kido.school/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Monkey Puzzle": {
@@ -1429,7 +1426,7 @@
   "checked": "2026-11-27",
   "sector": "childcare",
   "careers": "https://www.monkeypuzzledaynurseries.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "monkeypuzzledaynurseries.com",
    "uk.indeed.com"
@@ -1440,17 +1437,17 @@
   "checked": "2026-11-27",
   "sector": "childcare",
   "careers": "https://www.littlegardendaynurseries.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "familyfirstnurseries.co.uk"
   ]
  },
  "University of Kent": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://jobs.kent.ac.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": [
    "jobs.gre.ac.uk",
    "kent.ac.uk",
@@ -1462,7 +1459,7 @@
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://jobs.canterbury.ac.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Coastal Academies Trust": {
@@ -1470,7 +1467,7 @@
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://www.coastalacademies.org/vacancies",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Thinking Schools Academy Trust": {
@@ -1488,7 +1485,7 @@
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://www.kcsp.org.uk/vacancies/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Simon Langton schools": {
@@ -1496,7 +1493,7 @@
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://www.thelangton.org.uk/vacancies",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kent Adult Education": {
@@ -1504,7 +1501,7 @@
   "checked": "2026-11-27",
   "sector": "education",
   "careers": "https://www.kentadulteducation.co.uk/about-us/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "jobsearch.kent.gov.uk"
   ]
@@ -1514,7 +1511,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.canterbury.gov.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "ce0551li.webitrent.com"
   ]
@@ -1524,7 +1521,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.dover.gov.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "ce0551li.webitrent.com",
    "maisondieudover.org.uk"
@@ -1535,7 +1532,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.folkestone-hythe.gov.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "ats-folkestonehythe.jgp.co.uk",
    "folkestonehythe.sso.applyforthis.com"
@@ -1546,7 +1543,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://swale.gov.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kent Police": {
@@ -1554,7 +1551,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.kent.police.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kent Fire and Rescue": {
@@ -1572,7 +1569,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.kentcht.nhs.uk/working-with-us/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "feeds.trac.jobs"
   ]
@@ -1582,7 +1579,7 @@
   "checked": "2026-11-27",
   "sector": "public-sector",
   "careers": "https://www.ekhuft.nhs.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "csp.org.uk",
    "feeds.trac.jobs",
@@ -1598,7 +1595,7 @@
   "checked": "2026-11-27",
   "sector": "energy",
   "careers": "https://www.ukpowernetworks.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Southern Water": {
@@ -1606,7 +1603,7 @@
   "checked": "2026-11-27",
   "sector": "energy",
   "careers": "https://www.southernwater.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "SGN": {
@@ -1614,7 +1611,7 @@
   "checked": "2026-11-27",
   "sector": "energy",
   "careers": "https://www.sgn.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Vattenfall UK": {
@@ -1653,7 +1650,7 @@
   "checked": "2026-11-27",
   "sector": "energy",
   "careers": "https://orsted.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "British Gas (Centrica)": {
@@ -1661,7 +1658,7 @@
   "checked": "2026-11-27",
   "sector": "energy",
   "careers": "https://www.centrica.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "www.lifeatcentrica.com"
   ]
@@ -1711,7 +1708,7 @@
   "checked": "2026-11-27",
   "sector": "green",
   "careers": "https://www.fccenvironment.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.fccenvironment.co.uk"
   ]
@@ -1721,7 +1718,7 @@
   "checked": "2026-11-27",
   "sector": "green",
   "careers": "https://www.renewi.com/en-gb/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Serco": {
@@ -1729,7 +1726,7 @@
   "checked": "2026-11-27",
   "sector": "green",
   "careers": "https://www.serco.com/uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Urbaser UK": {
@@ -1737,7 +1734,7 @@
   "checked": "2026-11-27",
   "sector": "green",
   "careers": "https://www.urbaser.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.fccenvironment.co.uk",
    "fccenvironment.co.uk",
@@ -1773,7 +1770,7 @@
   "checked": "2026-11-27",
   "sector": "manufacturing",
   "careers": "https://www.saica.com/en/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Bakkavor": {
@@ -1812,7 +1809,7 @@
   "checked": "2026-11-27",
   "sector": "manufacturing",
   "careers": "https://www.cocacolaep.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Hovis": {
@@ -1820,7 +1817,7 @@
   "checked": "2026-11-27",
   "sector": "manufacturing",
   "careers": "https://www.hovis.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Warburtons": {
@@ -1840,7 +1837,7 @@
   "checked": "2026-11-27",
   "sector": "manufacturing",
   "careers": "https://www.moypark.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "crmdemo.networxrecruitment.net",
    "pilgrimseurope.networxrecruitment.net"
@@ -1864,7 +1861,7 @@
   "checked": "2026-11-27",
   "sector": "life-sciences",
   "careers": "https://www.discovery-park.co.uk/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "discovery-park.co.uk"
   ]
@@ -1908,7 +1905,7 @@
   "checked": "2026-11-27",
   "sector": "finance",
   "careers": "https://corporate.saga.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careerssearch.saga.co.uk",
    "saga.co.uk",
@@ -1930,7 +1927,7 @@
   "checked": "2026-11-27",
   "sector": "finance",
   "careers": "https://careers.nationwide.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Lloyds Banking Group": {
@@ -1938,7 +1935,7 @@
   "checked": "2026-11-27",
   "sector": "finance",
   "careers": "https://www.lloydsbankinggroupcareers.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Santander UK": {
@@ -1946,7 +1943,7 @@
   "checked": "2026-11-27",
   "sector": "finance",
   "careers": "https://www.santanderjobs.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Metro Bank": {
@@ -1964,7 +1961,7 @@
   "checked": "2026-11-27",
   "sector": "customer-services",
   "careers": "https://www.capita.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Concentrix UK": {
@@ -1984,7 +1981,7 @@
   "checked": "2026-11-27",
   "sector": "customer-services",
   "careers": "https://www.teleperformance.com/en-gb/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "jobs-tp.career.softgarden.de",
    "jobs.teleperformance.be",
@@ -2000,7 +1997,7 @@
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.everyoneactive.com/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Better (GLL)": {
@@ -2021,7 +2018,7 @@
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.placesleisure.org/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.placesforpeople.co.uk",
    "facebook.com",
@@ -2030,11 +2027,11 @@
   ]
  },
  "Freedom Leisure": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.freedom-leisure.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "JD Gyms": {
@@ -2042,7 +2039,7 @@
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.jdgyms.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "asset-relay.madgexjb.com",
    "facebook.com",
@@ -2059,7 +2056,7 @@
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.anytimefitness.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "cdn.prod.website-files.com",
    "linkedin.com",
@@ -2093,7 +2090,7 @@
   "checked": "2026-11-27",
   "sector": "sport",
   "careers": "https://www.kentcricket.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "English Heritage": {
@@ -2119,7 +2116,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://www.canterbury-cathedral.org/about/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Leeds Castle": {
@@ -2127,7 +2124,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://www.leeds-castle.com/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Turner Contemporary": {
@@ -2135,7 +2132,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://turnercontemporary.org/about/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "turner-contemporary.transforms.svdcdn.com"
   ]
@@ -2145,7 +2142,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://marlowetheatre.com/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "e7owrfa54a7.exactdn.com"
   ]
@@ -2155,7 +2152,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://www.theatreroyalmargate.com/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Merlin Entertainments": {
@@ -2183,7 +2180,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://www.cineworld.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Odeon": {
@@ -2191,7 +2188,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://careers.odeon.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Namco Funscape": {
@@ -2199,7 +2196,7 @@
   "checked": "2026-11-27",
   "sector": "leisure",
   "careers": "https://www.namco.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Dogs Trust": {
@@ -2217,7 +2214,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.aspinallfoundation.org/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Wildwood Trust": {
@@ -2225,7 +2222,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://wildwoodtrust.org/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "www.wildwoodtrust.org"
   ]
@@ -2235,7 +2232,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.rspca.org.uk/getinvolved/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "jobs.rspca.org.uk"
   ]
@@ -2245,7 +2242,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.bluecross.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "PDSA": {
@@ -2253,7 +2250,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.pdsa.org.uk/get-involved/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "pdsa.current-vacancies.com"
   ]
@@ -2263,7 +2260,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.cats.org.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "facebook.com",
    "instagram.com",
@@ -2290,7 +2287,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://careers.ivcevidensia.co.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Vets4Pets": {
@@ -2298,7 +2295,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://careers.vets4pets.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Pets Corner": {
@@ -2306,7 +2303,7 @@
   "checked": "2026-11-27",
   "sector": "animal-care",
   "careers": "https://www.petscorner.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "British Heart Foundation": {
@@ -2324,7 +2321,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.cancerresearchuk.org/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Oxfam": {
@@ -2332,7 +2329,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://jobs.oxfam.org.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Sue Ryder": {
@@ -2340,7 +2337,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.sueryder.org/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.sueryder.org"
   ]
@@ -2350,7 +2347,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.porchlight.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Kent Wildlife Trust": {
@@ -2358,7 +2355,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.kentwildlifetrust.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "kentwildlife.livevacancies.co.uk"
   ]
@@ -2368,7 +2365,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.ageuk.org.uk/about-us/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "apply-for-new-style-jsa.dwp.gov.uk",
    "apply5.lumessetalentlink.com",
@@ -2380,7 +2377,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.ymcakent.org/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "Salvation Army": {
@@ -2388,7 +2385,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.salvationarmy.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "careers.salvationarmy.org.uk",
    "stats.g.doubleclick.net"
@@ -2399,7 +2396,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.barnardos.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "jobs.barnardos.org.uk"
   ]
@@ -2409,7 +2406,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://www.scope.org.uk/jobs/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "ce0258li.webitrent.com"
   ]
@@ -2419,7 +2416,7 @@
   "checked": "2026-11-27",
   "sector": "voluntary",
   "careers": "https://jobs.shelter.org.uk/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Go-Ahead (bus)": {
@@ -2427,7 +2424,7 @@
   "checked": "2026-11-27",
   "sector": "passenger-transport",
   "careers": "https://www.go-ahead.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "goahead.ciphr-irecruit.com",
    "goaheadlondon.com",
@@ -2439,7 +2436,7 @@
   "checked": "2026-11-27",
   "sector": "passenger-transport",
   "careers": "https://www.arrivabus.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "National Express": {
@@ -2447,7 +2444,7 @@
   "checked": "2026-11-27",
   "sector": "passenger-transport",
   "careers": "https://careers.nationalexpressgroup.com/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": []
  },
  "First Bus": {
@@ -2472,7 +2469,7 @@
   "checked": "2026-11-27",
   "sector": "beauty",
   "careers": "https://www.regissalons.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "regissalons.co.uk"
   ]
@@ -2482,7 +2479,7 @@
   "checked": "2026-11-27",
   "sector": "beauty",
   "careers": "https://www.rush.co.uk/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "stats.wp.com"
   ]
@@ -2492,7 +2489,7 @@
   "checked": "2026-11-27",
   "sector": "beauty",
   "careers": "https://www.toniandguy.com/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": [
    "toniandguy.bamboohr.com",
    "toniandguy.com"
@@ -2503,7 +2500,7 @@
   "checked": "2026-11-27",
   "sector": "beauty",
   "careers": "https://www.thebodyshop.com/en-gb/careers",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Benefit Cosmetics": {
@@ -2525,15 +2522,15 @@
   "checked": "2026-11-27",
   "sector": "recruitment",
   "careers": "https://www.pertemps.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Staffline": {
-  "status": "no readable job feed",
+  "status": "ok: vacancy list - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "recruitment",
   "careers": "https://www.staffline.co.uk/careers/",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-04",
   "seen": [
    "api.whatsapp.com",
    "crmdemo.networxrecruitment.net",
@@ -2546,7 +2543,7 @@
   "checked": "2026-11-27",
   "sector": "arts-media",
   "careers": "https://canterburyfestival.co.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
  },
  "Folkestone Creative Foundation": {
@@ -2554,7 +2551,147 @@
   "checked": "2026-11-27",
   "sector": "arts-media",
   "careers": "https://www.creativefoundation.org.uk/jobs",
-  "next_check": "2026-11-27",
+  "next_check": "2026-12-11",
   "seen": []
+ },
+ "Asymchem (Sandwich)": {
+  "status": "error: SSLError",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.asymchem.com/careers",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Cummins (Discovery Park)": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.cummins.com/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Concept Life Sciences": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.conceptlifesciences.com/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "conceptlifesciences.peoplehr.net"
+  ]
+ },
+ "LGC": {
+  "status": "ok: smartrecruiters (0 local now) - added",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.lgcgroup.com/careers/",
+  "next_check": "2026-12-27",
+  "seen": [
+   "careers.smartrecruiters.com",
+   "d2p36i2repke8e.cloudfront.net",
+   "jobs.smartrecruiters.com"
+  ]
+ },
+ "Centauri Therapeutics": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.centauritherapeutics.com/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "AlgaeCytes": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.algaecytes.com/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "algaecytes.com"
+  ]
+ },
+ "Venomtech": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://venomtech.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "BSPG Laboratories": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.bspglabs.com/careers",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Kreston Reeves": {
+  "status": "ok: pinpoint (1 local now) - added",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.krestonreeves.com/careers/",
+  "next_check": "2026-12-27",
+  "seen": []
+ },
+ "Augean": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.augean.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "ce1103li.webitrent.com"
+  ]
+ },
+ "Quvium": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.quvium.com/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "iLoF": {
+  "status": "ok: smartrecruiters (0 local now) - added",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://ilof.tech/careers",
+  "next_check": "2026-12-27",
+  "seen": [
+   "jobs.smartrecruiters.com"
+  ]
+ },
+ "Cogent Skills apprenticeships": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://cogentskills.com/apprenticeships/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "notjustlabcoats.co.uk",
+   "portal.dynamicsats.com"
+  ]
+ },
+ "Discovery Park jobs board": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://discovery-park.co.uk/jobs/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Pfizer Sandwich": {
+  "status": "can't read: workday",
+  "checked": "2026-11-27",
+  "sector": "life-sciences",
+  "careers": "https://www.pfizer.co.uk/careers",
+  "next_check": "2027-02-25",
+  "seen": [
+   "cogentskills.com",
+   "pfecpfizercomus.pfizersite.io",
+   "pfizer.cloudflareaccess.com",
+   "pfizer.wd1.myworkdayjobs.com"
+  ]
  }
 }

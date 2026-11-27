@@ -1,13 +1,13 @@
 {
  "checked": "2026-11-27",
  "manual_sources": 42,
- "auto_sources": 28,
+ "auto_sources": 44,
  "parked": 0,
- "candidates": 257,
+ "candidates": 272,
  "still_to_check": 0,
  "time_used_pct": 74,
- "probed_tonight": 247,
- "added_tonight": 27,
+ "probed_tonight": 211,
+ "added_tonight": 16,
  "by_sector": {
   "childcare": 1,
   "construction": 4,
@@ -15,14 +15,15 @@
   "energy": 2,
   "facilities": 2,
   "green": 1,
-  "health-care": 2,
+  "health-care": 6,
+  "hospitality": 6,
   "leisure": 1,
-  "life-sciences": 1,
+  "life-sciences": 4,
   "logistics": 2,
   "manufacturing": 1,
   "passenger-transport": 1,
   "public-sector": 1,
-  "retail": 1,
+  "retail": 4,
   "security": 2,
   "sport": 1,
   "voluntary": 1,
@@ -36,10 +37,6 @@
   [
    "instagram.com",
    6
-  ],
-  [
-   "tribepad.com",
-   2
   ],
   [
    "uk.indeed.com",
@@ -78,15 +75,7 @@
    2
   ],
   [
-   "crmdemo.networxrecruitment.net",
-   2
-  ],
-  [
    "linkedin.com",
-   2
-  ],
-  [
-   "youtube.com",
    2
   ],
   [
@@ -107,6 +96,18 @@
   ],
   [
    "helpinghandshomecare.co.uk",
+   1
+  ],
+  [
+   "jobs.helpinghandshomecare.co.uk",
+   1
+  ],
+  [
+   "www.helpinghandshomecare.co.uk",
+   1
+  ],
+  [
+   "careers.voyagecare.com",
    1
   ]
  ]
