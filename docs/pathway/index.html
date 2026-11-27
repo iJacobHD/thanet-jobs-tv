@@ -383,7 +383,7 @@
     window.scrollTo(0, 0);
     const { jobs, apps, careers } = await loadBoard();
     const hit = j => s.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w));
-    const list = jobs.filter(hit), alist = apps.filter(hit);
+    const list = [...jobs.filter(hit), ...careers.filter(j => j.entry && hit(j))], alist = apps.filter(hit);
     const live = document.getElementById("live"); if (!live) return;
     const hourly = list.map(j => (j.pay.match(/^£([\d.]+)(?:–£([\d.]+))?\/hr/) || []).slice(1).filter(Boolean).map(Number)).filter(x => x.length).map(x => x[0]).sort((a, b) => a - b);
     const payLine = hourly.length >= 3 ? `<p><b>Typical pay here now:</b> £${hourly[0].toFixed(2)} – £${hourly[hourly.length - 1].toFixed(2)} an hour, most around <b>£${hourly[Math.floor(hourly.length / 2)].toFixed(2)}</b> (from ${hourly.length} adverts on our board). The legal minimum for 21+ is £12.71 an hour.</p>` : "";
@@ -393,7 +393,7 @@
       : `<p class="muted">None on our board today – new jobs are added every morning. <a href="../">See all jobs</a>.</p>`);
     const lad = document.getElementById("ladderlist");
     if (lad) {
-      const cl = careers.filter(hit).sort((a, b) => yearly(a.pay) - yearly(b.pay));
+      const cl = careers.filter(j => !j.entry && hit(j)).sort((a, b) => yearly(a.pay) - yearly(b.pay));
       const entryPay = list.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
       const careerPay = cl.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
       const mid = a => a[Math.floor(a.length / 2)];
@@ -405,8 +405,8 @@
         : `<p class="muted">None advertised locally today – check back, this updates every morning.</p>`;
     }
   }
-  const careerLink = j => `<a class="j" href="${esc(j.url)}" target="_blank" rel="noopener"><b>${esc(j.title)} <span class="badge" style="background:#e3e8ee">${esc(j.level).toUpperCase()}</span></b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
-  const jobLink = j => `<a class="j" href="../go.html?j=${encodeURIComponent(j.go || "")}" ${j.go ? "" : `onclick="location.href='${esc(j.url)}';return false"`}><b>${esc(j.title)}</b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
+  const careerLink = j => `<a class="j" href="${esc(j.url)}" target="_blank" rel="noopener"><b>${esc(j.title)} <span class="badge" style="${j.entry ? "background:#e6f4ea;color:#0b4f2a" : "background:#e3e8ee"}">${esc(j.level).toUpperCase()}</span></b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}${j.nodate ? " · <b style='display:inline;color:#b42318'>No closing date – apply soon</b>" : ""}</small></a>`;
+  const jobLink = j => j.nodate ? careerLink(j) : `<a class="j" href="../go.html?j=${encodeURIComponent(j.go || "")}" ${j.go ? "" : `onclick="location.href='${esc(j.url)}';return false"`}><b>${esc(j.title)}</b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
 
   async function allJobsView(params) {
     const sel = params.get("sector") || "", lvl = params.get("level") || "all", q0 = params.get("q") || "";
@@ -422,7 +422,7 @@
       </div>
       <p class="status" id="cnt"></p><div id="all" class="livejobs"><p class="muted">Loading…</p></div>`;
     const { jobs, careers } = await loadBoard();
-    const rows = [...jobs.map(j => ({ ...j, entry: true })), ...careers.map(j => ({ ...j, entry: false }))];
+    const rows = [...jobs.map(j => ({ ...j, entry: true })), ...careers.map(j => ({ ...j, entry: !!j.entry }))];
     let shown = 60;
     const towns = [...new Set(rows.map(j => j.town).filter(Boolean))].sort();
     document.getElementById("ft").innerHTML += towns.map(t => `<option>${esc(t)}</option>`).join("");
@@ -436,11 +436,11 @@
         (fl === "all" || (fl === "entry") === j.entry) && (!ft || j.town === ft) &&
         words.every(w => `${j.title} ${j.employer} ${j.town} ${j.level || "entry level"}`.toLowerCase().includes(w)))
         .sort(fo === "payhi" ? (a, b) => yearly(b.pay) - yearly(a.pay) : fo === "paylo" ? (a, b) => (yearly(a.pay) || 1e9) - (yearly(b.pay) || 1e9)
-          : fo === "az" ? (a, b) => a.title.localeCompare(b.title) : (a, b) => a.closing.localeCompare(b.closing));
+          : fo === "az" ? (a, b) => a.title.localeCompare(b.title) : (a, b) => (a.closing || "9999").localeCompare(b.closing || "9999"));
       const ne = list.filter(j => j.entry).length;
       document.getElementById("cnt").textContent = `${list.length} job${list.length === 1 ? "" : "s"} · ${ne} entry level · ${list.length - ne} experienced`;
       if (!list.length) { document.getElementById("all").innerHTML = `<p class="muted">No jobs match. Try fewer words, another town, or "All sectors".</p>`; return; }
-      document.getElementById("all").innerHTML = list.slice(0, shown).map(j => j.entry
+      document.getElementById("all").innerHTML = list.slice(0, shown).map(j => j.entry && !j.nodate
         ? jobLink(j).replace("</b>", ` <span class="badge" style="background:#e6f4ea;color:#0b4f2a">ENTRY LEVEL</span></b>`) : careerLink(j)).join("") +
         (list.length > shown ? `<div class="row" style="justify-content:center;margin-top:12px"><button class="btn alt small" id="more">Show more</button></div>` : "");
       const m = document.getElementById("more"); if (m) m.onclick = () => { shown += 60; draw(); };

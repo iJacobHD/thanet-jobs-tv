@@ -358,6 +358,22 @@ def career_level(reason):
     return ""
 
 
+NO_DATE = "no closing date (cannot prove it is open)"
+
+
+def undated_entry(jid, job, cfg, today):
+    """A job with no closing date can't go on the TV (the video plays all week), but it was listed in this
+    morning's feed, so it is open today: Pathway (rebuilt every morning) shows it as 'no closing date'."""
+    trial = dict(job, closing=str(today + dt.timedelta(days=30)))
+    ok, why, _ = classify(trial, cfg, today)
+    lvl = "Entry level" if ok else career_level(why)
+    if not lvl:
+        return None
+    e = career_entry(jid, job, cfg, lvl)
+    e.update(closing="", nodate=True, entry=ok)
+    return e
+
+
 def career_entry(jid, job, cfg, level):
     return {
         "id": jid, "title": clean_title(job["title"]), "employer": tidy_employer(job["employer"]),
@@ -378,11 +394,11 @@ def write_careers(careers, failed, used, cfg, today):
     if failed:       # keep yesterday's for feeds that failed today
         try:
             prev = json.load(open(path, encoding="utf-8"))
-            careers += [j for j in prev.get("jobs", []) if j.get("source") in failed and j.get("closing", "") > str(today)]
+            careers += [j for j in prev.get("jobs", []) if j.get("source") in failed and not j.get("nodate") and j.get("closing", "") > str(today)]
         except (OSError, ValueError):
             pass
     seen, out = set(), []
-    for j in sorted(careers, key=lambda j: j["closing"]):
+    for j in sorted(careers, key=lambda j: j["closing"] or "9999"):
         key = (j["title"].lower(), j["employer"].lower(), j["town"].lower())
         if key not in seen:
             seen.add(key); out.append(j)
@@ -747,6 +763,10 @@ def main():
             lvl = career_level(c["reason"])
             if lvl and reed_jobs is not None and not is_apprenticeship(reed_by_id[jid]) and still_open(reed_by_id[jid], today, cfg):
                 careers.append(career_entry(jid, reed_by_id[jid], cfg, lvl))
+            elif c["reason"] == NO_DATE and reed_jobs is not None and not is_apprenticeship(reed_by_id[jid]):
+                e = undated_entry(jid, reed_by_id[jid], cfg, today)
+                if e:
+                    careers.append(e)
             if reed_jobs is not None and is_apprenticeship(reed_by_id[jid]):     # may still suit the apprenticeship board
                 ok, why, aflags = classify_apprenticeship(reed_by_id[jid], cfg, today)
                 if ok:
@@ -769,6 +789,10 @@ def main():
             kept.append(board_entry(jid, job, cfg, flags))
         elif career_level(reason) and not is_apprenticeship(job):   # experienced roles: careers side only
             careers.append(career_entry(jid, job, cfg, career_level(reason)))
+        elif reason == NO_DATE and not is_apprenticeship(job):        # open today, but no closing date
+            e = undated_entry(jid, job, cfg, today)
+            if e:
+                careers.append(e)
         if reed_jobs is not None and is_apprenticeship(job):
             ok, why, aflags = classify_apprenticeship(job, cfg, today)
             if ok:
