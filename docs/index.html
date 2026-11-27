@@ -238,10 +238,10 @@
       const boards = ["Reed", "NHS Jobs", "Teaching Vacancies", "Find an apprenticeship"];
       const parts = data.source.split(". ")[0].split(", ").map(x => x.replace(/ \(yesterday's\)$/, ""));
       const used = boards.filter(b => parts.includes(b));
-      const others = parts.filter(x => !boards.includes(x)).length;
+      const others = parts.filter(x => !boards.includes(x) && x !== "Adzuna").length;
       const ogl = /Open Government Licence/.test(data.source) ? " Contains public sector information licensed under the Open Government Licence v3.0." : "";
       document.getElementById("source").textContent =
-        `Jobs from ${used.join(", ")}${others ? ` and ${others} employers' own websites` : ""}.${ogl} Always check the full advert before applying.`;
+        `Jobs from ${used.join(", ")}${others ? ` and ${others} employers' own websites` : ""}.${parts.includes("Adzuna") ? " Jobs by Adzuna." : ""}${ogl} Always check the full advert before applying.`;
     }
     if (data && data.generated) {
       const g = new Date(data.generated);

@@ -455,7 +455,7 @@ def write_go_index(today):
                 "t": j["title"], "e": j["employer"], "town": j["town"], "place": j.get("place") or j["town"],
                 "pay": j["pay"], "hours": j.get("hours", ""), "closing": j["closing"],
                 "est": bool(j.get("closing_estimated") or j.get("listed_only")), "url": j["url"],
-                "app": name.startswith("app"), "seen": str(today)}
+                "app": name.startswith("app"), "src": j.get("source", ""), "seen": str(today)}
     cutoff = str(today - dt.timedelta(days=30))
     idx = {k: v for k, v in idx.items() if v["seen"] >= cutoff}
     with open(path, "w", encoding="utf-8") as fh:

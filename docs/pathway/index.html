@@ -175,7 +175,7 @@
   <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="#alljobs">All jobs</a><a href="../">Jobs board</a></nav>
 </div></header>
 <main id="app"><p>Loading…</p></main>
-<footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs come from the <a href="../">East Kent Jobs board</a>.</footer>
+<footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs come from the <a href="../">East Kent Jobs board</a>.<span id="adzcredit" hidden> <a href="https://www.adzuna.co.uk" target="_blank" rel="noopener" style="display:inline-block;min-width:116px;min-height:23px;line-height:23px;font-weight:700;text-decoration:none;color:inherit">Jobs by <span style="color:#7cb342">Adzuna</span></a></span></footer>
 
 <script src="data.js"></script>
 <script>
@@ -190,7 +190,10 @@
 
   const loadBoard = () => board || (board = Promise.all(["../jobs.json", "../apprenticeships.json", "../careers.json"].map(u =>
     fetch(u, { cache: "no-store" }).then(r => r.json()).then(d => d.jobs || []).catch(() => [])))
-    .then(([jobs, apps, careers]) => ({ jobs, apps, careers })));
+    .then(([jobs, apps, careers]) => {
+      if ([...jobs, ...apps, ...careers].some(j => j.source === "Adzuna")) document.getElementById("adzcredit").hidden = false;
+      return { jobs, apps, careers };
+    }));
   // yearly pay from "£12.71/hr", "£24,000–£28,000/yr", "£90/day" (full-time equivalent, for comparing levels)
   const yearly = pay => {
     const m = String(pay).match(/£([\d,.]+)(?:–£([\d,.]+))?\/(hr|yr|day)/); if (!m) return 0;
@@ -538,6 +541,7 @@
     const s = new URLSearchParams(query || "").get("s");
     if (s !== null) mine = new Set(s.split(",").filter(k => P.SKILLS[k]));
     const [view, arg] = path.split("/");
+    loadBoard();
     if (view === "cv") cvView();
     else if (view === "tick") tickView();
     else if (view === "results") resultsView();
