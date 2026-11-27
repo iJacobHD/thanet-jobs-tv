@@ -150,6 +150,7 @@
   .choice .ic{display:inline-flex;width:52px;height:52px;border-radius:14px;background:#eef3f9;color:var(--navy);align-items:center;justify-content:center;margin-bottom:10px}
   .choice .ic .i{width:28px;height:28px}
   .tile{border-left:5px solid var(--lime);flex-direction:column;align-items:flex-start;gap:2px;min-height:74px;justify-content:center}
+  .tile .fold{font-size:12.5px;color:var(--muted);font-weight:500}
   .tile .ct{font-size:14px;font-weight:600;color:var(--muted)}
   .tile:hover{border-left-color:var(--navy)}
   .match{border-left:5px solid var(--lime)}
@@ -256,7 +257,7 @@
     bindHomeSearch(); fillCounts();
   }
   function grid() {
-    return `<div class="grid">${P.SECTORS.map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span><span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
+    return `<div class="grid">${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span>${s.folder ? `<span class="fold">Folder: ${esc(s.folder)}</span>` : ""}<span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
       <p class="note">Every sector has a full guide: what it is like, what you need, the steps to get in and live local jobs.</p>`;
   }
   async function fillCounts() {
@@ -383,7 +384,7 @@
     app.innerHTML = `${hasMe ? `<div class="noprint">${stepper(3)}</div>` : ""}<a class="back noprint" href="${hasMe ? "#results" + qs() : "#sectors"}">← ${hasMe ? "Back to my matches" : "All sectors"}</a>
       <div class="sector-layout"><nav class="toc sticky noprint"><b>On this page</b>${toc.map(([id, t]) => `<a href="javascript:void document.getElementById('${id}').scrollIntoView({behavior:'smooth'})">${t}</a>`).join("")}
         <div style="margin-top:16px"><button class="btn alt small" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print</button></div></nav><div>
-      <div class="sector-head"><div><h1>${esc(s.name)}</h1><p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
+      <div class="sector-head"><div><h1>${esc(s.name)}</h1>${s.folder ? `<p style="opacity:.75;font-size:15px;margin:2px 0 0">In the Sector Selector folder as “${esc(s.folder)}”</p>` : ""}<p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
       ${hasMe ? `<section id="bridge"><h2>Your bridge into ${esc(s.name)}</h2>
         <div class="bridge">
           <div class="col have"><h3 class="colhead" style="color:var(--green)"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg> <span style="color:var(--ink)">What you already have</span></h3>${have.length ? `<div class="chips">${have.map(([k]) => `<span class="chip on-static">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
@@ -434,7 +435,7 @@
       <div class="panel filters">
                 <label><b>Search</b><br><input id="fq" type="search" value="${esc(q0)}" placeholder="Job, company or town" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"></label>
         <label><b>Sector</b><br><select id="fs" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
-          <option value="">All sectors</option>${P.SECTORS.map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>
+          <option value="">All sectors</option>${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>
         <label><b>Town</b><br><select id="ft" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"><option value="">Anywhere</option></select></label>
         <label><b>Sort by</b><br><select id="fo" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
           <option value="close">Closing soonest</option><option value="payhi">Highest pay</option><option value="paylo">Lowest pay</option><option value="az">A–Z</option></select></label>

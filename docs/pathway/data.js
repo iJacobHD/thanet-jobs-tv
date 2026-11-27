@@ -130,7 +130,7 @@ PATHWAY.SECTORS = [
     links: [["National Careers Service – photographer", "https://nationalcareers.service.gov.uk/job-profiles/photographer"], ["National Careers Service – video editor", "https://nationalcareers.service.gov.uk/job-profiles/video-editor"], ["National Careers Service – stagehand", "https://nationalcareers.service.gov.uk/job-profiles/stagehand"], ["Kent Adult Education – Skills Bootcamps", "https://www.kentadulteducation.co.uk/learning-with-us/skills-bootcamps/"]],
   },
   {
-    id: "beauty", name: "Beauty & Therapy", icon: "💅", full: true,
+    id: "beauty", name: "Hair & Beauty", folder: "Beauty & Therapy", icon: "💅", full: true,
     skills: { customer: 2, sales: 1, cleaning: 1, care: 1 },
     jobwords: ["beauty", "hair", "salon", "nail", "therapist", "barber"],
     about: "Hair, beauty, nails and barbering in salons, spas, hotels and shops. Many people start as a salon junior or apprentice and train on the job. Lots of experienced therapists go on to work for themselves, but salons and spas employ juniors and apprentices. Customer service is at the heart of it – clients come back for the person as much as the treatment.",
@@ -234,7 +234,7 @@ PATHWAY.SECTORS = [
     links: [["National Careers Service – wind turbine technician", "https://nationalcareers.service.gov.uk/job-profiles/wind-turbine-technician"], ["National Careers Service – gas service technician", "https://nationalcareers.service.gov.uk/job-profiles/gas-service-technician"], ["National Careers Service – electrician", "https://nationalcareers.service.gov.uk/job-profiles/electrician"], ["Find an apprenticeship – energy and utilities", "https://www.findapprenticeship.service.gov.uk/apprenticeships?searchTerm=energy&location=Margate&distance=30"]],
   },
   {
-    id: "facilities", name: "Facilities Management", icon: "🏢", full: true,
+    id: "facilities", name: "Cleaning & Facilities", folder: "Facilities Management", icon: "🏢", full: true,
     skills: { cleaning: 2, trades: 1, customer: 1, reliable: 1, safety: 1 },
     jobwords: ["facilities", "caretaker", "cleaner", "cleaning", "porter", "housekeep", "maintenance"],
     about: "Keeping buildings clean, safe and working – offices, hospitals, schools, shops and hotels. Jobs include cleaning, caretaking, portering, security and maintenance. Most need no experience, there are lots of part-time hours (early mornings and evenings), and big employers offer training and progression.",
@@ -256,7 +256,7 @@ PATHWAY.SECTORS = [
     links: [["National Careers Service – financial services adviser", "https://nationalcareers.service.gov.uk/job-profiles/financial-services-customer-adviser"], ["National Careers Service – bookkeeper", "https://nationalcareers.service.gov.uk/job-profiles/bookkeeper"], ["National Careers Service – payroll administrator", "https://nationalcareers.service.gov.uk/job-profiles/payroll-administrator"], ["Find an apprenticeship – accounts and finance", "https://www.findapprenticeship.service.gov.uk/apprenticeships?searchTerm=accounts&location=Margate&distance=30"]],
   },
   {
-    id: "green", name: "Green, Recycling & Zero Carbon", icon: "♻️", full: true,
+    id: "green", name: "Recycling & Green Jobs", folder: "Green, Recycling & Zero Carbon", icon: "♻️", full: true,
     skills: { manual: 2, safety: 1, driving: 1, trades: 1, outdoors: 1 },
     jobwords: ["recycling", "waste", "refuse", "green", "solar", "retrofit", "insulation", "environment"],
     about: "Cutting waste and carbon: recycling and waste collection, making homes warmer (insulation and retrofit), solar panels, heat pumps and electric vehicle charging. It is a growing area, and many green jobs build on construction and trades skills. Councils and their contractors also employ waste and recycling crews.",
@@ -305,7 +305,7 @@ PATHWAY.SECTORS = [
     links: [["National Careers Service – chef", "https://nationalcareers.service.gov.uk/job-profiles/chef"], ["National Careers Service – waiter", "https://nationalcareers.service.gov.uk/job-profiles/waiter"], ["Find an apprenticeship – hospitality and catering", "https://www.findapprenticeship.service.gov.uk/apprenticeships?searchTerm=hospitality&location=Margate&distance=30"]],
   },
   {
-    id: "it", name: "IT & Communications", icon: "📶", full: true,
+    id: "it", name: "IT & Digital", folder: "IT & Communications", icon: "📶", full: true,
     skills: { it: 2, computer: 2, customer: 1, phone: 1 },
     jobwords: ["it ", "ict", "technician", "helpdesk", "digital", "developer", "network"],
     about: "Supporting and building the technology everyone uses – fixing computers, setting up networks, helping users and writing software. Many people start in IT support, answering help desk calls and fixing everyday problems. You can learn a lot for free online, and certificates and Skills Bootcamps can count as much as a degree.",
@@ -327,7 +327,7 @@ PATHWAY.SECTORS = [
     links: [["National Careers Service – leisure centre assistant", "https://nationalcareers.service.gov.uk/job-profiles/leisure-centre-assistant"], ["National Careers Service – lifeguard", "https://nationalcareers.service.gov.uk/job-profiles/lifeguard"], ["National Careers Service – outdoor activities instructor", "https://nationalcareers.service.gov.uk/job-profiles/outdoor-activities-instructor"]],
   },
   {
-    id: "life-sciences", name: "Life Sciences & Biotech", icon: "🧪", full: true,
+    id: "life-sciences", name: "Science & Laboratories", folder: "Life Sciences & Biotech", icon: "🧪", full: true,
     skills: { safety: 2, numbers: 1, computer: 1, machines: 1, english: 1 },
     jobwords: ["laboratory", "lab ", "science", "pharma", "biotech", "quality"],
     about: "Science that improves health – medicines, testing, research and medical products. East Kent has a science park at Discovery Park in Sandwich, home to a range of science and technology businesses. Lab technician jobs often ask for science qualifications, but production, cleanroom, stores and admin roles in science companies can be open to new starters.",
@@ -393,7 +393,7 @@ PATHWAY.SECTORS = [
     links: [["Civil Service Jobs", "https://www.civilservicejobs.service.gov.uk/"], ["National Careers Service – Civil Service admin officer", "https://nationalcareers.service.gov.uk/job-profiles/civil-service-administrative-officer"], ["National Careers Service – PCSO", "https://nationalcareers.service.gov.uk/job-profiles/police-community-support-officer"], ["National Careers Service – housing officer", "https://nationalcareers.service.gov.uk/job-profiles/housing-officer"]],
   },
   {
-    id: "recruitment", name: "Recruitment Agencies", icon: "🤝", full: true,
+    id: "recruitment", name: "Recruitment & HR", folder: "Recruitment Agencies", icon: "🤝", full: true,
     skills: { phone: 2, sales: 2, computer: 1, customer: 1 },
     jobwords: ["recruitment", "recruiter", "resourcer", "consultant"],
     about: "Matching people to jobs. Recruitment agencies find staff for employers – temporary, contract and permanent. Entry roles involve lots of phone calls, finding candidates online and building relationships. It is target-driven and pay often includes commission. Sales, customer service and hospitality experience transfers well.",
