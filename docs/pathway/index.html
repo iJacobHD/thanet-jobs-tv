@@ -257,7 +257,7 @@
     bindHomeSearch(); fillCounts();
   }
   function grid() {
-    return `<div class="grid">${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span>${s.folder ? `<span class="fold">Folder: ${esc(s.folder)}</span>` : ""}<span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
+    return `<div class="grid">${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span><span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
       <p class="note">Every sector has a full guide: what it is like, what you need, the steps to get in and live local jobs.</p>`;
   }
   async function fillCounts() {
@@ -384,7 +384,7 @@
     app.innerHTML = `${hasMe ? `<div class="noprint">${stepper(3)}</div>` : ""}<a class="back noprint" href="${hasMe ? "#results" + qs() : "#sectors"}">← ${hasMe ? "Back to my matches" : "All sectors"}</a>
       <div class="sector-layout"><nav class="toc sticky noprint"><b>On this page</b>${toc.map(([id, t]) => `<a href="javascript:void document.getElementById('${id}').scrollIntoView({behavior:'smooth'})">${t}</a>`).join("")}
         <div style="margin-top:16px"><button class="btn alt small" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print</button></div></nav><div>
-      <div class="sector-head"><div><h1>${esc(s.name)}</h1>${s.folder ? `<p style="opacity:.75;font-size:15px;margin:2px 0 0">In the Sector Selector folder as “${esc(s.folder)}”</p>` : ""}<p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
+      <div class="sector-head"><div><h1>${esc(s.name)}</h1><p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
       ${hasMe ? `<section id="bridge"><h2>Your bridge into ${esc(s.name)}</h2>
         <div class="bridge">
           <div class="col have"><h3 class="colhead" style="color:var(--green)"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg> <span style="color:var(--ink)">What you already have</span></h3>${have.length ? `<div class="chips">${have.map(([k]) => `<span class="chip on-static">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
