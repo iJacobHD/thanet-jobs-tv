@@ -31,8 +31,8 @@ UA = sources.UA
 CHEAP = set(platforms.MODES) | {"greenhouse"}           # one request a morning
 COST = {"cheap": 8.0, "sitemap": 90.0}                  # estimated seconds a morning for a new source
 MAX_AUTO = int(os.environ.get("MAX_AUTO_SOURCES", 300))
-PROBES_PER_NIGHT = int(os.environ.get("PROBES_PER_NIGHT", 40))
-NIGHT_MINUTES = float(os.environ.get("DISCOVERY_MINUTES", 25))
+PROBES_PER_NIGHT = int(os.environ.get("PROBES_PER_NIGHT", 80))
+NIGHT_MINUTES = float(os.environ.get("DISCOVERY_MINUTES", 30))
 JOBLIKE = re.compile(r"/(?:jobs?|vacanc\w*|job-details|jobdetails|positions?|opportunit\w*|careers?/(?:job|vacanc)\w*)/", re.I)
 
 
@@ -158,13 +158,47 @@ def probe(c, places, today, log):
         except Exception as e:
             return f"{mode} found but failed: {type(e).__name__}", None
         return f"ok: {mode} ({len(jobs)} local now)", emp
+    # Networx "current-vacancies.com" sites: the page carries the IDs its own search uses
+    for d in sorted(SEEN.get(c["name"], [])):
+        if d.endswith("current-vacancies.com"):
+            emp = try_networx(c, d, s, places, today, log)
+            if emp:
+                return "ok: networx", emp
     if bad:
         return f"can't read: {bad}", None
-    emp = try_sitemap(url, s, rp, places, log)
-    if emp:
-        emp["name"] = c["name"]
-        return "ok: sitemap", emp
+    # the careers page itself, then any jobs./careers./vacancies. site the company sends people to
+    home = urllib.parse.urlsplit(url).netloc.lower().replace("www.", "")
+    stem = home.split(".")[0]
+    origins = [url] + ["https://" + d + "/" for d in sorted(SEEN.get(c["name"], []))
+                       if re.match(r"(?:jobs|careers|vacancies|work|join)\.", d) or (stem and stem in d and d != home)]
+    for o in origins[:4]:
+        r2 = robots_for(o, s) if o != url else rp
+        emp = try_sitemap(o, s, r2, places, log)
+        if emp:
+            emp["name"] = c["name"]
+            return "ok: sitemap", emp
     return "no readable job feed", None
+
+
+def try_networx(c, domain, s, places, today, log):
+    try:
+        r = s.get(f"https://{domain}/", timeout=30)
+        links = re.findall(r'href="(/Careers/[^"]*VSP-\d+[^"]*)"', r.text) or [urllib.parse.urlsplit(r.url).path]
+        page = links[0]
+        t = s.get(f"https://{domain}{page}", timeout=30).text
+    except requests.RequestException:
+        return None
+    cid = re.search(r"ClientID\W{1,6}(\d+)", t) or re.search(r"VSP-(\d+)", page)
+    onb = re.search(r"OnboardingPageID\W{1,6}(-?\d+)", t)
+    if not cid:
+        return None
+    emp = {"name": c["name"], "mode": "networx", "base": f"https://{domain}", "page": page,
+           "client_id": int(cid.group(1)), "onboarding_page_id": int(onb.group(1)) if onb else 0}
+    try:
+        sources.employer_site(emp, places, today, {}, log=log)
+    except Exception:
+        return None
+    return emp
 
 
 def main():
