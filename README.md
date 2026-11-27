@@ -4,7 +4,7 @@ A portrait (9:16) job board for a TV mounted on its side. It shows 4 jobs per sl
 
 * **Where the jobs come from:** DWP Find a Job (Work Hub, jobs.service.gov.uk). Its terms allow reasonable automated copying as long as DWP is credited, and the display does credit it.
 * **What gets shown:** jobs in Thanet that are still open, entry level, and **not self-employed**.
-* **The button:** https://ijacobhd.github.io/thanet-jobs-tv/week.html has a yellow **Jobs for this week** button. It downloads an MP4 that shows 12 seconds per slide and is already turned 270° for the sideways TV. Every job in it stays open for at least the next 7 days. Copy it onto the USB stick and play it on repeat. `Update USB stick.bat` can do the copying for you.
+* **The button:** https://eastkentjobs.github.io/week.html has a yellow **Jobs for this week** button. It downloads an MP4 that shows 12 seconds per slide and is already turned 270° for the sideways TV. Every job in it stays open for at least the next 7 days. Copy it onto the USB stick and play it on repeat. `Update USB stick.bat` can do the copying for you.
 * **How it updates:** every morning, GitHub collects jobs from several official job feeds, removes duplicates, filters them, and remakes the board, the slides and the MP4. Nobody has to run anything, and nothing touches Work Hub.
   * **Reed** (secret `REED_API_KEY`) has closing dates.
   * **Teaching Vacancies** (Department for Education) needs no key and has closing dates. It covers school support jobs like teaching assistants, cleaners and catering.
@@ -48,7 +48,7 @@ data/report.txt                 every job checked and WHY it was kept or skipped
 3. Go to **Settings → Actions → General → Workflow permissions** and pick **Read and write permissions**, then click Save.
 4. Go to **Settings → Pages**. Under Source, pick **Deploy from a branch**, branch `main`, folder `/docs`, then Save.
 5. Go to the **Actions** tab → **Update Thanet jobs** → **Run workflow**. The first run takes about 5 minutes.
-6. Your board is now live at `https://ijacobhd.github.io/thanet-jobs-tv/`.
+6. Your board is now live at `https://eastkentjobs.github.io/`.
 
 ## Using a USB stick (TV photo slideshow)
 
@@ -69,7 +69,7 @@ Each scheduled run also makes picture slides: `docs/usb/JOBS_01.jpg`, `JOBS_02.j
 
 Open the link full-screen on whatever drives the TV: the TV's own browser, a Fire TV Stick (Silk browser), a Chromecast with Google TV, or a mini PC.
 On a Windows PC, use kiosk mode so it starts full-screen with no bars:
-`chrome.exe --kiosk "https://ijacobhd.github.io/thanet-jobs-tv/"`
+`chrome.exe --kiosk "https://eastkentjobs.github.io/"`
 
 **Leave the TV's own setting on normal (landscape).** The page rotates itself 270° by default. Settings go on the end of the link:
 

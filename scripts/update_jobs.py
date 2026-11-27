@@ -298,7 +298,7 @@ def classify_apprenticeship(job, cfg, today):
     return True, "ok", {"licence": needs_licence(job), "no_experience": True, "travel_minutes": mins}
 
 
-SITE = "https://ijacobhd.github.io/thanet-jobs-tv/"
+SITE = "https://eastkentjobs.github.io/"
 
 
 def go_id(jid):

@@ -44,7 +44,7 @@
   </ol>
   <div class="update">
     <p id="status"><span class="dot"></span>Checking for updates…</p>
-    <a class="btn blue" href="https://github.com/iJacobHD/thanet-jobs-tv/actions/workflows/update-jobs.yml" target="_blank" rel="noopener">↻ Update now</a>
+    <a class="btn blue" href="https://github.com/eastkentjobs/eastkentjobs.github.io/actions/workflows/update-jobs.yml" target="_blank" rel="noopener">↻ Update now</a>
     <p class="small">Opens GitHub. Click the green <b>Run workflow</b> button, then <b>Run workflow</b> again.<br>
       It takes about an hour. This page shows when the new videos are ready.</p>
   </div>
@@ -62,7 +62,7 @@
   // Live update status from GitHub's public API (no sign-in needed to read it)
   const fmt = t => new Date(t).toLocaleString("en-GB", { weekday: "long", hour: "2-digit", minute: "2-digit" });
   function checkStatus() {
-    fetch("https://api.github.com/repos/iJacobHD/thanet-jobs-tv/actions/workflows/update-jobs.yml/runs?per_page=5")
+    fetch("https://api.github.com/repos/eastkentjobs/eastkentjobs.github.io/actions/workflows/update-jobs.yml/runs?per_page=5")
       .then(r => r.json()).then(d => {
         const runs = (d.workflow_runs || []);
         const el = document.getElementById("status");

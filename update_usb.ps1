@@ -1,6 +1,6 @@
 # Thanet Jobs TV - copy the latest job slides onto the USB stick.
 # ===== EDIT THIS LINE ONCE (your GitHub Pages address) =====
-$Site = "https://ijacobhd.github.io/thanet-jobs-tv"
+$Site = "https://eastkentjobs.github.io"
 # ===========================================================
 $ErrorActionPreference = "Stop"
 try {
