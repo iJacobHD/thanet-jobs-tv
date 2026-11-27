@@ -232,7 +232,13 @@
       const g = new Date(data.generated);
       updEl.textContent = "Updated " + g.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
     }
-    if (USB) { document.querySelector(".bar").style.visibility = "hidden"; document.body.dataset.ready = "1"; return; }
+    if (USB) {
+      // the video draws the moving bar itself: tell the renderer where the empty track is and which end it starts from
+      const b = document.querySelector(".bar").getBoundingClientRect(), st = prog.getBoundingClientRect();
+      document.body.dataset.bar = JSON.stringify({ x: b.left, y: b.top, w: b.width, h: b.height,
+        sx: st.left, sy: st.top, color: getComputedStyle(prog).backgroundColor });
+      document.body.dataset.ready = "1"; return;
+    }
     // progress bar
     prog.style.transition = "none"; prog.style.width = "0";
     void prog.offsetWidth;

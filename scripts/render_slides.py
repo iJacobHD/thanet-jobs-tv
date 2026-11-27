@@ -29,6 +29,26 @@ DOCS = os.path.join(ROOT, "docs")
 OUT = os.path.join(DOCS, "usb")
 
 
+def bar_inputs(bar, secs, track_rgb):
+    """ffmpeg inputs + filter_complex for a moving 'time left on this page' bar over the empty track."""
+    if not bar:
+        return [], ["-vf", "fps=25"]
+    import re as _re
+    rgb = [int(v) for v in _re.findall(r"\d+", bar["color"])[:3]] or [255, 221, 0]
+    fill, track = "0x%02x%02x%02x" % tuple(rgb), "0x%02x%02x%02x" % tuple(track_rgb)
+    x, y, bw, bh = (round(bar[k]) for k in ("x", "y", "w", "h"))
+    f = f"mod(t\\,{secs})/{secs}"
+    if bw >= bh:
+        pos = f"x=-W+W*{f}:y=0" if abs(bar["sx"] - bar["x"]) < 2 else f"x=W-W*{f}:y=0"
+    else:
+        pos = f"x=0:y=-H+H*{f}" if abs(bar["sy"] - bar["y"]) < 2 else f"x=0:y=H-H*{f}"
+    graph = (f"[0:v]fps=25[bg];"
+             f"color=c={track}:s={bw}x{bh}:r=25[tr];color=c={fill}:s={bw}x{bh}:r=25[fi];"
+             f"[tr][fi]overlay={pos}:eval=frame:shortest=1[bar];"
+             f"[bg][bar]overlay=x={x}:y={y}:shortest=1[v]")
+    return [], ["-filter_complex", graph, "-map", "[v]"]
+
+
 def main():
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
     rotate = int(cfg.get("usb_rotate", 270))
@@ -57,15 +77,18 @@ def main():
         browser = p.chromium.launch(executable_path=exe) if exe else p.chromium.launch()
         page = browser.new_page(viewport={"width": w, "height": h})
         for prefix, extra, video_name, zip_name, info_name, src in boards:
-            files, n, total = [], 1, None
+            files, n, total, track_rgb = [], 1, None, (60, 80, 100)
             while total is None or n <= total:
                 page.goto(f"http://127.0.0.1:{port}/index.html?usb=1&rotate={rotate}&mindays={min_days}&page={n}{extra}")
                 page.wait_for_function("document.body.dataset.ready === '1' || document.body.dataset.pages === '0'", timeout=20000)
                 total = int(page.evaluate("document.body.dataset.pages") or 0)
+                bar = json.loads(page.evaluate("document.body.dataset.bar || 'null'") or "null")
                 if total == 0:
                     total = 1  # still make one "nothing right now" slide
                 png = page.screenshot(type="png")
                 img = Image.open(io.BytesIO(png)).convert("RGB")
+                if bar:
+                    track_rgb = img.getpixel((round(bar["x"] + bar["w"] / 2), round(bar["y"] + bar["h"] / 2)))
                 name = f"{prefix}_{n:02d}.jpg"
                 img.save(os.path.join(OUT, name), "JPEG", quality=95, subsampling=0)
                 files.append(name)
@@ -77,6 +100,7 @@ def main():
             subprocess.run([
                 "ffmpeg", "-y", "-loglevel", "error",
                 "-framerate", f"1/{secs}", "-i", os.path.join(OUT, f"{prefix}_%02d.jpg"),
+                *bar_inputs(bar, secs, track_rgb)[1],
                 "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage",
                 "-r", "25", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
                 "-t", str(secs * len(files)), os.path.join(OUT, video_name),
