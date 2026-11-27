@@ -4,7 +4,8 @@ name: Update Thanet jobs
 # filter them, and remake the TV board, the slides and "Jobs this week.mp4".
 on:
   schedule:
-    - cron: "17 5 * * *"
+    - cron: "17 5 * * *"     # main morning run
+    - cron: "43 7 * * *"     # backup: only does anything if GitHub skipped the 05:17 run (it sometimes does)
   workflow_dispatch: {}
 
 permissions:
@@ -23,17 +24,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Already updated today?
+        if: github.event_name == 'schedule' && github.event.schedule == '43 7 * * *'
+        run: |
+          made=$(python3 -c "import json;print(json.load(open('docs/jobs.json'))['generated'][:10])")
+          if [ "$made" = "$(date -u +%F)" ]; then
+            echo "The 05:17 run already updated today - nothing to do."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/setup-python@v5
+        if: env.SKIP != '1'
         with:
           python-version: "3.12"
 
       - name: Install
+        if: env.SKIP != '1'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -r requirements.txt playwright pillow
           python -m playwright install --with-deps chromium
 
       - name: Fetch and filter jobs (Reed, Teaching Vacancies, NHS Jobs, Adzuna)
+        if: env.SKIP != '1'
         env:
           REED_API_KEY: ${{ secrets.REED_API_KEY }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
@@ -42,9 +55,11 @@ jobs:
         run: python scripts/update_jobs.py
 
       - name: Make slides and MP4
+        if: env.SKIP != '1'
         run: python scripts/render_slides.py
 
       - name: Save changes
+        if: env.SKIP != '1'
         run: |
           git config user.name  "jobs-bot"
           git config user.email "jobs-bot@users.noreply.github.com"
