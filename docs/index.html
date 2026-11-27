@@ -42,7 +42,8 @@
   .chip.pay{background:#e6f4ea;color:#0b4f2a}
   .chip.lic{background:#fff1c2;color:#5c4400}
   .chip.noexp{background:#dbeafe;color:#123c7a}
-  .closes{font-size:26px;font-weight:700;color:var(--muted);white-space:nowrap}
+  .closes{font-size:26px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .foot .chip{flex:0 0 auto}
   .closes.soon{color:var(--warn)}
 
   .qr{width:310px;flex:0 0 310px;background:#fff;display:flex;flex-direction:column;align-items:center;
@@ -161,7 +162,7 @@
     const left = daysLeft(j.closing);
     const n = j.qr.size + 8;
     const closes = j.listed_only
-      ? `Open on ${esc(j.source)} careers · apply soon`
+      ? `No closing date given · apply soon`
       : j.closing_estimated
       ? `Posted ${fmtDate(j.posted)} · apply soon`
       : (left <= 3 ? `Closes soon: ${fmtDate(j.closing)}` : `Apply by ${fmtDate(j.closing)}`);
@@ -172,12 +173,12 @@
         <div class="chips">
           <span class="chip">📍 ${esc(j.town)}</span>
           <span class="chip pay">${esc(j.pay)}</span>
-          ${j.travel_minutes && j.travel_minutes > 45 ? `<span class="chip">🚆 ~${j.travel_minutes} min</span>` : ""}
+          ${j.travel_minutes ? `<span class="chip">🚆 ~${j.travel_minutes} min</span>` : ""}
           ${j.hours ? `<span class="chip">${esc(j.hours)}</span>` : ""}
         </div>
         <div class="foot">
           <div class="closes ${left <= 3 && !j.closing_estimated ? "soon" : ""}">${closes}</div>
-          ${j.licence ? `<span class="chip lic">🚗 Licence needed</span>` : (j.no_experience ? `<span class="chip noexp">✓ Training given</span>` : "")}
+          ${j.card ? `<span class="chip lic">🪪 ${esc(j.card)} needed</span>` : j.licence ? `<span class="chip lic">🚗 Licence needed</span>` : (j.no_experience ? `<span class="chip noexp">✓ Training given</span>` : "")}
         </div>
       </div>
       <div class="qr">
@@ -208,8 +209,25 @@
       document.body.dataset.pages = pages;
       // if a row of chips is too wide, drop the least important (last) chip rather than cut it off
       slide.querySelectorAll(".chips").forEach(c => { while (c.scrollWidth > c.clientWidth + 1 && c.children.length > 2) c.lastElementChild.remove(); });
+      // make every card fit: drop the least important chip, then shrink the title step by step
+      slide.querySelectorAll(".job .info").forEach(info => {
+        const over = () => info.scrollHeight > info.clientHeight + 1;
+        const chips = info.querySelector(".chips"), title = info.querySelector(".title");
+        while (over() && chips.children.length > 3) chips.lastElementChild.remove();
+        let size = parseFloat(getComputedStyle(title).fontSize);
+        while (over() && size > 26) { size -= 2; title.style.fontSize = size + "px"; }
+        if (over()) title.style.webkitLineClamp = "1";
+      });
     }
-    if (data && data.source) document.getElementById("source").textContent = "Source: " + data.source + ". Always check the full advert before applying.";
+    if (data && data.source) {
+      const boards = ["Reed", "NHS Jobs", "Teaching Vacancies", "Find an apprenticeship"];
+      const parts = data.source.split(". ")[0].split(", ").map(x => x.replace(/ \(yesterday's\)$/, ""));
+      const used = boards.filter(b => parts.includes(b));
+      const others = parts.filter(x => !boards.includes(x)).length;
+      const ogl = /Open Government Licence/.test(data.source) ? " Contains public sector information licensed under the Open Government Licence v3.0." : "";
+      document.getElementById("source").textContent =
+        `Jobs from ${used.join(", ")}${others ? ` and ${others} employers' own websites` : ""}.${ogl} Always check the full advert before applying.`;
+    }
     if (data && data.generated) {
       const g = new Date(data.generated);
       updEl.textContent = "Updated " + g.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });

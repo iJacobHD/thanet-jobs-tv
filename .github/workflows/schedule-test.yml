@@ -1,0 +1,13 @@
+name: Schedule test (temporary - safe to delete)
+
+# Only proves GitHub fires timed runs for this repo. Changes nothing.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Scheduled run fired at $(date -u)"

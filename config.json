@@ -144,7 +144,8 @@
         "/jobs-sitemap.xml"
       ],
       "job_path": "/job/",
-      "crawl_delay": 10
+      "crawl_delay": 10,
+      "employer": "John Lewis Partnership"
     },
     {
       "name": "Boots",
@@ -218,7 +219,8 @@
       "name": "TK Maxx / Homesense",
       "base": "https://jobs.tjx.com",
       "mode": "phenom",
-      "crawl_delay": 3
+      "crawl_delay": 3,
+      "employer": "TJX"
     },
     {
       "name": "B&M",
@@ -236,7 +238,8 @@
       "base": "https://jobs.icelandcareers.co.uk",
       "mode": "aspnet_grid",
       "listing": "/Search.aspx",
-      "crawl_delay": 3
+      "crawl_delay": 3,
+      "employer": "Iceland"
     },
     {
       "name": "The Range",
@@ -260,7 +263,8 @@
       "base": "https://www.tpplccareers.co.uk",
       "mode": "slug",
       "job_path": "/job/",
-      "crawl_delay": 3
+      "crawl_delay": 3,
+      "employer": "Travis Perkins Group"
     },
     {
       "name": "Currys",
@@ -336,7 +340,8 @@
       "base": "https://www.mbcareersandjobs.com",
       "mode": "slug",
       "job_path": "/job/",
-      "crawl_delay": 3
+      "crawl_delay": 3,
+      "employer": "Mitchells & Butlers"
     },
     {
       "name": "Premier Inn / Beefeater / Brewers Fayre (Whitbread)",
@@ -344,7 +349,8 @@
       "mode": "slug",
       "job_path": "/job/\\d+/",
       "fields": true,
-      "crawl_delay": 10
+      "crawl_delay": 10,
+      "employer": "Whitbread"
     },
     {
       "name": "2gether Support Solutions (East Kent hospitals)",
@@ -355,7 +361,8 @@
       "job_link": "/jobs/job/",
       "title_re": "job-list-title\">([^<]+)",
       "location_re": "itemprop=\"address\">([^<]+)",
-      "crawl_delay": 10
+      "crawl_delay": 10,
+      "employer": "2gether Support Solutions"
     },
     {
       "name": "KFC",
@@ -545,7 +552,56 @@
       "ME10": "Sittingbourne",
       "TN23": "Ashford",
       "TN24": "Ashford"
-    }
+    },
+    "shown_minutes": {
+      "Margate": 10,
+      "Cliftonville": 10,
+      "Westgate": 10,
+      "Westgate-on-Sea": 10,
+      "Garlinge": 10,
+      "Birchington": 15,
+      "Westwood": 15,
+      "Westwood Cross": 15,
+      "Westwood Retail Park": 15,
+      "Broadstairs": 15,
+      "St Peter's": 15,
+      "St Peters": 15,
+      "Ramsgate": 15,
+      "Thanet": 15,
+      "Minster": 20,
+      "Manston": 20,
+      "Cliffsend": 20,
+      "Monkton": 25,
+      "Acol": 20,
+      "St Nicholas": 20,
+      "Herne Bay": 20,
+      "Herne": 30,
+      "Beltinge": 25,
+      "Reculver": 30,
+      "Greenhill": 25,
+      "Broomfield": 30,
+      "Studd Hill": 25,
+      "Whitstable": 25,
+      "Tankerton": 30,
+      "Chestfield": 30,
+      "Swalecliffe": 30,
+      "Canterbury": 30,
+      "Sturry": 25,
+      "Hersden": 25,
+      "Blean": 40,
+      "Hampton": 30,
+      "Thanington": 40,
+      "Harbledown": 40,
+      "Sandwich": 25,
+      "Deal": 35,
+      "Walmer": 40,
+      "Faversham": 35,
+      "Sittingbourne": 45,
+      "Ashford": 45,
+      "Dover": 45,
+      "Whitfield": 55
+    },
+    "shown_minutes_note": "Typical bus/train time from Margate shown on the cards. The 90-minute area rule uses the door-to-door 'towns' table above."
   },
   "employers_not_possible": {
     "Aldi": "vacancy site sits behind a Cloudflare bot check",

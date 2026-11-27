@@ -70,11 +70,26 @@ QUALIFICATION = [
     r"degree[- ]educated", r"educated to degree",
     r"(?:must|should)\s+(?:have|hold)\s+(?:an?\s+)?(?:level|nvq)\s*[3-7]",
     r"level\s*[3-7]\s+(?:\w+\s+){0,4}(?:qualification|diploma|certificate|award)[^.]{0,30}(?:essential|required)",
-    r"\b(?:hgv|lgv|pcv|cpc|class\s*[12] licen[cs]e|c1 licen[cs]e|ppt licen[cs]e|forklift licen[cs]e|flt licen[cs]e|counterbalance licen[cs]e)\b",
-    r"\bSIA (?:licen[cs]e|badge)\b", r"\bCSCS\b", r"\bchartered\b",
+    r"\b(?:hgv|lgv|pcv|cpc|class\s*[12] licen[cs]e|c1 licen[cs]e|ppt licen[cs]e|ppt licen[cs]e)\b",
+    r"\bSIA (?:licen[cs]e|badge)\b", r"\bchartered\b",
     r"\bqualified\s+(?:teacher|chef|electrician|plumber|accountant|nurse|engineer|mechanic|technician)",
     r"\bfully qualified\b",
 ]
+# Cards a beginner can get in days (CSCS test, forklift course) - keep the job, show a badge instead of hiding it
+CARD_NEEDED = [
+    ("CSCS card", r"\bCSCS\b"),
+    ("Forklift licence", r"\b(?:forklift|fork lift|flt|counterbalance|reach truck|rtitb|mhe)\b[^.]{0,40}\b(?:licen[cs]e|ticket|certificat\w*|qualif\w*)\b(?![^.]{0,30}\b(?:provided|given|desirable|preferred|not essential|an advantage)\b)"),
+    ("Forklift licence", r"\b(?:licen[cs]e|ticket|certificat\w*)\b[^.]{0,20}\b(?:forklift|flt|counterbalance|reach truck)\b"),
+]
+
+
+def card_needed(text):
+    for label, pat in CARD_NEEDED:
+        if re.search(pat, text, re.I):
+            return label
+    return ""
+
+
 SENIOR_TITLES = [
     r"\bmanager\b", r"\bsupervisor\b", r"\bteam leader\b", r"\bsenior\b", r"\blead\b", r"\bhead of\b",
     r"\bdeputy\b", r"\bdirector\b", r"\bconsultant\b", r"\bteacher\b", r"\blecturer\b", r"\bnurse\b",
@@ -219,6 +234,15 @@ def commute_minutes(location, cfg):
     return None
 
 
+def shown_minutes(town, cfg):
+    """Typical bus/train time from Margate shown on the card - looked up by the card's town so it is always consistent."""
+    table = (cfg.get("commute") or {}).get("shown_minutes", {})
+    for name in sorted(table, key=len, reverse=True):
+        if re.search(r"\b" + re.escape(name) + r"\b", town, re.I):
+            return table[name]
+    return None
+
+
 def nice_town(t, cfg):
     return (cfg.get("commute") or {}).get("postcode_names", {}).get(t, t)
 
@@ -287,7 +311,8 @@ def board_entry(jid, job, cfg, flags):
         "contract": job["job_type"],
         "closing": job["closing"],
         "licence": flags["licence"],
-        "travel_minutes": flags.get("travel_minutes"),
+        "card": flags.get("card", ""),
+        "travel_minutes": shown_minutes(nice_town(town_of(job["location"], cfg["allowed_places"]), cfg), cfg) or flags.get("travel_minutes"),
         "no_experience": flags["no_experience"],
         "url": job["url"],
         "source": job.get("source", "DWP Find a Job"),
@@ -378,6 +403,7 @@ def classify(job, cfg, today):
 
     flags = {
         "licence": needs_licence(job),
+        "card": card_needed(clean if not forced else text),
         "no_experience": bool(_any(NO_EXPERIENCE, text)),
         "days_left": days_left,
         "travel_minutes": mins,
@@ -393,6 +419,7 @@ def parse_date_iso(s):
 
 
 def clean_title(t):
+    t = re.split(r"\s*\|\|\s*", t)[0]
     t = t.split(" | ")[0]
     if "_" in t:
         t = t.split("_")[0]
@@ -405,7 +432,7 @@ def clean_title(t):
     t = re.sub(r"\s*-\s*(?:part[ -]time|full[ -]time|car required|flex(?:ible)? hours)\b", "", t, flags=re.I)
     t = re.sub(r"\s*-\s*£[\d.]+.*$", "", t)
     t = re.sub(r"\s+-\s+(?:QEQM|QEH|K&C|WHH)\b.*$", "", t)        # hospital site suffixes
-    t = re.sub(r"\s*/\s*", "/", t)
+    t = re.sub(r"\s*/+\s*", "/", t)
     t = re.sub(r"\s+", " ", t).strip(" -–")
     return t
 
@@ -584,7 +611,7 @@ def main():
     kept, report, apprentices = [], [], []
     for jid in ids:
         c = cache.get(jid)
-        if c and c["reason"] != "ok" and (today - dt.date.fromisoformat(c["checked"])).days < 7:
+        if c and c["reason"] != "ok" and not re.search(r"CSCS|forklift|flt|counterbalance", c["reason"], re.I) and (today - dt.date.fromisoformat(c["checked"])).days < 7:
             report.append((jid, c["title"], c["reason"] + " (cached)"))
             if reed_jobs is not None and is_apprenticeship(reed_by_id[jid]):     # may still suit the apprenticeship board
                 ok, why, aflags = classify_apprenticeship(reed_by_id[jid], cfg, today)
@@ -604,7 +631,7 @@ def main():
         report.append((jid, job["title"], reason))
         if not reason.startswith("expired"):
             cache[jid] = {"title": job["title"], "reason": reason, "checked": str(today)}
-        if keep:
+        if keep and not is_apprenticeship(job):       # apprenticeships have their own board and video
             kept.append(board_entry(jid, job, cfg, flags))
         if reed_jobs is not None and is_apprenticeship(job):
             ok, why, aflags = classify_apprenticeship(job, cfg, today)
