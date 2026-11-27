@@ -268,6 +268,7 @@ PATHWAY.SECTORS = [
   },
   {
     id: "health-care", name: "Health & Social Care", icon: "❤️", full: true,
+    notwords: ["customer care", "caretaker", "skin care", "hair care", "pet care", "car care", "childcare", "child care", "aftercare", "careers"],
     skills: { care: 2, customer: 1, reliable: 2, team: 1, english: 1, driving: 1, safety: 1 },
     jobwords: ["care", "carer", "support worker", "healthcare", "health care", "nursing assistant", "domiciliary", "senior carer", "hca", "residential", "personal assistant"],
     about: "Helping people live as well and as independently as they can, in care homes, people's own homes (domiciliary care), supported living and hospitals. It is one of the biggest employers in East Kent and one of the easiest to start from scratch: most employers train new carers fully and pay you while you learn. The work is rewarding and steady, with plenty of part-time, full-time, day and night shifts.",
