@@ -193,8 +193,20 @@
   };
   const k = n => "£" + (Math.round(n / 500) * 500).toLocaleString("en-GB");
   // a job belongs to a sector if its title has one of the sector's words and none of its "not" words
-  const inSector = (s, j) => { const t = " " + j.title.toLowerCase() + " ";
-    return s.jobwords.some(w => t.includes(w)) && !(s.notwords || []).some(w => t.includes(w)); };
+  // Words match from the start of a word ("manufactur" finds "manufacturing"); short words (4 letters or
+  // fewer, like "sen" or "bar") must be the whole word, so "sen" never matches "representative".
+  const wordRe = {};
+  const has = (t, w) => (wordRe[w] || (wordRe[w] = new RegExp("(^|[^a-z])" + w.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + (w.trim().length <= 4 ? "($|[^a-z])" : ""), "i"))).test(t);
+  const byTitle = (s, t) => s.jobwords.some(w => has(t, w)) && !(s.notwords || []).some(w => has(t, w));
+  const sectorCache = new WeakMap();
+  const sectorsOf = j => {      // by job title first; if the title says nothing about the work, by employer
+    if (sectorCache.has(j)) return sectorCache.get(j);
+    const t = j.title.toLowerCase(), e = (j.employer || "").toLowerCase();
+    let ids = P.SECTORS.filter(s => byTitle(s, t)).map(s => s.id);
+    if (!ids.length) ids = Object.entries(P.EMPLOYER_SECTOR || {}).filter(([, names]) => names.some(n => e.includes(n))).map(([id]) => id).slice(0, 1);
+    sectorCache.set(j, ids); return ids;
+  };
+  const inSector = (s, j) => sectorsOf(j).includes(s.id);
   const sectorOf = j => P.SECTORS.find(s => inSector(s, j));
 
   // ---------------------------------------------------------------- reading a CV on the device
@@ -271,7 +283,7 @@
     document.querySelectorAll(".tile .ct").forEach(el => {
       const s = S(el.dataset.sec), hit = j => inSector(s, j);
       const n = jobs.filter(hit).length + careers.filter(j => j.entry && hit(j)).length, m = careers.filter(j => !j.entry && hit(j)).length;
-      el.textContent = n || m ? `${n} entry-level${m ? ` · ${m} experienced` : ""} jobs now` : "Guide and routes in";
+      el.textContent = n || m ? `${n} entry-level${m ? ` · ${m} experienced` : ""} job${n + m === 1 ? "" : "s"} now` : "Guide and routes in";
     });
   }
   function sectorsView() {
