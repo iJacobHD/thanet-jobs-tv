@@ -631,5 +631,6 @@
     "Surrey",
     "Middlesex"
   ],
-  "use_apprenticeships": true
+  "use_apprenticeships": true,
+  "video_max_pages": 35
 }

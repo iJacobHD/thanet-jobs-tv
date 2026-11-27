@@ -49,6 +49,7 @@
       It takes about an hour. This page shows when the new videos are ready.</p>
   </div>
 
+  <p class="small" id="health" style="display:none;background:#fff4d6;border:1px solid #f1d78a;border-radius:8px;padding:10px 12px;color:#5c4400"></p>
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.<br>
      Helping someone change sector? Use <a href="pathway/"><b>Pathway</b></a> – upload a CV or tick past jobs to see their best routes.</p>
 </div>
@@ -64,6 +65,14 @@
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
     document.getElementById("info").textContent = `${i.count ? i.count + " jobs, " : ""}${i.slides} slides, made ${d}. The robot remakes both videos every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
+  // weekly health check: company sites that have found nothing for 7+ days probably changed their website
+  fetch("health.json?t=" + Date.now()).then(r => r.json()).then(h => {
+    if (!h.stale || !h.stale.length) return;
+    const el = document.getElementById("health");
+    el.innerHTML = `⚠ <b>${h.stale.length} job source${h.stale.length === 1 ? " hasn't" : "s haven't"} found any jobs for a week</b> – the website may have changed. Ask Claude to check: ` +
+      h.stale.map(x => x.name.replace(/[<>&]/g, "")).join(", ") + ".";
+    el.style.display = "block";
+  }).catch(() => {});
   fetch("usb/info-apprenticeships.json?t=" + Date.now()).then(r => r.json()).then(i => {
     document.getElementById("dl2").download = `Apprenticeships this week - ${stamp(i.made)}.mp4`;
     document.getElementById("info2").textContent = `${i.count} apprenticeship${i.count === 1 ? "" : "s"} in this week's video (${i.slides} slide${i.slides === 1 ? "" : "s"}).`;

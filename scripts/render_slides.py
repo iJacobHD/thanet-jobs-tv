@@ -67,6 +67,7 @@ def main():
     os.makedirs(OUT)
 
     secs = int(cfg.get("video_seconds_per_slide", 15))
+    cap = int(cfg.get("video_max_pages", 35)) * 6        # 6 jobs a page; keeps the video about 7 minutes at most
     boards = [("JOBS", "", "jobs-this-week.mp4", "slides.zip", "info.json", "jobs.json")]
     if os.path.exists(os.path.join(DOCS, "apprenticeships.json")):
         boards.append(("APPS", "&board=apprenticeships", "apprenticeships-this-week.mp4", "apprenticeship-slides.zip",
@@ -79,7 +80,7 @@ def main():
         for prefix, extra, video_name, zip_name, info_name, src in boards:
             files, n, total, track_rgb = [], 1, None, (60, 80, 100)
             while total is None or n <= total:
-                page.goto(f"http://127.0.0.1:{port}/index.html?usb=1&rotate={rotate}&mindays={min_days}&page={n}{extra}")
+                page.goto(f"http://127.0.0.1:{port}/index.html?usb=1&rotate={rotate}&mindays={min_days}&cap={cap}&page={n}{extra}")
                 page.wait_for_function("document.body.dataset.ready === '1' || document.body.dataset.pages === '0'", timeout=20000)
                 total = int(page.evaluate("document.body.dataset.pages") or 0)
                 bar = json.loads(page.evaluate("document.body.dataset.bar || 'null'") or "null")
@@ -109,6 +110,7 @@ def main():
             cutoff = str(_dt.date.today() + _dt.timedelta(days=min_days))
             count = sum(1 for j in json.load(open(os.path.join(DOCS, src), encoding="utf-8")).get("jobs", [])
                         if j.get("closing", "") >= cutoff)          # what is actually in the video
+            count = min(count, cap)
             with open(os.path.join(OUT, info_name), "w") as fh:
                 json.dump({"made": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "slides": len(files),
                            "seconds_per_slide": secs, "min_days_open": min_days, "count": count}, fh)

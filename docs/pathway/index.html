@@ -144,7 +144,7 @@
 <header class="top"><div class="in">
   <a href="#"><span class="tag">PATHWAY</span></a>
   <a href="#">East Kent Jobs</a>
-  <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="../">Jobs board</a></nav>
+  <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="#alljobs">All jobs</a><a href="../">Jobs board</a></nav>
 </div></header>
 <main id="app"><p>Loading…</p></main>
 <footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs come from the <a href="../">East Kent Jobs board</a>.</footer>
@@ -160,9 +160,16 @@
   let board = null;   // live jobs from the main site, loaded once
   let adding = false; // keep "add a skill" open while tapping
 
-  const loadBoard = () => board || (board = Promise.all(["../jobs.json", "../apprenticeships.json"].map(u =>
+  const loadBoard = () => board || (board = Promise.all(["../jobs.json", "../apprenticeships.json", "../careers.json"].map(u =>
     fetch(u, { cache: "no-store" }).then(r => r.json()).then(d => d.jobs || []).catch(() => [])))
-    .then(([jobs, apps]) => ({ jobs, apps })));
+    .then(([jobs, apps, careers]) => ({ jobs, apps, careers })));
+  // yearly pay from "£12.71/hr", "£24,000–£28,000/yr", "£90/day" (full-time equivalent, for comparing levels)
+  const yearly = pay => {
+    const m = String(pay).match(/£([\d,.]+)(?:–£([\d,.]+))?\/(hr|yr|day)/); if (!m) return 0;
+    const v = parseFloat(m[1].replace(/,/g, "")); return m[3] === "hr" ? v * 37.5 * 52 : m[3] === "day" ? v * 5 * 52 : v;
+  };
+  const k = n => "£" + (Math.round(n / 500) * 500).toLocaleString("en-GB");
+  const sectorOf = j => P.SECTORS.find(s => s.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w)));
 
   // ---------------------------------------------------------------- reading a CV on the device
   const norm = t => " " + t.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9&+'#\-]+/g, " ") + " ";
@@ -217,6 +224,7 @@
         <a class="choice" href="#cv"><span class="ic">📄</span><b>I have a CV</b><small>Upload it and we will pick out your skills.</small></a>
         <a class="choice" href="#tick"><span class="ic">✅</span><b>I don't have a CV</b><small>Tick the jobs you have done instead. Takes 1 minute.</small></a>
       </div>
+      <a class="card" href="#alljobs" style="display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit"><span style="font-size:30px">🔎</span><span><b style="font-size:19px">Browse every job in East Kent</b><br><span class="muted">First jobs and experienced roles, by sector – see where a career can take you.</span></span><span class="go" style="margin-left:auto">→</span></a>
       <h2>Or look at a sector</h2>
       ${grid()}`;
   }
@@ -335,7 +343,7 @@
     const want = Object.entries(s.skills).sort((a, b) => b[1] - a[1]);
     const have = want.filter(([k]) => mine.has(k)), need = want.filter(([k]) => !mine.has(k));
     const pc = Math.round(score(s, mine) * 100);
-    const toc = [hasMe && ["bridge", "Your bridge"], s.full && ["about", "What it's like"], s.full && ["steps", "Step by step"], !s.full && ["skills", "Skills wanted"], ["jobs", "Jobs right now"], ["help", "Free help"], s.full && ["links", "Useful links"]].filter(Boolean);
+    const toc = [hasMe && ["bridge", "Your bridge"], s.full && ["about", "What it's like"], s.full && ["steps", "Step by step"], !s.full && ["skills", "Skills wanted"], ["jobs", "Start here"], ["ladder", "Where it can lead"], ["help", "Free help"], s.full && ["links", "Useful links"]].filter(Boolean);
     app.innerHTML = `${hasMe ? `<div class="noprint">${stepper(3)}</div>` : ""}<a class="back noprint" href="${hasMe ? "#results" + qs() : "#sectors"}">← ${hasMe ? "Back to my matches" : "All sectors"}</a>
       <div class="sector-layout"><nav class="toc sticky noprint"><b>On this page</b>${toc.map(([id, t]) => `<a href="javascript:void document.getElementById('${id}').scrollIntoView({behavior:'smooth'})">${t}</a>`).join("")}
         <div style="margin-top:16px"><button class="btn alt small" onclick="print()">🖨 Print</button></div></nav><div>
@@ -349,14 +357,15 @@
       ${s.full ? fullGuide(s) : `<section id="skills"><h2>Skills this sector looks for</h2>
         <div class="chips">${want.map(([k, w]) => `<span class="chip ${w === 2 ? "gap" : ""}">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
         <div class="card">📘 <b>Full guide coming soon.</b> Your work coach can tell you about courses and routes into ${esc(s.name.toLowerCase())} now.</div></section>`}
-      <section id="jobs"><h2>Jobs on our board right now</h2><div id="live" class="livejobs"><p class="muted">Loading local jobs…</p></div></section>
+      <section id="jobs"><h2>Start here: entry-level jobs now</h2><div id="live" class="livejobs"><p class="muted">Loading local jobs…</p></div></section>
+      <section id="ladder"><h2>Where it can lead</h2><p class="muted" style="margin-top:0">Jobs in this sector in East Kent that need experience or qualifications – what you could work towards.</p><div id="ladderlist" class="livejobs"><p class="muted">Loading…</p></div></section>
       <section id="help"><h2>Free help to get there</h2>
       ${P.FUNDING.map(f => `<div class="card" style="margin:10px 0"><b>${esc(f.t)}</b><br><span class="muted">${esc(f.d)}</span></div>`).join("")}
       </section>${s.full ? `<section id="links"><h2>Useful links</h2><ul>${s.links.map(([t, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("")}</ul></section>` : ""}
       <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()">🖨 Print this pathway</button><a class="btn" href="../">See all jobs →</a></div>
       </div></div>`;
     window.scrollTo(0, 0);
-    const { jobs, apps } = await loadBoard();
+    const { jobs, apps, careers } = await loadBoard();
     const hit = j => s.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w));
     const list = jobs.filter(hit), alist = apps.filter(hit);
     const live = document.getElementById("live"); if (!live) return;
@@ -366,8 +375,55 @@
       ? list.slice(0, 6).map(j => jobLink(j)).join("") + (alist.length ? `<p><b>Apprenticeships:</b></p>` + alist.slice(0, 3).map(j => jobLink(j)).join("") : "") +
         `<p class="note">${list.length} job${list.length === 1 ? "" : "s"}${alist.length ? ` and ${alist.length} apprenticeship${alist.length === 1 ? "" : "s"}` : ""} in this sector on our board today. <a href="../">See the full board</a>.</p>`
       : `<p class="muted">None on our board today – new jobs are added every morning. <a href="../">See all jobs</a>.</p>`);
+    const lad = document.getElementById("ladderlist");
+    if (lad) {
+      const cl = careers.filter(hit).sort((a, b) => yearly(a.pay) - yearly(b.pay));
+      const entryPay = list.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
+      const careerPay = cl.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
+      const mid = a => a[Math.floor(a.length / 2)];
+      const ladder = entryPay.length && careerPay.length >= 2 ? `<div class="card" style="margin-top:0"><b>💷 Pay as you progress (full-time, per year)</b>
+          <div class="facts" style="margin-top:10px"><div><span class="muted">Starting out</span><br><b style="font-size:22px">${k(mid(entryPay))}</b><br><span class="note">typical entry-level job</span></div>
+          <div><span class="muted">With experience</span><br><b style="font-size:22px">${k(mid(careerPay))}</b><br><span class="note">typical, up to ${k(careerPay[careerPay.length - 1])}</span></div></div></div>` : "";
+      lad.innerHTML = cl.length ? ladder + cl.slice(0, 8).map(j => careerLink(j)).join("") +
+          `<p class="note">${cl.length} experienced or qualified job${cl.length === 1 ? "" : "s"} in this sector right now. <a href="#alljobs?sector=${s.id}${mine.size ? "&s=" + [...mine].join(",") : ""}">See them all</a>.</p>`
+        : `<p class="muted">None advertised locally today – check back, this updates every morning.</p>`;
+    }
   }
+  const careerLink = j => `<a class="j" href="${esc(j.url)}" target="_blank" rel="noopener"><b>${esc(j.title)} <span class="badge" style="background:#e3e8ee">${esc(j.level).toUpperCase()}</span></b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
   const jobLink = j => `<a class="j" href="../go.html?j=${encodeURIComponent(j.go || "")}" ${j.go ? "" : `onclick="location.href='${esc(j.url)}';return false"`}><b>${esc(j.title)}</b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
+
+  async function allJobsView(params) {
+    const sel = params.get("sector") || "", lvl = params.get("level") || "all";
+    app.innerHTML = `${head("All jobs in East Kent", "Every local job we found today – first jobs and the careers they lead to.", "#", "Back")}
+      <div class="panel" style="display:flex;gap:12px;flex-wrap:wrap;align-items:end">
+        <label style="flex:1;min-width:200px"><b>Sector</b><br><select id="fs" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
+          <option value="">All sectors</option>${P.SECTORS.map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>
+        <div><b>Level</b><div class="chips" style="margin-top:4px" id="fl">${[["all", "All"], ["entry", "Entry level"], ["exp", "Experienced"]].map(([v, t]) => `<button class="chip" data-v="${v}" aria-pressed="${v === lvl}">${t}</button>`).join("")}</div></div>
+        <label style="flex:1;min-width:200px"><b>Search</b><br><input id="fq" placeholder="e.g. driver, Canterbury" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"></label>
+      </div>
+      <p class="status" id="cnt"></p><div id="all" class="livejobs"><p class="muted">Loading…</p></div>`;
+    const { jobs, careers } = await loadBoard();
+    const rows = [...jobs.map(j => ({ ...j, entry: true })), ...careers.map(j => ({ ...j, entry: false }))];
+    let shown = 60;
+    const draw = () => {
+      const fs = document.getElementById("fs").value, fq = document.getElementById("fq").value.trim().toLowerCase();
+      const fl = app.querySelector('#fl [aria-pressed="true"]').dataset.v;
+      const sec = S(fs);
+      const list = rows.filter(j => (!sec || sec.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w))) &&
+        (fl === "all" || (fl === "entry") === j.entry) && (!fq || `${j.title} ${j.employer} ${j.town}`.toLowerCase().includes(fq)))
+        .sort((a, b) => (b.entry - a.entry) || a.closing.localeCompare(b.closing));
+      document.getElementById("cnt").textContent = `${list.length} job${list.length === 1 ? "" : "s"}`;
+      document.getElementById("all").innerHTML = list.slice(0, shown).map(j => j.entry
+        ? jobLink(j).replace("</b>", ` <span class="badge" style="background:#e6f4ea;color:#0b4f2a">ENTRY LEVEL</span></b>`) : careerLink(j)).join("") +
+        (list.length > shown ? `<div class="row" style="justify-content:center;margin-top:12px"><button class="btn alt small" id="more">Show more</button></div>` : "");
+      const m = document.getElementById("more"); if (m) m.onclick = () => { shown += 60; draw(); };
+    };
+    document.getElementById("fs").onchange = () => { shown = 60; draw(); };
+    document.getElementById("fq").oninput = () => { shown = 60; draw(); };
+    document.getElementById("fl").onclick = e => { const b = e.target.closest(".chip"); if (!b) return;
+      app.querySelectorAll("#fl .chip").forEach(c => c.setAttribute("aria-pressed", c === b)); shown = 60; draw(); };
+    draw();
+  }
 
   function fullGuide(s) {
     return `<section id="about"><h2>What is it like?</h2><p>${esc(s.about)}</p>
@@ -392,6 +448,7 @@
     else if (view === "results") resultsView();
     else if (view === "sector") sectorView(arg);
     else if (view === "sectors") sectorsView();
+    else if (view === "alljobs") allJobsView(new URLSearchParams(query || ""));
     else home();
     if (view !== "sector") window.scrollTo(0, 0);
   }

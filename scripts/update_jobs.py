@@ -344,6 +344,80 @@ def board_entry(jid, job, cfg, flags):
     }
 
 
+# Reasons that only mean "not a first job" - the advert is local, open and genuine, so it belongs
+# on the careers side (Pathway) even though it never goes on the TV board.
+LEVEL_REASONS = (("not entry level", "Senior / management"), ("asks for experience", "Needs experience"),
+                 ("needs a qualification", "Needs a qualification"), ("pay range suggests", "Higher pay"),
+                 ("salary too high", "Higher pay"), ("NHS Band 3+", "Needs experience"))
+
+
+def career_level(reason):
+    for start, label in LEVEL_REASONS:
+        if reason.startswith(start):
+            return label
+    return ""
+
+
+def career_entry(jid, job, cfg, level):
+    return {
+        "id": jid, "title": clean_title(job["title"]), "employer": tidy_employer(job["employer"]),
+        "town": nice_town(town_of(job["location"], cfg["allowed_places"]), cfg),
+        "pay": tidy_pay(job["pay"], job["description"]), "hours": job["hours"],
+        "closing": job["closing"], "url": job["url"], "level": level, "source": job.get("source", ""),
+    }
+
+
+def still_open(job, today, cfg):
+    d = parse_date_iso(job.get("closing"))
+    return bool(d) and not job.get("closed_notice") and (d - today).days >= cfg.get("hide_when_days_left_below", 1)
+
+
+def write_careers(careers, failed, used, cfg, today):
+    """docs/careers.json - every local job that needs experience or qualifications. Shown on Pathway only."""
+    path = os.path.join(ROOT, "docs", "careers.json")
+    if failed:       # keep yesterday's for feeds that failed today
+        try:
+            prev = json.load(open(path, encoding="utf-8"))
+            careers += [j for j in prev.get("jobs", []) if j.get("source") in failed and j.get("closing", "") > str(today)]
+        except (OSError, ValueError):
+            pass
+    seen, out = set(), []
+    for j in sorted(careers, key=lambda j: j["closing"]):
+        key = (j["title"].lower(), j["employer"].lower(), j["town"].lower())
+        if key not in seen:
+            seen.add(key); out.append(j)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump({"updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                   "count": len(out), "jobs": out}, fh, ensure_ascii=False, indent=0)
+    print(f"careers.json: {len(out)} experienced / qualified jobs")
+
+
+def write_health(found_by, failed, cfg, today):
+    """Spot broken readers: a source that has found nothing for 7+ days usually means its website changed."""
+    path = os.path.join(ROOT, "data", "source_health.json")
+    try:
+        h = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError):
+        h = {}
+    for name in set(found_by) | set(failed):
+        e = h.setdefault(name, {"first_seen": str(today), "last_found": ""})
+        e["last_count"] = found_by.get(name, 0)
+        e["failed_today"] = name in failed
+        if found_by.get(name, 0) > 0:
+            e["last_found"] = str(today)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(h, fh, indent=1, sort_keys=True)
+    stale = []
+    for name, e in sorted(h.items()):
+        since = e.get("last_found") or e.get("first_seen")
+        if (today - dt.date.fromisoformat(since)).days >= 7 and name in (set(found_by) | set(failed)):
+            stale.append({"name": name, "since": e.get("last_found") or "", "failing": e.get("failed_today", False)})
+    with open(os.path.join(ROOT, "docs", "health.json"), "w", encoding="utf-8") as fh:
+        json.dump({"checked": str(today), "stale": stale}, fh, ensure_ascii=False)
+    if stale:
+        print("!! Sources with no jobs for 7+ days: " + ", ".join(x["name"] for x in stale))
+
+
 def write_go_index(today):
     """docs/go.json - what each QR code's phone page shows. Kept 30 days so a code on last week's
     USB video still works after the job drops off the board."""
@@ -587,11 +661,14 @@ def main():
         places = cfg["allowed_places"]
         collected = []
 
+        found_by = {}
+
         def run(name, fn):
             try:
                 js = fn()
                 collected.extend(js)
                 used.append(name)
+                found_by[name] = len(js)
             except Exception as e:      # one feed failing never stops the others
                 print(f"!! {name} failed: {e}")
                 failed.append(name)
@@ -627,6 +704,7 @@ def main():
             run("Adzuna", lambda: [j for loc in cfg.get("search_locations", [cfg["search_location"]])
                                    for j in sources.adzuna(az_id, az_key, places, loc,
                                                            max_days_old=cfg.get("adzuna_max_days_old", 10))])
+        write_health(found_by, failed, cfg, today)
         if not collected:
             print("No jobs from any feed. Keeping the previous jobs.json.")
             sys.exit(1)
@@ -661,11 +739,14 @@ def main():
         cache = json.load(open(cache_path)) if dump is None else {}
     except (OSError, ValueError):
         cache = {}
-    kept, report, apprentices = [], [], []
+    kept, report, apprentices, careers = [], [], [], []
     for jid in ids:
         c = cache.get(jid)
         if c and c["reason"] != "ok" and not re.search(r"CSCS|forklift|flt|counterbalance", c["reason"], re.I) and (today - dt.date.fromisoformat(c["checked"])).days < 7:
             report.append((jid, c["title"], c["reason"] + " (cached)"))
+            lvl = career_level(c["reason"])
+            if lvl and reed_jobs is not None and not is_apprenticeship(reed_by_id[jid]) and still_open(reed_by_id[jid], today, cfg):
+                careers.append(career_entry(jid, reed_by_id[jid], cfg, lvl))
             if reed_jobs is not None and is_apprenticeship(reed_by_id[jid]):     # may still suit the apprenticeship board
                 ok, why, aflags = classify_apprenticeship(reed_by_id[jid], cfg, today)
                 if ok:
@@ -686,6 +767,8 @@ def main():
             cache[jid] = {"title": job["title"], "reason": reason, "checked": str(today)}
         if keep and not is_apprenticeship(job):       # apprenticeships have their own board and video
             kept.append(board_entry(jid, job, cfg, flags))
+        elif career_level(reason) and not is_apprenticeship(job):   # experienced roles: careers side only
+            careers.append(career_entry(jid, job, cfg, career_level(reason)))
         if reed_jobs is not None and is_apprenticeship(job):
             ok, why, aflags = classify_apprenticeship(job, cfg, today)
             if ok:
@@ -722,6 +805,7 @@ def main():
         json.dump(out, fh, ensure_ascii=False, indent=1)
     if reed_jobs is not None:
         write_apprenticeships(apprentices, failed, used, cfg, today)
+        write_careers(careers, failed, used, cfg, today)
     write_go_index(today)
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
     cache = {k: v for k, v in cache.items() if k in ids}          # forget adverts that have gone

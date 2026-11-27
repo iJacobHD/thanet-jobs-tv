@@ -105,3 +105,8 @@ After each run, open `data/report.txt` to see every job checked and the reason i
 * **Board shows old jobs:** check the Actions tab for a red ❌. If the job site changed its layout, the updater stops and keeps the last good list. The TV still removes expired jobs either way.
 * **GitHub emails that the schedule was disabled:** GitHub pauses scheduled jobs in quiet repositories. Open Actions and click **Enable workflow**.
 * **The job site blocks GitHub's servers:** run `python scripts/update_jobs.py` on any PC with Python, using Windows Task Scheduler every few hours, then upload `docs/jobs.json`.
+
+## Careers vs the TV board (added 27 Nov 2026)
+- **TV board and videos**: entry-level jobs only (`docs/jobs.json`). Video capped at `video_max_pages` (35 pages, ~7 min); if there are more jobs, the best ones for newcomers are kept (no experience needed, close to Thanet, no licence, closing within 2 weeks).
+- **Pathway careers side**: local jobs that were left off the board *only* because they need experience, qualifications or are senior go to `docs/careers.json`. Pathway shows them under "Where it can lead" on each sector page and on the "All jobs in East Kent" page. They never appear on the TV.
+- **Health check**: `data/source_health.json` records the last day each source found jobs. Any source with nothing for 7+ days is listed in `docs/health.json` and shown as a warning on the download page.
