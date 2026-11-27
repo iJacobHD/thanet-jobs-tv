@@ -51,6 +51,7 @@
   </div>
 
   <p class="small" id="srcs"></p>
+  <p class="small" id="whostarted"></p>
   <p class="small" id="health" style="display:none;background:#fff4d6;border:1px solid #f1d78a;border-radius:8px;padding:10px 12px;color:#5c4400"></p>
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.<br>
      Helping someone change sector? Use <a href="pathway/"><b>Pathway</b></a> – upload a CV or tick past jobs to see their best routes.</p>
@@ -67,6 +68,13 @@
     const d = new Date(i.made).toLocaleString("en-GB", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
     document.getElementById("info").textContent = `${i.count ? i.count + " jobs, " : ""}${i.slides} slides, made ${d}. The robot remakes both videos every morning.`;
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
+  // which timer started the last few updates - shows whether GitHub's own timer is reliable yet
+  fetch("https://raw.githubusercontent.com/eastkentjobs/eastkentjobs.github.io/main/data/run_log.txt?t=" + Date.now()).then(r => r.text()).then(t => {
+    const rows = t.split("\n").filter(l => /^\d{4}-/.test(l)).slice(-7);
+    if (!rows.length) return;
+    const gh = rows.filter(l => l.includes("GitHub timer")).length;
+    document.getElementById("whostarted").textContent = `Last ${rows.length} update${rows.length === 1 ? "" : "s"}: ${gh} started by GitHub's own timer. Most recent – ${rows[rows.length - 1].replace(/^(\S+ \S+) UTC\s+/, "$1: ")}.`;
+  }).catch(() => {});
   // how many sources the robot reads, and how close to its limit it is
   fetch("sources.json?t=" + Date.now()).then(r => r.json()).then(x => {
     document.getElementById("srcs").innerHTML = `<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg> Reading <b>${x.manual_sources + x.auto_sources} company websites</b> plus Reed, NHS Jobs, Teaching Vacancies and Find an apprenticeship. ` +

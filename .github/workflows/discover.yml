@@ -4,7 +4,7 @@ name: Discover more employers
 # while keeping the morning run inside its time limit (see scripts/discover.py).
 on:
   schedule:
-    - cron: "31 1 * * *"
+    - cron: "31 0-3 * * *"   # several chances a night; only the first that fires does anything
   workflow_dispatch: {}
 
 permissions:

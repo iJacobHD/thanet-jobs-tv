@@ -4,8 +4,9 @@ name: Update Thanet jobs
 # filter them, and remake the TV board, the slides and "Jobs this week.mp4".
 on:
   schedule:
-    - cron: "17 5 * * *"     # main morning run
-    - cron: "43 7 * * *"     # backup: only does anything if GitHub skipped the 05:17 run (it sometimes does)
+    # GitHub's timer often fires late or not at all, so it gets a chance every hour from 04:17 to 11:17.
+    # The first one that fires does the update; every later one sees it's done and stops in seconds.
+    - cron: "17 4-11 * * *"
   workflow_dispatch:
     inputs:
       only_if_needed:
@@ -40,6 +41,17 @@ jobs:
             echo "Today's update has already run - nothing to do."
             echo "SKIP=1" >> "$GITHUB_ENV"
           fi
+
+      # Log what started today's update: GitHub's own timer, the morning scheduled task, or someone pressing "Update now".
+      - name: Record who started the update
+        if: env.SKIP != '1'
+        run: |
+          case "${{ github.event_name }}" in
+            schedule) who="GitHub timer (${{ github.event.schedule }})";;
+            workflow_dispatch) if [ "${{ inputs.only_if_needed }}" = "true" ]; then who="Claude scheduled task (backup)"; else who="Update now button / manual"; fi;;
+            *) who="${{ github.event_name }}";;
+          esac
+          echo "$(date -u +'%Y-%m-%d %H:%M') UTC  $who" >> data/run_log.txt
 
       - uses: actions/setup-python@v5
         if: env.SKIP != '1'
