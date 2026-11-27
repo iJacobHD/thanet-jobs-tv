@@ -4,7 +4,7 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.averyhealthcare.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Bupa care homes": {
   "status": "can't read: workday",
@@ -18,231 +18,231 @@
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.hallmarkcarehomes.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Agincare": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.agincare.com/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Bluebird Care": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.bluebirdcare.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Right at Home UK": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.rightathome.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Caremark": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.caremark.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Helping Hands": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.helpinghands.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Anchor": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.anchor.org.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Sanctuary Care": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.sanctuary-care.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Achieve Together": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.achievetogether.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Voyage Care": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.voyagecare.com/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Choice Support": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.choicesupport.org.uk/jobs",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Mencap": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.mencap.org.uk/jobs",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Pilgrims Hospices": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.pilgrimshospices.org/jobs/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Demelza": {
   "status": "ok: pinpoint (0 local now) - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.demelza.org.uk/jobs",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Kent Autistic Trust": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.kentautistictrust.org/jobs/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Optima Care": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.optimacare.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Avante Care and Support": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.avantecare.org.uk/jobs/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Home Instead": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.homeinstead.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Runwood Homes": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.runwoodhomes.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Care Concern Group": {
   "status": "error: ConnectionError",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.careconcerngroup.co.uk/careers/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Healthcare Homes": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.healthcarehomes.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Brighterkind": {
   "status": "error: ConnectionError",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.brighterkind.com/careers/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Hadley Healthcare": {
   "status": "error: ConnectionError",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.hadleyhealthcare.co.uk/careers/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Oasis Dental Care": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.oasisdentalcare.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Boots Opticians": {
   "status": "ok: sitemap - waiting: time limit reached",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.boots.jobs/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Lloyds Pharmacy Clinical Homecare": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "health-care",
   "careers": "https://www.lloydsclinical.com/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Greene King": {
   "status": "error: ConnectionError",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.greeneking.co.uk/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Marston's": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.marstons.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Fuller's": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.fullers.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Turtle Bay": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.turtlebay.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Prezzo": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.prezzo.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Wagamama": {
   "status": "error: ConnectionError",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.wagamama.com/",
-  "next_check": "2026-12-04"
+  "next_check": "2026-11-27"
  },
  "Côte": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.cote.co.uk/careers",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Five Guys": {
   "status": "can't read: workday",
@@ -263,20 +263,20 @@
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://careers.caffenero.com/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "The Restaurant Group (Frankie & Benny's)": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://www.trgplc.com/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  },
  "Bill's": {
   "status": "no readable job feed",
   "checked": "2026-11-27",
   "sector": "hospitality",
   "careers": "https://bills-website.co.uk/careers/",
-  "next_check": "2027-01-26"
+  "next_check": "2026-11-27"
  }
 }

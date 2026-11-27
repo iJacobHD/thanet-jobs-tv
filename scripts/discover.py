@@ -100,6 +100,18 @@ def try_sitemap(url, s, rp, places, log):
     return None
 
 
+SEEN = {}   # careers site -> outside job-system domains spotted on it (to know which readers to build next)
+JOBSYS = re.compile(r"job|career|recruit|vacanc|apply|talent|hire|ats|eploy|tribepad|harri|oleeo|cezanne|networx|jobtrain|hireful|kallidus", re.I)
+
+
+def note_domains(name, base_url, text):
+    home = urllib.parse.urlsplit(base_url).netloc.replace("www.", "")
+    for u in re.findall(r'(?:href|src|action)="(https?://[^"]+)"', text):
+        d = urllib.parse.urlsplit(u).netloc.lower().replace("www.", "")
+        if d and home not in d and JOBSYS.search(d + urllib.parse.urlsplit(u).path):
+            SEEN.setdefault(name, set()).add(d)
+
+
 def probe(c, places, today, log):
     """Returns (status, emp_config or None)."""
     s = sources._session()
@@ -115,6 +127,7 @@ def probe(c, places, today, log):
         except requests.RequestException as e:
             return f"error: {type(e).__name__}", None
         mode, slug, bad = detect(text)
+        note_domains(c["name"], url, r.text)
         if not mode:      # look one click deeper: "current vacancies" / "search jobs" links on the same page
             for href in re.findall(r'href="([^"]+)"', r.text)[:400]:
                 if re.search(r"vacanc|jobs|careers|join-us|work-for-us|opportunit", href, re.I):
@@ -127,6 +140,9 @@ def probe(c, places, today, log):
                         try:
                             t2 = s.get(full, timeout=30)
                             m2, s2, b2 = detect(t2.url + " " + t2.text)
+                            note_domains(c["name"], url, t2.url + '"' + t2.text)
+                            if urllib.parse.urlsplit(t2.url).netloc != urllib.parse.urlsplit(url).netloc:
+                                SEEN.setdefault(c["name"], set()).add(urllib.parse.urlsplit(t2.url).netloc.lower())
                         except requests.RequestException:
                             continue
                     bad = bad or b2
@@ -183,7 +199,8 @@ def main():
     # 2. governor: how much of the morning time limit company sites use now
     limit = 0.75 * float(os.environ.get("EMPLOYER_MINUTES", 70)) * 60
     active = [e for e in cfg.get("employers", []) if e.get("enabled", True)] + [e for e in auto if e.get("enabled", True)]
-    used = sum((health.get(e["name"]) or {}).get("secs", COST["cheap"] if e.get("mode") in CHEAP else COST["sitemap"]) for e in active)
+    # measured seconds from the latest morning run; sources not measured yet count as a typical 30s (8s for feeds)
+    used = sum((health.get(e["name"]) or {}).get("secs", COST["cheap"] if e.get("mode") in CHEAP else 30.0) for e in active)
     print(f"Governor: company sites use ~{used / 60:.0f} of {limit / 60:.0f} allowed minutes; {sum(1 for e in auto if e.get('enabled', True))} auto sources on")
 
     # 3. probe candidates that are due (never checked first, then parked/failed ones whose re-check date has passed)
@@ -203,9 +220,10 @@ def main():
             status, emp = f"error: {type(e).__name__}", None
         probed += 1
         print(f"   -> {status}")
-        days = 7 if status.startswith("error") else 60 if status.startswith("no readable") else 90 if status.startswith(("can't", "blocked")) else 30
+        # "no readable feed" is retried in 14 days: new readers get added for the job systems seen most often
+        days = 7 if status.startswith("error") else 14 if status.startswith("no readable") else 90 if status.startswith(("can't", "blocked")) else 30
         st = {"status": status, "checked": str(today), "sector": c.get("sector", ""), "careers": c["careers"],
-              "next_check": str(today + dt.timedelta(days=days))}
+              "next_check": str(today + dt.timedelta(days=days)), "seen": sorted(SEEN.get(c["name"], []))[:12]}
         if emp:
             cost = COST["cheap"] if emp["mode"] in CHEAP else COST["sitemap"]
             if used + cost > limit or sum(1 for e in auto if e.get("enabled", True)) >= MAX_AUTO:
@@ -231,7 +249,10 @@ def main():
                "still_to_check": sum(1 for c in cands if c["name"] not in state and c["name"] not in manual),
                "time_used_pct": round(100 * used / (float(os.environ.get("EMPLOYER_MINUTES", 70)) * 60)),
                "probed_tonight": probed, "added_tonight": added,
-               "by_sector": {sec: sum(1 for e in on if e.get("sector") == sec) for sec in sorted({e.get("sector", "") for e in on})}}
+               "by_sector": {sec: sum(1 for e in on if e.get("sector") == sec) for sec in sorted({e.get("sector", "") for e in on})},
+               # job systems we can't read yet, most common first - the next readers to build
+               "unread_systems": __import__("collections").Counter(d for v in state.values() if v.get("status", "").startswith("no readable")
+                                                                  for d in v.get("seen", [])).most_common(20)}
     with open(os.path.join(ROOT, "docs", "sources.json"), "w", encoding="utf-8") as fh:
         json.dump(summary, fh, indent=1)
     print(json.dumps(summary, indent=1))

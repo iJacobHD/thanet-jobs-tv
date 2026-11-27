@@ -420,8 +420,8 @@ def write_health(found_by, failed, cfg, today, secs_by=None):
         e["last_count"] = found_by.get(name, 0)
         e["failed_today"] = name in failed
         e["fail_streak"] = e.get("fail_streak", 0) + 1 if name in failed else 0
-        if secs_by and name in secs_by:       # rolling average run time, used by the discovery governor
-            e["secs"] = round(0.7 * e.get("secs", secs_by[name]) + 0.3 * secs_by[name], 1)
+        if secs_by and name in secs_by:       # latest run time, used by the discovery governor
+            e["secs"] = secs_by[name]
         if found_by.get(name, 0) > 0:
             e["last_found"] = str(today)
     with open(path, "w", encoding="utf-8") as fh:
