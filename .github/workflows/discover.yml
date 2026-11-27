@@ -5,7 +5,14 @@ name: Discover more employers
 on:
   schedule:
     - cron: "31 0-3 * * *"   # several chances a night; only the first that fires does anything
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      probes:
+        description: "How many companies to test (default 80)"
+        default: "80"
+      minutes:
+        description: "Time limit in minutes (default 30)"
+        default: "30"
 
 permissions:
   contents: write
@@ -17,9 +24,11 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 170
     env:
       PYTHONUNBUFFERED: "1"
+      PROBES_PER_NIGHT: ${{ inputs.probes || '80' }}
+      DISCOVERY_MINUTES: ${{ inputs.minutes || '30' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,11 +36,14 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Test candidate employers
+        timeout-minutes: 155
+        continue-on-error: true
         run: |
           done=$(python3 -c "import json;print(json.load(open('docs/sources.json')).get('checked',''))" 2>/dev/null || true)
           if [ "$done" = "$(date -u +%F)" ] && [ "${{ github.event_name }}" = "schedule" ]; then echo "Already ran today"; exit 0; fi
           python scripts/discover.py
       - name: Save
+        if: always()
         run: |
           git config user.name  "jobs-bot"
           git config user.email "jobs-bot@users.noreply.github.com"

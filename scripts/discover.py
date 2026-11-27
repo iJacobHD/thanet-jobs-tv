@@ -273,6 +273,9 @@ def main():
                 added += 1
                 st["status"] = status + " - added"
         state[c["name"]] = st
+        if probed % 10 == 0:          # save progress as we go, so a time-out never loses work
+            save("discovery.json", state)
+            save("auto_employers.json", auto)
         time.sleep(1)
 
     save("discovery.json", state)
