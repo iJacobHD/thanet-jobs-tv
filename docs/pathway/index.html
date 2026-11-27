@@ -146,6 +146,17 @@
   @media (max-width:900px){.two,.side,.sector-layout{grid-template-columns:1fr}.sticky{position:static}.toc{display:none}}
   footer.site{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:15px;color:var(--muted)}
   @media print{header.top,.noprint,footer.site{display:none!important}body{background:#fff;font-size:13px}.card,.fact,.bridge .col,ol.steps li{break-inside:avoid}.sector-head,.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  .i{width:1.15em;height:1.15em;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+  .choice .ic{display:inline-flex;width:52px;height:52px;border-radius:14px;background:#eef3f9;color:var(--navy);align-items:center;justify-content:center;margin-bottom:10px}
+  .choice .ic .i{width:28px;height:28px}
+  .tile{border-left:5px solid var(--lime);flex-direction:column;align-items:flex-start;gap:2px;min-height:74px;justify-content:center}
+  .tile .ct{font-size:14px;font-weight:600;color:var(--muted)}
+  .tile:hover{border-left-color:var(--navy)}
+  .match{border-left:5px solid var(--lime)}
+  .drop .big .i{width:46px;height:46px;color:var(--navy);stroke-width:1.6}
+  .fact h3 .ic .i{width:20px;height:20px}
+  .colhead{display:flex;align-items:center;gap:8px}
+  .privacy .i{color:var(--green);width:22px;height:22px;margin-top:1px}
 </style>
 </head>
 <body>
@@ -233,32 +244,41 @@
       <section class="hero"><h1>Find your <span>pathway</span> into a new sector</h1>
         <p>See which kinds of work you could move into from what you have already done – and exactly what you need to get there.</p></section>
       <div class="choices">
-        <a class="choice" href="#cv"><span class="ic">📄</span><b>I have a CV</b><small>Upload it and we will pick out your skills.</small></a>
-        <a class="choice" href="#tick"><span class="ic">✅</span><b>I don't have a CV</b><small>Tick the jobs you have done instead. Takes 1 minute.</small></a>
+        <a class="choice" href="#cv"><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><b>I have a CV</b><small>Upload it and we will pick out your skills.</small></a>
+        <a class="choice" href="#tick"><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M9 3h6v3H9zM8.5 13.5l2.5 2.5 4.5-5"/></svg></span><b>I don't have a CV</b><small>Tick the jobs you have done instead. Takes 1 minute.</small></a>
       </div>
       <form class="panel searchbar" id="homesearch" role="search" style="margin-top:14px">
-        <label for="hq"><b style="font-size:19px">🔎 Search every job in East Kent</b><br><span class="muted">First jobs and experienced roles – try a job, a company or a town.</span></label>
+        <label for="hq"><b style="font-size:19px;display:inline-flex;gap:8px;align-items:center"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg> Search every job in East Kent</b><br><span class="muted">First jobs and experienced roles – try a job, a company or a town.</span></label>
         <div class="row" style="margin-top:10px;flex-wrap:nowrap"><input id="hq" type="search" placeholder="e.g. driver, nurse, Canterbury" autocomplete="off">
         <button class="btn" type="submit">Search</button></div></form>
       <h2>Or look at a sector</h2>
       ${grid()}`;
-    bindHomeSearch();
+    bindHomeSearch(); fillCounts();
   }
   function grid() {
-    return `<div class="grid">${P.SECTORS.map(s => `<a class="tile ${s.full ? "" : "soon"}" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span><span>${esc(s.name)}</span></a>`).join("")}</div>
+    return `<div class="grid">${P.SECTORS.map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span><span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
       <p class="note">Every sector has a full guide: what it is like, what you need, the steps to get in and live local jobs.</p>`;
+  }
+  async function fillCounts() {
+    const { jobs, careers } = await loadBoard();
+    document.querySelectorAll(".tile .ct").forEach(el => {
+      const s = S(el.dataset.sec), hit = j => s.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w));
+      const n = jobs.filter(hit).length + careers.filter(j => j.entry && hit(j)).length, m = careers.filter(j => !j.entry && hit(j)).length;
+      el.textContent = n || m ? `${n} entry-level${m ? ` · ${m} experienced` : ""} jobs now` : "Guide and routes in";
+    });
   }
   function sectorsView() {
     app.innerHTML = `${head("All sectors", "Tap a sector to see what it is like and how to get in.", "#", "Back")}${grid()}`;
+    fillCounts();
   }
 
   function cvView() {
     app.innerHTML = `${stepper(1)}${head("Upload your CV", "We read it and pick out the skills you can take into a new sector.", "#", "Back")}
       <div class="two">
         <div class="panel">
-          <div class="privacy" style="margin-top:0"><span>🔒</span><span><b>Your CV stays on this device.</b> It is read here in your browser. Nothing is uploaded, sent or saved.</span></div>
+          <div class="privacy" style="margin-top:0"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span><b>Your CV stays on this device.</b> It is read here in your browser. Nothing is uploaded, sent or saved.</span></div>
           <label class="drop" id="drop"><input type="file" id="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
-            <span class="big">📄</span><b class="desk">Drag your CV here</b><span class="muted desk">or</span><b class="touch">Add your CV</b>
+            <span class="big"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><b class="desk">Drag your CV here</b><span class="muted desk">or</span><b class="touch">Add your CV</b>
             <span class="btn small fake">Choose a file</span>
             <span class="note">PDF or Word (.docx)</span></label>
           <p class="status" id="st" role="status"></p>
@@ -276,7 +296,7 @@
             <li><span><b>Get your pathway</b>What transfers, what to add, and the steps to get there.</span></li>
           </ol>
           <div class="divider">no CV?</div>
-          <a class="btn alt" href="#tick" style="width:100%;justify-content:center">✅ Tick the jobs you have done</a>
+          <a class="btn alt" href="#tick" style="width:100%;justify-content:center"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M9 3h6v3H9zM8.5 13.5l2.5 2.5 4.5-5"/></svg> Tick the jobs you have done</a>
         </aside>
       </div>`;
     const st = document.getElementById("st"), drop = document.getElementById("drop");
@@ -347,7 +367,7 @@
   function matchRow({ s, p }) {
     const pc = Math.round(p * 100);
     const words = pc >= 70 ? "Strong match" : pc >= 45 ? "Good match – a few things to add" : pc >= 20 ? "Some skills transfer" : "Bigger step – still possible";
-    return `<a class="match" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span>
+    return `<a class="match" href="#sector/${s.id}${qs()}">
       <span class="body"><b>${esc(s.name)}</b>${s.full ? "" : ' <span class="badge" style="background:#e3e8ee">GUIDE SOON</span>'}
       <span class="meter"><i style="width:${Math.max(pc, 3)}%"></i></span><small>${pc}% · ${words}</small></span>
       <span class="go">Pathway →</span></a>`;
@@ -362,23 +382,23 @@
     const toc = [hasMe && ["bridge", "Your bridge"], s.full && ["about", "What it's like"], s.full && ["steps", "Step by step"], !s.full && ["skills", "Skills wanted"], ["jobs", "Start here"], ["ladder", "Where it can lead"], ["help", "Free help"], s.full && ["links", "Useful links"]].filter(Boolean);
     app.innerHTML = `${hasMe ? `<div class="noprint">${stepper(3)}</div>` : ""}<a class="back noprint" href="${hasMe ? "#results" + qs() : "#sectors"}">← ${hasMe ? "Back to my matches" : "All sectors"}</a>
       <div class="sector-layout"><nav class="toc sticky noprint"><b>On this page</b>${toc.map(([id, t]) => `<a href="javascript:void document.getElementById('${id}').scrollIntoView({behavior:'smooth'})">${t}</a>`).join("")}
-        <div style="margin-top:16px"><button class="btn alt small" onclick="print()">🖨 Print</button></div></nav><div>
-      <div class="sector-head"><span class="ic">${s.icon}</span><div><h1>${esc(s.name)}</h1><p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
+        <div style="margin-top:16px"><button class="btn alt small" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print</button></div></nav><div>
+      <div class="sector-head"><div><h1>${esc(s.name)}</h1><p>${hasMe ? `Your match: <b>${pc}%</b>` : "Sector guide for East Kent"}</p></div></div>
       ${hasMe ? `<section id="bridge"><h2>Your bridge into ${esc(s.name)}</h2>
         <div class="bridge">
-          <div class="col have"><h3>✅ What you already have</h3>${have.length ? `<div class="chips">${have.map(([k]) => `<span class="chip on-static">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
+          <div class="col have"><h3 class="colhead" style="color:var(--green)"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg> <span style="color:var(--ink)">What you already have</span></h3>${have.length ? `<div class="chips">${have.map(([k]) => `<span class="chip on-static">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
             <p class="note">Put these near the top of your CV when you apply.</p>` : `<p class="muted">Nothing direct yet – but this sector trains new starters. Follow the steps below.</p>`}</div>
-          <div class="col need"><h3>➕ What to add</h3>${need.length ? need.map(([k, w]) => `<div class="gapitem"><b>${esc(P.SKILLS[k].name)}${w === 2 ? ' <span class="badge">KEY</span>' : ""}</b><span>${esc((s.gaps && s.gaps[k]) || P.SKILLS[k].get)}</span></div>`).join("") : `<p>You have everything this sector looks for. Start applying!</p>`}</div>
+          <div class="col need"><h3 class="colhead" style="color:#8a6a00"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span style="color:var(--ink)">What to add</span></h3>${need.length ? need.map(([k, w]) => `<div class="gapitem"><b>${esc(P.SKILLS[k].name)}${w === 2 ? ' <span class="badge">KEY</span>' : ""}</b><span>${esc((s.gaps && s.gaps[k]) || P.SKILLS[k].get)}</span></div>`).join("") : `<p>You have everything this sector looks for. Start applying!</p>`}</div>
         </div></section>` : `<div class="card noprint"><b>Want this matched to you?</b> <a href="#cv">Upload your CV</a> or <a href="#tick">tick the jobs you have done</a> and we will show what transfers and what to add.</div>`}
       ${s.full ? fullGuide(s) : `<section id="skills"><h2>Skills this sector looks for</h2>
         <div class="chips">${want.map(([k, w]) => `<span class="chip ${w === 2 ? "gap" : ""}">${esc(P.SKILLS[k].name)}</span>`).join("")}</div>
-        <div class="card">📘 <b>Full guide coming soon.</b> Your work coach can tell you about courses and routes into ${esc(s.name.toLowerCase())} now.</div></section>`}
+        <div class="card"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H20"/></svg> <b>Full guide coming soon.</b> Your work coach can tell you about courses and routes into ${esc(s.name.toLowerCase())} now.</div></section>`}
       <section id="jobs"><h2>Start here: entry-level jobs now</h2><div id="live" class="livejobs"><p class="muted">Loading local jobs…</p></div></section>
       <section id="ladder"><h2>Where it can lead</h2><p class="muted" style="margin-top:0">Jobs in this sector in East Kent that need experience or qualifications – what you could work towards.</p><div id="ladderlist" class="livejobs"><p class="muted">Loading…</p></div></section>
       <section id="help"><h2>Free help to get there</h2>
       ${P.FUNDING.map(f => `<div class="card" style="margin:10px 0"><b>${esc(f.t)}</b><br><span class="muted">${esc(f.d)}</span></div>`).join("")}
       </section>${s.full ? `<section id="links"><h2>Useful links</h2><ul>${s.links.map(([t, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("")}</ul></section>` : ""}
-      <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()">🖨 Print this pathway</button><a class="btn" href="../">See all jobs →</a></div>
+      <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print this pathway</button><a class="btn" href="../">See all jobs →</a></div>
       </div></div>`;
     window.scrollTo(0, 0);
     const { jobs, apps, careers } = await loadBoard();
@@ -397,7 +417,7 @@
       const entryPay = list.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
       const careerPay = cl.map(j => yearly(j.pay)).filter(Boolean).sort((a, b) => a - b);
       const mid = a => a[Math.floor(a.length / 2)];
-      const ladder = entryPay.length && careerPay.length >= 2 ? `<div class="card" style="margin-top:0"><b>💷 Pay as you progress (full-time, per year)</b>
+      const ladder = entryPay.length && careerPay.length >= 2 ? `<div class="card" style="margin-top:0"><b style="display:inline-flex;gap:8px;align-items:center"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 7.5A3.5 3.5 0 0 0 10 9v10M7 13h7M7 19h10"/></svg> Pay as you progress (full-time, per year)</b>
           <div class="facts" style="margin-top:10px"><div><span class="muted">Starting out</span><br><b style="font-size:22px">${k(mid(entryPay))}</b><br><span class="note">typical entry-level job</span></div>
           <div><span class="muted">With experience</span><br><b style="font-size:22px">${k(mid(careerPay))}</b><br><span class="note">typical, up to ${k(careerPay[careerPay.length - 1])}</span></div></div></div>` : "";
       lad.innerHTML = cl.length ? ladder + cl.slice(0, 8).map(j => careerLink(j)).join("") +
@@ -456,10 +476,10 @@
   function fullGuide(s) {
     return `<section id="about"><h2>What is it like?</h2><p>${esc(s.about)}</p>
       <div class="facts">
-        <div class="fact"><h3><span class="ic">👀</span>What to expect</h3><ul>${s.expect.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-        <div class="fact"><h3><span class="ic">💼</span>Jobs to start in</h3><ul>${s.roles.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-        <div class="fact"><h3><span class="ic">🧭</span>Experience needed</h3><p>${esc(s.needs.experience)}</p></div>
-        <div class="fact"><h3><span class="ic">📜</span>Qualifications & licences</h3><p>${esc(s.needs.quals)}</p></div>
+        <div class="fact"><h3><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>What to expect</h3><ul>${s.expect.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="fact"><h3><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>Jobs to start in</h3><ul>${s.roles.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="fact"><h3><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>Experience needed</h3><p>${esc(s.needs.experience)}</p></div>
+        <div class="fact"><h3><span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5L7.5 21l4.5-2.5 4.5 2.5-1-7.5"/></svg></span>Qualifications & licences</h3><p>${esc(s.needs.quals)}</p></div>
       </div></section>
       <section id="steps"><h2>Your pathway, step by step</h2>
       <ol class="steps">${s.steps.map(x => `<li><b>${esc(x.t)}</b>${esc(x.d)}</li>`).join("")}</ol></section>`;

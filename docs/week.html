@@ -25,6 +25,7 @@
   .btn.green:hover{background:#86efac}
   ol{text-align:left;display:inline-block;margin:18px 0 0;color:#d6e2f0}
   a{color:#ffd400}
+  .i{width:1.15em;height:1.15em;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -32,8 +33,8 @@
   <h1>Local jobs for the TV</h1>
   <p>Entry-level jobs within 90 minutes of Thanet by bus or train</p>
   <p id="info">Loading…</p>
-  <a class="btn" id="dl" href="usb/jobs-this-week.mp4" download="Jobs this week.mp4">⬇ Jobs for this week</a>
-  <br><a class="btn green" id="dl2" href="usb/apprenticeships-this-week.mp4" download="Apprenticeships this week.mp4">⬇ Apprenticeships for this week</a>
+  <a class="btn" id="dl" href="usb/jobs-this-week.mp4" download="Jobs this week.mp4"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> Jobs for this week</a>
+  <br><a class="btn green" id="dl2" href="usb/apprenticeships-this-week.mp4" download="Apprenticeships this week.mp4"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> Apprenticeships for this week</a>
   <p id="info2" class="small">Loading…</p>
   <p class="small">Two MP4 videos, 12 seconds per slide, already turned for the sideways TV.<br>
      Every job in it stays open for at least the next 7 days.</p>
@@ -44,7 +45,7 @@
   </ol>
   <div class="update">
     <p id="status"><span class="dot"></span>Checking for updates…</p>
-    <a class="btn blue" href="https://github.com/eastkentjobs/eastkentjobs.github.io/actions/workflows/update-jobs.yml" target="_blank" rel="noopener">↻ Update now</a>
+    <a class="btn blue" href="https://github.com/eastkentjobs/eastkentjobs.github.io/actions/workflows/update-jobs.yml" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5"/></svg> Update now</a>
     <p class="small">Opens GitHub. Click the green <b>Run workflow</b> button, then <b>Run workflow</b> again.<br>
       It takes about an hour. This page shows when the new videos are ready.</p>
   </div>
@@ -68,14 +69,14 @@
   }).catch(() => { document.getElementById("info").textContent = "Latest video, remade every morning."; });
   // how many sources the robot reads, and how close to its limit it is
   fetch("sources.json?t=" + Date.now()).then(r => r.json()).then(x => {
-    document.getElementById("srcs").innerHTML = `📡 Reading <b>${x.manual_sources + x.auto_sources} company websites</b> plus Reed, NHS Jobs, Teaching Vacancies and Find an apprenticeship. ` +
+    document.getElementById("srcs").innerHTML = `<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg> Reading <b>${x.manual_sources + x.auto_sources} company websites</b> plus Reed, NHS Jobs, Teaching Vacancies and Find an apprenticeship. ` +
       `${x.auto_sources} were found automatically; ${x.still_to_check} more are queued to be tested. Morning time used: ${x.time_used_pct}% of the safe limit.`;
   }).catch(() => {});
   // weekly health check: company sites that have found nothing for 7+ days probably changed their website
   fetch("health.json?t=" + Date.now()).then(r => r.json()).then(h => {
     if (!h.stale || !h.stale.length) return;
     const el = document.getElementById("health");
-    el.innerHTML = `⚠ <b>${h.stale.length} job source${h.stale.length === 1 ? " hasn't" : "s haven't"} found any jobs for a week</b> – the website may have changed. Ask Claude to check: ` +
+    el.innerHTML = `<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4.5M12 17.5h.01"/></svg> <b>${h.stale.length} job source${h.stale.length === 1 ? " hasn't" : "s haven't"} found any jobs for a week</b> – the website may have changed. Ask Claude to check: ` +
       h.stale.map(x => x.name.replace(/[<>&]/g, "")).join(", ") + ".";
     el.style.display = "block";
   }).catch(() => {});
