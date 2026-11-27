@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2040%2040%22%20aria-hidden%3D%22true%22%3E%3Crect%20rx%3D%2210%22%20fill%3D%22%23a4c639%22/%3E%20%3Cpath%20d%3D%22M8.5%2031.5C8.5%2025.5%2013%2024%2018%2024s10-1.5%2010-6.5-3-5-3-5%22%20fill%3D%22none%22%20stroke%3D%22%230b2a4a%22%20stroke-width%3D%223.3%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M25%2015.5V6.5%22%20stroke%3D%22%230b2a4a%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M25%206.8h7.2l-2%202.6%202%202.6H25z%22%20fill%3D%22%230b2a4a%22%20stroke%3D%22%230b2a4a%22%20stroke-width%3D%221.6%22%20stroke-linejoin%3D%22round%22/%3E%20%3Ccircle%20cx%3D%228.5%22%20cy%3D%2231.5%22%20r%3D%222.6%22%20fill%3D%22%23a4c639%22%20stroke%3D%22%230b2a4a%22%20stroke-width%3D%222.4%22/%3E%3C/svg%3E">
 <title>Pathway – find your way into a new sector | East Kent Jobs</title>
 <meta name="description" content="Upload your CV or tick what you have done, and see which job sectors you could move into in East Kent – and how.">
 <style>
@@ -14,6 +15,11 @@
   header.top{background:var(--navy);color:#fff}
   header.top .in{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
   header.top a{color:#fff;text-decoration:none;font-weight:700}
+  header.top .brand{display:inline-flex;align-items:center;gap:11px}
+  header.top .brand svg{flex:0 0 auto}
+  header.top .bw{display:flex;flex-direction:column;gap:3px;line-height:1}
+  header.top .bn{font-size:21px;font-weight:800;letter-spacing:-.01em}
+  header.top .bs{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
   header.top .tag{background:var(--yellow);color:var(--ink);padding:2px 8px;border-radius:4px;font-size:14px;letter-spacing:.04em}
   header.top nav{margin-left:auto;display:flex;gap:16px;font-size:16px}
   header.top nav a{font-weight:600;opacity:.9}
@@ -165,8 +171,10 @@
 </head>
 <body>
 <header class="top"><div class="in">
-  <a href="#"><span class="tag">PATHWAY</span></a>
-  <a href="#">East Kent Jobs</a>
+  <a href="#" class="brand" aria-label="Pathway home"><svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#a4c639"/>
+<path d="M8.5 31.5C8.5 25.5 13 24 18 24s10-1.5 10-6.5-3-5-3-5" fill="none" stroke="#0b2a4a" stroke-width="3.3" stroke-linecap="round"/>
+<path d="M25 15.5V6.5" stroke="#0b2a4a" stroke-width="2.6" stroke-linecap="round"/><path d="M25 6.8h7.2l-2 2.6 2 2.6H25z" fill="#0b2a4a" stroke="#0b2a4a" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="8.5" cy="31.5" r="2.6" fill="#a4c639" stroke="#0b2a4a" stroke-width="2.4"/></svg><span class="bw"><span class="bn">Pathway</span><span class="bs">by East Kent Jobs</span></span></a>
   <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="#alljobs">All jobs</a><a href="../">Jobs board</a></nav>
 </div></header>
 <main id="app"><p>Loading…</p></main>
