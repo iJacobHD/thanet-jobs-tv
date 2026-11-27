@@ -15,6 +15,13 @@
   .btn:hover{background:#ffe34d}
   .small{font-size:15px;color:#9fb2c9}
   .btn.green{background:#4ade80;margin-top:6px}
+  .update{margin:26px auto 0;padding:18px 20px;max-width:520px;border:1px solid #2b3d55;border-radius:14px;background:#0f1d30}
+  .btn.blue{background:#60a5fa;font-size:20px;padding:12px 26px;margin-top:10px}
+  .btn.blue:hover{background:#93c5fd}
+  #status{font-size:17px;margin:4px 0 0}
+  .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:1px;background:#9fb2c9}
+  .dot.run{background:#facc15;animation:pulse 1.2s infinite} .dot.ok{background:#4ade80} .dot.bad{background:#f87171}
+  @keyframes pulse{50%{opacity:.35}}
   .btn.green:hover{background:#86efac}
   ol{text-align:left;display:inline-block;margin:18px 0 0;color:#d6e2f0}
   a{color:#ffd400}
@@ -35,6 +42,13 @@
     <li>Copy <b>Jobs this week.mp4</b> (and <b>Apprenticeships this week.mp4</b> if you want it) onto the USB stick, replacing last week's.</li>
     <li>On the TV, play the video from the stick with <b>repeat</b> switched on.</li>
   </ol>
+  <div class="update">
+    <p id="status"><span class="dot"></span>Checking for updates…</p>
+    <a class="btn blue" href="https://github.com/iJacobHD/thanet-jobs-tv/actions/workflows/update-jobs.yml" target="_blank" rel="noopener">↻ Update now</a>
+    <p class="small">Opens GitHub. Click the green <b>Run workflow</b> button, then <b>Run workflow</b> again.<br>
+      It takes about an hour. This page shows when the new videos are ready.</p>
+  </div>
+
   <p class="small" style="margin-top:22px">Want to check a job? See the <a href="./?rotate=0">live board</a>.</p>
 </div>
 <script>
@@ -45,6 +59,32 @@
   fetch("usb/info-apprenticeships.json?t=" + Date.now()).then(r => r.json()).then(i => {
     document.getElementById("info2").textContent = `${i.count} apprenticeship${i.count === 1 ? "" : "s"} in this week's video (${i.slides} slide${i.slides === 1 ? "" : "s"}).`;
   }).catch(() => { document.getElementById("info2").textContent = "Apprenticeship video, remade every morning."; });
+  // Live update status from GitHub's public API (no sign-in needed to read it)
+  const fmt = t => new Date(t).toLocaleString("en-GB", { weekday: "long", hour: "2-digit", minute: "2-digit" });
+  function checkStatus() {
+    fetch("https://api.github.com/repos/iJacobHD/thanet-jobs-tv/actions/workflows/update-jobs.yml/runs?per_page=5")
+      .then(r => r.json()).then(d => {
+        const runs = (d.workflow_runs || []);
+        const el = document.getElementById("status");
+        const live = runs.find(r => r.status !== "completed");
+        if (live) {
+          const mins = Math.round((Date.now() - new Date(live.run_started_at || live.created_at)) / 60000);
+          el.innerHTML = `<span class="dot run"></span>Updating now – started ${fmt(live.run_started_at || live.created_at)} (${mins} min ago). New videos in about ${Math.max(5, 65 - mins)} min.`;
+          return;
+        }
+        const last = runs.find(r => r.conclusion === "success");
+        const bad = runs[0] && runs[0].conclusion && runs[0].conclusion !== "success" && runs[0].conclusion !== "skipped";
+        el.innerHTML = last
+          ? `<span class="dot ok"></span>Up to date – last updated ${fmt(last.updated_at)}.` + (bad ? " (The most recent try didn't finish – the videos above are from the last good update.)" : "")
+          : `<span class="dot bad"></span>No finished update found yet.`;
+      }).catch(() => {
+        document.getElementById("status").innerHTML = `<span class="dot"></span>Update status unavailable right now.`;
+      });
+  }
+  checkStatus();
+  setInterval(checkStatus, 60000);
+  // when an update finishes while the page is open, refresh the video info lines
+  setInterval(() => location.reload(), 15 * 60000);
 </script>
 </body>
 </html>
