@@ -451,6 +451,13 @@ def tidy_pay(pay, description=""):
     nums = re.findall(r"£\s*([\d,]+(?:\.\d+)?)", p)
     if nums:
         lo, hi = nums[0], nums[1] if len(nums) > 1 else nums[0]
+        f_lo, f_hi = float(lo.replace(",", "")), float(hi.replace(",", ""))
+        if (f_lo < 100) != (f_hi < 100):          # "£13.18 to £25,427" = hourly rate + yearly total: show the hourly rate
+            hi = lo = (lo if f_lo < 100 else hi)
+        elif f_hi < f_lo:
+            if f_lo > 1000 and f_hi > 1000:       # schools: full-time figure first, then the actual part-time pay
+                return f"{_money(hi)}/yr (part-time)"
+            lo, hi = hi, lo                       # otherwise just put the range the right way round
         rng = _money(lo) if float(lo.replace(",", "")) == float(hi.replace(",", "")) else f"{_money(lo)}–{_money(hi)}"
         if re.search(r"a day|per day|daily", p, re.I):
             return f"{rng}/day"
