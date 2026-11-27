@@ -709,9 +709,13 @@ def main():
             emp_cache = json.load(open(emp_cache_path, encoding="utf-8"))
         except (OSError, ValueError):
             emp_cache = {}
-        for emp in cfg.get("employers", []):
-            if emp.get("enabled", True):
-                run(emp["name"], lambda emp=emp: sources.employer_site(emp, places, today, emp_cache))
+        # Rotation: sites that were cut off by the time limit (or never finished) go first, so none is missed twice running
+        done = emp_cache.setdefault("_finished", {})
+        order = sorted((e for e in cfg.get("employers", []) if e.get("enabled", True)), key=lambda e: done.get(e["name"], ""))
+        for emp in order:
+            run(emp["name"], lambda emp=emp: sources.employer_site(emp, places, today, emp_cache))
+            if time.time() <= sources.DEADLINE and emp["name"] not in failed:
+                done[emp["name"]] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
         os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
         with open(emp_cache_path, "w", encoding="utf-8") as fh:
             json.dump(emp_cache, fh, indent=0)

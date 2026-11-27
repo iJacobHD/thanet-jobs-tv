@@ -264,11 +264,15 @@ def employer_site(emp, places, today, cache, log=print):
             del ecache[k]
     log(f"{emp['name']}: {len(urls)} links in sitemap, {len(job_urls)} adverts to consider")
 
-    jobs, opened, budget = [], 0, int(emp.get("max_new_pages_per_run", 400))
+    jobs, opened, budget, reused = [], 0, int(emp.get("max_new_pages_per_run", 400)), 0
     for u in job_urls:
         c = ecache.get(u)
         if c and not c.get("local"):
             continue                                   # read before, not in our area
+        if c and c.get("job") and _fresh(c, today):    # quick scan: still listed, read in the last week - reuse it
+            jobs.append(_refresh_estimate(dict(c["job"]), emp, today))
+            reused += 1
+            continue
         if not c and (opened >= budget or time.time() > DEADLINE):
             continue                                   # rest will be read on later runs
         time.sleep(delay)
@@ -330,9 +334,10 @@ def employer_site(emp, places, today, cache, log=print):
             job["closing"] = str(today + dt.timedelta(days=int(emp.get("show_days_without_closing", 8))))
             job["closing_estimated"] = True
             job["listed_only"] = True
+        ecache[u]["job"] = dict(job, description=job["description"][:4000])
         jobs.append(job)
     left = sum(1 for u in job_urls if u not in ecache)
-    log(f"{emp['name']}: opened {opened} adverts, {len(jobs)} local jobs" + (f", {left} still to read on later runs" if left else ""))
+    log(f"{emp['name']}: {reused} unchanged (quick scan), opened {opened} adverts, {len(jobs)} local jobs" + (f", {left} still to read on later runs" if left else ""))
     return jobs
 
 
@@ -430,7 +435,7 @@ def _fields(html_text):
 
 
 def _closing_in_text(text):
-    m = re.search(r"(?:Apply by|Closing date|Closing Date:|Applications close:?|Application deadline:?|Closes:?)\s*"
+    m = re.search(r"(?:Apply by|Closing [Dd]ate|Applications close|Application deadline|Closes)\s*:?\s*"
                   r"((?:[A-Za-z]{3,9},?\s+)?\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+,?\s+\d{4}|\d{1,2}/\d{1,2}/\d{4})", text)
     return _anydate(m.group(1)) if m else None
 
@@ -463,6 +468,39 @@ def _session():
     s = requests.Session()
     s.headers.update(UA)
     return s
+
+
+RECHECK_DAYS = 7   # an advert still on the list is re-opened once a week in case pay or closing date changed
+
+
+def _fresh(c, today):
+    try:
+        return (today - dt.date.fromisoformat(c.get("checked", ""))).days < RECHECK_DAYS
+    except ValueError:
+        return False
+
+
+def _refresh_estimate(job, emp, today):
+    """A reused job with no published closing date stays 'open for N more days' from today, as on first read."""
+    if job.get("listed_only"):
+        job["closing"] = str(today + dt.timedelta(days=int(emp.get("show_days_without_closing", 8))))
+    return job
+
+
+def _cached_detail(s, emp, href, delay, ecache, today):
+    """_open_detail with the quick-scan memory. Returns (detail or None, reused) - or ("later", False) past the time limit."""
+    c = ecache.get(href)
+    if c and _fresh(c, today):
+        if c.get("closed"):
+            return None, True
+        cl, pay, desc = c["d"]
+        return ((_date(cl) or _anydate(cl)) if cl else None, pay, desc), True
+    if time.time() > DEADLINE:
+        return "later", False
+    d = _open_detail(s, emp, href, delay)
+    ecache[href] = {"checked": str(today), "closed": d is None,
+                    "d": None if d is None else [str(d[0]) if d[0] else None, d[1], d[2][:4000]]}
+    return d, False
 
 
 def _open_detail(s, emp, url, delay):
@@ -517,7 +555,11 @@ def listing_pages(emp, places, today, cache, log=print):
             rows.append((href, part[:int(emp.get("row_chars", 1500))]))
         if not new:
             break
-    jobs = []
+    jobs, ecache, reused = [], cache.setdefault(emp["name"], {}), 0
+    listed = {h for h, _ in rows}
+    for k in list(ecache):                   # forget adverts that are no longer listed
+        if k not in listed:
+            del ecache[k]
     for href, row in rows:
         text = _text(row)
         if not _thanet(text, places) or re.search(r"internal only", text, re.I):
@@ -528,8 +570,9 @@ def listing_pages(emp, places, today, cache, log=print):
         pay = _pay_in_text(text)
         desc = ""
         if emp.get("open_local", True):
-            d = _open_detail(s, emp, href, delay)
-            if d is None:
+            d, was = _cached_detail(s, emp, href, delay, ecache, today)
+            reused += was
+            if d is None or d == "later":
                 continue
             closing = closing or d[0]
             pay = pay or d[1]
@@ -538,7 +581,7 @@ def listing_pages(emp, places, today, cache, log=print):
         ident = (re.findall(r"\d{3,}", href) or [re.sub(r"\W+", "", href[-40:])])[-1]
         jobs.append(_job(emp, ident, title, loc, href, today, pay=pay,
                          hours=_hours(text), closing=closing, posted=posted or "", description=desc))
-    log(f"{emp['name']}: {len(rows)} adverts listed, {len(jobs)} local jobs")
+    log(f"{emp['name']}: {len(rows)} adverts listed, {reused} unchanged (quick scan), {len(jobs)} local jobs")
     return jobs
 
 
@@ -667,14 +710,20 @@ def aspnet_grid(emp, places, today, cache, log=print):
         form["__EVENTARGUMENT"] = f"Page${page}"
         time.sleep(delay)
         t = s.post(url, data={k: html.unescape(v) for k, v in form.items()}, timeout=40).text
-    jobs, seen = [], set()
+    jobs, seen, reused = [], set(), 0
+    ecache = cache.setdefault(emp["name"], {})
+    listed = {f"{base}/VacancyInformation.aspx?VId={v}" for v, _, _ in rows}
+    for k in list(ecache):
+        if k not in listed:
+            del ecache[k]
     for vid, title, rowtext in rows:
         if vid in seen or not _thanet(rowtext, places):
             continue
         seen.add(vid)
         href = f"{base}/VacancyInformation.aspx?VId={vid}"
-        d = _open_detail(s, emp, href, delay)
-        if d is None:
+        d, was = _cached_detail(s, emp, href, delay, ecache, today)
+        reused += was
+        if d is None or d == "later":
             continue
         loc = rowtext.replace(title, "").strip()
         jobs.append(_job(emp, vid, title, loc, href, today, pay=d[1], hours=_hours(d[2][:600]),
