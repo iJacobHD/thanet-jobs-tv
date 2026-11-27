@@ -1,75 +1,112 @@
 {
  "checked": "2026-11-27",
  "manual_sources": 42,
- "auto_sources": 1,
+ "auto_sources": 28,
  "parked": 0,
  "candidates": 257,
- "still_to_check": 177,
- "time_used_pct": 30,
- "probed_tonight": 40,
- "added_tonight": 1,
+ "still_to_check": 0,
+ "time_used_pct": 74,
+ "probed_tonight": 247,
+ "added_tonight": 27,
  "by_sector": {
-  "retail": 1
+  "childcare": 1,
+  "construction": 4,
+  "education": 1,
+  "energy": 2,
+  "facilities": 2,
+  "green": 1,
+  "health-care": 2,
+  "leisure": 1,
+  "life-sciences": 1,
+  "logistics": 2,
+  "manufacturing": 1,
+  "passenger-transport": 1,
+  "public-sector": 1,
+  "retail": 1,
+  "security": 2,
+  "sport": 1,
+  "voluntary": 1,
+  "warehouse": 3
  },
  "unread_systems": [
   [
    "facebook.com",
+   7
+  ],
+  [
+   "instagram.com",
+   6
+  ],
+  [
+   "tribepad.com",
    2
   ],
   [
-   "jobs.gailsbread.co.uk",
-   1
-  ],
-  [
-   "jobs.brewdog.com",
-   1
-  ],
-  [
-   "jobs.home.bargains",
-   1
-  ],
-  [
-   "cardfactoryinvestors.com",
-   1
-  ],
-  [
-   "jobs.farmfoods.co.uk",
-   1
-  ],
-  [
-   "careers.heronfoods.com",
-   1
+   "uk.indeed.com",
+   2
   ],
   [
    "cdn1.site-media.eu",
-   1
-  ],
-  [
-   "heronfoods.com",
-   1
-  ],
-  [
-   "heronfoods.livevacancies.co.uk",
-   1
+   2
   ],
   [
    "hireful.com",
+   2
+  ],
+  [
+   "uk.linkedin.com",
+   2
+  ],
+  [
+   "ce0551li.webitrent.com",
+   2
+  ],
+  [
+   "feeds.trac.jobs",
+   2
+  ],
+  [
+   "gov.uk",
+   2
+  ],
+  [
+   "twitter.com",
+   2
+  ],
+  [
+   "careers.fccenvironment.co.uk",
+   2
+  ],
+  [
+   "crmdemo.networxrecruitment.net",
+   2
+  ],
+  [
+   "linkedin.com",
+   2
+  ],
+  [
+   "youtube.com",
+   2
+  ],
+  [
+   "careers.hallmarkcarehomes.co.uk",
    1
   ],
   [
-   "careers.tesco.com",
+   "recruitment.hallmarkcarehomes.co.uk",
    1
   ],
   [
-   "tesco.com",
+   "agincare-careers.tal.net",
    1
   ],
   [
-   "poundstretcher.co.uk",
+   "agincare-media-offload.s3.eu-west-2.amazonaws.com",
    1
   ],
   [
-   "poundstretcher.current-vacancies.com",
+   "helpinghandshomecare.co.uk",
    1
   ]
  ]

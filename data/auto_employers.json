@@ -7,5 +7,373 @@
   "auto": true,
   "sector": "retail",
   "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.kuehne-nagel.com",
+  "sitemaps": [
+   "/ca/fr/sitemap_index.xml",
+   "/belux/nl/sitemap_index.xml",
+   "/ca/en/sitemap_index.xml",
+   "/fr/fr/sitemap_index.xml"
+  ],
+  "job_path": "/ca/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Kuehne+Nagel",
+  "enabled": true,
+  "auto": true,
+  "sector": "warehouse",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.bidfood.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Bidfood",
+  "enabled": true,
+  "auto": true,
+  "sector": "warehouse",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Fowler Welch",
+  "mode": "smartrecruiters",
+  "slug": "CulinaGroup1",
+  "enabled": true,
+  "auto": true,
+  "sector": "warehouse",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Ocado",
+  "mode": "greenhouse",
+  "board": "ocadogroup",
+  "enabled": true,
+  "auto": true,
+  "sector": "logistics",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.fedex.com",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/courier\\-swing\\-drvr\\-dot/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "FedEx",
+  "enabled": true,
+  "auto": true,
+  "sector": "logistics",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.kier.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/jobs/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Kier",
+  "enabled": true,
+  "auto": true,
+  "sector": "construction",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.ses-ltd.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/jobs/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Wates",
+  "enabled": true,
+  "auto": true,
+  "sector": "construction",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.starkbuild.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Jewson",
+  "enabled": true,
+  "auto": true,
+  "sector": "construction",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.selcobw.com",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Selco",
+  "enabled": true,
+  "auto": true,
+  "sector": "construction",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.carlislesupportservices.com",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Carlisle Support Services",
+  "enabled": true,
+  "auto": true,
+  "sector": "security",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.icts.co.uk",
+  "sitemaps": [
+   "/sitemap"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "ICTS UK",
+  "enabled": true,
+  "auto": true,
+  "sector": "security",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://www.churchillservices.com",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Churchill Group",
+  "enabled": true,
+  "auto": true,
+  "sector": "facilities",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Caterlink",
+  "mode": "smartrecruiters",
+  "slug": "WSHGroup",
+  "enabled": true,
+  "auto": true,
+  "sector": "facilities",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://www.kidsplanetdaynurseries.co.uk",
+  "sitemaps": [
+   "/sitemap_index.xml"
+  ],
+  "job_path": "/careers/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Kids Planet",
+  "enabled": true,
+  "auto": true,
+  "sector": "childcare",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.tsatrust.org.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Thinking Schools Academy Trust",
+  "enabled": true,
+  "auto": true,
+  "sector": "education",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://www.kent.fire-uk.org",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Kent Fire and Rescue",
+  "enabled": true,
+  "auto": true,
+  "sector": "public-sector",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.vattenfall.com",
+  "sitemaps": [
+   "/sitemap.xml",
+   "/vacanciessitemap.xml",
+   "/contentsitemap.xml"
+  ],
+  "job_path": "/global/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Vattenfall UK",
+  "enabled": true,
+  "auto": true,
+  "sector": "energy",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Octopus Energy",
+  "mode": "lever",
+  "slug": "octoenergy",
+  "enabled": true,
+  "auto": true,
+  "sector": "energy",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Biffa",
+  "mode": "workable",
+  "slug": "biffa",
+  "enabled": true,
+  "auto": true,
+  "sector": "green",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.warburtons.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/jobs/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Warburtons",
+  "enabled": true,
+  "auto": true,
+  "sector": "manufacturing",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Eurofins UK",
+  "mode": "smartrecruiters",
+  "slug": "Eurofins",
+  "enabled": true,
+  "auto": true,
+  "sector": "life-sciences",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.better.org.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/job/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Better (GLL)",
+  "enabled": true,
+  "auto": true,
+  "sector": "sport",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.english-heritage.org.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "English Heritage",
+  "enabled": true,
+  "auto": true,
+  "sector": "leisure",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://jobs.bhf.org.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "British Heart Foundation",
+  "enabled": true,
+  "auto": true,
+  "sector": "voluntary",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://careers.firstgroup.co.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/jobs/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "First Bus",
+  "enabled": true,
+  "auto": true,
+  "sector": "passenger-transport",
+  "added": "2026-11-27"
+ },
+ {
+  "mode": "all",
+  "base": "https://apply.anchor.org.uk",
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "job_path": "/vacancies/",
+  "max_new_pages_per_run": 60,
+  "crawl_delay": 2,
+  "name": "Anchor",
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
+ },
+ {
+  "name": "Demelza",
+  "mode": "pinpoint",
+  "slug": "demelza",
+  "enabled": true,
+  "auto": true,
+  "sector": "health-care",
+  "added": "2026-11-27"
  }
 ]
