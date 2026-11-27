@@ -298,11 +298,32 @@ def classify_apprenticeship(job, cfg, today):
     return True, "ok", {"licence": needs_licence(job), "no_experience": True, "travel_minutes": mins}
 
 
+SITE = "https://ijacobhd.github.io/thanet-jobs-tv/"
+
+
+def go_id(jid):
+    """Short, stable id for the job's phone page (keeps the QR code small and quick to scan)."""
+    import hashlib
+    n = int(hashlib.sha1(jid.encode()).hexdigest()[:10], 16)
+    out = ""
+    while n:
+        n, r = divmod(n, 36)
+        out = "0123456789abcdefghijklmnopqrstuvwxyz"[r] + out
+    return out
+
+
+def qr_for(jid):
+    link = SITE + "go.html?j=" + go_id(jid)
+    m = make_qr(link, "M")
+    return {"path": to_svg_path(m, border=0), "size": len(m)}, link
+
+
 def board_entry(jid, job, cfg, flags):
-    svg = to_svg_path(make_qr(job["url"], "M"), border=0)
-    size = len(make_qr(job["url"], "M"))
+    qr, go_link = qr_for(jid)
     return {
         "id": jid,
+        "go": go_id(jid),
+        "place": job.get("location", ""),
         "title": clean_title(job["title"]),
         "employer": tidy_employer(job["employer"]),
         "town": nice_town(town_of(job["location"], cfg["allowed_places"]), cfg),
@@ -319,8 +340,33 @@ def board_entry(jid, job, cfg, flags):
         "posted": job.get("posted", ""),
         "closing_estimated": bool(job.get("closing_estimated")),
         "listed_only": bool(job.get("listed_only")),
-        "qr": {"size": size, "path": svg},
+        "qr": qr,
     }
+
+
+def write_go_index(today):
+    """docs/go.json - what each QR code's phone page shows. Kept 30 days so a code on last week's
+    USB video still works after the job drops off the board."""
+    path = os.path.join(ROOT, "docs", "go.json")
+    try:
+        idx = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError):
+        idx = {}
+    for name in ("jobs.json", "apprenticeships.json"):
+        try:
+            jobs = json.load(open(os.path.join(ROOT, "docs", name), encoding="utf-8"))["jobs"]
+        except (OSError, ValueError, KeyError):
+            continue
+        for j in jobs:
+            idx[j.get("go") or go_id(j["id"])] = {
+                "t": j["title"], "e": j["employer"], "town": j["town"], "place": j.get("place") or j["town"],
+                "pay": j["pay"], "hours": j.get("hours", ""), "closing": j["closing"],
+                "est": bool(j.get("closing_estimated") or j.get("listed_only")), "url": j["url"],
+                "app": name.startswith("app"), "seen": str(today)}
+    cutoff = str(today - dt.timedelta(days=30))
+    idx = {k: v for k, v in idx.items() if v["seen"] >= cutoff}
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(idx, fh, ensure_ascii=False, separators=(",", ":"))
 
 
 def write_apprenticeships(apps, failed, used, cfg, today):
@@ -676,6 +722,7 @@ def main():
         json.dump(out, fh, ensure_ascii=False, indent=1)
     if reed_jobs is not None:
         write_apprenticeships(apprentices, failed, used, cfg, today)
+    write_go_index(today)
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
     cache = {k: v for k, v in cache.items() if k in ids}          # forget adverts that have gone
     if dump is None:
