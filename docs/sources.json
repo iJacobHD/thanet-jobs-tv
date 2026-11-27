@@ -1,12 +1,76 @@
 {
  "checked": "2026-11-27",
  "manual_sources": 42,
- "auto_sources": 0,
+ "auto_sources": 1,
  "parked": 0,
  "candidates": 257,
- "still_to_check": 217,
- "time_used_pct": 88,
+ "still_to_check": 177,
+ "time_used_pct": 30,
  "probed_tonight": 40,
- "added_tonight": 0,
- "by_sector": {}
+ "added_tonight": 1,
+ "by_sector": {
+  "retail": 1
+ },
+ "unread_systems": [
+  [
+   "facebook.com",
+   2
+  ],
+  [
+   "jobs.gailsbread.co.uk",
+   1
+  ],
+  [
+   "jobs.brewdog.com",
+   1
+  ],
+  [
+   "jobs.home.bargains",
+   1
+  ],
+  [
+   "cardfactoryinvestors.com",
+   1
+  ],
+  [
+   "jobs.farmfoods.co.uk",
+   1
+  ],
+  [
+   "careers.heronfoods.com",
+   1
+  ],
+  [
+   "cdn1.site-media.eu",
+   1
+  ],
+  [
+   "heronfoods.com",
+   1
+  ],
+  [
+   "heronfoods.livevacancies.co.uk",
+   1
+  ],
+  [
+   "hireful.com",
+   1
+  ],
+  [
+   "careers.tesco.com",
+   1
+  ],
+  [
+   "tesco.com",
+   1
+  ],
+  [
+   "poundstretcher.co.uk",
+   1
+  ],
+  [
+   "poundstretcher.current-vacancies.com",
+   1
+  ]
+ ]
 }

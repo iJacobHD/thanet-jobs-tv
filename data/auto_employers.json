@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "name": "WHSmith",
+  "mode": "teamtailor",
+  "slug": "whsmith",
+  "enabled": true,
+  "auto": true,
+  "sector": "retail",
+  "added": "2026-11-27"
+ }
+]

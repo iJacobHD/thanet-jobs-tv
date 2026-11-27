@@ -278,5 +278,383 @@
   "sector": "hospitality",
   "careers": "https://bills-website.co.uk/careers/",
   "next_check": "2026-11-27"
+ },
+ "Park Holidays UK": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.parkholidays.com/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Parkdean Resorts": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.parkdeanresorts.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Dreamland Margate": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.dreamland.co.uk/jobs",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Hilton": {
+  "status": "can't read: oracle",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://jobs.hilton.com/",
+  "next_check": "2027-02-25",
+  "seen": [
+   "efet.fa.us2.oraclecloud.com",
+   "facebook.com",
+   "instagram.com",
+   "jobpixel.com",
+   "jobs-editor.hilton.com",
+   "m.facebook.com",
+   "static.xx.fbcdn.net",
+   "www.facebook.com",
+   "www.instagram.com"
+  ]
+ },
+ "Best Western": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.bestwestern.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Gail's Bakery": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://gailsbread.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "jobs.gailsbread.co.uk"
+  ]
+ },
+ "Starbucks franchise (Euro Garages / EG)": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.eg.group/careers/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Tim Hortons UK": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://timhortons.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Bella Italia / Casual Dining Group": {
+  "status": "error: ConnectTimeout",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.casualdininggroup.co.uk/careers/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Brewdog": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "hospitality",
+  "careers": "https://www.brewdog.com/uk/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "jobs.brewdog.com"
+  ]
+ },
+ "Poundland": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.poundland.co.uk/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Home Bargains": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.homebargains.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "facebook.com",
+   "jobs.home.bargains"
+  ]
+ },
+ "Matalan": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.matalan.co.uk/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "New Look": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.newlook.com/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Frasers Group (Sports Direct)": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.frasers.group/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Card Factory": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.cardfactory.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "cardfactoryinvestors.com"
+  ]
+ },
+ "The Works": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.theworks.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "WHSmith": {
+  "status": "ok: teamtailor (0 local now) - added",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.whsmithcareers.co.uk/",
+  "next_check": "2026-12-27",
+  "seen": [
+   "whsmith.teamtailor.com",
+   "whsmithcareers.co.uk"
+  ]
+ },
+ "Savers": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.savers.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Clarks": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.clarks.com/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Lush": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.lush.com/uk/en/jobs",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Vision Express": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.visionexpress.com/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Timpson": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.timpson-group.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Robert Dyas": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.robertdyas.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Shoe Zone": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.shoezone.com/Careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Peacocks": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.peacocks.co.uk/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Farmfoods": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.farmfoods.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "jobs.farmfoods.co.uk"
+  ]
+ },
+ "Heron Foods": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.heronfoods.com/careers/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "careers.heronfoods.com",
+   "cdn1.site-media.eu",
+   "facebook.com",
+   "heronfoods.com",
+   "heronfoods.livevacancies.co.uk",
+   "hireful.com"
+  ]
+ },
+ "One Stop": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.onestop.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": [
+   "careers.tesco.com",
+   "tesco.com"
+  ]
+ },
+ "Jollyes": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.jollyes.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Poundstretcher": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.poundstretcher.co.uk/careers",
+  "next_check": "2026-12-11",
+  "seen": [
+   "poundstretcher.co.uk",
+   "poundstretcher.current-vacancies.com"
+  ]
+ },
+ "Argos": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.argos-careers.co.uk/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "Waterstones": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.waterstones.com/careers",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "Pandora UK": {
+  "status": "can't read: successfactors",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.pandoragroup.com/",
+  "next_check": "2027-02-25",
+  "seen": [
+   "cdn.sites.eu1.paradox.ai",
+   "d1wao037kgukun.cloudfront.net",
+   "sapcareerssite.pandoragroup.com",
+   "talenthub.io"
+  ]
+ },
+ "Claire's": {
+  "status": "can't read: workday",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://careers.claires.com/",
+  "next_check": "2027-02-25",
+  "seen": []
+ },
+ "Wilko (The Range)": {
+  "status": "no readable job feed",
+  "checked": "2026-11-27",
+  "sector": "retail",
+  "careers": "https://www.therange.co.uk/careers/",
+  "next_check": "2026-12-11",
+  "seen": []
+ },
+ "DPD UK": {
+  "status": "error: ConnectionError",
+  "checked": "2026-11-27",
+  "sector": "warehouse",
+  "careers": "https://careers.dpd.co.uk/",
+  "next_check": "2026-12-04",
+  "seen": []
+ },
+ "DHL": {
+  "status": "can't read: avature",
+  "checked": "2026-11-27",
+  "sector": "warehouse",
+  "careers": "https://careers.dhl.com/",
+  "next_check": "2027-02-25",
+  "seen": [
+   "assets.phenompeople.com",
+   "cdn-prod-static.phenompeople.com",
+   "cdn.phenompeople.com",
+   "dhl.com",
+   "dpdhl-sbeditor.phenompro.com",
+   "pp-cdn.phenompeople.com",
+   "secure.jobappnetwork.com"
+  ]
+ },
+ "GXO": {
+  "status": "can't read: successfactors",
+  "checked": "2026-11-27",
+  "sector": "warehouse",
+  "careers": "https://gxo.com/careers/",
+  "next_check": "2027-02-25",
+  "seen": [
+   "career41.sapsf.com",
+   "hcm41.sapsf.com",
+   "jobs.gxo.com"
+  ]
+ },
+ "Wincanton": {
+  "status": "can't read: successfactors",
+  "checked": "2026-11-27",
+  "sector": "warehouse",
+  "careers": "https://www.wincanton.co.uk/careers/",
+  "next_check": "2027-02-25",
+  "seen": [
+   "career41.sapsf.com",
+   "hcm41.sapsf.com",
+   "jobs.gxo.com"
+  ]
  }
 }
