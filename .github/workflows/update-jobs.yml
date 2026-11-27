@@ -6,7 +6,12 @@ on:
   schedule:
     - cron: "17 5 * * *"     # main morning run
     - cron: "43 7 * * *"     # backup: only does anything if GitHub skipped the 05:17 run (it sometimes does)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      only_if_needed:
+        description: "Skip if today's update already ran (used by the morning scheduled task)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,16 +25,19 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUNBUFFERED: "1"      # show progress in the log while it runs
-    timeout-minutes: 110
+    timeout-minutes: 140
     steps:
       - uses: actions/checkout@v4
 
+      # GitHub's timer can fire hours late. Any timed run - and any run started by the morning
+      # scheduled task - does nothing if today's update has already happened (protects the Reed limit).
+      # Pressing "Run workflow" by hand on the GitHub page always runs.
       - name: Already updated today?
-        if: github.event_name == 'schedule' && github.event.schedule == '43 7 * * *'
+        if: github.event_name == 'schedule' || inputs.only_if_needed == true
         run: |
           made=$(python3 -c "import json;print(json.load(open('docs/jobs.json'))['generated'][:10])")
           if [ "$made" = "$(date -u +%F)" ]; then
-            echo "The 05:17 run already updated today - nothing to do."
+            echo "Today's update has already run - nothing to do."
             echo "SKIP=1" >> "$GITHUB_ENV"
           fi
 
@@ -68,6 +76,24 @@ jobs:
             echo "No changes"
           else
             git commit -m "Update jobs $(date -u +'%Y-%m-%d %H:%M')"
+            git pull --rebase -X theirs || true
+            git push
+          fi
+
+      # Discovery also runs straight after the update, so new employers keep being found even when
+      # GitHub's 01:31 timer doesn't fire. It skips if it already ran today and is capped at 20 minutes.
+      - name: Discover more employers
+        if: env.SKIP != '1'
+        continue-on-error: true
+        env:
+          DISCOVERY_MINUTES: "20"
+        run: |
+          done=$(python3 -c "import json;print(json.load(open('docs/sources.json')).get('checked',''))" 2>/dev/null || true)
+          if [ "$done" = "$(date -u +%F)" ]; then echo "Discovery already ran today"; exit 0; fi
+          python scripts/discover.py
+          git add -A data/discovery.json data/auto_employers.json docs/sources.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Discovery $(date -u +'%Y-%m-%d')"
             git pull --rebase -X theirs || true
             git push
           fi

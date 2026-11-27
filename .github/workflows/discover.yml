@@ -27,7 +27,10 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Test candidate employers
-        run: python scripts/discover.py
+        run: |
+          done=$(python3 -c "import json;print(json.load(open('docs/sources.json')).get('checked',''))" 2>/dev/null || true)
+          if [ "$done" = "$(date -u +%F)" ] && [ "${{ github.event_name }}" = "schedule" ]; then echo "Already ran today"; exit 0; fi
+          python scripts/discover.py
       - name: Save
         run: |
           git config user.name  "jobs-bot"
