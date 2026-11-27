@@ -93,7 +93,7 @@ def card_needed(text):
 SENIOR_TITLES = [
     r"\bmanager\b", r"\bsupervisor\b", r"\bteam leader\b", r"\bsenior\b", r"\blead\b", r"\bhead of\b",
     r"\bdeputy\b", r"\bdirector\b", r"\bconsultant\b", r"\bteacher\b", r"\blecturer\b", r"\bnurse\b",
-    r"\bmidwife\b", r"\bengineer\b", r"\bsurgeon\b",
+    r"\bmidwife\b", r"\bengineer\b", r"\bsurgeon\b", r"\bparamedic\b", r"\b(?:anp|acp)\b", r"\bphysio",
     r"\b(?:gp|doctor|psychiatrist|dermatologist|physician|pharmacist|gastroenterologist)\b",
     r"\bsolicitor\b", r"\btherapist\b", r"\banalyst\b", r"\baccountant\b", r"\bcontroller\b",
     r"\bspecialist\b", r"\bpractitioner\b", r"\bco-?ordinator\b", r"\bofficer\b",

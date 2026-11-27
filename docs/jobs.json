@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-27T16:15:03Z",
  "source": "Reed, Teaching Vacancies, NHS Jobs, Find an apprenticeship, Morrisons, Asda, Tesco, Lidl, M&S, Co-op, Waitrose / John Lewis, Boots, Sainsbury's, Primark, Next, McDonald's, Greggs, TK Maxx / Homesense, B&M, Iceland / The Food Warehouse, The Range, Halfords, Wickes / Toolstation / Travis Perkins, Currys, JD Sports, Travelodge, Smyths Toys, Hollywood Bowl, Hobbycraft, Hotel Chocolat, Wetherspoon, Harvester / Toby Carvery / Miller & Carter (M&B), Premier Inn / Beefeater / Brewers Fayre (Whitbread), 2gether Support Solutions (East Kent hospitals), KFC, Royal Mail, Compass Group (Chartwells, Eurest, Medirest), Care UK, OCS, Specsavers, PizzaExpress, Shepherd Neame (pubs & hotels), Barchester care homes, Zizzi, East Kent College Group, Costa Coffee (yesterday's). Teaching Vacancies, NHS Jobs and Find an apprenticeship data under the Open Government Licence v3.0",
- "count": 183,
+ "count": 181,
  "area": "Within 90 mins of Thanet by public transport",
  "jobs": [
   {
@@ -255,31 +255,6 @@
    }
   },
   {
-   "id": "nhs:5634184",
-   "go": "5qfn78g",
-   "place": "Dover, CT16 1RW",
-   "title": "ACP Bank Workers",
-   "employer": "Channel Health Alliance",
-   "town": "Dover",
-   "pay": "See advert",
-   "hours": "",
-   "contract": "Bank",
-   "closing": "2026-11-30",
-   "licence": false,
-   "card": "",
-   "travel_minutes": 45,
-   "no_experience": false,
-   "url": "https://beta.jobs.nhs.uk/candidate/jobadvert/B0253-26-0008",
-   "source": "NHS Jobs",
-   "posted": "2026-10-01",
-   "closing_estimated": false,
-   "listed_only": false,
-   "qr": {
-    "path": "M0 0h7v1h-7zM11 0h1v1h-1zM13 0h1v1h-1zM16 0h5v1h-5zM23 0h1v1h-1zM26 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM13 1h5v1h-5zM22 1h1v1h-1zM26 1h1v1h-1zM32 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h4v1h-4zM15 2h1v1h-1zM17 2h5v1h-5zM23 2h2v1h-2zM26 2h1v1h-1zM28 2h3v1h-3zM32 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM19 3h2v1h-2zM23 3h2v1h-2zM26 3h1v1h-1zM28 3h3v1h-3zM32 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM13 4h1v1h-1zM15 4h1v1h-1zM18 4h1v1h-1zM21 4h3v1h-3zM26 4h1v1h-1zM28 4h3v1h-3zM32 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h3v1h-3zM13 5h5v1h-5zM20 5h3v1h-3zM24 5h1v1h-1zM26 5h1v1h-1zM32 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h7v1h-7zM8 7h3v1h-3zM12 7h1v1h-1zM14 7h2v1h-2zM21 7h3v1h-3zM0 8h1v1h-1zM2 8h5v1h-5zM9 8h5v1h-5zM15 8h1v1h-1zM17 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h5v1h-5zM0 9h5v1h-5zM7 9h1v1h-1zM9 9h4v1h-4zM16 9h1v1h-1zM18 9h2v1h-2zM21 9h1v1h-1zM23 9h1v1h-1zM26 9h2v1h-2zM29 9h2v1h-2zM32 9h1v1h-1zM2 10h2v1h-2zM5 10h3v1h-3zM9 10h2v1h-2zM12 10h1v1h-1zM15 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h3v1h-3zM28 10h1v1h-1zM30 10h1v1h-1zM0 11h5v1h-5zM8 11h2v1h-2zM11 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM21 11h2v1h-2zM25 11h2v1h-2zM28 11h5v1h-5zM4 12h4v1h-4zM9 12h3v1h-3zM18 12h1v1h-1zM24 12h2v1h-2zM28 12h2v1h-2zM31 12h2v1h-2zM3 13h3v1h-3zM9 13h3v1h-3zM13 13h5v1h-5zM20 13h1v1h-1zM22 13h2v1h-2zM26 13h2v1h-2zM29 13h1v1h-1zM31 13h2v1h-2zM3 14h1v1h-1zM6 14h2v1h-2zM11 14h4v1h-4zM18 14h2v1h-2zM22 14h1v1h-1zM25 14h3v1h-3zM31 14h1v1h-1zM0 15h1v1h-1zM2 15h4v1h-4zM7 15h2v1h-2zM10 15h2v1h-2zM13 15h2v1h-2zM16 15h1v1h-1zM19 15h3v1h-3zM24 15h3v1h-3zM28 15h3v1h-3zM1 16h2v1h-2zM6 16h1v1h-1zM10 16h2v1h-2zM13 16h1v1h-1zM17 16h1v1h-1zM19 16h2v1h-2zM22 16h1v1h-1zM25 16h1v1h-1zM27 16h2v1h-2zM32 16h1v1h-1zM0 17h1v1h-1zM2 17h4v1h-4zM7 17h2v1h-2zM10 17h5v1h-5zM17 17h1v1h-1zM19 17h2v1h-2zM22 17h2v1h-2zM26 17h2v1h-2zM29 17h2v1h-2zM32 17h1v1h-1zM3 18h1v1h-1zM5 18h5v1h-5zM11 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM21 18h1v1h-1zM26 18h3v1h-3zM30 18h2v1h-2zM0 19h2v1h-2zM3 19h3v1h-3zM9 19h1v1h-1zM17 19h3v1h-3zM21 19h1v1h-1zM23 19h2v1h-2zM26 19h7v1h-7zM1 20h6v1h-6zM8 20h1v1h-1zM11 20h1v1h-1zM15 20h2v1h-2zM20 20h1v1h-1zM22 20h1v1h-1zM27 20h3v1h-3zM31 20h1v1h-1zM0 21h4v1h-4zM5 21h1v1h-1zM7 21h2v1h-2zM13 21h1v1h-1zM15 21h1v1h-1zM18 21h1v1h-1zM21 21h1v1h-1zM23 21h1v1h-1zM25 21h2v1h-2zM32 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM5 22h7v1h-7zM13 22h1v1h-1zM15 22h2v1h-2zM20 22h3v1h-3zM25 22h1v1h-1zM30 22h2v1h-2zM0 23h1v1h-1zM3 23h3v1h-3zM9 23h2v1h-2zM15 23h1v1h-1zM18 23h1v1h-1zM21 23h1v1h-1zM25 23h1v1h-1zM28 23h3v1h-3zM0 24h1v1h-1zM2 24h1v1h-1zM6 24h2v1h-2zM11 24h1v1h-1zM14 24h2v1h-2zM17 24h1v1h-1zM22 24h1v1h-1zM24 24h6v1h-6zM8 25h4v1h-4zM16 25h1v1h-1zM18 25h4v1h-4zM23 25h2v1h-2zM28 25h1v1h-1zM30 25h1v1h-1zM32 25h1v1h-1zM0 26h7v1h-7zM10 26h1v1h-1zM12 26h5v1h-5zM18 26h1v1h-1zM20 26h1v1h-1zM22 26h3v1h-3zM26 26h1v1h-1zM28 26h1v1h-1zM30 26h2v1h-2zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM12 27h5v1h-5zM19 27h6v1h-6zM28 27h5v1h-5zM0 28h1v1h-1zM2 28h3v1h-3zM6 28h1v1h-1zM8 28h4v1h-4zM15 28h1v1h-1zM18 28h2v1h-2zM21 28h1v1h-1zM24 28h6v1h-6zM31 28h2v1h-2zM0 29h1v1h-1zM2 29h3v1h-3zM6 29h1v1h-1zM8 29h3v1h-3zM12 29h1v1h-1zM15 29h3v1h-3zM20 29h1v1h-1zM23 29h3v1h-3zM28 29h5v1h-5zM0 30h1v1h-1zM2 30h3v1h-3zM6 30h1v1h-1zM8 30h2v1h-2zM11 30h3v1h-3zM18 30h2v1h-2zM24 30h1v1h-1zM26 30h2v1h-2zM30 30h1v1h-1zM0 31h1v1h-1zM6 31h1v1h-1zM9 31h1v1h-1zM11 31h2v1h-2zM16 31h1v1h-1zM18 31h4v1h-4zM23 31h1v1h-1zM25 31h2v1h-2zM28 31h3v1h-3zM0 32h7v1h-7zM8 32h5v1h-5zM14 32h1v1h-1zM16 32h2v1h-2zM19 32h1v1h-1zM22 32h1v1h-1zM24 32h2v1h-2zM27 32h1v1h-1zM31 32h1v1h-1z",
-    "size": 33
-   }
-  },
-  {
    "id": "emp:wetherspoon:areerscomvacancies2899barstaffhtml",
    "go": "4zmc8rs7",
    "place": "Sittingbourne, ME10 1DR",
@@ -451,31 +426,6 @@
    "listed_only": false,
    "qr": {
     "path": "M0 0h7v1h-7zM9 0h2v1h-2zM16 0h1v1h-1zM18 0h4v1h-4zM23 0h1v1h-1zM26 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM9 1h1v1h-1zM15 1h2v1h-2zM18 1h1v1h-1zM21 1h2v1h-2zM26 1h1v1h-1zM32 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h2v1h-2zM11 2h2v1h-2zM14 2h2v1h-2zM19 2h6v1h-6zM26 2h1v1h-1zM28 2h3v1h-3zM32 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM18 3h2v1h-2zM22 3h2v1h-2zM26 3h1v1h-1zM28 3h3v1h-3zM32 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h1v1h-1zM10 4h7v1h-7zM20 4h4v1h-4zM26 4h1v1h-1zM28 4h3v1h-3zM32 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM12 5h3v1h-3zM17 5h1v1h-1zM19 5h1v1h-1zM21 5h2v1h-2zM26 5h1v1h-1zM32 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h7v1h-7zM8 7h3v1h-3zM12 7h1v1h-1zM14 7h1v1h-1zM16 7h1v1h-1zM19 7h5v1h-5zM0 8h1v1h-1zM2 8h5v1h-5zM12 8h2v1h-2zM17 8h1v1h-1zM19 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h5v1h-5zM1 9h1v1h-1zM3 9h1v1h-1zM5 9h1v1h-1zM7 9h2v1h-2zM10 9h1v1h-1zM12 9h2v1h-2zM16 9h4v1h-4zM23 9h1v1h-1zM26 9h2v1h-2zM29 9h2v1h-2zM32 9h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM8 10h2v1h-2zM11 10h5v1h-5zM17 10h1v1h-1zM20 10h2v1h-2zM24 10h3v1h-3zM28 10h1v1h-1zM30 10h1v1h-1zM0 11h3v1h-3zM10 11h4v1h-4zM16 11h4v1h-4zM21 11h2v1h-2zM25 11h2v1h-2zM28 11h5v1h-5zM0 12h2v1h-2zM6 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM14 12h1v1h-1zM16 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM24 12h2v1h-2zM28 12h2v1h-2zM31 12h2v1h-2zM1 13h3v1h-3zM5 13h1v1h-1zM7 13h2v1h-2zM10 13h1v1h-1zM15 13h1v1h-1zM17 13h2v1h-2zM23 13h1v1h-1zM26 13h2v1h-2zM29 13h1v1h-1zM31 13h2v1h-2zM0 14h1v1h-1zM2 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM10 14h1v1h-1zM12 14h1v1h-1zM15 14h2v1h-2zM18 14h1v1h-1zM20 14h1v1h-1zM22 14h1v1h-1zM24 14h4v1h-4zM31 14h1v1h-1zM1 15h1v1h-1zM3 15h1v1h-1zM10 15h1v1h-1zM13 15h3v1h-3zM21 15h1v1h-1zM23 15h4v1h-4zM28 15h3v1h-3zM0 16h1v1h-1zM3 16h5v1h-5zM9 16h3v1h-3zM13 16h3v1h-3zM17 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM25 16h1v1h-1zM27 16h2v1h-2zM32 16h1v1h-1zM0 17h1v1h-1zM2 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM10 17h1v1h-1zM12 17h1v1h-1zM19 17h2v1h-2zM22 17h2v1h-2zM26 17h2v1h-2zM29 17h2v1h-2zM32 17h1v1h-1zM0 18h1v1h-1zM2 18h1v1h-1zM4 18h3v1h-3zM12 18h4v1h-4zM18 18h1v1h-1zM22 18h1v1h-1zM26 18h3v1h-3zM30 18h2v1h-2zM0 19h3v1h-3zM7 19h2v1h-2zM11 19h1v1h-1zM13 19h2v1h-2zM19 19h1v1h-1zM21 19h4v1h-4zM26 19h7v1h-7zM0 20h2v1h-2zM3 20h1v1h-1zM6 20h1v1h-1zM8 20h1v1h-1zM10 20h2v1h-2zM13 20h1v1h-1zM15 20h1v1h-1zM18 20h1v1h-1zM27 20h3v1h-3zM31 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM4 21h1v1h-1zM7 21h1v1h-1zM13 21h4v1h-4zM20 21h4v1h-4zM25 21h2v1h-2zM32 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM6 22h4v1h-4zM12 22h2v1h-2zM19 22h1v1h-1zM21 22h2v1h-2zM25 22h1v1h-1zM30 22h2v1h-2zM0 23h1v1h-1zM3 23h1v1h-1zM5 23h1v1h-1zM7 23h5v1h-5zM13 23h1v1h-1zM16 23h1v1h-1zM18 23h4v1h-4zM24 23h2v1h-2zM28 23h4v1h-4zM0 24h1v1h-1zM3 24h2v1h-2zM6 24h4v1h-4zM11 24h2v1h-2zM14 24h1v1h-1zM17 24h1v1h-1zM19 24h1v1h-1zM22 24h1v1h-1zM24 24h6v1h-6zM8 25h1v1h-1zM11 25h2v1h-2zM14 25h1v1h-1zM16 25h5v1h-5zM23 25h2v1h-2zM28 25h1v1h-1zM30 25h1v1h-1zM32 25h1v1h-1zM0 26h7v1h-7zM10 26h2v1h-2zM13 26h1v1h-1zM15 26h3v1h-3zM20 26h2v1h-2zM23 26h2v1h-2zM26 26h1v1h-1zM28 26h1v1h-1zM30 26h2v1h-2zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h3v1h-3zM12 27h2v1h-2zM15 27h10v1h-10zM28 27h5v1h-5zM0 28h1v1h-1zM2 28h3v1h-3zM6 28h1v1h-1zM8 28h2v1h-2zM12 28h1v1h-1zM15 28h2v1h-2zM19 28h1v1h-1zM24 28h6v1h-6zM31 28h2v1h-2zM0 29h1v1h-1zM2 29h3v1h-3zM6 29h1v1h-1zM8 29h1v1h-1zM13 29h1v1h-1zM15 29h1v1h-1zM17 29h2v1h-2zM22 29h4v1h-4zM28 29h5v1h-5zM0 30h1v1h-1zM2 30h3v1h-3zM6 30h1v1h-1zM8 30h1v1h-1zM10 30h1v1h-1zM13 30h4v1h-4zM18 30h1v1h-1zM24 30h1v1h-1zM26 30h2v1h-2zM30 30h1v1h-1zM0 31h1v1h-1zM6 31h1v1h-1zM10 31h1v1h-1zM14 31h2v1h-2zM18 31h1v1h-1zM21 31h1v1h-1zM23 31h1v1h-1zM25 31h2v1h-2zM28 31h3v1h-3zM0 32h7v1h-7zM8 32h6v1h-6zM15 32h3v1h-3zM19 32h1v1h-1zM22 32h1v1h-1zM24 32h2v1h-2zM27 32h1v1h-1zM31 32h1v1h-1z",
-    "size": 33
-   }
-  },
-  {
-   "id": "nhs:5715634",
-   "go": "2epmyc5y",
-   "place": "Deal, CT14 9LF",
-   "title": "PCN - Paramedic/ANP/ACP",
-   "employer": "Deal & Sandwich Primary Care Network",
-   "town": "Deal",
-   "pay": "See advert",
-   "hours": "",
-   "contract": "Permanent",
-   "closing": "2026-11-30",
-   "licence": false,
-   "card": "",
-   "travel_minutes": 35,
-   "no_experience": false,
-   "url": "https://beta.jobs.nhs.uk/candidate/jobadvert/A1480-26-0005",
-   "source": "NHS Jobs",
-   "posted": "2026-11-09",
-   "closing_estimated": false,
-   "listed_only": false,
-   "qr": {
-    "path": "M0 0h7v1h-7zM10 0h1v1h-1zM16 0h1v1h-1zM18 0h3v1h-3zM23 0h1v1h-1zM26 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM9 1h1v1h-1zM15 1h2v1h-2zM18 1h1v1h-1zM21 1h2v1h-2zM26 1h1v1h-1zM32 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h5v1h-5zM14 2h2v1h-2zM19 2h6v1h-6zM26 2h1v1h-1zM28 2h3v1h-3zM32 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h3v1h-3zM18 3h2v1h-2zM22 3h3v1h-3zM26 3h1v1h-1zM28 3h3v1h-3zM32 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM13 4h4v1h-4zM20 4h4v1h-4zM26 4h1v1h-1zM28 4h3v1h-3zM32 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM11 5h4v1h-4zM17 5h1v1h-1zM19 5h1v1h-1zM21 5h2v1h-2zM24 5h1v1h-1zM26 5h1v1h-1zM32 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h7v1h-7zM8 7h3v1h-3zM14 7h1v1h-1zM16 7h1v1h-1zM19 7h4v1h-4zM24 7h1v1h-1zM0 8h1v1h-1zM2 8h5v1h-5zM11 8h3v1h-3zM17 8h1v1h-1zM19 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h5v1h-5zM0 9h2v1h-2zM3 9h1v1h-1zM5 9h1v1h-1zM7 9h4v1h-4zM12 9h2v1h-2zM16 9h4v1h-4zM23 9h1v1h-1zM26 9h2v1h-2zM29 9h2v1h-2zM32 9h1v1h-1zM0 10h2v1h-2zM3 10h2v1h-2zM6 10h1v1h-1zM8 10h2v1h-2zM11 10h5v1h-5zM17 10h1v1h-1zM20 10h2v1h-2zM24 10h3v1h-3zM28 10h1v1h-1zM30 10h1v1h-1zM0 11h3v1h-3zM11 11h3v1h-3zM16 11h4v1h-4zM21 11h2v1h-2zM25 11h2v1h-2zM28 11h5v1h-5zM4 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM11 12h2v1h-2zM14 12h1v1h-1zM16 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM25 12h1v1h-1zM28 12h2v1h-2zM31 12h2v1h-2zM1 13h1v1h-1zM10 13h2v1h-2zM15 13h1v1h-1zM17 13h2v1h-2zM23 13h1v1h-1zM26 13h2v1h-2zM29 13h1v1h-1zM31 13h2v1h-2zM0 14h1v1h-1zM3 14h2v1h-2zM6 14h2v1h-2zM10 14h3v1h-3zM15 14h2v1h-2zM18 14h1v1h-1zM20 14h1v1h-1zM22 14h1v1h-1zM25 14h3v1h-3zM31 14h1v1h-1zM1 15h3v1h-3zM7 15h1v1h-1zM10 15h2v1h-2zM13 15h3v1h-3zM21 15h1v1h-1zM25 15h2v1h-2zM28 15h3v1h-3zM0 16h1v1h-1zM2 16h6v1h-6zM9 16h2v1h-2zM13 16h3v1h-3zM17 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM25 16h1v1h-1zM27 16h2v1h-2zM32 16h1v1h-1zM0 17h1v1h-1zM2 17h1v1h-1zM8 17h3v1h-3zM12 17h2v1h-2zM19 17h5v1h-5zM26 17h2v1h-2zM29 17h2v1h-2zM32 17h1v1h-1zM2 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM9 18h2v1h-2zM12 18h4v1h-4zM18 18h1v1h-1zM26 18h3v1h-3zM30 18h2v1h-2zM2 19h1v1h-1zM4 19h2v1h-2zM7 19h3v1h-3zM11 19h1v1h-1zM14 19h1v1h-1zM19 19h1v1h-1zM21 19h4v1h-4zM26 19h7v1h-7zM0 20h1v1h-1zM3 20h1v1h-1zM6 20h1v1h-1zM8 20h2v1h-2zM11 20h1v1h-1zM13 20h3v1h-3zM18 20h1v1h-1zM24 20h1v1h-1zM27 20h3v1h-3zM31 20h1v1h-1zM0 21h1v1h-1zM4 21h2v1h-2zM10 21h2v1h-2zM13 21h4v1h-4zM20 21h4v1h-4zM25 21h2v1h-2zM32 21h1v1h-1zM0 22h1v1h-1zM2 22h2v1h-2zM6 22h1v1h-1zM8 22h2v1h-2zM13 22h1v1h-1zM19 22h1v1h-1zM21 22h2v1h-2zM24 22h2v1h-2zM30 22h2v1h-2zM0 23h1v1h-1zM5 23h1v1h-1zM7 23h5v1h-5zM13 23h1v1h-1zM16 23h1v1h-1zM18 23h4v1h-4zM23 23h3v1h-3zM28 23h4v1h-4zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM8 24h2v1h-2zM12 24h1v1h-1zM14 24h1v1h-1zM17 24h1v1h-1zM19 24h1v1h-1zM22 24h1v1h-1zM24 24h6v1h-6zM8 25h2v1h-2zM11 25h2v1h-2zM14 25h1v1h-1zM16 25h6v1h-6zM23 25h2v1h-2zM28 25h1v1h-1zM30 25h1v1h-1zM32 25h1v1h-1zM0 26h7v1h-7zM9 26h1v1h-1zM11 26h1v1h-1zM14 26h4v1h-4zM20 26h5v1h-5zM26 26h1v1h-1zM28 26h1v1h-1zM30 26h2v1h-2zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM12 27h1v1h-1zM15 27h10v1h-10zM28 27h5v1h-5zM0 28h1v1h-1zM2 28h3v1h-3zM6 28h1v1h-1zM8 28h2v1h-2zM12 28h1v1h-1zM14 28h3v1h-3zM19 28h1v1h-1zM22 28h1v1h-1zM24 28h6v1h-6zM31 28h2v1h-2zM0 29h1v1h-1zM2 29h3v1h-3zM6 29h1v1h-1zM8 29h1v1h-1zM12 29h4v1h-4zM17 29h2v1h-2zM22 29h4v1h-4zM28 29h5v1h-5zM0 30h1v1h-1zM2 30h3v1h-3zM6 30h1v1h-1zM8 30h1v1h-1zM10 30h7v1h-7zM18 30h1v1h-1zM20 30h1v1h-1zM24 30h1v1h-1zM26 30h2v1h-2zM30 30h1v1h-1zM0 31h1v1h-1zM6 31h1v1h-1zM10 31h1v1h-1zM12 31h1v1h-1zM14 31h2v1h-2zM18 31h1v1h-1zM21 31h1v1h-1zM23 31h1v1h-1zM25 31h2v1h-2zM28 31h3v1h-3zM0 32h7v1h-7zM8 32h6v1h-6zM15 32h3v1h-3zM19 32h1v1h-1zM22 32h1v1h-1zM24 32h2v1h-2zM27 32h1v1h-1zM31 32h1v1h-1z",
     "size": 33
    }
   },

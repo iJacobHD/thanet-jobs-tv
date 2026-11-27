@@ -127,6 +127,14 @@
   .howto li{counter-increment:h;display:flex;gap:12px;margin:0 0 14px;font-size:16px}
   .howto li:before{content:counter(h);flex:0 0 30px;height:30px;border-radius:50%;background:#eef3f9;color:var(--navy);font-weight:900;display:flex;align-items:center;justify-content:center}
   .howto b{display:block;font-size:17px}
+  .searchbar input{flex:1;min-width:0;font:inherit;padding:13px 14px;border:2px solid var(--navy);border-radius:12px}
+  .searchbar input:focus,#fq:focus{outline:3px solid var(--yellow);outline-offset:1px}
+  .filters{display:grid;grid-template-columns:1.6fr 1.3fr 1.1fr 1.1fr;gap:14px 16px;align-items:end}
+  .filters .lvl{grid-column:1/-1;display:flex;align-items:center;gap:12px}
+  .filters .lvl .chips{margin:0!important}
+  .filters select,.filters input{height:46px}
+  @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.filters{grid-template-columns:1fr}.filters .lvl{flex-wrap:wrap}}
   .toc{font-size:15px}
   .toc b{display:block;margin-bottom:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-size:13px}
   .toc a{display:block;padding:7px 10px;border-left:3px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600}
@@ -216,6 +224,10 @@
     <div class="pagehead"><div><h1>${title}</h1>${sub ? `<p>${sub}</p>` : ""}</div></div>`;
 
   // ---------------------------------------------------------------- views
+  function bindHomeSearch() {
+    const f = document.getElementById("homesearch"); if (!f) return;
+    f.onsubmit = e => { e.preventDefault(); location.hash = "#alljobs?q=" + encodeURIComponent(document.getElementById("hq").value.trim()); };
+  }
   function home() {
     app.innerHTML = `
       <section class="hero"><h1>Find your <span>pathway</span> into a new sector</h1>
@@ -224,9 +236,13 @@
         <a class="choice" href="#cv"><span class="ic">📄</span><b>I have a CV</b><small>Upload it and we will pick out your skills.</small></a>
         <a class="choice" href="#tick"><span class="ic">✅</span><b>I don't have a CV</b><small>Tick the jobs you have done instead. Takes 1 minute.</small></a>
       </div>
-      <a class="card" href="#alljobs" style="display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit"><span style="font-size:30px">🔎</span><span><b style="font-size:19px">Browse every job in East Kent</b><br><span class="muted">First jobs and experienced roles, by sector – see where a career can take you.</span></span><span class="go" style="margin-left:auto">→</span></a>
+      <form class="panel searchbar" id="homesearch" role="search" style="margin-top:14px">
+        <label for="hq"><b style="font-size:19px">🔎 Search every job in East Kent</b><br><span class="muted">First jobs and experienced roles – try a job, a company or a town.</span></label>
+        <div class="row" style="margin-top:10px;flex-wrap:nowrap"><input id="hq" type="search" placeholder="e.g. driver, nurse, Canterbury" autocomplete="off">
+        <button class="btn" type="submit">Search</button></div></form>
       <h2>Or look at a sector</h2>
       ${grid()}`;
+    bindHomeSearch();
   }
   function grid() {
     return `<div class="grid">${P.SECTORS.map(s => `<a class="tile ${s.full ? "" : "soon"}" href="#sector/${s.id}${qs()}"><span class="ic">${s.icon}</span><span>${esc(s.name)}</span></a>`).join("")}</div>
@@ -393,26 +409,37 @@
   const jobLink = j => `<a class="j" href="../go.html?j=${encodeURIComponent(j.go || "")}" ${j.go ? "" : `onclick="location.href='${esc(j.url)}';return false"`}><b>${esc(j.title)}</b><small>${esc(j.employer)} · ${esc(j.town)} · ${esc(j.pay)}</small></a>`;
 
   async function allJobsView(params) {
-    const sel = params.get("sector") || "", lvl = params.get("level") || "all";
+    const sel = params.get("sector") || "", lvl = params.get("level") || "all", q0 = params.get("q") || "";
     app.innerHTML = `${head("All jobs in East Kent", "Every local job we found today – first jobs and the careers they lead to.", "#", "Back")}
-      <div class="panel" style="display:flex;gap:12px;flex-wrap:wrap;align-items:end">
-        <label style="flex:1;min-width:200px"><b>Sector</b><br><select id="fs" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
+      <div class="panel filters">
+                <label><b>Search</b><br><input id="fq" type="search" value="${esc(q0)}" placeholder="Job, company or town" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"></label>
+        <label><b>Sector</b><br><select id="fs" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
           <option value="">All sectors</option>${P.SECTORS.map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>
-        <div><b>Level</b><div class="chips" style="margin-top:4px" id="fl">${[["all", "All"], ["entry", "Entry level"], ["exp", "Experienced"]].map(([v, t]) => `<button class="chip" data-v="${v}" aria-pressed="${v === lvl}">${t}</button>`).join("")}</div></div>
-        <label style="flex:1;min-width:200px"><b>Search</b><br><input id="fq" placeholder="e.g. driver, Canterbury" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"></label>
+        <label><b>Town</b><br><select id="ft" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"><option value="">Anywhere</option></select></label>
+        <label><b>Sort by</b><br><select id="fo" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
+          <option value="close">Closing soonest</option><option value="payhi">Highest pay</option><option value="paylo">Lowest pay</option><option value="az">A–Z</option></select></label>
+        <div class="lvl"><b>Show</b><div class="chips" id="fl">${[["all", "All"], ["entry", "Entry level"], ["exp", "Experienced"]].map(([v, t]) => `<button class="chip" data-v="${v}" aria-pressed="${v === lvl}">${t}</button>`).join("")}</div></div>
       </div>
       <p class="status" id="cnt"></p><div id="all" class="livejobs"><p class="muted">Loading…</p></div>`;
     const { jobs, careers } = await loadBoard();
     const rows = [...jobs.map(j => ({ ...j, entry: true })), ...careers.map(j => ({ ...j, entry: false }))];
     let shown = 60;
+    const towns = [...new Set(rows.map(j => j.town).filter(Boolean))].sort();
+    document.getElementById("ft").innerHTML += towns.map(t => `<option>${esc(t)}</option>`).join("");
     const draw = () => {
       const fs = document.getElementById("fs").value, fq = document.getElementById("fq").value.trim().toLowerCase();
+      const ft = document.getElementById("ft").value, fo = document.getElementById("fo").value;
+      const words = fq.split(/\s+/).filter(Boolean);
       const fl = app.querySelector('#fl [aria-pressed="true"]').dataset.v;
       const sec = S(fs);
       const list = rows.filter(j => (!sec || sec.jobwords.some(w => (" " + j.title.toLowerCase() + " ").includes(w))) &&
-        (fl === "all" || (fl === "entry") === j.entry) && (!fq || `${j.title} ${j.employer} ${j.town}`.toLowerCase().includes(fq)))
-        .sort((a, b) => (b.entry - a.entry) || a.closing.localeCompare(b.closing));
-      document.getElementById("cnt").textContent = `${list.length} job${list.length === 1 ? "" : "s"}`;
+        (fl === "all" || (fl === "entry") === j.entry) && (!ft || j.town === ft) &&
+        words.every(w => `${j.title} ${j.employer} ${j.town} ${j.level || "entry level"}`.toLowerCase().includes(w)))
+        .sort(fo === "payhi" ? (a, b) => yearly(b.pay) - yearly(a.pay) : fo === "paylo" ? (a, b) => (yearly(a.pay) || 1e9) - (yearly(b.pay) || 1e9)
+          : fo === "az" ? (a, b) => a.title.localeCompare(b.title) : (a, b) => a.closing.localeCompare(b.closing));
+      const ne = list.filter(j => j.entry).length;
+      document.getElementById("cnt").textContent = `${list.length} job${list.length === 1 ? "" : "s"} · ${ne} entry level · ${list.length - ne} experienced`;
+      if (!list.length) { document.getElementById("all").innerHTML = `<p class="muted">No jobs match. Try fewer words, another town, or "All sectors".</p>`; return; }
       document.getElementById("all").innerHTML = list.slice(0, shown).map(j => j.entry
         ? jobLink(j).replace("</b>", ` <span class="badge" style="background:#e6f4ea;color:#0b4f2a">ENTRY LEVEL</span></b>`) : careerLink(j)).join("") +
         (list.length > shown ? `<div class="row" style="justify-content:center;margin-top:12px"><button class="btn alt small" id="more">Show more</button></div>` : "");
@@ -420,6 +447,7 @@
     };
     document.getElementById("fs").onchange = () => { shown = 60; draw(); };
     document.getElementById("fq").oninput = () => { shown = 60; draw(); };
+    document.getElementById("ft").onchange = document.getElementById("fo").onchange = () => { shown = 60; draw(); };
     document.getElementById("fl").onclick = e => { const b = e.target.closest(".chip"); if (!b) return;
       app.querySelectorAll("#fl .chip").forEach(c => c.setAttribute("aria-pressed", c === b)); shown = 60; draw(); };
     draw();
