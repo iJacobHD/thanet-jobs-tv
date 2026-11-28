@@ -172,10 +172,10 @@
 <body>
 <header class="top"><div class="in">
   <a href="#" class="brand" aria-label="Pathway home"><svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#a4c639"/><path d="M10 31c0-6 5-7 10-7s10-2 10-7-4-6-8-6" fill="none" stroke="#0b2a4a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13.5" cy="11" r="3.6" fill="#0b2a4a"/></svg><span class="bn">Pathway</span></a>
-  <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="#alljobs">All jobs</a><a href="../">Jobs board</a></nav>
+  <nav><a href="#">Start</a><a href="#sectors">All sectors</a><a href="#alljobs">All jobs</a></nav>
 </div></header>
 <main id="app"><p>Loading…</p></main>
-<footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs come from the <a href="../">East Kent Jobs board</a>.<span id="adzcredit" hidden> <a href="https://www.adzuna.co.uk" target="_blank" rel="noopener" style="display:inline-block;min-width:116px;min-height:23px;line-height:23px;font-weight:700;text-decoration:none;color:inherit">Jobs by <span style="color:#7cb342">Adzuna</span></a></span></footer>
+<footer class="site">Pathway gives general guidance for East Kent. Courses, funding and pay change, so always check with your work coach before paying for anything. Live jobs are collected every morning from local employers and job sites.<span id="adzcredit" hidden> <a href="https://www.adzuna.co.uk" target="_blank" rel="noopener" style="display:inline-block;min-width:116px;min-height:23px;line-height:23px;font-weight:700;text-decoration:none;color:inherit">Jobs by <span style="color:#7cb342">Adzuna</span></a></span></footer>
 
 <script src="data.js"></script>
 <script>
@@ -425,7 +425,7 @@
       <section id="help"><h2>Free help to get there</h2>
       ${P.FUNDING.map(f => `<div class="card" style="margin:10px 0"><b>${esc(f.t)}</b><br><span class="muted">${esc(f.d)}</span></div>`).join("")}
       </section>${s.full ? `<section id="links"><h2>Useful links</h2><ul>${s.links.map(([t, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("")}</ul></section>` : ""}
-      <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print this pathway</button><a class="btn" href="../">See all jobs →</a></div>
+      <div class="row noprint" style="margin-top:20px"><button class="btn alt" onclick="print()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg> Print this pathway</button><a class="btn" href="#alljobs">See all jobs →</a></div>
       </div></div>`;
     window.scrollTo(0, 0);
     const { jobs, apps, careers } = await loadBoard();
@@ -437,7 +437,7 @@
     live.innerHTML = (payLine) + (list.length || alist.length
       ? `<p class="note" style="margin-top:0"><b>${list.length} job${list.length === 1 ? "" : "s"}</b>${alist.length ? ` and <b>${alist.length} apprenticeship${alist.length === 1 ? "" : "s"}</b>` : ""} in this sector today.</p>
         <div id="lb-entry"></div>${alist.length ? `<h3 style="margin-top:18px">Apprenticeships</h3><div id="lb-apps"></div>` : ""}`
-      : `<p class="muted">None on our board today – new jobs are added every morning. <a href="../">See all jobs</a>.</p>`);
+      : `<p class="muted">None on our board today – new jobs are added every morning. <a href="#alljobs">See all jobs</a>.</p>`);
     if (document.getElementById("lb-entry")) listBlock(document.getElementById("lb-entry"), list, jobLink, "jobs");
     if (document.getElementById("lb-apps")) listBlock(document.getElementById("lb-apps"), alist, jobLink, "apprenticeships");
     const lad = document.getElementById("ladderlist");

@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: update-jobs          # never at the same time as the morning update
@@ -53,3 +54,8 @@ jobs:
             git pull --rebase -X theirs || true
             git push
           fi
+      - name: Publish website
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main || true

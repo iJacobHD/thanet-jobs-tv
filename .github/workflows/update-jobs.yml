@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: write      # to start "Publish website" when the update is done
 
 concurrency:
   group: update-jobs
@@ -78,6 +79,18 @@ jobs:
         if: env.SKIP != '1'
         run: python scripts/render_slides.py
 
+      # Videos and slide zips go in the "media" release (replaced each morning), not the project's history,
+      # which would otherwise grow by 50-80 MB a day. "Publish website" puts them on the site.
+      - name: Store today's videos in the media release
+        if: env.SKIP != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view media >/dev/null 2>&1 || gh release create media --title "Media (replaced every morning)" \
+            --notes "Today's TV videos and slide zips. Replaced by the morning update; the website downloads them from here." --latest=false
+          files=$(ls docs/usb/*.mp4 docs/usb/*.zip 2>/dev/null || true)
+          if [ -n "$files" ]; then gh release upload media $files --clobber; fi
+
       - name: Save changes
         if: env.SKIP != '1'
         run: |
@@ -109,3 +122,9 @@ jobs:
             git pull --rebase -X theirs || true
             git push
           fi
+
+      - name: Publish website
+        if: env.SKIP != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

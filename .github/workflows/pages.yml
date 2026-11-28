@@ -1,0 +1,56 @@
+name: Publish website
+
+# Publishes the website (the docs folder) to eastkentjobs.github.io.
+# The videos and slide zips are NOT kept in the project's history (they would add 50-80 MB every day).
+# The morning update stores today's copies in the "media" release instead, replacing yesterday's,
+# and this workflow puts them back into the website when it publishes.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write     # only to create the media release the first time
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Add today's videos and slide zips
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p docs/usb
+          if ! gh release view media >/dev/null 2>&1 && ls docs/usb/*.mp4 >/dev/null 2>&1; then
+            # first time only: start the media release from the copies still in the project
+            gh release create media --title "Media (replaced every morning)" --latest=false \
+              --notes "Today's TV videos and slide zips. Replaced by the morning update; the website downloads them from here."
+            gh release upload media docs/usb/*.mp4 docs/usb/*.zip --clobber
+          fi
+          if gh release download media -R "$GITHUB_REPOSITORY" -D docs/usb --clobber; then
+            echo "Media from the release:"; ls -la docs/usb
+          else
+            echo "No media release yet - publishing the copies in the project (if any)."
+          fi
+          rm -f docs/usb/*.jpg          # single slide images are only used to make the video
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4
