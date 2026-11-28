@@ -1,0 +1,722 @@
+{
+ "2gether Support Solutions (East Kent hospitals)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 9,
+  "last_found": "2026-11-28",
+  "secs": 108.7
+ },
+ "Achieve Together": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.0
+ },
+ "Anchor": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.6
+ },
+ "Asda": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 4,
+  "last_found": "2026-11-28",
+  "secs": 66.2
+ },
+ "Avante Care and Support": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.0
+ },
+ "B&M": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 417.4
+ },
+ "Barchester care homes": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.7
+ },
+ "Better (GLL)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.1
+ },
+ "Bidfood": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.2
+ },
+ "Biffa": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.2
+ },
+ "Boots": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 5,
+  "last_found": "2026-11-28",
+  "secs": 11.1
+ },
+ "Boots Opticians": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.8
+ },
+ "Brewdog": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.7
+ },
+ "British Heart Foundation": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.7
+ },
+ "Card Factory": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.0
+ },
+ "Care UK": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 10,
+  "last_found": "2026-11-28",
+  "secs": 51.3
+ },
+ "Carlisle Support Services": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.0
+ },
+ "Caterlink": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 17,
+  "last_found": "2026-11-28",
+  "secs": 2.6
+ },
+ "Churchill Group": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 5.1
+ },
+ "Co-op": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 3,
+  "last_found": "2026-11-28",
+  "secs": 21.6
+ },
+ "Compass Group (Chartwells, Eurest, Medirest)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 6,
+  "last_found": "2026-11-28",
+  "secs": 472.9
+ },
+ "Costa Coffee": {
+  "fail_streak": 1,
+  "failed_today": true,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 120.3
+ },
+ "Currys": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.7
+ },
+ "C\u00f4te": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.1
+ },
+ "Demelza": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 2,
+  "last_found": "2026-11-28",
+  "secs": 0.7
+ },
+ "East Kent College Group": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.1
+ },
+ "English Heritage": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.1
+ },
+ "Eurofins UK": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 2,
+  "last_found": "2026-11-28",
+  "secs": 0.3
+ },
+ "FedEx": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 3.6
+ },
+ "Find an apprenticeship": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 21,
+  "last_found": "2026-11-28",
+  "secs": 13.3
+ },
+ "First Bus": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.9
+ },
+ "Fowler Welch": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 3,
+  "last_found": "2026-11-28",
+  "secs": 0.8
+ },
+ "Gail's Bakery": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.7
+ },
+ "Greggs": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 420.7
+ },
+ "Halfords": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 12.0
+ },
+ "Harvester / Toby Carvery / Miller & Carter (M&B)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 4,
+  "last_found": "2026-11-28",
+  "secs": 15.7
+ },
+ "Hobbycraft": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.8
+ },
+ "Hollywood Bowl": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 4.1
+ },
+ "Hotel Chocolat": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 22.6
+ },
+ "ICTS UK": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.7
+ },
+ "Iceland / The Food Warehouse": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.2
+ },
+ "JD Sports": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.2
+ },
+ "Jewson": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.6
+ },
+ "KFC": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 2,
+  "last_found": "2026-11-28",
+  "secs": 9.6
+ },
+ "Kent Fire and Rescue": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 4.5
+ },
+ "Kids Planet": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 6.5
+ },
+ "Kier": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.0
+ },
+ "Kreston Reeves": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 1.1
+ },
+ "Kuehne+Nagel": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 5.6
+ },
+ "LGC": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.3
+ },
+ "Lidl": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.8
+ },
+ "M&S": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 4.1
+ },
+ "Marston's": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.7
+ },
+ "McDonald's": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 2,
+  "last_found": "2026-11-28",
+  "secs": 7.5
+ },
+ "Mencap": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.0
+ },
+ "Morrisons": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 5,
+  "last_found": "2026-11-28",
+  "secs": 83.4
+ },
+ "NHS Jobs": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 209,
+  "last_found": "2026-11-28",
+  "secs": 35.1
+ },
+ "Next": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 11.3
+ },
+ "OCS": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 2,
+  "last_found": "2026-11-28",
+  "secs": 783.0
+ },
+ "Ocado": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.2
+ },
+ "Octopus Energy": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.4
+ },
+ "One Stop": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.7
+ },
+ "PizzaExpress": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.8
+ },
+ "Poundstretcher": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.0
+ },
+ "Premier Inn / Beefeater / Brewers Fayre (Whitbread)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 40.2
+ },
+ "Primark": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.5
+ },
+ "Reed": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1183,
+  "last_found": "2026-11-28",
+  "secs": 617.4
+ },
+ "Royal Mail": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 9,
+  "last_found": "2026-11-28",
+  "secs": 37.0
+ },
+ "Sainsbury's": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 3,
+  "last_found": "2026-11-28",
+  "secs": 399.1
+ },
+ "Selco": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.2
+ },
+ "Shepherd Neame (pubs & hotels)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 15,
+  "last_found": "2026-11-28",
+  "secs": 1.2
+ },
+ "Smyths Toys": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 3.8
+ },
+ "Specsavers": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 6,
+  "last_found": "2026-11-28",
+  "secs": 21.9
+ },
+ "TK Maxx / Homesense": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 45.1
+ },
+ "Teaching Vacancies": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 34,
+  "last_found": "2026-11-28",
+  "secs": 74.2
+ },
+ "Tesco": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 8,
+  "last_found": "2026-11-28",
+  "secs": 32.7
+ },
+ "The Range": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 1,
+  "last_found": "2026-11-28",
+  "secs": 0.8
+ },
+ "The Restaurant Group (Frankie & Benny's)": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.4
+ },
+ "Thinking Schools Academy Trust": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.1
+ },
+ "Travelodge": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 11.5
+ },
+ "Turtle Bay": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.5
+ },
+ "Vattenfall UK": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.8
+ },
+ "WHSmith": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.6
+ },
+ "Waitrose / John Lewis": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 42.1
+ },
+ "Warburtons": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 1.0
+ },
+ "Wates": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.3
+ },
+ "Wetherspoon": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 10,
+  "last_found": "2026-11-28",
+  "secs": 154.9
+ },
+ "Wickes / Toolstation / Travis Perkins": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 7,
+  "last_found": "2026-11-28",
+  "secs": 24.4
+ },
+ "Zizzi": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 2.2
+ },
+ "iLoF": {
+  "fail_streak": 0,
+  "failed_today": false,
+  "first_seen": "2026-11-28",
+  "last_count": 0,
+  "last_found": "",
+  "secs": 0.3
+ }
+}
