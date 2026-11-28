@@ -66,7 +66,7 @@ PATHWAY.SECTORS = [
   {
     id: "admin", name: "Admin", icon: "🗂️", full: true,
     skills: { admin: 2, computer: 2, phone: 1, english: 1, numbers: 1, customer: 1 },
-    jobwords: ["admin", "administrator", "receptionist", "clerk", "office", "data entry", "commercial support", "office assistant", "business support", "administration", "administrative", "secretary", "pa "],
+    jobwords: ["admin", "administrator", "receptionist", "clerk", "data entry", "commercial support", "office assistant", "business support", "administration", "administrative", "secretary", "pa ", "office manager", "office support", "office coordinator", "office administrator", "office junior", "back office", "front office", "clerical"],
     about: "Keeping offices running: answering phones and emails, booking appointments, updating records and greeting visitors. Admin jobs are in almost every organisation – GP surgeries, schools, councils, solicitors, builders and charities – so there are steady openings across East Kent. Most are Monday to Friday office hours, with plenty of part-time roles.",
     expect: ["Lots of computer work: email, Word, Excel and booking systems", "Answering the phone and dealing with visitors", "Keeping records accurate and private", "Usually office hours, Monday to Friday"],
     roles: ["Administration assistant", "Receptionist (including GP and dental)", "Data entry clerk", "Office junior", "School office assistant", "Business administration apprentice"],
@@ -133,6 +133,7 @@ PATHWAY.SECTORS = [
     id: "beauty", name: "Hair & Beauty", folder: "Beauty & Therapy", icon: "💅", full: true,
     skills: { customer: 2, sales: 1, cleaning: 1, care: 1 },
     jobwords: ["beauty", "hair", "salon", "nail", "therapist", "barber"],
+    notwords: ["occupational", "physio", "speech", "psycholog", "massage therapist in"],
     about: "Hair, beauty, nails and barbering in salons, spas, hotels and shops. Many people start as a salon junior or apprentice and train on the job. Lots of experienced therapists go on to work for themselves, but salons and spas employ juniors and apprentices. Customer service is at the heart of it – clients come back for the person as much as the treatment.",
     expect: ["On your feet with clients all day", "Weekend and late-evening appointments", "Keeping tools and the salon very clean", "Selling products and rebooking clients"],
     roles: ["Salon junior / assistant", "Apprentice hairdresser or barber", "Trainee beauty therapist", "Nail technician", "Spa receptionist", "Beauty counter adviser (retail)"],
@@ -144,6 +145,7 @@ PATHWAY.SECTORS = [
     id: "childcare", name: "Childcare", icon: "🧸", full: true,
     skills: { children: 2, care: 2, team: 1, english: 1, reliable: 1 },
     jobwords: ["nursery", "childcare", "early years", "nanny", "playworker", "pre-school", "breakfast club", "after school", "preschool", "crèche", "creche"],
+    notwords: ["legal", "solicitor"],
     about: "Caring for and helping young children learn and play – in nurseries, pre-schools, breakfast and after-school clubs, or as a nanny or childminder. It is rewarding and in demand. You can start as a nursery assistant without a qualification, but to progress you will need recognised early years qualifications. Everyone working with children needs an enhanced DBS check.",
     expect: ["Playing, reading and doing activities with children", "Changing nappies, feeding and keeping children safe", "Talking with parents every day", "Early starts or split shifts in clubs"],
     roles: ["Nursery assistant", "Pre-school or playgroup assistant", "Breakfast or after-school club worker", "Nanny", "Childminder (self-employed, registered)", "Early years apprentice"],
@@ -154,7 +156,7 @@ PATHWAY.SECTORS = [
   {
     id: "construction", name: "Construction", icon: "🏗️", full: true,
     skills: { manual: 2, safety: 2, trades: 2, team: 1, reliable: 1, driving: 1, machines: 1 },
-    jobwords: ["labourer", "construction", "groundwork", "site ", "bricklay", "carpent", "joiner", "plaster", "scaffold", "decorat", "site operative", "groundworks operative", "multi trade", "multi-trade", "roofer", "steel fix", "building", "traffic marshal"],
+    jobwords: ["labourer", "construction", "groundwork", "site ", "bricklay", "carpent", "joiner", "plaster", "scaffold", "decorat", "site operative", "groundworks operative", "multi trade", "multi-trade", "roofer", "steel fix", "building", "traffic marshal", "floor layer", "quantity surveyor", "telehandler", "surveyor"],
     about: "Building and repairing homes, roads, schools and everything in between. Most people start as a labourer or site operative, carrying materials, keeping the site clean and safe, and helping the trades. It is outdoor, physical and usually starts early (7–8am). Agencies supply a lot of the work around East Kent, so there are often short contracts while you build up experience.",
     expect: ["Early starts and outdoor work in all weathers", "Heavy lifting and lots of walking", "Personal protective equipment (boots, hi-vis, hard hat) on site at all times", "Often agency or contract work at first, then longer jobs"],
     roles: ["Labourer / site operative", "Groundworker", "Trainee bricklayer, carpenter or plasterer", "Painter and decorator", "Plant operator (dumper, roller)", "Traffic marshal"],
@@ -192,7 +194,7 @@ PATHWAY.SECTORS = [
   {
     id: "education", name: "Education & Training", icon: "🎓", full: true,
     skills: { children: 2, english: 2, care: 1, computer: 1 },
-    jobwords: ["teaching assistant", "learning support", "tutor", "invigilator", "midday", "lunchtime", "sen ", "send", "lunchtime supervisor", "special educational", "sensa", "teaching", "classroom"],
+    jobwords: ["teaching assistant", "learning support", "tutor", "invigilator", "midday", "lunchtime", "sen ", "send", "lunchtime supervisor", "special educational", "sensa", "teaching", "classroom", "teacher", "lecturer", "senco", "inclusion", "cover supervisor", "note taker", "behaviour support", "behaviour specialist", "semh"],
     about: "Helping children and adults learn – in schools, colleges and training centres. Most people start in support roles like teaching assistant, lunchtime supervisor or exam invigilator. There is no single required qualification for teaching assistants, but schools set their own requirements and everyone working with children needs an enhanced DBS check.",
     expect: ["School hours and term time", "Supporting small groups or one child", "Helping with reading, behaviour and activities", "Working closely with teachers"],
     roles: ["Teaching assistant", "Special educational needs (SEN) teaching assistant", "Lunchtime / midday supervisor", "Exam invigilator", "Learning support assistant (college)", "Cover supervisor"],
@@ -203,8 +205,8 @@ PATHWAY.SECTORS = [
   {
     id: "engineering", name: "Engineering", icon: "⚙️", full: true,
     skills: { trades: 2, machines: 2, numbers: 1, safety: 1 },
-    jobwords: ["engineer", "technician", "maintenance", "mechanic", "electrician", "fitter"],
-    notwords: ["pharmacy", "pathology", "laboratory", "lab technician", "dental", "veterinary"],
+    jobwords: ["engineer", "technician", "mechanic", "electrician", "fitter", "maintenance engineer", "maintenance technician", "maintenance fitter", "maintenance electrician", "refrigeration", "mechanical", "electrical engineer", "welder", "fabricator", "cnc"],
+    notwords: ["pharmacy", "pathology", "laboratory", "lab technician", "dental", "veterinary", "decontamination", "service desk", "software", "network", "it ", "qc ", "dental technician", "kitchen fitter"],
     about: "Designing, building, fixing and maintaining machines, vehicles, buildings and systems. In East Kent there is engineering work in manufacturing, ports, energy, food production and vehicle repair. Most people get in through an apprenticeship or by starting as an operative and training up. Free Level 2 engineering and manufacturing courses are available for eligible adults.",
     expect: ["Hands-on work with tools and machines", "Health and safety rules on every job", "Fault-finding and problem-solving", "Shift work in factories"],
     roles: ["Engineering operative", "Maintenance assistant", "Trainee mechanic / vehicle technician", "Welder or fabricator (trainee)", "CNC machine operator", "Engineering apprentice"],
@@ -226,7 +228,7 @@ PATHWAY.SECTORS = [
   {
     id: "energy", name: "Energy, Utilities & Environment", icon: "⚡", full: true,
     skills: { trades: 2, safety: 2, driving: 1, manual: 1 },
-    jobwords: ["energy", "water", "utility", "utilities", "meter", "wind", "solar", "environment"],
+    jobwords: ["energy", "water", "utility", "utilities", "meter", "wind", "solar", "environment", "ecologist", "ecology"],
     about: "Keeping the power, gas and water flowing – and building the clean energy of the future. East Kent has offshore wind farms with operations bases at Ramsgate, as well as electricity, gas and water networks that need engineers, labourers and office staff. Many roles are filled through apprenticeships and on-the-job training.",
     expect: ["Outdoor and on-site work", "Strict safety rules", "Call-outs and shift work in some roles", "Driving between sites"],
     roles: ["Utilities labourer / operative", "Meter installer (trainee)", "Water network operative", "Wind turbine technician (trainee)", "Customer service for energy companies", "Utilities apprentice"],
@@ -237,7 +239,8 @@ PATHWAY.SECTORS = [
   {
     id: "facilities", name: "Cleaning & Facilities", folder: "Facilities Management", icon: "🏢", full: true,
     skills: { cleaning: 2, trades: 1, customer: 1, reliable: 1, safety: 1 },
-    jobwords: ["facilities", "caretaker", "cleaner", "cleaning", "porter", "domestic", "handyperson", "handyman", "site maintenance", "housekeeping"],
+    jobwords: ["facilities", "caretaker", "cleaner", "cleaning", "porter", "domestic", "handyperson", "handyman", "site maintenance", "housekeeping", "maintenance", "maintenance person", "maintenance operative", "maintenance assistant", "estates", "groundsperson", "grounds maintenance", "gardener"],
+    notwords: ["maintenance engineer", "maintenance technician", "maintenance fitter", "maintenance electrician", "refrigeration", "kitchen porter"],
     about: "Keeping buildings clean, safe and working – offices, hospitals, schools, shops and hotels. Jobs include cleaning, caretaking, portering, security and maintenance. Most need no experience, there are lots of part-time hours (early mornings and evenings), and big employers offer training and progression.",
     expect: ["Early mornings or evenings around building hours", "Physical work and lots of walking", "Using cleaning chemicals safely", "Working alone or in small teams"],
     roles: ["Cleaner", "Caretaker", "Hospital or hotel porter", "Housekeeper", "Maintenance assistant", "Facilities assistant"],
@@ -248,7 +251,7 @@ PATHWAY.SECTORS = [
   {
     id: "finance", name: "Financial Services", icon: "💷", full: true,
     skills: { numbers: 2, computer: 2, customer: 1, phone: 1, admin: 1 },
-    jobwords: ["finance", "accounts", "bookkeep", "payroll", "insurance", "credit control", "accountant", "banking", "bank cashier", "finance assistant", "accounts payable", "accounts receivable"],
+    jobwords: ["finance", "accounts", "bookkeep", "payroll", "insurance", "credit control", "accountant", "banking", "bank cashier", "finance assistant", "accounts payable", "accounts receivable", "legal cashier", "tax ", "audit", "paraplanner", "mortgage", "wealth manager", "book keeper", "revenue manager"],
     about: "Banking, insurance, accounts, payroll and pensions. Many jobs are customer-facing (helping people by phone or in branches) or admin-based (processing payments and records). Being careful with numbers and detail matters most. Bookkeeping qualifications such as AAT are a popular way in.",
     expect: ["Lots of computer and number work", "Accuracy and checking your work", "Strict rules on privacy and money", "Office hours, often hybrid"],
     roles: ["Customer service adviser (bank or insurance)", "Accounts assistant", "Payroll administrator", "Credit control assistant", "Bookkeeper (trainee)", "Finance apprentice"],
@@ -269,9 +272,9 @@ PATHWAY.SECTORS = [
   },
   {
     id: "health-care", name: "Health & Social Care", icon: "❤️", full: true,
-    notwords: ["customer care", "caretaker", "skin care", "hair care", "pet care", "car care", "childcare", "child care", "aftercare", "careers"],
+    notwords: ["customer care", "caretaker", "skin care", "hair care", "pet care", "car care", "childcare", "child care", "aftercare", "careers", "nursery", "tutor", "teach"],
     skills: { care: 2, customer: 1, reliable: 2, team: 1, english: 1, driving: 1, safety: 1 },
-    jobwords: ["carer", "support worker", "healthcare", "nursing assistant", "domiciliary", "senior carer", "hca", "residential", "personal assistant", "dental nurse", "dispenser", "pharmacy", "recovery worker", "outreach", "enabler", "family support", "family connections", "nursing", "nurse", "care worker", "care assistant", "reablement", "mental health", "therapy assistant", "physio", "health care assistant", "care professional", "care support", "live in care", "live-in care", "home care"],
+    jobwords: ["carer", "support worker", "healthcare", "nursing assistant", "domiciliary", "senior carer", "hca", "residential", "personal assistant", "dental nurse", "dispenser", "pharmacy", "recovery worker", "outreach", "enabler", "family support", "family connections", "nursing", "nurse", "care worker", "care assistant", "reablement", "mental health", "therapy assistant", "physio", "health care assistant", "care professional", "care support", "live in care", "live-in care", "home care", "doctor", "gp ", "locum", "psychiatr", "anaesthet", "gastroenterolog", "geriatric", "maxillofacial", "critical care", "intensive care", "palliative", "emergency medicine", "obstetric", "immunolog", "neurophysiolog", "echocardiograph", "cardiac", "pharmacist", "optometrist", "optical", "audiolog", "occupational therap", "matron", "decontamination", "pathology", "phlebotom", "sample collector", "midwife", "paramedic", "clinical", "radiograph", "sonograph", "dietitian", "speech and language", "physiotherap", "psycholog", "counsellor", "general practitioner", "psychotherap", "wound", "social worker", "social work", "dermatolog", "acp", "anp", "urgent treatment", "care navigator", "care coordinator", "care co-ordinator", "complex care", "registered manager", "homecare"],
     about: "Helping people live as well and as independently as they can, in care homes, people's own homes (domiciliary care), supported living and hospitals. It is one of the biggest employers in East Kent and one of the easiest to start from scratch: most employers train new carers fully and pay you while you learn. The work is rewarding and steady, with plenty of part-time, full-time, day and night shifts.",
     expect: ["Helping people wash, dress, eat and move safely", "Shift work: early, late, nights and some weekends", "Home care usually needs a driving licence and a car", "Training and support in your first weeks, then more as you go"],
     roles: ["Care assistant / carer", "Support worker (learning disabilities, mental health)", "Home care (domiciliary) worker", "Healthcare assistant (hospital, NHS)", "Activities coordinator", "Senior carer (after experience)"],
@@ -299,6 +302,7 @@ PATHWAY.SECTORS = [
     id: "hospitality", name: "Hospitality", icon: "🍽️", full: true,
     skills: { customer: 2, food: 2, team: 1, cash: 1, reliable: 1 },
     jobwords: ["waiter", "waitress", "chef", "kitchen", "barista", "hospitality", "front of house", "hotel", "catering", "waiting staff", "food & beverage", "food and beverage", "f&b", "host", "housekeep", "room attendant", "pot wash", "dishwash", "sous chef", "commis", "cook", "bar team", "bar staff", "bartender", "bar person", "bar assistant", "bar supervisor", "crew member"],
+    notwords: ["surveyor", "kitchen design", "kitchen fitter", "kitchen sales", "host family"],
     about: "Pubs, restaurants, cafés, hotels and takeaways. With the coast and tourism, East Kent has lots of hospitality work, especially in spring and summer. Most jobs need no experience and training is given. Hours are flexible – great around other commitments – but usually include evenings and weekends.",
     expect: ["Busy, fast-paced shifts", "Evenings, weekends and bank holidays", "On your feet all day", "Free or cheap meals on shift at many places"],
     roles: ["Bar staff / team member", "Waiter or waitress", "Kitchen porter", "Barista", "Commis chef", "Hotel room attendant or receptionist"],
@@ -309,7 +313,7 @@ PATHWAY.SECTORS = [
   {
     id: "it", name: "IT & Digital", folder: "IT & Communications", icon: "📶", full: true,
     skills: { it: 2, computer: 2, customer: 1, phone: 1 },
-    jobwords: ["it ", "ict", "helpdesk", "digital", "developer", "network engineer", "network support", "network administrator", "service desk", "it support", "it technician", "data analyst", "business analyst", "systems analyst", "business systems", "product owner", "analyst", "crm", "software", "cyber", "infrastructure"],
+    jobwords: ["it ", "ict", "helpdesk", "digital", "developer", "network engineer", "network support", "network administrator", "service desk", "it support", "it technician", "data analyst", "business analyst", "systems analyst", "business systems", "product owner", "analyst", "crm", "software", "cyber", "infrastructure", "computer science", "systems support", "it engineer", "it manager", "it director", "it consultant"],
     about: "Supporting and building the technology everyone uses – fixing computers, setting up networks, helping users and writing software. Many people start in IT support, answering help desk calls and fixing everyday problems. You can learn a lot for free online, and certificates and Skills Bootcamps can count as much as a degree.",
     expect: ["Solving problems for other staff or customers", "Lots of learning as technology changes", "Help desk calls, emails and tickets", "Office, hybrid or remote working"],
     roles: ["IT support / help desk assistant", "Junior business analyst / business analyst apprentice", "IT technician (schools and businesses)", "Junior web developer", "Data entry and IT admin", "Network support apprentice", "Software development apprentice"],
@@ -320,7 +324,7 @@ PATHWAY.SECTORS = [
   {
     id: "leisure", name: "Leisure & Tourism", icon: "🌴", full: true,
     skills: { customer: 2, team: 1, fitness: 1, cash: 1, reliable: 1 },
-    jobwords: ["leisure", "tourism", "holiday", "lifeguard", "attraction", "bowl", "cinema", "visitor", "santa", "grotto", "elf", "events assistant"],
+    jobwords: ["leisure", "tourism", "holiday", "lifeguard", "attraction", "bowl", "cinema", "visitor", "santa", "grotto", "elf", "events assistant", "travel agent", "travel consultant", "wedding", "events coordinator"],
     about: "Helping people enjoy their free time – leisure centres, holiday parks, attractions, cinemas, bowling, museums and the seaside. East Kent's coast means lots of seasonal work, plus year-round jobs in leisure centres. Most roles need no experience, and some (like lifeguarding) come with qualifications you can train for.",
     expect: ["Weekends, school holidays and evenings", "Busy summers and quieter winters", "Lots of customer contact", "Some outdoor work"],
     roles: ["Leisure centre assistant", "Lifeguard", "Holiday park team member", "Attraction or ride operator", "Cinema or bowling team member", "Visitor services assistant (museums and heritage)"],
@@ -332,6 +336,7 @@ PATHWAY.SECTORS = [
     id: "life-sciences", name: "Science & Laboratories", folder: "Life Sciences & Biotech", icon: "🧪", full: true,
     skills: { safety: 2, numbers: 1, computer: 1, machines: 1, english: 1 },
     jobwords: ["laboratory", "lab ", "science", "biotech", "quality", "pharmaceutical"],
+    notwords: ["computer science"],
     about: "Science that improves health – medicines, testing, research and medical products. East Kent has a science park at Discovery Park in Sandwich, home to a range of science and technology businesses. Lab technician jobs often ask for science qualifications, but production, cleanroom, stores and admin roles in science companies can be open to new starters.",
     expect: ["Following exact procedures and recording everything", "Strict hygiene and safety rules", "Lab coats and protective kit", "Shift work in production"],
     roles: ["Laboratory assistant / technician (trainee)", "Production or cleanroom operative", "Quality control assistant", "Stores and logistics operative", "Science company admin", "Laboratory apprentice"],
@@ -353,7 +358,7 @@ PATHWAY.SECTORS = [
   {
     id: "manufacturing", name: "Manufacturing", icon: "🏭", full: true,
     skills: { machines: 2, reliable: 2, safety: 1, manual: 1, team: 1 },
-    jobwords: ["production", "manufactur", "machine operative", "production operative", "assembly", "factory", "powder coat", "coating operative", "machine operat", "packing operative", "line operative", "food production", "bakery operative"],
+    jobwords: ["production", "manufactur", "machine operative", "production operative", "assembly", "factory", "powder coat", "coating operative", "machine operat", "packing operative", "line operative", "food production", "bakery operative", "machinist", "machine minder"],
     about: "Making things – food, packaging, parts, coatings, furniture and much more – in factories and workshops. Many East Kent manufacturers hire production operatives with no experience and train them on the job. Shifts can include nights and weekends, often with extra pay. Free Level 2 engineering and manufacturing courses are available for eligible adults.",
     expect: ["Working on a production line or machine", "Repetitive tasks and quality checks", "Shift patterns, sometimes nights", "Protective clothing and strict hygiene in food factories"],
     roles: ["Production operative", "Machine operator", "Packer / packing operative", "Quality checker", "Forklift driver (after training)", "Manufacturing apprentice"],
@@ -365,6 +370,7 @@ PATHWAY.SECTORS = [
     id: "oil-gas", name: "Oil & Gas", icon: "🛢️", full: true,
     skills: { safety: 2, trades: 2, machines: 1, manual: 1 },
     jobwords: ["oil", "gas", "offshore", "petroleum"],
+    notwords: ["gas engineer", "gas safe", "heating"],
     about: "Producing oil and gas, mostly offshore in the North Sea. There are no oil and gas sites in East Kent, so this usually means working away – often two or three weeks offshore, then the same time at home. Many of the same skills and safety tickets are used in offshore wind, which does have bases at Ramsgate.",
     expect: ["Long shifts and weeks away from home", "Helicopter travel to platforms", "Very strict safety rules", "Physical, hands-on work"],
     roles: ["Offshore steward or catering crew", "Roustabout / deckhand (entry level)", "Scaffolder or rigger (with tickets)", "Technician or mechanic (with trade skills)", "Offshore wind technician (trainee)", "Onshore support and logistics"],
@@ -397,7 +403,7 @@ PATHWAY.SECTORS = [
   {
     id: "recruitment", name: "Recruitment & HR", folder: "Recruitment Agencies", icon: "🤝", full: true,
     skills: { phone: 2, sales: 2, computer: 1, customer: 1 },
-    jobwords: ["recruitment", "recruiter", "resourcer", "consultant"],
+    jobwords: ["recruitment", "recruiter", "resourcer", "recruitment consultant", "hr ", "hr consultant", "hr administrator", "hr advisor", "hr assistant", "human resources", "people advisor", "talent", "employee relations", "learning & development", "learning and development"],
     about: "Matching people to jobs. Recruitment agencies find staff for employers – temporary, contract and permanent. Entry roles involve lots of phone calls, finding candidates online and building relationships. It is target-driven and pay often includes commission. Sales, customer service and hospitality experience transfers well.",
     expect: ["Lots of phone calls and messages", "Targets and commission", "Using job boards and databases", "Fast-paced office work"],
     roles: ["Recruitment resourcer", "Trainee recruitment consultant", "Recruitment administrator", "Temp desk coordinator", "In-house recruitment assistant", "Recruitment apprentice"],
@@ -408,7 +414,8 @@ PATHWAY.SECTORS = [
   {
     id: "retail", name: "Retail", icon: "🛍️", full: true,
     skills: { customer: 2, cash: 1, stock: 1, team: 1, sales: 1, reliable: 1 },
-    jobwords: ["retail", "sales assistant", "customer assistant", "shop", "cashier", "checkout", "store assistant", "shop assistant", "night pack", "night fill", "sales advisor", "sales associate", "retail assistant", "store colleague", "till"],
+    jobwords: ["retail", "sales assistant", "customer assistant", "shop", "cashier", "checkout", "store assistant", "shop assistant", "night pack", "night fill", "sales advisor", "sales associate", "retail assistant", "store colleague", "till", "merchandiser", "store manager"],
+    notwords: ["legal cashier"],
     about: "Selling and serving in shops – supermarkets, high street stores, retail parks and online warehouses. Retail is one of the biggest employers in East Kent, with lots of part-time hours and extra jobs before Christmas. No experience is needed for most roles, and it builds skills (customer service, cash handling, teamwork) that transfer to almost any job.",
     expect: ["Serving customers and using tills", "Filling shelves and tidying displays", "Weekends, evenings and bank holidays", "Busy times like Christmas and sales"],
     roles: ["Sales or customer assistant", "Checkout operator", "Stock / replenishment assistant", "Night-fill colleague", "Online order picker", "Supervisor (after experience)"],
@@ -430,7 +437,7 @@ PATHWAY.SECTORS = [
   {
     id: "security", name: "Security", icon: "🛡️", full: true,
     skills: { security: 2, reliable: 2, customer: 1, safety: 1 },
-    jobwords: ["security", "door supervisor", "steward", "cctv", "patrol"],
+    jobwords: ["security", "door supervisor", "steward", "cctv", "patrol", "fire marshal", "waking watch"],
     about: "Keeping people and places safe – shops, offices, building sites, events, pubs and clubs. Most front-line security jobs legally need an SIA licence. The training is short (days, not months), and there is a lot of work in East Kent, especially retail security, events and stewarding. Shifts can include nights and weekends.",
     expect: ["Long shifts, including nights and weekends", "Patrols, checks and watching CCTV", "Dealing calmly with difficult people", "Standing outside or at doors for long periods"],
     roles: ["Security officer (guard)", "Door supervisor", "Retail security / store detective", "Event steward", "CCTV operator", "Concierge / reception security"],
@@ -452,7 +459,7 @@ PATHWAY.SECTORS = [
   {
     id: "voluntary", name: "Voluntary & Charity", icon: "💚", full: true,
     skills: { volunteer: 2, customer: 1, care: 1, admin: 1 },
-    jobwords: ["charity", "volunteer", "fundraising", "community"],
+    jobwords: ["charity", "volunteer", "fundraising", "fundraiser", "community engagement", "community development"],
     about: "Working for charities and community groups – shops, fundraising, support services, youth work and campaigns. Volunteering is also one of the best ways to gain experience for any sector, and it shows employers you are reliable and motivated. Many charities also have paid roles, from shop staff to support workers.",
     expect: ["Working towards a cause you care about", "Small teams and lots of variety", "Some evening and weekend events", "Lots of contact with the public"],
     roles: ["Charity shop assistant or manager", "Fundraising assistant", "Support worker", "Community or youth worker", "Volunteer coordinator", "Charity admin assistant"],
@@ -490,11 +497,13 @@ PATHWAY.SECTORS = [
 
 // When a job title alone doesn't say the type of work (e.g. "Team Member"), the employer decides.
 PATHWAY.EMPLOYER_SECTOR = {
-  "hospitality": ["kfc", "mcdonald", "wetherspoon", "harvester", "toby carvery", "mitchells & butlers", "whitbread", "premier inn", "beefeater", "brewers fayre",
+  "hospitality": ["greene king", "shepherd neame", "caterlink", "kfc", "mcdonald", "wetherspoon", "harvester", "toby carvery", "mitchells & butlers", "whitbread", "premier inn", "beefeater", "brewers fayre",
     "costa", "greggs", "pizzaexpress", "pizza express", "zizzi", "shepherd neame", "burger king", "nando", "five guys", "wagamama", "pret", "caffè nero", "caffe nero", "starbucks", "travelodge", "hollywood bowl"],
   "retail": ["co-op", "coop", "tesco", "sainsbury", "asda", "morrisons", "lidl", "aldi", "m&s", "marks & spencer", "waitrose", "iceland", "b&m", "boots", "primark", "next", "tk maxx",
     "homesense", "the range", "halfords", "currys", "jd sports", "smyths", "hobbycraft", "hotel chocolat", "specsavers", "poundland", "home bargains", "whsmith", "card factory"],
-  "health-care": ["home instead", "barchester", "care uk", "hc-one", "bupa", "avery", "hallmark", "bluebird care", "caremark", "helping hands", "right at home", "hcrg"],
+  "public-sector": ["county council", "district council", "city council", "borough council", "dwp", "hmrc", "kent police"],
+  "health-care": ["healthcare", "homecare", "health care", "nhs", "hospitals", "health nhs", "medical centre", "surgery", "home instead", "barchester", "care uk", "hc-one", "bupa", "avery", "hallmark", "bluebird care", "caremark", "helping hands", "right at home", "hcrg"],
+  "education": ["school", "academy", "college", "university"],
   "warehouse": ["royal mail", "dpd", "evri", "yodel", "dhl", "amazon"],
   "facilities": ["ocs", "compass group", "sodexo", "iss ", "2gether"],
 };
