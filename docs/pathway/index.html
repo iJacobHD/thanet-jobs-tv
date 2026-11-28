@@ -283,13 +283,13 @@
     bindHomeSearch(); fillCounts();
   }
   function grid() {
-    return `<div class="grid">${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span><span class="ct" data-sec="${s.id}"></span></a>`).join("")}</div>
+    return `<div class="grid">${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(s => `<a class="tile" href="#sector/${s.id}${qs()}"><span>${esc(s.name)}</span><span class="ct" data-sec="${s.id}"></span></a>`).join("")}<a class="tile" href="#alljobs?sector=other"><span>Other jobs</span><span class="ct" data-sec="other"></span></a></div>
       <p class="note">Every sector has a full guide: what it is like, what you need, the steps to get in and live local jobs.</p>`;
   }
   async function fillCounts() {
     const { jobs, careers } = await loadBoard();
     document.querySelectorAll(".tile .ct").forEach(el => {
-      const s = S(el.dataset.sec), hit = j => inSector(s, j);
+      const s = S(el.dataset.sec), hit = el.dataset.sec === "other" ? j => !sectorsOf(j).length : j => inSector(s, j);
       const n = jobs.filter(hit).length + careers.filter(j => j.entry && hit(j)).length, m = careers.filter(j => !j.entry && hit(j)).length;
       el.textContent = n || m ? `${n} entry-level${m ? ` · ${m} experienced` : ""} job${n + m === 1 ? "" : "s"} now` : "Guide and routes in";
     });
@@ -484,7 +484,7 @@
       <div class="panel filters">
                 <label><b>Search</b><br><input id="fq" type="search" value="${esc(q0)}" placeholder="Job, company or town" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"></label>
         <label><b>Sector</b><br><select id="fs" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
-          <option value="">All sectors</option>${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>
+          <option value="">All sectors</option>${[...P.SECTORS].sort((a, b) => a.name.localeCompare(b.name)).map(x => `<option value="${x.id}" ${x.id === sel ? "selected" : ""}>${esc(x.name)}</option>`).join("")}<option value="other" ${sel === "other" ? "selected" : ""}>Other jobs (no sector)</option></select></label>
         <label><b>Town</b><br><select id="ft" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px"><option value="">Anywhere</option></select></label>
         <label><b>Sort by</b><br><select id="fo" style="width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;margin-top:4px">
           <option value="close">Closing soonest</option><option value="payhi">Highest pay</option><option value="paylo">Lowest pay</option><option value="az">A–Z</option></select></label>
@@ -502,7 +502,7 @@
       const words = fq.split(/\s+/).filter(Boolean);
       const fl = app.querySelector('#fl [aria-pressed="true"]').dataset.v;
       const sec = S(fs);
-      const list = rows.filter(j => (!sec || inSector(sec, j)) &&
+      const list = rows.filter(j => (fs === "other" ? !sectorsOf(j).length : !sec || inSector(sec, j)) &&
         (fl === "all" || (fl === "entry") === j.entry) && (!ft || j.town === ft) &&
         words.every(w => `${j.title} ${j.employer} ${j.town} ${j.level || "entry level"}`.toLowerCase().includes(w)))
         .sort(fo === "payhi" ? (a, b) => yearly(b.pay) - yearly(a.pay) : fo === "paylo" ? (a, b) => (yearly(a.pay) || 1e9) - (yearly(b.pay) || 1e9)
