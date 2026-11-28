@@ -204,6 +204,7 @@ PATHWAY.SECTORS = [
     id: "engineering", name: "Engineering", icon: "⚙️", full: true,
     skills: { trades: 2, machines: 2, numbers: 1, safety: 1 },
     jobwords: ["engineer", "technician", "maintenance", "mechanic", "electrician", "fitter"],
+    notwords: ["pharmacy", "pathology", "laboratory", "lab technician", "dental", "veterinary"],
     about: "Designing, building, fixing and maintaining machines, vehicles, buildings and systems. In East Kent there is engineering work in manufacturing, ports, energy, food production and vehicle repair. Most people get in through an apprenticeship or by starting as an operative and training up. Free Level 2 engineering and manufacturing courses are available for eligible adults.",
     expect: ["Hands-on work with tools and machines", "Health and safety rules on every job", "Fault-finding and problem-solving", "Shift work in factories"],
     roles: ["Engineering operative", "Maintenance assistant", "Trainee mechanic / vehicle technician", "Welder or fabricator (trainee)", "CNC machine operator", "Engineering apprentice"],
@@ -308,7 +309,7 @@ PATHWAY.SECTORS = [
   {
     id: "it", name: "IT & Digital", folder: "IT & Communications", icon: "📶", full: true,
     skills: { it: 2, computer: 2, customer: 1, phone: 1 },
-    jobwords: ["it ", "ict", "technician", "helpdesk", "digital", "developer", "network", "service desk", "it support", "it technician", "data analyst", "business analyst", "systems analyst", "business systems", "product owner", "analyst", "crm", "software", "cyber", "infrastructure"],
+    jobwords: ["it ", "ict", "helpdesk", "digital", "developer", "network engineer", "network support", "network administrator", "service desk", "it support", "it technician", "data analyst", "business analyst", "systems analyst", "business systems", "product owner", "analyst", "crm", "software", "cyber", "infrastructure"],
     about: "Supporting and building the technology everyone uses – fixing computers, setting up networks, helping users and writing software. Many people start in IT support, answering help desk calls and fixing everyday problems. You can learn a lot for free online, and certificates and Skills Bootcamps can count as much as a degree.",
     expect: ["Solving problems for other staff or customers", "Lots of learning as technology changes", "Help desk calls, emails and tickets", "Office, hybrid or remote working"],
     roles: ["IT support / help desk assistant", "Junior business analyst / business analyst apprentice", "IT technician (schools and businesses)", "Junior web developer", "Data entry and IT admin", "Network support apprentice", "Software development apprentice"],
@@ -374,7 +375,7 @@ PATHWAY.SECTORS = [
   {
     id: "passenger-transport", name: "Passenger Transport", icon: "🚌", full: true,
     skills: { driving: 2, customer: 2, reliable: 1, safety: 1 },
-    jobwords: ["bus driver", "coach driver", "taxi", "rail", "train", "passenger", "station"],
+    jobwords: ["bus driver", "coach driver", "taxi", "rail", "train driver", "train conductor", "train guard", "train manager", "passenger", "station"],
     about: "Getting people where they need to go – buses, coaches, trains and taxis. Bus companies in Kent recruit trainee drivers with no experience and pay for your bus (PCV) licence while you train. Taxi and private hire drivers are licensed by the local council. Rail companies also hire station and on-train staff.",
     expect: ["Early, late and weekend shifts", "Dealing with the public all day", "Safe, careful driving", "Uniform and set routes"],
     roles: ["Trainee bus driver", "Coach driver", "Taxi or private hire driver", "Station or platform assistant", "Train conductor / guard", "Community transport driver"],
