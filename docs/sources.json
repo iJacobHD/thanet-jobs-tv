@@ -1,13 +1,13 @@
 {
- "checked": "2026-11-27",
+ "checked": "2026-11-28",
  "manual_sources": 42,
  "auto_sources": 44,
  "parked": 0,
  "candidates": 272,
  "still_to_check": 0,
- "time_used_pct": 74,
- "probed_tonight": 211,
- "added_tonight": 16,
+ "time_used_pct": 84,
+ "probed_tonight": 0,
+ "added_tonight": 0,
  "by_sector": {
   "childcare": 1,
   "construction": 4,
