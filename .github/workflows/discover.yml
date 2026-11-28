@@ -1,6 +1,6 @@
 name: Discover more employers
 
-# Every night: test more companies' careers sites and switch on the ones that work,
+# Every night at given time: test more companies' careers sites and switch on the ones that work,
 # while keeping the morning run inside its time limit (see scripts/discover.py).
 on:
   schedule:
