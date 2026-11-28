@@ -1,7 +1,7 @@
 name: Update Thanet jobs
 
 # Every morning: fetch jobs from Reed's official API (needs the REED_API_KEY secret),
-# filter them, and remake the TV board, the slides and "Jobs this week.mp4".
+# filter them, and remake the TV board, all the slides and "Jobs this week.mp4".
 on:
   schedule:
     # GitHub's timer often fires late or not at all, so it gets a chance every hour from 04:17 to 11:17.
