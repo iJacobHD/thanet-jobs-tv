@@ -1,0 +1,38 @@
+name: Adzuna coverage check (one-off)
+
+# Start by hand only (Actions > Adzuna coverage check > Run workflow). Uses at most 8 of the free key's calls.
+on:
+  workflow_dispatch:
+    inputs:
+      max_calls:
+        description: "Most Adzuna calls to use (the free key has very few)"
+        default: "8"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Compare Adzuna's local jobs with ours
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          MAX_CALLS: ${{ inputs.max_calls }}
+        run: python scripts/adzuna_check.py
+      - name: Save report
+        run: |
+          git config user.name "jobs-bot"; git config user.email "jobs-bot@users.noreply.github.com"
+          git add data/adzuna_check.txt
+          if ! git diff --cached --quiet; then git commit -m "Adzuna coverage check"; git pull --rebase -X theirs || true; git push; fi

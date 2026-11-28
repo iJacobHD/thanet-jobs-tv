@@ -75,7 +75,7 @@
   "video_seconds_per_slide": 12,
   "use_teaching_vacancies": true,
   "use_nhs_jobs": true,
-  "use_adzuna": true,
+  "use_adzuna": false,
   "adzuna_max_days_old": 10,
   "search_locations": [
     "Margate",
@@ -632,5 +632,6 @@
     "Middlesex"
   ],
   "use_apprenticeships": true,
-  "video_max_pages": 35
+  "video_max_pages": 35,
+  "use_adzuna_note": "Off: the free Adzuna key only has a few calls. Use the one-off 'Adzuna coverage check' workflow instead."
 }
