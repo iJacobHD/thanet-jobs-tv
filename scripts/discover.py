@@ -307,7 +307,7 @@ def main():
             cost = COST["cheap"] if emp["mode"] in CHEAP else COST["sitemap"]
             if used + cost > limit or sum(1 for e in auto if e.get("enabled", True)) >= MAX_AUTO:
                 st["status"] = status + " - waiting: time limit reached"
-                st["next_check"] = str(today + dt.timedelta(days=7))
+                st["next_check"] = str(today + dt.timedelta(days=1))   # retry tomorrow: real timings may show there is room
             else:
                 emp.update(enabled=True, auto=True, sector=c.get("sector", ""), added=str(today))
                 if c["name"] in by_name:
