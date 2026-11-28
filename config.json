@@ -632,6 +632,5 @@
     "Middlesex"
   ],
   "use_apprenticeships": true,
-  "video_max_pages": 35,
-  "use_adzuna_note": "Off: the free Adzuna key only has a few calls. Use the one-off 'Adzuna coverage check' workflow instead."
+  "video_max_pages": 35
 }
